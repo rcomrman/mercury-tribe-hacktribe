@@ -1,0 +1,5 @@
+c01d64b8 <md31_compare_veneer>:
+c01d64b8: e92d4010     	push	{r4, lr}
+c01d64bc: ebfff2b9     	bl	0xc01d2fa8 <md31_compare_visit> @ imm = #-0x351c
+c01d64c0: e8bd8010     	pop	{r4, pc}
+

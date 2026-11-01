@@ -1,0 +1,11 @@
+
+build/arm/md31_RESEARCH_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .md30_callback:
+
+c01e0000 <md30_callback_bridge>:
+c01e0000: e92d500f     	push	{r0, r1, r2, r3, r12, lr}
+c01e0004: ebffcb53     	bl	0xc01d2d58 <md30_callback_visit> @ imm = #-0xd2b4
+c01e0008: e8bd500f     	pop	{r0, r1, r2, r3, r12, lr}
+c01e000c: e51ff004     	ldr	pc, [pc, #-0x4]         @ 0xc01e0010 <md30_callback_bridge+0x10>
+c01e0010: 1c a7 02 c0  	.word	0xc002a71c

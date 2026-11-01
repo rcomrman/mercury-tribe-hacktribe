@@ -1,0 +1,8 @@
+Mercury Dust - second avis Claude - MD45 (STATIC ABI PRECHECK ONLY)
+
+1. Lire MD45_SECOND_AVIS_CLAUDE_FR.md.
+2. Voir MD45_ABI_AUDIT_RESULT.json pour les opcodes effectivement vérifiés.
+3. Le script md45_static_abi_audit.py est reproductible sur le binaire de recherche MD44.
+4. Les fichiers VSB originaux ne sont pas inclus et n'ont pas été modifiés.
+5. Le moteur MD44 est dans l'archive distincte MERCURY_DUST_MD44_SOURCES_ET_PASSATION_SANS_FLASH.zip.
+AUCUN FLASH.

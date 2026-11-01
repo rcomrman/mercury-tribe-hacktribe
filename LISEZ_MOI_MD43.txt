@@ -1,0 +1,7 @@
+MERCURY DUST MD43 — couche de portage multi-plateformes en laboratoire
+
+Lire MD43_RAPPORT_FR.md, puis tests/run_md43_host.sh.
+Le test compare deux FAUX environnements ; aucun plugin OmniTribe n'est inclus.
+MD41 est le dernier mécanisme Korg de restauration testé ; MD42 identifie
+l'absence d'acquittement matériel ; MD43 n'efface pas cette limite.
+NE RIEN FLASHER SUR L'ELECTRIBE À PARTIR DE CETTE ARCHIVE.

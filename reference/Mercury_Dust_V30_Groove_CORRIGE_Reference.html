@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MERCURY DUST · V30 GROOVE — VERSION CORRIGÉE</title>
+<style>
+:root{color-scheme:dark;--bg:#06080b;--panel:#121820;--sub:#1a232d;--line:#33414d;--text:#e5edf3;--muted:#8da2b4;--highlight:#c3e6ed;--green:#adf2d0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 25% 0%,#1c2731,#070a0e 57%);color:var(--text);font:13px/1.45 system-ui,"Segoe UI",sans-serif}
+header,.layout,footer{max-width:1400px;margin:auto}header{padding:24px 25px 11px;display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap}h1{font-size:clamp(25px,3.2vw,40px);letter-spacing:-.065em;margin:5px 0 2px;line-height:1.1}h1 em{font-style:normal;color:var(--highlight);font-weight:500}.eyebrow{font-size:10px;letter-spacing:.22em;color:#9ed0db;font-weight:800}.sub{color:var(--muted)}.chip{font-size:10px;border:1px solid var(--line);border-radius:5px;padding:6px 10px;letter-spacing:.06em;color:#b4ccd6}
+.layout{padding:8px 25px 40px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(350px,.85fr);gap:16px}.stack{display:flex;flex-direction:column;gap:16px}.panel{background:linear-gradient(145deg,#111a23,#0e151d);border:1px solid #263540;border-radius:12px;padding:17px;box-shadow:0 18px 45px #0002;min-width:0}.panel h2{margin:0;font-size:12px;letter-spacing:.12em}.panelhead{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.screenwrap{padding:8px;background:#000;border:1px solid #394954;border-radius:6px;box-shadow:inset 0 0 18px #0007}canvas{display:block;width:100%;aspect-ratio:2 / 1;background:black;image-rendering:pixelated;image-rendering:crisp-edges}button,input{font:inherit}button{cursor:pointer;background:#1a2631;color:var(--text);border:1px solid #38505d;border-radius:6px;padding:8px 10px;transition:background .15s,border-color .15s}button:hover{background:#2a3948;border-color:#9cc7d0}button.active{border-color:#c7e4e9;background:#284653;color:white}button.primary{background:#cce7ed;border-color:#cce7ed;color:#071118;font-weight:800}.controls{display:flex;flex-wrap:wrap;gap:7px;align-items:center}.meta{font-size:10px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;margin:9px 0 12px}.hint{color:#91a8b9;font-size:11px;line-height:1.6;margin:11px 0 0}
+.presets{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}.preset{padding:10px 6px;font-weight:700;line-height:1.2;font-size:11px}.preset small{display:block;color:#a8bcc9;font-size:9px;margin-top:4px;font-weight:400}.tracks{display:grid;grid-template-columns:repeat(8,1fr);gap:5px}.track{font-size:11px;padding:7px 2px}.track small{display:block;color:#90a8b4;font-size:9px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.steps{display:grid;grid-template-columns:repeat(16,1fr);gap:4px;margin-top:11px}.step{height:24px;padding:0;border-radius:2px;background:#0c141c}.step.on{background:#aeced5;border-color:#c8e8ec}.step.playhead{outline:2px solid #fff;outline-offset:2px}
+.pager{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:0 0 13px}.pager button{font-size:10px;letter-spacing:.04em;padding:9px 5px}.sliders{display:grid;grid-template-columns:1fr 1fr;gap:7px 16px}.fx{border-bottom:1px solid #2d3b45;padding:7px 0}.fxline{display:flex;align-items:baseline;justify-content:space-between;gap:7px}.fx label{font-size:12px;font-weight:700}.fx output{font-size:12px;color:#c7f1f4;font-variant-numeric:tabular-nums;font-weight:800}.fx small{display:block;min-height:28px;font-size:10px;color:var(--muted)}.fxbuttons{display:flex;align-items:center;gap:5px}.fxbuttons input{flex:1;min-width:0;accent-color:#c8e8ee;cursor:pointer}.fxbuttons button{padding:3px 5px;font-size:10px;line-height:1.2}.fxbuttons button:focus-visible{outline:2px solid white} .footrow{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;margin-top:12px}.message{min-height:19px;color:var(--green);font-size:11px}input[type=number]{width:64px;color:white;background:#111c25;border:1px solid #45606c;border-radius:5px;padding:7px}label.number{color:#9cb9c4;display:flex;gap:6px;align-items:center;font-size:11px}footer{padding:0 25px 30px;color:#7b909d;font-size:11px}
+@media(max-width:1020px){.layout{grid-template-columns:1fr}.presets{grid-template-columns:repeat(3,1fr)}}@media(max-width:590px){header{padding:18px 12px 9px}.layout{padding:7px 12px 28px}.panel{padding:12px}.tracks{grid-template-columns:repeat(4,1fr)}.sliders{grid-template-columns:1fr 1fr;gap:5px 10px}.pager{grid-template-columns:repeat(3,1fr)}.fx label{font-size:11px}.fx small{font-size:9px}}
+
+.sectionrule{border-top:1px solid var(--line);margin:15px 0}
+.musicgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.musicgrid label,.trackopts label{display:flex;flex-direction:column;gap:5px;font-size:10px;color:#c8d7df;font-weight:700;letter-spacing:.04em}
+.musicgrid input[type=range],.trackopts input[type=range]{width:100%;accent-color:#a7d8dc}.musicgrid output,.trackopts output{color:#d1f8fa}.musicgrid select,.trackopts select{padding:7px 5px;border-radius:5px;background:#0d1720;color:#e2edf3;border:1px solid #405561;font:inherit}
+.musicgrid:has(#sceneSelect){grid-template-columns:1fr;margin-top:10px}.trackopts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px;margin-bottom:5px}
+.meters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0}.meters span{font-size:10px;display:flex;flex-direction:column;gap:4px;color:#8ea6b7}.meters i{height:5px;width:100%;background:linear-gradient(90deg,#bddde2 var(--v,0%),#24323b var(--v,0%));border-radius:3px}
+@media(max-width:590px){.musicgrid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header><div><div class="eyebrow">ELECTRIBE · 1-BIT GENERATIVE VISUAL</div><h1>MERCURY DUST <em>V30 · GROOVE FIX</em></h1><div class="sub">Chrome coulant V30 · mouvements musicaux · pixel art 1-bit · 16 pistes</div></div><span class="chip">128×64 · MONOCHROME · SANS GIF</span></header>
+<div class="layout">
+<div class="stack">
+<section class="panel"><div class="panelhead"><h2>ÉCRAN ELECTRIBE / RENDU</h2><span id="state" class="chip">INITIALISATION…</span></div>
+<div class="screenwrap"><canvas id="screen" width="128" height="64" aria-label="Rubans de mercure procéduraux, pilotés par des événements"></canvas></div>
+<div class="meta"><span id="renderState">AUCUN ÉVÉNEMENT — NOIR</span><span id="beat">125 BPM · 01/16</span></div>
+<div class="controls"><button class="primary" id="atelier">◉ ATELIER</button><button id="demo">▶ DÉMO + SON</button><button id="demoSilent">◈ DÉMO SILENCIEUSE</button><button id="stop">■ NOIR</button><button id="hit">⚡ TEST PISTE</button><label class="number">BPM <input id="bpm" type="number" min="40" max="250" value="125"></label></div>
+<p class="hint" id="startupHint"><strong>Pour démarrer :</strong> clique sur « DÉMO + SON » ou « ATELIER ». Au repos, l’écran est volontairement noir. Si tu ouvres ce fichier dans l’aperçu ChatGPT, télécharge-le et ouvre-le dans Edge/Chrome. <strong>Atelier :</strong> prévisualisation sans musique. <strong>Démo + son :</strong> un groove original est joué et ses événements font directement bouger le chrome. <strong>MIDI :</strong> notes, vélocité et canaux de ton Electribe (sans analyse audio). <strong>Noir :</strong> image vide.</p>
+</section>
+<section class="panel"><div class="panelhead"><h2>PRESETS COMPLETS · 16 PISTES</h2><span class="sub">Un clic reprogramme toutes les pistes</span></div><div id="presets" class="presets"></div><p class="hint">Chaque preset change la <b>composition géométrique</b>, la programmation rythmique et les 16 pistes. Les caractères sont différents, pas seulement l'intensité des mêmes effets.</p>
+<div class="sectionrule"></div><div class="panelhead"><h2>RÉACTIVITÉ MUSICALE · GLOBALE</h2><span class="sub">0 = aucune influence · 100 = forte influence</span></div>
+<div class="musicgrid">
+<label>KICK / IMPACT <input id="kickSense" type="range" min="0" max="100" value="48"><output id="kickSenseValue">48</output></label>
+<label>MÉLODIE / PITCH <input id="melodySense" type="range" min="0" max="100" value="64"><output id="melodySenseValue">64</output></label>
+<label>PERCUS / ACCENTS <input id="percSense" type="range" min="0" max="100" value="55"><output id="percSenseValue">55</output></label>
+</div><div class="meters"><span>KICK <i id="meterKick"></i></span><span>MELO <i id="meterMelody"></i></span><span>PERC <i id="meterPerc"></i></span></div>
+<div class="musicgrid"><label>SCÈNE <select id="sceneSelect"><option value="flow">FLOW · RIVIÈRE</option><option value="silk">SILK · COULURES</option><option value="hypnose">HYPNOSE · SPIRALE</option><option value="acid">ACID · TURBULENCE</option><option value="hard">HARD TEK · CISAILLE</option></select></label></div>
+</section>
+<section class="panel"><div class="panelhead"><h2>16 PISTES / SEQUENCER TEST</h2><span class="sub" id="selectedInfo">PISTE 01 · KICK</span></div><div id="tracks" class="tracks"></div><div class="trackopts"><label>Rôle de la piste <select id="role"></select></label><label>Réaction piste <input id="trackGain" type="range" min="0" max="100" value="70"><output id="trackGainValue">70</output></label></div><div id="steps" class="steps"></div><p class="hint">Les pas lancent des événements musicaux avec vélocité et hauteur de note. Tu peux assigner librement KICK, PERCU, MÉLODIE, BASSE, PAD ou FX à chaque piste, notamment si tes canaux MIDI sont organisés différemment.</p></section>
+</div>
+<div class="stack">
+<section class="panel"><div class="panelhead"><h2 id="editorName">ÉDITEUR / PISTE 01</h2><button id="reset">RAZ PISTE</button></div><div class="pager" id="pages"></div><div class="sliders" id="sliders"></div><div class="footrow"><button id="compare">A/B : EFFET ACTIF</button><span id="status" class="message">Démarrage…</span></div><p class="hint">Un effet à 0 ou 100 change directement la géométrie ou les reflets. Le bouton A/B compare le dernier paramètre. Les presets réécrivent les 16 pistes.</p></section>
+<section class="panel"><div class="panelhead"><h2>PRESETS / FICHIER</h2></div><div class="controls"><button id="save">↓ EXPORT JSON</button><button id="load">↑ IMPORT JSON</button><input type="file" id="json" accept=".json,application/json" hidden><button id="midi">MIDI PC (OPTIONNEL)</button></div><p class="hint">Export des 24 paramètres × 16 pistes, tempo et séquences. Le MIDI fonctionne dans les navigateurs qui le prennent en charge. Pas d'installation de firmware.</p></section>
+</div></div>
+<footer>Prototype graphique PC · Pas de GIF, ni analyse audio · Firmware et IFX inchangés</footer>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), W=128, H=64,PI=Math.PI,TAU=PI*2;
+const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
+const hash=(n)=>{let a=Math.sin(n*127.1+19.314)*43758.54;return a-Math.floor(a)};
+const PAGES=[
+{name:'MATIÈRE',entries:[['length','Envergure','Longueur des rubans sur l’écran'],['width','Épaisseur','Rubans fins ou larges'],['fold','Enroulement','Boucles et détours du mercure'],['strands','Entrelacs','Branches supplémentaires']]},
+{name:'FLUIDE',entries:[['flow','Écoulement','Vitesse de déplacement de la matière'],['waves','Ondulation','Courbes fluides sur les rubans'],['viscosity','Viscosité','Oscillation souple ou nerveuse'],['drips','Coulures','Longues gouttes qui pendent des rubans']]},
+{name:'CHROME',entries:[['carve','Creux noirs','Fentes noires creusées dans le métal'],['rims','Arêtes blanches','Liserés de chrome très nets'],['shine','Reflets','Traits lumineux qui glissent'],['cut','Lames sombres','Grandes plages noires intérieures']]},
+{name:'HYPNOSE',entries:[['swirl','Torsion','Rubans qui se vrillent'],['orbit','Rotation orbitale','Déviation lente de l’ensemble'],['breath','Respiration','Gonflements fluides périodiques'],['echo','Écho liquide','Seconde traînée de la matière']]},
+{name:'HARD',entries:[['glitch','Glitch horizontal','Tranches déplacées sur l’objet'],['tear','Déchirure','Fentes nettes dans le mercure'],['shake','Tremblement','Secousses brèves à la frappe'],['melt','Fonte','Lignes verticales de matière fondue']]},
+{name:'FRAGMENTS',entries:[['fracture','Fractures','Éclats anguleux qui coupent les rubans'],['sparks','Éclats','Pixels éjectés depuis la matière'],['trail','Rémanence','Reflets persistants dans le sillage'],['life','Durée','Temps de persistance après la note']]}
+];
+const IDS=PAGES.flatMap(p=>p.entries.map(e=>e[0]));
+const LABELS=['KICK','SNARE','HAT C','HAT O','CLAP','TOM','PERC','RIDE','BASS','SYNTH 1','SYNTH 2','ACID','DRONE','NOISE','FX 1','FX 2'];
+const KEYS=['V30 FLOW','SILK','HYPNOSE','ACID','HARD TEK'];
+const BASE={length:85,width:76,fold:72,strands:66,flow:38,waves:76,viscosity:74,drips:54,carve:82,rims:80,shine:75,cut:68,swirl:48,orbit:20,breath:42,echo:12,glitch:3,tear:0,shake:2,melt:24,fracture:0,sparks:8,trail:14,life:65};
+const PRESETS={
+ 'V30 FLOW':{...BASE},
+ 'SILK':{...BASE,width:57,fold:42,strands:36,flow:22,waves:52,viscosity:90,drips:66,carve:62,rims:96,shine:90,cut:65,swirl:26,orbit:14,breath:37,echo:21,glitch:0,tear:0,shake:0,melt:44,fracture:0,sparks:0,trail:34,life:86},
+ 'HYPNOSE':{...BASE,width:68,fold:86,strands:68,flow:35,waves:78,viscosity:85,drips:52,carve:88,rims:78,shine:91,cut:73,swirl:86,orbit:68,breath:75,echo:45,glitch:7,tear:0,shake:0,melt:34,fracture:0,sparks:7,trail:48,life:84},
+ 'ACID':{...BASE,width:58,fold:96,strands:89,flow:79,waves:89,viscosity:34,drips:45,carve:86,rims:93,shine:96,cut:70,swirl:82,orbit:69,breath:58,echo:20,glitch:40,tear:21,shake:18,melt:61,fracture:20,sparks:28,trail:21,life:59},
+ 'HARD TEK':{...BASE,length:92,width:66,fold:80,strands:72,flow:64,waves:70,viscosity:24,drips:34,carve:86,rims:95,shine:68,cut:83,swirl:74,orbit:37,breath:94,echo:24,glitch:87,tear:75,shake:75,melt:50,fracture:85,sparks:67,trail:33,life:39}
+};
+const SEQUENCES=[
+ [0,4,8,12],[4,12],[0,2,4,6,8,10,12,14],[3,7,11,15],[4,12],[10],[3,11],[6,14],
+ [0,3,6,8,11,14],[0,4,8,12],[2,6,10,14],[1,5,9,13],[0,8],[3,7,11,15],[6,14],[15]
+];
+const ROLE_NAMES={kick:'KICK',perc:'PERCUSSION',melody:'MÉLODIE',bass:'BASSE',pad:'PAD / DRONE',fx:'EFFET / TRANSITION'};
+const ROLE_DEFAULT=['kick','perc','perc','perc','perc','perc','perc','perc','bass','melody','melody','melody','pad','fx','fx','fx'];
+const SCENES={
+ 'V30 FLOW':'flow','SILK':'silk','HYPNOSE':'hypnose','ACID':'acid','HARD TEK':'hard'
+};
+const SCENE_STEPS={
+ flow: {9:[0,4,8,12],10:[2,6,10,14],11:[1,5,9,13]},
+ silk: {0:[0,8],1:[8],2:[0,4,8,12],8:[0,8],9:[0,8],10:[4,12],11:[12],12:[0]},
+ hypnose: {0:[0,4,8,12],1:[4,12],8:[0,3,6,9,12,15],9:[0,3,6,9,12,15],10:[2,5,8,11,14],11:[1,5,9,13],12:[0,8]},
+ acid: {0:[0,4,8,12],1:[4,12],2:[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],8:[0,3,6,8,10,14],9:[0,2,5,7,10,12,15],11:[1,2,4,7,9,11,14]},
+ hard: {0:[0,3,4,7,8,11,12,15],1:[4,12],2:[0,2,4,6,8,10,12,14],3:[3,7,11,15],8:[0,5,8,13],9:[2,6,10,14],10:[0,7,11,15]}
+};
+const GAIN_DEFAULT={flow:[48,64,55],silk:[22,76,18],hypnose:[40,90,28],acid:[55,85,65],hard:[78,40,83]};
+const MELODY_NOTES=[60,64,67,69,67,64,62,59,60,62,67,72,69,67,64,62];
+const BASS_NOTES=[36,36,43,36,38,38,43,38,41,41,43,41,38,38,36,35];
+
+function makeTrack(i,base=BASE,scene='flow'){
+ let f={};for(let id of IDS)f[id]=Math.round(base[id]??0);
+ if(i===0){f.breath=clamp(f.breath+25,0,100);f.shake=clamp(f.shake+5,0,100)}
+ if(i===1){f.tear=clamp(f.tear+20,0,100);f.fracture=clamp(f.fracture+16,0,100)}
+ if(i===2){f.sparks=clamp(f.sparks+18,0,100)}
+ if(i===8){f.fold=clamp(f.fold+9,0,100);f.flow=clamp(f.flow+12,0,100)}
+ if(i===12){f.life=clamp(f.life+20,0,100);f.trail=clamp(f.trail+16,0,100)}
+ const specific=SCENE_STEPS[scene]||{};
+ return {fx:f,role:ROLE_DEFAULT[i],gain:80,steps:Array.from({length:16},(_,n)=>(specific[i]||SEQUENCES[i]).includes(n))};
+}
+let tracks=[],selected=0,page=0,presetName='V30 FLOW',mode='stop',bypass=false,lastParam='glitch';
+let serial=1,clock=0,lastTime=0,nextStep=0,step=0,midiAccess=null;
+let scene='flow', globalGains={kick:0.48,melody:0.64,perc:0.55};
+const motion={kick:0,perc:0,bass:0,melody:0,pad:0,pitch:0,fx:0};
+let lastSignalsAt=0, midiCutoff=.5, audioCtx=null, audioMaster=null, demoSound=false, midiClockStart=0,midiClockTicks=0;
+let events=[],painting=false,atelierPhase=0;
+const canvas=$('screen'), ctx=canvas.getContext('2d',{willReadFrequently:true});ctx.imageSmoothingEnabled=false;
+const art=document.createElement('canvas');art.width=W;art.height=H;
+const ac=art.getContext('2d',{willReadFrequently:true});ac.imageSmoothingEnabled=false;
+const out=ctx.createImageData(W,H);let prev=new Uint8Array(W*H);
+function message(m){$('status').textContent=m;}
+function normFx(tr){const raw=tracks[tr].fx, f={};for(let id of IDS)f[id]=(bypass&&tr===selected&&id===lastParam?0:raw[id])/100;return f;}
+function applyPreset(name){
+ presetName=name;scene=SCENES[name]||'flow';
+ tracks=Array.from({length:16},(_,i)=>makeTrack(i,PRESETS[name],scene));
+ const g=GAIN_DEFAULT[scene];globalGains={kick:g[0]/100,melody:g[1]/100,perc:g[2]/100};
+ for(const key of ['kick','melody','perc']){
+  $(key+'Sense').value=Math.round(globalGains[key]*100);
+  $(key+'SenseValue').textContent=$(key+'Sense').value;
+ }
+ $('sceneSelect').value=scene;
+ for(const key in motion)motion[key]=0;
+ events=[];renderControls();message('Preset '+name+' chargé : 16 pistes + scène '+scene.toUpperCase()+'.');
+}
+function renderPresets(){$('presets').innerHTML='';for(let name of KEYS){let b=document.createElement('button');b.className='preset'+(name===presetName?' active':'');b.innerHTML=name+'<small>16 pistes</small>';b.onclick=()=>applyPreset(name);$('presets').appendChild(b);}}
+function renderTracks(){
+ $('tracks').innerHTML='';tracks.forEach((tr,i)=>{
+  let b=document.createElement('button');b.className='track'+(i===selected?' active':'');
+  b.innerHTML=String(i+1).padStart(2,'0')+'<small>'+LABELS[i]+'</small>';
+  b.onclick=()=>{selected=i;renderControls();};$('tracks').appendChild(b);
+ });
+ $('selectedInfo').textContent='PISTE '+String(selected+1).padStart(2,'0')+' · '+LABELS[selected];
+ const sel=$('role');sel.innerHTML='';
+ for(const [id,label] of Object.entries(ROLE_NAMES)){
+  const opt=document.createElement('option');opt.value=id;opt.textContent=label;sel.appendChild(opt);
+ }
+ sel.value=tracks[selected].role;
+ $('trackGain').value=tracks[selected].gain;
+ $('trackGainValue').textContent=tracks[selected].gain;
+}
+function renderSteps(){$('steps').innerHTML='';tracks[selected].steps.forEach((v,i)=>{let b=document.createElement('button');b.className='step'+(v?' on':'')+((mode==='demo'||mode==='demoSilent')&&i===((step+15)%16)?' playhead':'');b.title='Pas '+(i+1);b.onclick=()=>{tracks[selected].steps[i]=!v;renderSteps()};$('steps').appendChild(b);});}
+function renderPages(){$('pages').innerHTML='';PAGES.forEach((p,i)=>{let b=document.createElement('button');b.textContent=p.name;b.className=i===page?'active':'';b.onclick=()=>{page=i;renderControls()};$('pages').appendChild(b)});}
+function renderSliders(){$('sliders').innerHTML='';for(const [id,label,desc] of PAGES[page].entries){
+ let div=document.createElement('div');div.className='fx';let top=document.createElement('div');top.className='fxline';let name=document.createElement('label');name.textContent=label;let output=document.createElement('output');output.textContent=tracks[selected].fx[id];top.append(name,output);
+ let sub=document.createElement('small');sub.textContent=desc;let bar=document.createElement('div');bar.className='fxbuttons';let b0=document.createElement('button');b0.textContent='0';let b100=document.createElement('button');b100.textContent='100';let range=document.createElement('input');range.type='range';range.min=0;range.max=100;range.step=1;range.value=tracks[selected].fx[id];range.title=label;
+ const update=v=>{tracks[selected].fx[id]=+v;range.value=v;output.textContent=v;lastParam=id;bypass=false;$('compare').textContent='A/B : '+id+' ACTIF';};b0.onclick=()=>update(0);b100.onclick=()=>update(100);range.oninput=()=>update(range.value);
+ bar.append(b0,range,b100);div.append(top,sub,bar);$('sliders').append(div);
+ }}
+function renderControls(){renderPresets();renderTracks();renderSteps();renderPages();renderSliders();$('editorName').textContent='ÉDITEUR / PISTE '+String(selected+1).padStart(2,'0')+' — '+LABELS[selected];}
+function setMode(m){
+ mode=m;events=[];nextStep=0;step=0;prev.fill(0);
+ for(const key in motion)motion[key]=0;
+ $('atelier').classList.toggle('active',m==='atelier');
+ $('demo').classList.toggle('active',m==='demo');
+ $('demoSilent').classList.toggle('active',m==='demoSilent');
+ $('state').textContent=m==='stop'?'NOIR / REPOS':m==='atelier'?'ATELIER / FORME':m==='demo'?'DÉMO / AUDIO + EVENTS':m==='demoSilent'?'DÉMO / EVENTS':'MIDI / EVENTS';
+ renderSteps();if(m==='stop')clearScreen();
+ const hint=$('startupHint'); if(hint)hint.style.display='none';
+}
+function clearScreen(){ac.clearRect(0,0,W,H);ctx.fillStyle='#000';ctx.fillRect(0,0,W,H);$('renderState').textContent='AUCUN ÉVÉNEMENT — NOIR';}
+
+function hit(track,velocity=1,note=60){
+ if(track<0||track>=16)return;
+ events.push({track,birth:clock,velocity:clamp(velocity,.1,1.5),note,seed:serial++,released:false});
+ if(events.length>60)events.shift();
+}
+function release(track,note){
+ for(let i=events.length-1;i>=0;i--){const e=events[i];if(e.track===track&&e.note===note&&!e.released){e.released=true;e.releaseTime=clock;break;}}
+}
+function life(e,f){
+ const age=Math.max(0,clock-e.birth);
+ const role=tracks[e.track].role;
+ const attack=role==='kick'?.008:role==='perc'?.01:.04;
+ let hold=role==='kick'?.02:role==='perc'?.02:role==='bass'?.10:role==='melody'?.10:.12;
+ let decay=role==='kick'?.27:role==='perc'?.20:role==='bass'?.58:role==='melody'?.85:role==='pad'?2.3:1.1;
+ decay*=.48+f.life*1.6;
+ let v=clamp(age/attack)*Math.exp(-Math.max(0,age-hold)/decay)*e.velocity;
+ if(e.released)v*=Math.exp(-Math.max(0,clock-e.releaseTime)/.22);
+ return v;
+}
+function activeEvents(){
+ events=events.filter(e=>clock-e.birth<7);
+ return events.filter(e=>life(e,normFx(e.track))>.012);
+}
+function getEventsSignals(act){
+ const raw={kick:0,perc:0,bass:0,melody:0,pad:0,fx:0,pitch:0}, weights={melody:0,bass:0,pad:0};
+ for(const e of act){
+  const role=tracks[e.track].role;
+  const g=(tracks[e.track].gain/100);
+  const age=Math.max(0,clock-e.birth);
+  const base=life(e,normFx(e.track))*g;
+  const atk=role==='kick'?.16:role==='perc'?.13:.45;
+  const fast=Math.exp(-age/atk)*e.velocity*g;
+  if(role==='kick')raw.kick=Math.max(raw.kick,fast);
+  else if(role==='perc')raw.perc=Math.max(raw.perc,fast);
+  else if(role==='bass')raw.bass=Math.max(raw.bass,base);
+  else if(role==='melody')raw.melody=Math.max(raw.melody,base);
+  else if(role==='pad')raw.pad=Math.max(raw.pad,base);
+  else raw.fx=Math.max(raw.fx,base);
+  if(['melody','bass','pad'].includes(role)){
+    const w=base;
+    raw.pitch+=(clamp((e.note-48)/36,-.8,1.2))*w;
+    weights[role]+=w;
+  }
+ }
+ const pitchDen=weights.melody+weights.bass+weights.pad;
+ raw.pitch=pitchDen>0?raw.pitch/pitchDen:0;
+ return raw;
+}
+function updateMotion(act,dt){
+ const t=getEventsSignals(act);
+ if(mode==='atelier'){
+  // Preview normally undulates gently, but test notes MUST produce distinct transients.
+  t.kick=Math.max(t.kick,.12+.05*Math.sin(clock*3.1));
+  t.perc=Math.max(t.perc,.07); t.melody=Math.max(t.melody,.28);
+  t.bass=Math.max(t.bass,.22);t.pad=Math.max(t.pad,.55);
+  if(!act.some(e=>['melody','bass','pad'].includes(tracks[e.track].role))) t.pitch=.26*Math.sin(clock*.92);
+ }
+ const gk=globalGains.kick, gm=globalGains.melody, gp=globalGains.perc;
+ const target={kick:t.kick*gk,perc:t.perc*gp,bass:t.bass*gm,
+     melody:t.melody*gm,pad:t.pad*gm,fx:t.fx*gp,pitch:t.pitch*gm};
+ for(const k in motion){
+  const rise=k==='kick'?.018:k==='perc'?.018:.13;
+  const fall=k==='kick'?.13:k==='perc'?.095:k==='pitch'?.35:k==='bass'?.27:.30;
+  const tau=target[k]>motion[k]?rise:fall;
+  motion[k]+=(target[k]-motion[k])*(1-Math.exp(-dt/Math.max(.004,tau)));
+ }
+ $('meterKick').style.setProperty('--v',Math.round(clamp(motion.kick*1.8)*100)+'%');
+ $('meterMelody').style.setProperty('--v',Math.round(clamp((motion.melody+motion.bass)*1.5)*100)+'%');
+ $('meterPerc').style.setProperty('--v',Math.round(clamp(motion.perc*2)*100)+'%');
+}
+function mixFx(act){
+ let target={};for(const id of IDS)target[id]=0;
+ let count=0,intensity=0;
+ if(mode==='atelier')return {...normFx(selected),energy:1,impact:.24};
+ for(const e of act){
+  const f=normFx(e.track),p=life(e,f)*(tracks[e.track].gain/100);
+  count+=p;intensity=Math.max(intensity,p);
+  for(const id of IDS)target[id]+=f[id]*p;
+ }
+ if(count>0){for(const id of IDS)target[id]/=count;}
+ target.energy=clamp(count/1.5,0,1.08);
+ target.impact=clamp(intensity,0,1.25);
+ return target;
+}
+
+// Organic Bezier-like ribbon as polygon. No stored image: every contour is regenerated.
+function buildRibbon(f,t,index,energy){
+ let p=[]; const N=94;
+ const sceneSpeed={flow:1,silk:.53,hypnose:.62,acid:1.65,hard:1.15}[scene]||1;
+ const speed=(.55+f.flow*2.45)*(.48+f.viscosity*.62)*sceneSpeed;
+ const phase=t*speed, bob=TAU*index/3;
+ const sceneSpan={flow:1,silk:.83,hypnose:.88,acid:1.03,hard:.94}[scene]||1;
+ const span=(.52+f.length*.60)*128*sceneSpan;
+ const center=64, left=center-span/2;
+ let scale=(.55+f.width*.73)*(.85+.17*Math.sin(t*(.28+f.breath*.7)+index));
+ let yshift=index===0?-3:index===1?7:-9;
+ let offset=index===0?0:index===1?PI*.79:PI*1.23;
+ const amp=(7+13*f.fold)*(scene==='silk'?.55:scene==='hypnose'?1.18:scene==='acid'?1.24:scene==='hard'?.85:1);
+ const waves=.5+f.waves*1.5;
+ for(let i=0;i<=N;i++){
+  const u=i/N, edge=Math.sin(PI*u);
+  const cyc=TAU*(u*waves+index*.16);
+  const bassWave=motion.bass*Math.sin(u*TAU*1.15-t*1.9)*11;
+  const melodyWave=motion.melody*Math.sin(u*TAU*2.1-t*2.6+motion.pitch*4.8)*14;
+  const noteLift=motion.pitch*(scene==='hypnose'?11:6);
+  let x=left+span*u + Math.sin(TAU*u*(1.5+f.fold*.7)+phase*.75+offset)*f.fold*14*edge;
+  let y=33+yshift+
+      Math.sin(TAU*u*(1.05+f.fold*.62)+phase*.45+offset)*amp+
+      Math.sin(cyc*1.25-phase*.38+offset)*f.waves*5 +
+      (bassWave*.38+melodyWave+noteLift)*edge;
+  const swirl=f.swirl*10*Math.sin(u*TAU*2.0+phase*.72+offset);
+  y+=swirl*edge;
+  x+= Math.sin(TAU*u*2.5-phase*.45+offset)*f.swirl*5*edge;
+  if(scene==='hypnose'){
+    const a=(u-.5)*PI*.38 + phase*.055;
+    const ox=x-64,oy=y-32;
+    x=64+ox*Math.cos(a)-oy*Math.sin(a);
+    y=32+ox*Math.sin(a)*.60+oy*Math.cos(a);
+  }else if(scene==='acid'){
+    y+=Math.sin((u*9.0+phase*.12)*TAU)*3.8*edge;
+    x+=Math.sin((u*2.7-phase*.075)*TAU)*5.0*edge;
+  }else if(scene==='hard'){
+    const stair=Math.floor(u*15)/15;
+    y+=Math.sin(stair*TAU*3.0+phase*.8)*3.4*edge;
+  }else if(scene==='silk'){
+    x+=Math.sin(u*TAU*.5+t*.32)*3*edge;
+    y+=u*7 + Math.sin(t*.42+index)*2;
+  }
+  let r=(4.1+8.3*f.width)*(0.70+0.38*Math.sin(u*TAU*1.6+phase*.26+offset))*(.66+.34*Math.sin(PI*u));
+  r*=scale*(0.88+0.12*Math.sin(t*.35+index));
+  r*=1+Math.min(.15,motion.kick*.29)*(1-0.3*Math.abs(2*u-1));
+  // pressure ripples make the silhouette breathe without turning it into a ball
+  r*=1 + f.breath*.16*Math.sin(t*(1.6+f.flow*1.7)+index*.8+u*5);
+  r=Math.max(1.2,r*energy);
+  p.push({x,y,r,u});
+ }
+ return p;
+}
+function drawTube(c,p,start,end,shift=0,mul=1,color='#fff'){
+ const a=Math.max(0,Math.floor((p.length-1)*start)),b=Math.min(p.length-1,Math.ceil((p.length-1)*end));
+ if(b-a<2)return;
+ const up=[],down=[];
+ for(let i=a;i<=b;i++){
+  const prevP=p[Math.max(0,i-1)],nextP=p[Math.min(p.length-1,i+1)];
+  const dx=nextP.x-prevP.x,dy=nextP.y-prevP.y, inv=1/Math.max(.001,Math.hypot(dx,dy)),nx=-dy*inv,ny=dx*inv;
+  const r=p[i].r,rad=r*mul,ox=p[i].x+nx*r*shift,oy=p[i].y+ny*r*shift;
+  up.push([ox+nx*rad,oy+ny*rad]);down.push([ox-nx*rad,oy-ny*rad]);
+ }
+ c.fillStyle=color;c.beginPath();c.moveTo(...up[0]);for(let i=1;i<up.length;i++)c.lineTo(...up[i]);for(let i=down.length-1;i>=0;i--)c.lineTo(...down[i]);c.closePath();c.fill();
+}
+function drawDrip(c,p,u,time,f,index,energy){
+ const i=Math.round(u*(p.length-1)),a=p[i];if(!a)return;
+ let length=(7+f.drips*29)*(0.65+.35*hash(index*9+u*14))*(.75+.25*Math.sin(time*(.34+f.flow*.9)+index));
+ const w=(.7+1.7*f.drips)*energy;
+ const swing=Math.sin(time*(.30+f.flow*.55)+u*17+index)*f.waves*5;
+ const startY=a.y+a.r*.53;
+ const tipY=startY+length;
+ c.fillStyle='#fff';c.beginPath();c.moveTo(a.x-w*1.5,startY-2);
+ c.bezierCurveTo(a.x-w*1.2,startY+length*.31,a.x+swing-w*.5,startY+length*.62,a.x+swing-w*.35,tipY-2);
+ c.quadraticCurveTo(a.x+swing+w*.9,tipY+2,a.x+swing+w*.8,tipY-1);
+ c.bezierCurveTo(a.x+swing+w*.2,startY+length*.67,a.x+w,startY+length*.32,a.x+w*1.3,startY-2);
+ c.closePath();c.fill();
+ if(f.carve>.38&&length>10){c.strokeStyle='#000';c.lineWidth=1;c.beginPath();c.moveTo(a.x-.05,startY+5);c.quadraticCurveTo(a.x+swing*.2,startY+length*.58,a.x+swing-.5,tipY-2);c.stroke();}
+}
+function renderMatter(f,time){
+ ac.clearRect(0,0,W,H);ac.fillStyle='#000';ac.fillRect(0,0,W,H);
+ const pulse=1+f.breath*.10*Math.sin(time*(1.4+f.flow*.75)) + motion.kick*.16;
+ const energy=clamp((f.energy*.42+.64)*pulse,.24,1.25);
+ const count=scene==='silk'?1:scene==='hypnose'?3:scene==='hard'?2:1+(f.strands>.20?1:0)+(f.strands>.79?1:0);
+ for(let i=count-1;i>=0;i--){
+   let path=buildRibbon(f,time,i,energy*(i?0.72+.15*f.strands:1));
+   drawTube(ac,path,.015,.985,0,1,'#fff');
+   // Deep, travelling black river gives the metal a folded reflective surface.
+   if(f.cut>.02)drawTube(ac,path,.10,.96,.23+.13*Math.sin(time*.4+i),(.20+.56*f.cut), '#000');
+   // Secondary smaller black slots: creates long intertwined negative-space lobes.
+   if(f.carve>.02)drawTube(ac,path,.06,.57,-.38,.10+.31*f.carve,'#000');
+   if(f.rims>.03)drawTube(ac,path,.07,.90,-.74,.015+.085*f.rims,'#fff');
+   // Specular glints live INSIDE the black river, not loose speckle on screen.
+   if(f.shine>.02){
+    const a=(.16+.07*Math.sin(time*.27+i));
+    drawTube(ac,path,a,.38+a*.12,.38,.02+.15*f.shine,'#fff');
+    drawTube(ac,path,.56,.84,-.22,.017+.11*f.shine,'#fff');
+   }
+   if(f.drips>.03){
+    for(let k=0;k<3;k++){
+      let u=.18+k*.31+i*.05;
+      if(f.drips>.48||k===1||scene==='silk')drawDrip(ac,path,u,time,{...f,drips:clamp(f.drips*(scene==='silk'?1.35:1),0,1)},i*7+k,energy);
+    }
+   }
+ }
+ // Optional satellite echo created from the same flowing geometry.
+ if(f.echo>.01){
+  let epath=buildRibbon({...f,fold:f.fold*.8,width:f.width*.65},time-.55*f.echo,2,energy*f.echo*.64);
+  drawTube(ac,epath,.14,.84,0,.36,'#fff');
+  if(f.carve>.1)drawTube(ac,epath,.23,.73,.16,.12,'#000');
+ }
+ // White drifting glints following moving chrome, never a permanent starfield.
+ const speckles=Math.floor(f.shine*5);
+ ac.fillStyle='#fff';for(let i=0;i<speckles;i++){
+  const rx=Math.round(64+53*Math.sin(time*.21+i*1.67));
+  const ry=Math.round(32+25*Math.cos(time*.33+i*1.16));
+  ac.fillRect(rx,ry,1,1);
+ }
+}
+function postProcess(f,time){
+ const src=ac.getImageData(0,0,W,H).data, dest=out.data;
+ const tick=Math.floor(time*25),angle=time*(.05+.24*f.orbit);
+ const dx=Math.sin(angle)*f.orbit*11,dy=Math.cos(angle*.72)*f.orbit*6;
+ const shx=(hash(tick*3)-.5)*f.shake*9*f.impact,shy=(hash(tick*7)-.5)*f.shake*5*f.impact;
+ const bar1=Math.floor(hash(Math.floor(time*12))*64),bar2=Math.floor(hash(Math.floor(time*7)+89)*64);
+ const tearX=Math.floor(64+Math.sin(time*.8)*17);
+ const fade=clamp(f.energy*1.5,.1,1.0);
+ const newPrev=new Uint8Array(W*H);
+ const lit=(x,y)=>{let xx=Math.round(x),yy=Math.round(y);return xx>=0&&xx<W&&yy>=0&&yy<H?src[(yy*W+xx)*4]>130:0;};
+ for(let y=0;y<H;y++){
+  const cut1=f.glitch>.04&&Math.abs(y-bar1)<1+f.glitch*4;
+  const cut2=f.glitch>.30&&Math.abs(y-bar2)<1+f.glitch*2.5;
+  const glitchOffset=cut1?(hash(Math.floor(time*18)+y*13)-.5)*38*f.glitch:cut2?((hash(y*11+tick)-.5)*22*f.glitch):0;
+  for(let x=0;x<W;x++){
+   const idx=y*W+x,i=idx*4;
+   let sx=x-dx-shx-glitchOffset,sy=y-dy-shy;
+   // Same flowing matter, compressed/expanded to the kick; no decorative overlay.
+   const kickScale=1+motion.kick*.24;
+   sx=64+(sx-64)/kickScale;
+   sy=32+(sy-32)/(1+motion.kick*.085);
+   sy-=motion.bass*2.8*Math.sin(x*.06-time*1.7);
+   sx+=motion.melody*3.2*Math.sin(y*.18-time*2.8+motion.pitch*4);
+   if(motion.perc>.01&&Math.abs(y-(22+Math.floor(hash(tick*.3)*27)))<1+motion.perc*2.6){
+     sx+=(hash(Math.floor(y*.7)+tick*.08)-.5)*motion.perc*18;
+   }
+   // melt deforms only source geometry; never adds static digital noise.
+   sx-=f.melt*3*Math.sin(y*.23+time*(1+f.flow*.4));
+   sy+=f.melt*5*Math.sin(x*.14+time*.8);
+   if(f.swirl>.20){const r=Math.hypot(x-64,y-32),a=f.swirl*Math.sin(r*.13-time*.55);sx+=Math.sin(a)*f.swirl*2;sy+=Math.cos(a)*f.swirl*1.5;}
+   let val=lit(sx,sy);
+   if(val&&f.tear>.04&&Math.abs(x-tearX-y*.27)<1+f.tear*3)val=0;
+   if(val&&motion.perc>.09&&Math.abs(y-(10+Math.floor(hash(tick*.13)*43)))<motion.perc*1.6)val=0;
+   if(val&&f.fracture>.03){let w=Math.abs(x-(24+y*1.4+time*4%60));if(w<.25+f.fracture*2.5)val=0;}
+   if(val&&f.glitch>.30&&hash(Math.floor(x/7)+y*13+tick*7)<f.glitch*.008)val=0;
+   // trails cache only isolated highlights. Black background remains dominant.
+   if(!val&&f.trail>.03&&prev[idx]&&hash(idx*.17+tick*.7)<f.trail*.26)val=1;
+   if(val&&fade<1&&hash(idx*.47+tick*.1)>fade)val=0;
+   newPrev[idx]=val?1:0;
+   dest[i]=dest[i+1]=dest[i+2]=val?255:0;dest[i+3]=255;
+  }
+ }
+ prev=newPrev;
+ // fragments emerge from bright source contours only
+ if(f.sparks>.01){
+  const num=Math.floor(f.sparks*170*(.4+f.impact*.6));
+  let count=0;
+  for(let j=0;j<num;j++){
+   const x=Math.floor(hash(j*19.4+tick*.32)*W),y=Math.floor(hash(j*71.3+tick*.23)*H);
+   if(src[(y*W+x)*4]>127){
+    let xx=Math.round(x+(hash(j*17+tick*.8)-.5)*f.sparks*38),yy=Math.round(y+(hash(j*31+tick*.6)-.5)*f.sparks*26);
+    if(xx>=0&&xx<W&&yy>=0&&yy<H){const q=(yy*W+xx)*4;dest[q]=dest[q+1]=dest[q+2]=255;count++;}
+   }
+  }
+ }
+ ctx.putImageData(out,0,0);
+}
+function draw(dt){
+ if(mode==='stop'){clearScreen();return;}
+ const active=activeEvents();
+ updateMotion(active,dt||.016);
+ if(mode!=='atelier'&&!active.length){prev.fill(0);clearScreen();return;}
+ const f=mixFx(active);
+ renderMatter(f,clock);postProcess(f,clock);
+ $('renderState').textContent=mode==='atelier'?'ATELIER · PISTE '+String(selected+1).padStart(2,'0'):
+ 'LIVE · '+active.length+' NOTES · KICK '+Math.round(motion.kick*100)+' / MÉLO '+Math.round(motion.melody*100);
+}
+function demoPitch(i,st){
+ if(tracks[i].role==='melody')return MELODY_NOTES[(st+i*2)%16]+(i===10?12:0);
+ if(tracks[i].role==='bass')return BASS_NOTES[st];
+ if(tracks[i].role==='pad')return [48,55,60,55][Math.floor(st/4)%4];
+ if(tracks[i].role==='kick')return 36;
+ if(tracks[i].role==='perc')return i===1?38:i===2?42:i===3?46:40+i%8;
+ return 55+i%12;
+}
+function demoVelocity(i,st){
+ if(tracks[i].role==='kick')return st%8===0?1.0:.72;
+ if(tracks[i].role==='perc')return st%4===0?.62:.40;
+ if(tracks[i].role==='melody')return st%4===0?.86:.66;
+ return .61;
+}
+function runDemoStep(st){
+ for(let i=0;i<16;i++)if(tracks[i].steps[st]){
+  const note=demoPitch(i,st),vel=demoVelocity(i,st);
+  hit(i,vel,note);
+  if(mode==='demo')playDemoNote(tracks[i].role,note,vel);
+ }
+}
+function animate(t){
+ if(!lastTime)lastTime=t;
+ let dt=clamp((t-lastTime)/1000,0,.07);lastTime=t;clock+=dt;
+ if(mode==='demo'||mode==='demoSilent'){
+  const bpm=clamp(Number($('bpm').value)||125,40,250),stepLen=60/bpm/4;
+  if(!nextStep)nextStep=clock;
+  let guard=0;
+  while(clock>=nextStep&&guard++<8){
+   runDemoStep(step);
+   step=(step+1)%16;
+   nextStep+=stepLen;renderSteps();
+  }
+  $('beat').textContent=bpm+' BPM · '+String((step+15)%16+1).padStart(2,'0')+'/16';
+ }
+ draw(dt);requestAnimationFrame(animate);
+}
+async function ensureAudio(){
+ try{
+  if(!audioCtx){
+   const AC=window.AudioContext||window.webkitAudioContext;
+   if(!AC)throw new Error('Web Audio absent de ce navigateur');
+   audioCtx=new AC(); audioMaster=audioCtx.createGain(); audioMaster.gain.value=.17;
+   audioMaster.connect(audioCtx.destination);
+  }
+  if(audioCtx.state==='suspended')await audioCtx.resume();
+  if(audioCtx.state!=='running')throw new Error('le navigateur n’a pas activé la sortie audio');
+  return true;
+ }catch(e){message('Son indisponible : '+e.message+' — démo visuelle lancée.');return false;}
+}
+function playDemoNote(role,note,vel){
+ if(!audioCtx||!audioMaster)return;
+ const now=audioCtx.currentTime;
+ const voices=role==='perc'?1:role==='kick'?1:role==='fx'?0:1;
+ if(!voices)return;
+ const osc=audioCtx.createOscillator(),gain=audioCtx.createGain(),cut=audioCtx.createBiquadFilter();
+ let dur=.22,level=.11,frequency=440*Math.pow(2,(note-69)/12);
+ if(role==='kick'){
+  osc.type='sine';frequency=145;dur=.26;level=.34;
+  osc.frequency.setValueAtTime(150,now);osc.frequency.exponentialRampToValueAtTime(43,now+.17);
+ }else if(role==='perc'){
+  osc.type='triangle';frequency=(note===38?180:note===42?600:420);
+  dur=note===38?.16:.065;level=note===38?.12:.055;
+ }else if(role==='bass'){
+  osc.type='triangle';level=.18;dur=.27;
+ }else if(role==='melody'){
+  osc.type=scene==='hard'?'sawtooth':'sine';level=.09;dur=.23;
+ }else if(role==='pad'){
+  osc.type='sine';level=.055;dur=.65;
+ }
+ cut.type='lowpass';cut.frequency.value=role==='melody'?1200:role==='kick'?300:1700;
+ gain.gain.setValueAtTime(.0001,now);
+ gain.gain.linearRampToValueAtTime(Math.max(.001,level*vel),now+.012);
+ gain.gain.exponentialRampToValueAtTime(.0001,now+dur);
+ if(role!=='kick')osc.frequency.setValueAtTime(frequency,now);
+ osc.connect(cut);cut.connect(gain);gain.connect(audioMaster);
+ osc.start(now);osc.stop(now+dur+.01);
+}
+
+$('atelier').onclick=()=>setMode('atelier');
+$('demo').onclick=async()=>{const withSound=await ensureAudio();setMode(withSound?'demo':'demoSilent');message(withSound?'Démo sonore active : notes et visuels synchronisés.':'Démo visuelle active (audio bloqué par le navigateur).');};
+$('demoSilent').onclick=()=>setMode('demoSilent');
+$('stop').onclick=()=>{setMode('stop');message('Arrêt : image noire. Les oscillateurs en cours se terminent naturellement.');};
+for(const key of ['kick','melody','perc']){
+ $(key+'Sense').addEventListener('input',()=>{
+  globalGains[key]=Number($(key+'Sense').value)/100;
+  $(key+'SenseValue').textContent=$(key+'Sense').value;
+ });
+}
+$('sceneSelect').onchange=()=>{scene=$('sceneSelect').value;message('Scène : '+scene.toUpperCase()+' (24 réglages par piste conservés).');};
+$('role').onchange=()=>{tracks[selected].role=$('role').value;message('Piste '+(selected+1)+' : '+ROLE_NAMES[tracks[selected].role]);};
+$('trackGain').oninput=()=>{tracks[selected].gain=Number($('trackGain').value);$('trackGainValue').textContent=tracks[selected].gain;};
+$('hit').onclick=()=>{if(mode==='stop')setMode('midi');hit(selected,1.2,tracks[selected].role==='bass'?36:tracks[selected].role==='kick'?36:60);message('Piste '+(selected+1)+' déclenchée : rôle '+tracks[selected].role+'.');};
+$('reset').onclick=()=>{tracks[selected]=makeTrack(selected,PRESETS[presetName],scene);renderControls();message('Réglages de la piste restaurés.');};
+$('compare').onclick=()=>{bypass=!bypass;$('compare').textContent='A/B : '+lastParam+(bypass?' SANS':' ACTIF');};
+$('save').onclick=()=>{const data={format:'mercury-v30-groove',version:5,bpm:Number($('bpm').value),scene,globalGains,
+ tracks:tracks.map(t=>({fx:{...t.fx},steps:[...t.steps],role:t.role,gain:t.gain}))};
+ const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='mercury-v30-groove-preset.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),3000);message('Les 16 pistes ont été exportées.');};
+$('load').onclick=()=>$('json').click();
+$('json').onchange=e=>{const file=e.target.files?.[0];if(!file)return;file.text().then(raw=>{try{
+ const data=JSON.parse(raw);if(!Array.isArray(data.tracks)||data.tracks.length!==16)throw Error('16 pistes requises');
+ data.tracks.forEach((t,i)=>{for(let id of IDS){let value=Number(t.fx?.[id]);if(Number.isFinite(value))tracks[i].fx[id]=clamp(value,0,100);}if(Array.isArray(t.steps)&&t.steps.length===16)tracks[i].steps=t.steps.map(Boolean);
+  if(t.role&&ROLE_NAMES[t.role])tracks[i].role=t.role;
+  if(Number.isFinite(Number(t.gain)))tracks[i].gain=clamp(Number(t.gain),0,100);});
+ if(Number.isFinite(data.bpm))$('bpm').value=clamp(data.bpm,40,250);
+ if(Object.values(SCENES).includes(data.scene))scene=data.scene;
+ $('sceneSelect').value=scene;
+ for(const key of ['kick','melody','perc'])if(Number.isFinite(data.globalGains?.[key])){
+  globalGains[key]=clamp(data.globalGains[key]);
+  $(key+'Sense').value=Math.round(globalGains[key]*100);
+  $(key+'SenseValue').textContent=$(key+'Sense').value;
+ }
+ renderControls();message('Preset importé.');
+ }catch(e){message('Import impossible : '+e.message)}})};
+$('midi').onclick=async()=>{try{
+ if(!navigator.requestMIDIAccess)throw Error('Navigateur sans Web MIDI');
+ midiAccess=await navigator.requestMIDIAccess();let count=0;
+ for(const input of midiAccess.inputs.values()){
+  count++;
+  input.onmidimessage=event=>{
+    const [status,n,v]=event.data||[];if(status==null)return;
+    const typ=status&0xF0, ch=status&15;
+    if(status===0xF8){
+      if(!midiClockStart)midiClockStart=event.timeStamp;
+      midiClockTicks++;
+      if(midiClockTicks>=48){
+       const diff=event.timeStamp-midiClockStart;
+       if(diff>30){const bpm=120000/diff;if(bpm>=40&&bpm<=250)$('bpm').value=Math.round(bpm);}
+       midiClockTicks=0;midiClockStart=event.timeStamp;
+      }
+    }
+    if(typ===0x90 && v>0){if(mode!=='midi')setMode('midi');hit(ch,v/127,n);}
+    if(typ===0x80 || (typ===0x90&&v===0))release(ch,n);
+    if(typ===0xB0&&n===74)midiCutoff=v/127;
+  };
+ }
+ setMode('midi');message(count?('MIDI prêt : '+count+' entrée(s) · notes + vélocité + horloge.'):'MIDI activé, mais aucune entrée MIDI détectée. Branche ton Electribe et réessaie.');
+ }catch(e){message('MIDI : '+e.message)}
+};
+
+function showRuntimeError(err){
+ const details=String(err?.message||err||'Erreur inconnue');
+ const statusEl=document.getElementById('status');
+ if(statusEl){statusEl.style.color='#ffb5b5';statusEl.textContent='Erreur : '+details.slice(0,220);}
+ const hint=document.getElementById('startupHint');
+ if(hint)hint.textContent='ERREUR : '+details+' — vérifie que le fichier est ouvert dans un véritable navigateur (Edge ou Chrome), et non dans un aperçu de fichier.';
+}
+window.addEventListener('error',e=>showRuntimeError(e.error||e.message));
+window.addEventListener('unhandledrejection',e=>showRuntimeError(e.reason));
+window.MercuryLab={getState:()=>({mode,selected,presetName,scene,globalGains,motion:{...motion},tracks}),setParam:(i,id,v)=>{if(i>=0&&i<16&&IDS.includes(id))tracks[i].fx[id]=clamp(+v,0,100);renderSliders();},setMode,trigger:(i,vel,note)=>hit(i,vel||1,note||60),renderNow:()=>draw(.016),audioState:()=>audioCtx?.state||'non créé',playStep:(n)=>runDemoStep(n),getBitmap:()=>Array.from(ctx.getImageData(0,0,W,H).data.filter((_,i)=>i%4===0)),applyPreset};
+applyPreset('V30 FLOW');setMode('stop');clearScreen();message('PRÊT — ouvre ATELIER ou DÉMO + SON.');requestAnimationFrame(animate);
+</script>
+</body></html>
