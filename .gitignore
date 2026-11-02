@@ -1,0 +1,7 @@
+/build/
+/work/
+/rapport_audit.json
+__pycache__/
+*.pyc
+core
+qemu_*.core

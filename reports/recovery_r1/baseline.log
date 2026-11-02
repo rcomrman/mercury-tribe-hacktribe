@@ -1,0 +1,16 @@
+V29.1 PASS: armed-off by default; explicit proof; LCD C callback -> original model; dynamic visual; 12 global controls, no per-track page; disarm OK
+V28 PASS: 12 global controls, no per-track page, original track values preserved
+V29.4 PASS: worker timeout + corruption canaries -> Korg LCD, outer OFF, one-shot restore, safe key fallback. HOST ONLY.
+V29.4 PASS: >250ms worker gap disables gate and restores all 1024 Korg LCD bytes exactly once (simulated)
+MD39 PASS: 10 colliding keymaps rejected, unique map accepted; HOST ONLY.
+MD40 PASS: rearm blocked while active / LCD restore pending / Mercury key held; HOST ONLY.
+MD41 PASS: eight copied pages + later callback required; partial/no-copy/stale shadow blocks rearm (HOST ONLY)
+MD42 KNOWN GAP REPRODUCED: 8 failed modeled sends; MD41 accepted buffer restoration and rearm without SPI ack (HOST ONLY)
+MD44 PASS: declined native requests block premature Mercury reentry and preserve key ownership (HOST ONLY).
+ARM callback layout and unconditional Korg tail target checked
+V29.2: buttons + LCD comparator + fallback + ARM independent build PASS; NON FLASHABLE
+V29.3 PASS: 14/14 independent static corruption tests caught (in RAM only)
+V29.4: read-only static checks + ARM build + native-restore tests PASS; NO HARDWARE VALIDATION
+user_custom (2).VSB 28 / 28 81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03
+user_backup.VSB 28 / 28 06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052
+MERGED V29.4: HOST + static only. NOT FLASHABLE.
