@@ -1,0 +1,181 @@
+{
+  "method": "STATIC disassembly checks; no emulation, no runtime ABI, no device validation",
+  "elf": "build/arm/md31_RESEARCH_ONLY.elf",
+  "passed": 30,
+  "total": 30,
+  "tests": [
+    {
+      "check": "symbol md30_callback_bridge",
+      "pass": true,
+      "detail": "present"
+    },
+    {
+      "check": "md30_callback_bridge instruction count",
+      "pass": true,
+      "detail": "found=5, expected>=5"
+    },
+    {
+      "check": "symbol md20_key_veneer",
+      "pass": true,
+      "detail": "present"
+    },
+    {
+      "check": "md20_key_veneer instruction count",
+      "pass": true,
+      "detail": "found=8, expected>=8"
+    },
+    {
+      "check": "symbol md31_compare_veneer",
+      "pass": true,
+      "detail": "present"
+    },
+    {
+      "check": "md31_compare_veneer instruction count",
+      "pass": true,
+      "detail": "found=3, expected>=3"
+    },
+    {
+      "check": "LCD saves r0-r3,r12,lr (24 bytes)",
+      "pass": true,
+      "detail": "got=0xE92D500F; expected=0xE92D500F"
+    },
+    {
+      "check": "md30_callback_bridge BL md30_callback_visit",
+      "pass": true,
+      "detail": "encoded target=0xC01D2D4C; symbol=0xC01D2D4C"
+    },
+    {
+      "check": "LCD restores original arguments / LR",
+      "pass": true,
+      "detail": "got=0xE8BD500F; expected=0xE8BD500F"
+    },
+    {
+      "check": "LCD ARM-state tail branch through PC literal",
+      "pass": true,
+      "detail": "got=0xE51FF004; expected=0xE51FF004"
+    },
+    {
+      "check": "LCD original callback address",
+      "pass": true,
+      "detail": "got=0xC002A71C; expected=0xC002A71C"
+    },
+    {
+      "check": "KEY saves r0-r3,r12,lr (24 bytes)",
+      "pass": true,
+      "detail": "got=0xE92D500F; expected=0xE92D500F"
+    },
+    {
+      "check": "md20_key_veneer BL md23_route_key",
+      "pass": true,
+      "detail": "encoded target=0xC01D2324; symbol=0xC01D2324"
+    },
+    {
+      "check": "KEY tests route result",
+      "pass": true,
+      "detail": "got=0xE3500000; expected=0xE3500000"
+    },
+    {
+      "check": "KEY restores input arguments / LR",
+      "pass": true,
+      "detail": "got=0xE8BD500F; expected=0xE8BD500F"
+    },
+    {
+      "check": "KEY conditional branch after compare",
+      "pass": true,
+      "detail": "opcode=0x1A000000"
+    },
+    {
+      "check": "KEY original publisher tail branch",
+      "pass": true,
+      "detail": "got=0xE59FF000; expected=0xE59FF000"
+    },
+    {
+      "check": "KEY consumed path BX LR",
+      "pass": true,
+      "detail": "got=0xE12FFF1E; expected=0xE12FFF1E"
+    },
+    {
+      "check": "KEY original publisher address",
+      "pass": true,
+      "detail": "got=0xC00839F0; expected=0xC00839F0"
+    },
+    {
+      "check": "COMPARE saves r4,lr (8 bytes)",
+      "pass": true,
+      "detail": "got=0xE92D4010; expected=0xE92D4010"
+    },
+    {
+      "check": "md31_compare_veneer BL md31_compare_visit",
+      "pass": true,
+      "detail": "encoded target=0xC01D2F9C; symbol=0xC01D2F9C"
+    },
+    {
+      "check": "COMPARE restores r4 and returns via PC",
+      "pass": true,
+      "detail": "got=0xE8BD8010; expected=0xE8BD8010"
+    },
+    {
+      "check": "md30_callback_bridge: 8-byte entry SP stays aligned at BL",
+      "pass": true,
+      "detail": "stack delta=24 bytes; assumes entry SP 8-byte aligned"
+    },
+    {
+      "check": "md20_key_veneer: 8-byte entry SP stays aligned at BL",
+      "pass": true,
+      "detail": "stack delta=24 bytes; assumes entry SP 8-byte aligned"
+    },
+    {
+      "check": "md31_compare_veneer: 8-byte entry SP stays aligned at BL",
+      "pass": true,
+      "detail": "stack delta=8 bytes; assumes entry SP 8-byte aligned"
+    },
+    {
+      "check": "md30_callback_bridge ARM 4-byte address alignment",
+      "pass": true,
+      "detail": "0xC01E0000"
+    },
+    {
+      "check": "md20_key_veneer ARM 4-byte address alignment",
+      "pass": true,
+      "detail": "0xC01D0000"
+    },
+    {
+      "check": "md31_compare_veneer ARM 4-byte address alignment",
+      "pass": true,
+      "detail": "0xC01D649C"
+    },
+    {
+      "check": "user_custom (2).VSB expected VSB length",
+      "pass": true,
+      "detail": "2097408"
+    },
+    {
+      "check": "user_backup.VSB expected VSB length",
+      "pass": true,
+      "detail": "2097408"
+    }
+  ],
+  "vsb": {
+    "files": [
+      {
+        "name": "user_custom (2).VSB",
+        "bytes": 2097408,
+        "sha256": "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03"
+      },
+      {
+        "name": "user_backup.VSB",
+        "bytes": 2097408,
+        "sha256": "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+      }
+    ],
+    "headers_equal": true,
+    "differing_bytes": 142,
+    "expected_file_bytes": 2097408
+  },
+  "limitations": [
+    "Entry stack state and IRQ/task context unknown",
+    "Preservation of callee-saved registers by compiled C not dynamically validated",
+    "ARM/Thumb interworking and real Korg call-site ABI not exercised",
+    "No proof of free RAM, SPI completion, or debrick recovery"
+  ]
+}

@@ -2,13 +2,13 @@
 """Read-only negative tests, mutating copies in MEMORY, not VSB files."""
 import importlib.util
 from pathlib import Path
-import subprocess,struct
+import subprocess,struct,sys
 root=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('md31_audit',root/'tools/md31_audit_lcd_path_readonly.py')
 a=importlib.util.module_from_spec(spec);spec.loader.exec_module(a)
 elf=root/'build/arm/md31_RESEARCH_ONLY.elf'
 sym=a.elf_symbols(elf)
-p=Path('/mnt/data/firmware_input/user_custom.VSB')
+p=Path(sys.argv[1]) if len(sys.argv)>1 else Path('/mnt/data/firmware_input/user_custom.VSB')
 if not p.exists():
  print('SKIP readonly supplied firmware not mounted')
  raise SystemExit(0)
