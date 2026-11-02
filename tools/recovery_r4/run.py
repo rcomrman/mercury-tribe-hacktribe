@@ -31,9 +31,8 @@ for vi,(p,h) in enumerate(zip(sys.argv[1:],hashes)):
   if case in (0,1,2,3,5,6,7,11,12,13,14):assert '0xc0083fe8:' in text
   if case in (0,1,5,6,7,12):assert '0xc006e8bc:' in text
   if case in (6,7):assert '0xc006bc88:' in text and '0xc0083d28:' in text
-  extra=0
-  row={'vsb':vi,'case':case,'exit':rc,'extra_pixels':extra,'events':events,'snapshots':{str(k):hashlib.sha256(v).hexdigest() for k,v in shots.items()}}
-  allresults.append(row);print(vi,case,rc,'extra pixels',extra,flush=True)
+  row={'vsb':vi,'case':case,'exit':rc,'events':events,'snapshots':{str(k):hashlib.sha256(v).hexdigest() for k,v in shots.items()}}
+  allresults.append(row);print(vi,case,rc,'validated',flush=True)
   if vi==0:
    ims=[]
    for stage in [900,0,1,2]:

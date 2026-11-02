@@ -3,7 +3,6 @@
     "vsb": 0,
     "case": 0,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -87,7 +86,6 @@
     "vsb": 0,
     "case": 1,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -301,7 +299,6 @@
     "vsb": 0,
     "case": 2,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -385,7 +382,6 @@
     "vsb": 0,
     "case": 3,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -469,7 +465,6 @@
     "vsb": 0,
     "case": 4,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -553,7 +548,6 @@
     "vsb": 0,
     "case": 5,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -637,7 +631,6 @@
     "vsb": 0,
     "case": 6,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -739,7 +732,6 @@
     "vsb": 0,
     "case": 7,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -971,7 +963,6 @@
     "vsb": 0,
     "case": 8,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -1055,7 +1046,6 @@
     "vsb": 0,
     "case": 9,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -1139,7 +1129,6 @@
     "vsb": 0,
     "case": 10,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -1223,7 +1212,6 @@
     "vsb": 0,
     "case": 11,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -1307,7 +1295,6 @@
     "vsb": 0,
     "case": 12,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -1410,7 +1397,6 @@
     "vsb": 0,
     "case": 13,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -1457,7 +1443,6 @@
     "vsb": 0,
     "case": 14,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -1504,7 +1489,6 @@
     "vsb": 0,
     "case": 15,
     "exit": -11,
-    "extra_pixels": 0,
     "events": [],
     "snapshots": {}
   },
@@ -1512,7 +1496,6 @@
     "vsb": 1,
     "case": 0,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -1596,7 +1579,6 @@
     "vsb": 1,
     "case": 1,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -1810,7 +1792,6 @@
     "vsb": 1,
     "case": 2,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -1894,7 +1875,6 @@
     "vsb": 1,
     "case": 3,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -1978,7 +1958,6 @@
     "vsb": 1,
     "case": 4,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -2062,7 +2041,6 @@
     "vsb": 1,
     "case": 5,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -2146,7 +2124,6 @@
     "vsb": 1,
     "case": 6,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -2248,7 +2225,6 @@
     "vsb": 1,
     "case": 7,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -2480,7 +2456,6 @@
     "vsb": 1,
     "case": 8,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -2564,7 +2539,6 @@
     "vsb": 1,
     "case": 9,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -2648,7 +2622,6 @@
     "vsb": 1,
     "case": 10,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -2732,7 +2705,6 @@
     "vsb": 1,
     "case": 11,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -2816,7 +2788,6 @@
     "vsb": 1,
     "case": 12,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -2919,7 +2890,6 @@
     "vsb": 1,
     "case": 13,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -2966,7 +2936,6 @@
     "vsb": 1,
     "case": 14,
     "exit": 0,
-    "extra_pixels": 0,
     "events": [
       [
         1379030345,
@@ -3013,7 +2982,6 @@
     "vsb": 1,
     "case": 15,
     "exit": -11,
-    "extra_pixels": 0,
     "events": [],
     "snapshots": {}
   }
