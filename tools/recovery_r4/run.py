@@ -3,6 +3,7 @@
 import gzip,hashlib,json,os,resource,struct,subprocess,sys
 from pathlib import Path
 from PIL import Image,ImageDraw
+if len(sys.argv)!=3:raise SystemExit('usage: run.py custom.VSB backup.VSB')
 root=Path(__file__).resolve().parents[2];os.chdir(root);resource.setrlimit(resource.RLIMIT_CORE,(0,0))
 build=Path('build/recovery_r4');out=Path('reports/recovery_r4');build.mkdir(parents=True,exist_ok=True);out.mkdir(parents=True,exist_ok=True)
 hashes=['81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03','06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052']
