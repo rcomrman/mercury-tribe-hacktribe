@@ -1,0 +1,590 @@
+
+graphics_init
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c003f0d4: e59f3024     	ldr	r3, [pc, #0x24]         @ 0xc003f100 <korg_image+0x3f100>
+c003f0d8: e3a02001     	mov	r2, #1
+c003f0dc: e3a01000     	mov	r1, #0
+c003f0e0: e8830006     	stm	r3, {r1, r2}
+c003f0e4: e3e02000     	mvn	r2, #0
+c003f0e8: e5832010     	str	r2, [r3, #0x10]
+c003f0ec: e3a02080     	mov	r2, #128
+c003f0f0: e5832008     	str	r2, [r3, #0x8]
+c003f0f4: e3a02040     	mov	r2, #64
+c003f0f8: e583200c     	str	r2, [r3, #0xc]
+c003f0fc: eaff59c0     	b	0xc0015804 <korg_image+0x15804> @ imm = #-0x29900
+c003f100: c03487cc     	eorsgt	r8, r4, r12, asr #15
+
+line_clipping
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c003f2b4: e92d4ff0     	push	{r4, r5, r6, r7, r8, r9, r10, r11, lr}
+c003f2b8: e59f4214     	ldr	r4, [pc, #0x214]        @ 0xc003f4d4 <korg_image+0x3f4d4>
+c003f2bc: e590c000     	ldr	r12, [r0]
+c003f2c0: e5920000     	ldr	r0, [r2]
+c003f2c4: e5945008     	ldr	r5, [r4, #0x8]
+c003f2c8: e5912000     	ldr	r2, [r1]
+c003f2cc: e5933000     	ldr	r3, [r3]
+c003f2d0: e594400c     	ldr	r4, [r4, #0xc]
+c003f2d4: e1cccfcc     	bic	r12, r12, r12, asr #31
+c003f2d8: e1c00fc0     	bic	r0, r0, r0, asr #31
+c003f2dc: e15c0005     	cmp	r12, r5
+c003f2e0: a1a0c005     	movge	r12, r5
+c003f2e4: e1500005     	cmp	r0, r5
+c003f2e8: a1a00005     	movge	r0, r5
+c003f2ec: e1c21fc2     	bic	r1, r2, r2, asr #31
+c003f2f0: e1c35fc3     	bic	r5, r3, r3, asr #31
+c003f2f4: e1510004     	cmp	r1, r4
+c003f2f8: a1a01004     	movge	r1, r4
+c003f2fc: e1540005     	cmp	r4, r5
+c003f300: a1a04005     	movge	r4, r5
+c003f304: e150000c     	cmp	r0, r12
+c003f308: e24dd014     	sub	sp, sp, #20
+c003f30c: ba00000d     	blt	0xc003f348 <korg_image+0x3f348> @ imm = #0x34
+
+factory
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c006e664: e350002c     	cmp	r0, #44
+c006e668: e92d4008     	push	{r3, lr}
+c006e66c: ca000004     	bgt	0xc006e684 <korg_image+0x6e684> @ imm = #0x10
+c006e670: e59f2014     	ldr	r2, [pc, #0x14]         @ 0xc006e68c <korg_image+0x6e68c>
+c006e674: e7923100     	ldr	r3, [r2, r0, lsl #2]
+c006e678: e1a00001     	mov	r0, r1
+c006e67c: e12fff33     	blx	r3
+c006e680: e8bd8008     	pop	{r3, pc}
+c006e684: e3a00000     	mov	r0, #0
+c006e688: e8bd8008     	pop	{r3, pc}
+c006e68c: c00f9cd8     	ldrdgt	r9, r10, [pc], -r8
+
+page25_constructor
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c006d518: e92d41ff     	push	{r0, r1, r2, r3, r4, r5, r6, r7, r8, lr}
+c006d51c: e59f30b8     	ldr	r3, [pc, #0xb8]         @ 0xc006d5dc <korg_image+0x6d5dc>
+c006d520: e3a05000     	mov	r5, #0
+c006d524: e1a07000     	mov	r7, r0
+c006d528: e1a04000     	mov	r4, r0
+c006d52c: e5805004     	str	r5, [r0, #0x4]
+c006d530: e5805008     	str	r5, [r0, #0x8]
+c006d534: e580500c     	str	r5, [r0, #0xc]
+c006d538: e5805010     	str	r5, [r0, #0x10]
+c006d53c: e5805014     	str	r5, [r0, #0x14]
+c006d540: e5805018     	str	r5, [r0, #0x18]
+c006d544: e5c0501c     	strb	r5, [r0, #0x1c]
+c006d548: e5c0501d     	strb	r5, [r0, #0x1d]
+c006d54c: e4873010     	str	r3, [r7], #16
+c006d550: e3a00038     	mov	r0, #56
+c006d554: ebfeee1c     	bl	0xc0028dcc <korg_image+0x28dcc> @ imm = #-0x44790
+c006d558: e28d6010     	add	r6, sp, #16
+c006d55c: e1a08000     	mov	r8, r0
+c006d560: eb0077af     	bl	0xc008b424 <korg_image+0x8b424> @ imm = #0x1debc
+c006d564: e5268004     	str	r8, [r6, #-0x4]!
+c006d568: e1a00007     	mov	r0, r7
+c006d56c: e1a01006     	mov	r1, r6
+c006d570: ebffcfe1     	bl	0xc00614fc <korg_image+0x614fc> @ imm = #-0xc07c
+c006d574: e3a0009c     	mov	r0, #156
+c006d578: ebfeee13     	bl	0xc0028dcc <korg_image+0x28dcc> @ imm = #-0x447b4
+c006d57c: e3a03001     	mov	r3, #1
+c006d580: e88d0028     	stm	sp, {r3, r5}
+c006d584: e59f1054     	ldr	r1, [pc, #0x54]         @ 0xc006d5e0 <korg_image+0x6d5e0>
+c006d588: e3a02014     	mov	r2, #20
+c006d58c: e3a03016     	mov	r3, #22
+c006d590: e1a08000     	mov	r8, r0
+c006d594: eb007dce     	bl	0xc008ccd4 <korg_image+0x8ccd4> @ imm = #0x1f738
+c006d598: e1580005     	cmp	r8, r5
+c006d59c: e5848020     	str	r8, [r4, #0x20]
+c006d5a0: e1a00007     	mov	r0, r7
+c006d5a4: 12888010     	addne	r8, r8, #16
+c006d5a8: e1a01006     	mov	r1, r6
+c006d5ac: e58d800c     	str	r8, [sp, #0xc]
+c006d5b0: ebffcfd1     	bl	0xc00614fc <korg_image+0x614fc> @ imm = #-0xc0bc
+c006d5b4: e3a03014     	mov	r3, #20
+c006d5b8: e58d3000     	str	r3, [sp]
+c006d5bc: e5940020     	ldr	r0, [r4, #0x20]
+c006d5c0: e3a01001     	mov	r1, #1
+c006d5c4: e3a02016     	mov	r2, #22
+c006d5c8: e3a0307e     	mov	r3, #126
+c006d5cc: eb007d56     	bl	0xc008cb2c <korg_image+0x8cb2c> @ imm = #0x1f558
+c006d5d0: e1a00004     	mov	r0, r4
+c006d5d4: e28dd010     	add	sp, sp, #16
+c006d5d8: e8bd81f0     	pop	{r4, r5, r6, r7, r8, pc}
+c006d5dc: c00e3e08     	andgt	r3, lr, r8, lsl #28
+c006d5e0: c00a636d     	andgt	r6, r10, sp, ror #6
+c006d5e4: e92d4010     	push	{r4, lr}
+c006d5e8: e3a00024     	mov	r0, #36
+c006d5ec: ebfeedf6     	bl	0xc0028dcc <korg_image+0x28dcc> @ imm = #-0x44828
+c006d5f0: e1a04000     	mov	r4, r0
+c006d5f4: ebffffc7     	bl	0xc006d518 <korg_image+0x6d518> @ imm = #-0xe4
+c006d5f8: e1a00004     	mov	r0, r4
+c006d5fc: e8bd8010     	pop	{r4, pc}
+
+page25_destructors
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c006d464: e59f3014     	ldr	r3, [pc, #0x14]         @ 0xc006d480 <korg_image+0x6d480>
+c006d468: e92d4010     	push	{r4, lr}
+c006d46c: e1a04000     	mov	r4, r0
+c006d470: e5803000     	str	r3, [r0]
+c006d474: ebffcea5     	bl	0xc0060f10 <korg_image+0x60f10> @ imm = #-0xc56c
+c006d478: e1a00004     	mov	r0, r4
+c006d47c: e8bd8010     	pop	{r4, pc}
+c006d480: c00e3e08     	andgt	r3, lr, r8, lsl #28
+c006d484: e92d4010     	push	{r4, lr}
+c006d488: e1a04000     	mov	r4, r0
+c006d48c: ebfffff4     	bl	0xc006d464 <korg_image+0x6d464> @ imm = #-0x30
+c006d490: e1a00004     	mov	r0, r4
+c006d494: ebfeee4e     	bl	0xc0028dd4 <korg_image+0x28dd4> @ imm = #-0x446c8
+c006d498: e1a00004     	mov	r0, r4
+
+vector_grow_append
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c006144c: e92d40f8     	push	{r3, r4, r5, r6, r7, lr}
+c0061450: e8900044     	ldm	r0, {r2, r6}
+c0061454: e0466002     	sub	r6, r6, r2
+c0061458: e1a04000     	mov	r4, r0
+c006145c: e1b06146     	asrs	r6, r6, #2
+c0061460: 11a03006     	movne	r3, r6
+c0061464: 03a03001     	moveq	r3, #1
+c0061468: e0933006     	adds	r3, r3, r6
+c006146c: e1a07001     	mov	r7, r1
+c0061470: e3e06103     	mvn	r6, #-1073741824
+c0061474: 2a000004     	bhs	0xc006148c <korg_image+0x6148c> @ imm = #0x10
+c0061478: e1530006     	cmp	r3, r6
+c006147c: 31a06003     	movlo	r6, r3
+c0061480: e3560000     	cmp	r6, #0
+c0061484: 01a05006     	moveq	r5, r6
+c0061488: 0a000002     	beq	0xc0061498 <korg_image+0x61498> @ imm = #0x8
+c006148c: e1a00106     	lsl	r0, r6, #2
+c0061490: ebff1e4d     	bl	0xc0028dcc <korg_image+0x28dcc> @ imm = #-0x386cc
+c0061494: e1a05000     	mov	r5, r0
+c0061498: e894000c     	ldm	r4, {r2, r3}
+c006149c: e0433002     	sub	r3, r3, r2
+c00614a0: e5972000     	ldr	r2, [r7]
+c00614a4: e1a03143     	asr	r3, r3, #2
+c00614a8: e0851103     	add	r1, r5, r3, lsl #2
+c00614ac: e3510000     	cmp	r1, #0
+c00614b0: 17852103     	strne	r2, [r5, r3, lsl #2]
+c00614b4: e8940082     	ldm	r4, {r1, r7}
+c00614b8: e0617007     	rsb	r7, r1, r7
+c00614bc: e1b07147     	asrs	r7, r7, #2
+c00614c0: e1a07107     	lsl	r7, r7, #2
+c00614c4: 0a000002     	beq	0xc00614d4 <korg_image+0x614d4> @ imm = #0x8
+c00614c8: e1a00005     	mov	r0, r5
+c00614cc: e1a02007     	mov	r2, r7
+c00614d0: ebfea11e     	bl	0xc0009950 <korg_image+0x9950> @ imm = #-0x57b88
+c00614d4: e5940000     	ldr	r0, [r4]
+c00614d8: e0857007     	add	r7, r5, r7
+c00614dc: e3500000     	cmp	r0, #0
+c00614e0: e2877004     	add	r7, r7, #4
+c00614e4: 0a000000     	beq	0xc00614ec <korg_image+0x614ec> @ imm = #0x0
+c00614e8: ebff1e39     	bl	0xc0028dd4 <korg_image+0x28dd4> @ imm = #-0x3871c
+c00614ec: e88400a0     	stm	r4, {r5, r7}
+c00614f0: e0855106     	add	r5, r5, r6, lsl #2
+c00614f4: e5845008     	str	r5, [r4, #0x8]
+c00614f8: e8bd80f8     	pop	{r3, r4, r5, r6, r7, pc}
+c00614fc: e92d4010     	push	{r4, lr}
+c0061500: e9900014     	ldmib	r0, {r2, r4}
+c0061504: e1520004     	cmp	r2, r4
+c0061508: 0a000006     	beq	0xc0061528 <korg_image+0x61528> @ imm = #0x18
+c006150c: e5911000     	ldr	r1, [r1]
+c0061510: e3520000     	cmp	r2, #0
+c0061514: 15821000     	strne	r1, [r2]
+c0061518: e5902004     	ldr	r2, [r0, #0x4]
+c006151c: e2822004     	add	r2, r2, #4
+c0061520: e5802004     	str	r2, [r0, #0x4]
+c0061524: e8bd8010     	pop	{r4, pc}
+c0061528: ebffffc7     	bl	0xc006144c <korg_image+0x6144c> @ imm = #-0xe4
+c006152c: e8bd8010     	pop	{r4, pc}
+
+page_destructor
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c0060f10: e92d40f8     	push	{r3, r4, r5, r6, r7, lr}
+c0060f14: e5d0501c     	ldrb	r5, [r0, #0x1c]
+c0060f18: e59f308c     	ldr	r3, [pc, #0x8c]         @ 0xc0060fac <korg_image+0x60fac>
+c0060f1c: e3550000     	cmp	r5, #0
+c0060f20: 05906014     	ldreq	r6, [r0, #0x14]
+c0060f24: e5803000     	str	r3, [r0]
+c0060f28: 05903010     	ldreq	r3, [r0, #0x10]
+c0060f2c: e1a04000     	mov	r4, r0
+c0060f30: 00636006     	rsbeq	r6, r3, r6
+c0060f34: 01a06146     	asreq	r6, r6, #2
+c0060f38: 0a000011     	beq	0xc0060f84 <korg_image+0x60f84> @ imm = #0x44
+c0060f3c: eafffffe     	b	0xc0060f3c <korg_image+0x60f3c> @ imm = #-0x8
+c0060f40: e5943010     	ldr	r3, [r4, #0x10]
+c0060f44: e1a07105     	lsl	r7, r5, #2
+c0060f48: e7930105     	ldr	r0, [r3, r5, lsl #2]
+c0060f4c: e5903000     	ldr	r3, [r0]
+c0060f50: e5933010     	ldr	r3, [r3, #0x10]
+c0060f54: e12fff33     	blx	r3
+c0060f58: e5943010     	ldr	r3, [r4, #0x10]
+c0060f5c: e7930105     	ldr	r0, [r3, r5, lsl #2]
+c0060f60: e3500000     	cmp	r0, #0
+c0060f64: 0a000002     	beq	0xc0060f74 <korg_image+0x60f74> @ imm = #0x8
+c0060f68: e5903000     	ldr	r3, [r0]
+c0060f6c: e5933004     	ldr	r3, [r3, #0x4]
+c0060f70: e12fff33     	blx	r3
+c0060f74: e5943010     	ldr	r3, [r4, #0x10]
+c0060f78: e3a02000     	mov	r2, #0
+c0060f7c: e2855001     	add	r5, r5, #1
+c0060f80: e7832007     	str	r2, [r3, r7]
+c0060f84: e1550006     	cmp	r5, r6
+c0060f88: baffffec     	blt	0xc0060f40 <korg_image+0x60f40> @ imm = #-0x50
+c0060f8c: e5940010     	ldr	r0, [r4, #0x10]
+c0060f90: e3500000     	cmp	r0, #0
+c0060f94: 0a000000     	beq	0xc0060f9c <korg_image+0x60f9c> @ imm = #0x0
+c0060f98: ebff1f8d     	bl	0xc0028dd4 <korg_image+0x28dd4> @ imm = #-0x381cc
+c0060f9c: e1a00004     	mov	r0, r4
+c0060fa0: ebff82f3     	bl	0xc0041b74 <korg_image+0x41b74> @ imm = #-0x1f434
+c0060fa4: e1a00004     	mov	r0, r4
+c0060fa8: e8bd80f8     	pop	{r3, r4, r5, r6, r7, pc}
+c0060fac: c00e3160     	andgt	r3, lr, r0, ror #2
+c0060fb0: e92d4010     	push	{r4, lr}
+c0060fb4: e1a04000     	mov	r4, r0
+c0060fb8: ebffffd4     	bl	0xc0060f10 <korg_image+0x60f10> @ imm = #-0xb0
+c0060fbc: e1a00004     	mov	r0, r4
+c0060fc0: ebff1f83     	bl	0xc0028dd4 <korg_image+0x28dd4> @ imm = #-0x381f4
+c0060fc4: e1a00004     	mov	r0, r4
+c0060fc8: e8bd8010     	pop	{r4, pc}
+
+observer_destructor
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c0041b74: e92d4038     	push	{r3, r4, r5, lr}
+c0041b78: e59f3040     	ldr	r3, [pc, #0x40]         @ 0xc0041bc0 <korg_image+0x41bc0>
+c0041b7c: e1a04000     	mov	r4, r0
+c0041b80: e3a05000     	mov	r5, #0
+c0041b84: e5803000     	str	r3, [r0]
+c0041b88: e9940009     	ldmib	r4, {r0, r3}
+c0041b8c: e0603003     	rsb	r3, r0, r3
+c0041b90: e1550143     	cmp	r5, r3, asr #2
+c0041b94: 2a000004     	bhs	0xc0041bac <korg_image+0x41bac> @ imm = #0x10
+c0041b98: e7900105     	ldr	r0, [r0, r5, lsl #2]
+c0041b9c: e1a01004     	mov	r1, r4
+c0041ba0: eb00ba8d     	bl	0xc00705dc <korg_image+0x705dc> @ imm = #0x2ea34
+c0041ba4: e2855001     	add	r5, r5, #1
+c0041ba8: eafffff6     	b	0xc0041b88 <korg_image+0x41b88> @ imm = #-0x28
+c0041bac: e3500000     	cmp	r0, #0
+c0041bb0: 0a000000     	beq	0xc0041bb8 <korg_image+0x41bb8> @ imm = #0x0
+c0041bb4: ebff9c86     	bl	0xc0028dd4 <korg_image+0x28dd4> @ imm = #-0x18de8
+c0041bb8: e1a00004     	mov	r0, r4
+c0041bbc: e8bd8038     	pop	{r3, r4, r5, pc}
+c0041bc0: c00c5b50     	andgt	r5, r12, r0, asr r11
+
+original_iteration
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c006f240: e5952014     	ldr	r2, [r5, #0x14]
+c006f244: e5953010     	ldr	r3, [r5, #0x10]
+c006f248: e3a07000     	mov	r7, #0
+c006f24c: e0632002     	rsb	r2, r3, r2
+c006f250: e1a02142     	asr	r2, r2, #2
+c006f254: e1570002     	cmp	r7, r2
+c006f258: aa00000d     	bge	0xc006f294 <korg_image+0x6f294> @ imm = #0x34
+c006f25c: e5d5301d     	ldrb	r3, [r5, #0x1d]
+c006f260: e3530000     	cmp	r3, #0
+c006f264: e5953010     	ldr	r3, [r5, #0x10]
+c006f268: 13a00001     	movne	r0, #1
+c006f26c: 17931107     	ldrne	r1, [r3, r7, lsl #2]
+c006f270: 15c10014     	strbne	r0, [r1, #0x14]
+c006f274: e7930107     	ldr	r0, [r3, r7, lsl #2]
+c006f278: e2877001     	add	r7, r7, #1
+c006f27c: e5903000     	ldr	r3, [r0]
+c006f280: e5933008     	ldr	r3, [r3, #0x8]
+c006f284: e58d2004     	str	r2, [sp, #0x4]
+c006f288: e12fff33     	blx	r3
+c006f28c: e59d2004     	ldr	r2, [sp, #0x4]
+c006f290: eaffffef     	b	0xc006f254 <korg_image+0x6f254> @ imm = #-0x44
+c006f294: e3a03000     	mov	r3, #0
+c006f298: e5c5301d     	strb	r3, [r5, #0x1d]
+c006f29c: e5c5301c     	strb	r3, [r5, #0x1c]
+
+background_constructor
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c008b424: e3a02000     	mov	r2, #0
+c008b428: e5802004     	str	r2, [r0, #0x4]
+c008b42c: e5802008     	str	r2, [r0, #0x8]
+c008b430: e580200c     	str	r2, [r0, #0xc]
+c008b434: e5802010     	str	r2, [r0, #0x10]
+c008b438: e5c02016     	strb	r2, [r0, #0x16]
+c008b43c: e5802018     	str	r2, [r0, #0x18]
+c008b440: e580201c     	str	r2, [r0, #0x1c]
+c008b444: e5802020     	str	r2, [r0, #0x20]
+c008b448: e5802024     	str	r2, [r0, #0x24]
+c008b44c: e5802028     	str	r2, [r0, #0x28]
+c008b450: e580202c     	str	r2, [r0, #0x2c]
+c008b454: e5802030     	str	r2, [r0, #0x30]
+c008b458: e5802034     	str	r2, [r0, #0x34]
+c008b45c: e59f2010     	ldr	r2, [pc, #0x10]         @ 0xc008b474 <korg_image+0x8b474>
+c008b460: e3a01001     	mov	r1, #1
+c008b464: e5c01015     	strb	r1, [r0, #0x15]
+c008b468: e5802000     	str	r2, [r0]
+c008b46c: e5c01014     	strb	r1, [r0, #0x14]
+c008b470: e12fff1e     	bx	lr
+c008b474: c00e52d8     	ldrdgt	r5, r6, [lr], -r8
+
+background_cleanup
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c006ddcc: e5903018     	ldr	r3, [r0, #0x18]
+c006ddd0: e5902028     	ldr	r2, [r0, #0x28]
+c006ddd4: e92d41f3     	push	{r0, r1, r4, r5, r6, r7, r8, lr}
+c006ddd8: e590102c     	ldr	r1, [r0, #0x2c]
+c006dddc: e1520003     	cmp	r2, r3
+c006dde0: a2803018     	addge	r3, r0, #24
+c006dde4: b2803028     	addlt	r3, r0, #40
+c006dde8: e1a04000     	mov	r4, r0
+c006ddec: e5936000     	ldr	r6, [r3]
+c006ddf0: e5903030     	ldr	r3, [r0, #0x30]
+c006ddf4: e5900020     	ldr	r0, [r0, #0x20]
+c006ddf8: e1560001     	cmp	r6, r1
+c006ddfc: a1a06001     	movge	r6, r1
+c006de00: e1530000     	cmp	r3, r0
+c006de04: a2840020     	addge	r0, r4, #32
+c006de08: b2840030     	addlt	r0, r4, #48
+c006de0c: e5905000     	ldr	r5, [r0]
+c006de10: e594001c     	ldr	r0, [r4, #0x1c]
+c006de14: e1550003     	cmp	r5, r3
+c006de18: a1a05003     	movge	r5, r3
+c006de1c: e1500001     	cmp	r0, r1
+c006de20: b284102c     	addlt	r1, r4, #44
+c006de24: a284101c     	addge	r1, r4, #28
+c006de28: e5918000     	ldr	r8, [r1]
+c006de2c: e5941024     	ldr	r1, [r4, #0x24]
+c006de30: e1580002     	cmp	r8, r2
+c006de34: b1a08002     	movlt	r8, r2
+c006de38: e5942034     	ldr	r2, [r4, #0x34]
+c006de3c: e28d0008     	add	r0, sp, #8
+c006de40: e1510002     	cmp	r1, r2
+c006de44: b2841034     	addlt	r1, r4, #52
+c006de48: a2841024     	addge	r1, r4, #36
+c006de4c: e5917000     	ldr	r7, [r1]
+c006de50: e1570003     	cmp	r7, r3
+c006de54: b1a07003     	movlt	r7, r3
+c006de58: e3a03000     	mov	r3, #0
+c006de5c: e5203004     	str	r3, [r0, #-0x4]!
+c006de60: ebff44a9     	bl	0xc003f10c <korg_image+0x3f10c> @ imm = #-0x2ed5c
+c006de64: e0682006     	rsb	r2, r8, r6
+c006de68: e0673005     	rsb	r3, r7, r5
+c006de6c: e1a00006     	mov	r0, r6
+c006de70: e1a01005     	mov	r1, r5
+c006de74: e3520000     	cmp	r2, #0
+c006de78: b2622000     	rsblt	r2, r2, #0
+c006de7c: e3530000     	cmp	r3, #0
+c006de80: b2633000     	rsblt	r3, r3, #0
+c006de84: ebff45b4     	bl	0xc003f55c <korg_image+0x3f55c> @ imm = #-0x2e930
+c006de88: e5943018     	ldr	r3, [r4, #0x18]
+c006de8c: e1a00004     	mov	r0, r4
+c006de90: e5843028     	str	r3, [r4, #0x28]
+c006de94: e594301c     	ldr	r3, [r4, #0x1c]
+c006de98: e584302c     	str	r3, [r4, #0x2c]
+c006de9c: e5943020     	ldr	r3, [r4, #0x20]
+c006dea0: e5843030     	str	r3, [r4, #0x30]
+c006dea4: e5943024     	ldr	r3, [r4, #0x24]
+c006dea8: e5843034     	str	r3, [r4, #0x34]
+c006deac: e5943000     	ldr	r3, [r4]
+c006deb0: e5933014     	ldr	r3, [r3, #0x14]
+c006deb4: e12fff33     	blx	r3
+c006deb8: e28dd008     	add	sp, sp, #8
+c006debc: e8bd81f0     	pop	{r4, r5, r6, r7, r8, pc}
+
+text_constructor
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c008ccd4: e92d4038     	push	{r3, r4, r5, lr}
+c008ccd8: e3a0e001     	mov	lr, #1
+c008ccdc: e5c0e025     	strb	lr, [r0, #0x25]
+c008cce0: e59fe090     	ldr	lr, [pc, #0x90]         @ 0xc008cd78 <korg_image+0x8cd78>
+c008cce4: e3a0c000     	mov	r12, #0
+c008cce8: e28e5008     	add	r5, lr, #8
+c008ccec: e28ee024     	add	lr, lr, #36
+c008ccf0: e580e010     	str	lr, [r0, #0x10]
+c008ccf4: e59de010     	ldr	lr, [sp, #0x10]
+c008ccf8: e580c004     	str	r12, [r0, #0x4]
+c008ccfc: e580c008     	str	r12, [r0, #0x8]
+c008cd00: e580c00c     	str	r12, [r0, #0xc]
+c008cd04: e580c01c     	str	r12, [r0, #0x1c]
+c008cd08: e580c020     	str	r12, [r0, #0x20]
+c008cd0c: e5c0c024     	strb	r12, [r0, #0x24]
+c008cd10: e5c0c026     	strb	r12, [r0, #0x26]
+c008cd14: e580c028     	str	r12, [r0, #0x28]
+c008cd18: e580c02c     	str	r12, [r0, #0x2c]
+c008cd1c: e580c030     	str	r12, [r0, #0x30]
+c008cd20: e580c034     	str	r12, [r0, #0x34]
+c008cd24: e580c038     	str	r12, [r0, #0x38]
+c008cd28: e580c03c     	str	r12, [r0, #0x3c]
+c008cd2c: e580c040     	str	r12, [r0, #0x40]
+c008cd30: e580c044     	str	r12, [r0, #0x44]
+c008cd34: e580e048     	str	lr, [r0, #0x48]
+c008cd38: e580c08c     	str	r12, [r0, #0x8c]
+c008cd3c: e580c098     	str	r12, [r0, #0x98]
+c008cd40: e5802014     	str	r2, [r0, #0x14]
+c008cd44: e5802090     	str	r2, [r0, #0x90]
+c008cd48: e5805000     	str	r5, [r0]
+c008cd4c: e5803018     	str	r3, [r0, #0x18]
+c008cd50: e5803094     	str	r3, [r0, #0x94]
+c008cd54: e1a04000     	mov	r4, r0
+c008cd58: ebffff7d     	bl	0xc008cb54 <korg_image+0x8cb54> @ imm = #-0x20c
+c008cd5c: e59d3014     	ldr	r3, [sp, #0x14]
+c008cd60: e1a00004     	mov	r0, r4
+c008cd64: e584308c     	str	r3, [r4, #0x8c]
+c008cd68: e284104c     	add	r1, r4, #76
+c008cd6c: ebffff78     	bl	0xc008cb54 <korg_image+0x8cb54> @ imm = #-0x220
+c008cd70: e1a00004     	mov	r0, r4
+c008cd74: e8bd8038     	pop	{r3, r4, r5, pc}
+c008cd78: c00e5430     	andgt	r5, lr, r0, lsr r4
+
+text_cleanup_thunk
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c008c990: e5902098     	ldr	r2, [r0, #0x98]
+c008c994: e92d4073     	push	{r0, r1, r4, r5, r6, lr}
+c008c998: e5906028     	ldr	r6, [r0, #0x28]
+c008c99c: e5905030     	ldr	r5, [r0, #0x30]
+c008c9a0: e1a04000     	mov	r4, r0
+c008c9a4: e28d0008     	add	r0, sp, #8
+c008c9a8: e5202004     	str	r2, [r0, #-0x4]!
+c008c9ac: ebfec9d6     	bl	0xc003f10c <korg_image+0x3f10c> @ imm = #-0x4d8a8
+c008c9b0: e1a00006     	mov	r0, r6
+c008c9b4: e1a01005     	mov	r1, r5
+c008c9b8: e594201c     	ldr	r2, [r4, #0x1c]
+c008c9bc: e5943020     	ldr	r3, [r4, #0x20]
+c008c9c0: ebfecae5     	bl	0xc003f55c <korg_image+0x3f55c> @ imm = #-0x4d46c
+c008c9c4: e28dd008     	add	sp, sp, #8
+c008c9c8: e8bd8070     	pop	{r4, r5, r6, pc}
+c008c9cc: e2400010     	sub	r0, r0, #16
+c008c9d0: eaffffee     	b	0xc008c990 <korg_image+0x8c990> @ imm = #-0x48
+
+text_deleting_thunk
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c008cab8: e59f301c     	ldr	r3, [pc, #0x1c]         @ 0xc008cadc <korg_image+0x8cadc>
+c008cabc: e92d4010     	push	{r4, lr}
+c008cac0: e5803000     	str	r3, [r0]
+c008cac4: e59f3014     	ldr	r3, [pc, #0x14]         @ 0xc008cae0 <korg_image+0x8cae0>
+c008cac8: e1a04000     	mov	r4, r0
+c008cacc: e5803010     	str	r3, [r0, #0x10]
+c008cad0: ebfed427     	bl	0xc0041b74 <korg_image+0x41b74> @ imm = #-0x4af64
+c008cad4: e1a00004     	mov	r0, r4
+c008cad8: e8bd8010     	pop	{r4, pc}
+c008cadc: c00e5438     	andgt	r5, lr, r8, lsr r4
+c008cae0: c00e3f70     	andgt	r3, lr, r0, ror pc
+c008cae4: e2400010     	sub	r0, r0, #16
+c008cae8: eafffff2     	b	0xc008cab8 <korg_image+0x8cab8> @ imm = #-0x38
+c008caec: e92d4010     	push	{r4, lr}
+c008caf0: e1a04000     	mov	r4, r0
+c008caf4: ebffffef     	bl	0xc008cab8 <korg_image+0x8cab8> @ imm = #-0x44
+c008caf8: e1a00004     	mov	r0, r4
+c008cafc: ebfe70b4     	bl	0xc0028dd4 <korg_image+0x28dd4> @ imm = #-0x63d30
+c008cb00: e1a00004     	mov	r0, r4
+c008cb04: e8bd8010     	pop	{r4, pc}
+c008cb08: e2400010     	sub	r0, r0, #16
+c008cb0c: eafffff6     	b	0xc008caec <korg_image+0x8caec> @ imm = #-0x28
+
+heap_wrappers
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c0008f30: e92d4008     	push	{r3, lr}
+c0008f34: e59f3010     	ldr	r3, [pc, #0x10]         @ 0xc0008f4c <korg_image+0x8f4c>
+c0008f38: e1a01000     	mov	r1, r0
+c0008f3c: e5930000     	ldr	r0, [r3]
+c0008f40: eb00000a     	bl	0xc0008f70 <korg_image+0x8f70> @ imm = #0x28
+c0008f44: e8bd4008     	pop	{r3, lr}
+c0008f48: e12fff1e     	bx	lr
+c0008f4c: c00f8d6c     	andgt	r8, pc, r12, ror #26
+c0008f50: e92d4008     	push	{r3, lr}
+c0008f54: e59f3010     	ldr	r3, [pc, #0x10]         @ 0xc0008f6c <korg_image+0x8f6c>
+c0008f58: e1a01000     	mov	r1, r0
+c0008f5c: e5930000     	ldr	r0, [r3]
+c0008f60: eb0017c1     	bl	0xc000ee6c <korg_image+0xee6c> @ imm = #0x5f04
+c0008f64: e8bd4008     	pop	{r3, lr}
+c0008f68: e12fff1e     	bx	lr
+c0008f6c: c00f8d6c     	andgt	r8, pc, r12, ror #26
+
+heap_extension
+
+/workspace/mercury-tribe-hacktribe/build/recovery_r2/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <korg_image>:
+c002cefc: e59f3030     	ldr	r3, [pc, #0x30]         @ 0xc002cf34 <korg_image+0x2cf34>
+c002cf00: e5932000     	ldr	r2, [r3]
+c002cf04: e3520000     	cmp	r2, #0
+c002cf08: 059f2028     	ldreq	r2, [pc, #0x28]         @ 0xc002cf38 <korg_image+0x2cf38>
+c002cf0c: 05832000     	streq	r2, [r3]
+c002cf10: e5933000     	ldr	r3, [r3]
+c002cf14: e59f2020     	ldr	r2, [pc, #0x20]         @ 0xc002cf3c <korg_image+0x2cf3c>
+c002cf18: e0830000     	add	r0, r3, r0
+c002cf1c: e1500002     	cmp	r0, r2
+c002cf20: 959f200c     	ldrls	r2, [pc, #0xc]          @ 0xc002cf34 <korg_image+0x2cf34>
+c002cf24: 95820000     	strls	r0, [r2]
+c002cf28: 91a00003     	movls	r0, r3
+c002cf2c: 83a00000     	movhi	r0, #0
+c002cf30: e12fff1e     	bx	lr
+c002cf34: c03404ac     	eorsgt	r0, r4, r12, lsr #9
+c002cf38: c06a2940     	rsbgt	r2, r10, r0, asr #18
+c002cf3c: c08a2940     	addgt	r2, r10, r0, asr #18

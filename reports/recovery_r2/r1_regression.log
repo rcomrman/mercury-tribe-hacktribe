@@ -1,0 +1,15 @@
+{
+  "scope": "RESEARCH_ONLY Linux QEMU; not hardware validation",
+  "versions": {
+    "clang": "Debian clang version 19.1.7 (3+b1)",
+    "ld.lld": "Debian LLD 19.1.7 (compatible with GNU linkers)",
+    "qemu-arm": "qemu-arm version 10.0.13 (Debian 1:10.0.13+ds-0+deb13u1)"
+  },
+  "frames_sha256": "eb5cfe3472ddd8114e4138b2d4e6f67bd904188e6bb5b343193abe7904b8fd7b",
+  "frames": 32,
+  "presets": 8,
+  "images_per_preset": 4,
+  "same_results_both_vsbs": true
+}
+user_custom (2).VSB 59793 differential calls; 77.19 % saved; all 70 records verified
+user_backup.VSB 59793 differential calls; 77.19 % saved; all 70 records verified
