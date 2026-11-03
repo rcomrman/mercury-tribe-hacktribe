@@ -1,0 +1,13 @@
+{
+  "versions": {
+    "clang": "Debian clang version 19.1.7 (3+b1)",
+    "ld.lld": "Debian LLD 19.1.7 (compatible with GNU linkers)",
+    "qemu-arm": "qemu-arm version 10.0.13 (Debian 1:10.0.13+ds-0+deb13u1)"
+  },
+  "target": "ARM926EJ-S ARMv5TE ARM mode -O2 freestanding",
+  "scope": "Linux user-mode; native image RX; no MMIO reply, RTOS context switch or DMA simulation",
+  "queue_bytes": 128,
+  "local_lifetime_bytes": 20,
+  "unmodified_admission_and_pool_bytes": 3176,
+  "combined_structures_bytes": 3324
+}

@@ -6,7 +6,7 @@
 #include "../recovery_r14/admission.h"
 enum {R15_NEW,R15_ACCEPTED,R15_WAITING,R15_RUNNING,R15_DONE,R15_REFUSED};
 struct r15_command {uint32_t id,generation,words[4],state,result;};
-struct r15_queue {struct r15_command c[3];uint32_t head,count,last_id,closing,active,executed,completed,refused;};
+struct r15_queue {struct r15_command c[3];uint32_t head,count,last_id,closing,active,admitted,completed,refused;};
 static unsigned r15_submit(struct r15_queue*q,unsigned id,unsigned gen,const uint32_t*w,unsigned pointer_codec,unsigned busy){
  if(q->closing||q->count==3||!id||id<=q->last_id||!gen||pointer_codec){q->refused++;return R15_REFUSED;}
  struct r15_command*c=&q->c[(q->head+q->count)%3];c->id=id;c->generation=gen;
@@ -21,7 +21,7 @@ static unsigned r15_start(struct r15_queue*q,struct r14_admission*a,struct r12_p
  if(c->state==R15_DONE||c->state==R15_REFUSED)return R15_WAITING;
  if(c->generation!=generation){c->state=R15_REFUSED;q->refused++;return R15_REFUSED;}
  if(!r14_critical(a,p,5)){c->state=R15_WAITING;return R15_WAITING;}
- c->state=R15_RUNNING;q->active=1;q->executed++;return R15_RUNNING;
+ c->state=R15_RUNNING;q->active=1;q->admitted++;return R15_RUNNING;
 }
 /* Only called after actual native return, never from timeout/error observer. */
 static int r15_returned(struct r15_queue*q,struct r14_admission*a,unsigned ticket,unsigned native_result){

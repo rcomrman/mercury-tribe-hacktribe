@@ -11,11 +11,13 @@ La file de fixture contient trois entrées32 octets et32 octets de métadonnées
 | ACCEPTED1 | Copie dans la file, admissibilité initiale annoncée | Pas d'entrée ni de résultat Korg |
 | WAITING2 | Acceptée et conservée, domaine/ordre empêchant l'entrée | Pas de succès natif et pas de commande exécutée |
 | REFUSED5 à submit | Saturation, fermeture, ID invalide/ancien, génération nulle ou codec non supporté | Pas d'effet natif ; l'appelant doit traiter un vrai refus du modèle |
-| RUNNING3 | Tête valide et admission R14 CRITICAL réussie | Le corps peut encore ne jamais retourner |
+| RUNNING3 | Domaine réservé par admission R14 ; entrée du corps natif encore à observer | Ni instruction native déjà exécutée ni résultat acquis ; le corps peut ne jamais être appelé/retourner |
 | DONE4 | Vrai retour natif observé, résultat stocké | Pas d'absence de DMA/périphérique ni d'affichage reçu |
 | REFUSED5 avant entrée | Génération de cible devenue périmée | Pas une annulation d'une opération exécutée |
 | ACK terminal | Le destinataire a consommé DONE ou le refus préalable ; slot réutilisable pour la file | Ne libère aucun objet matériel et ne confirme pas le LCD |
 | ANNULÉE | Aucune API d'annulation implémentée ni preuve native | Ne pas renommer timeout/stop/refus en annulation |
+
+Le compteur `admitted` compte les réservations de domaine, pas les effets natifs. RUNNING seul ne certifie aucune instruction native ; les marqueurs de vrai retour et les chemins ARM apportent cette preuve séparément.
 
 `result` n'est disponible qu'en DONE avec l'ID demandé exact. La valeur sentinelle n'est jamais un retour Korg. La tête DONE/REFUSED reste comptée dans la capacité jusqu'à ACK. Elle ne peut ni être réexécutée ni écrasée par une acceptation ultérieure. Une absence d'ACK peut donc saturer volontairement la file plutôt que perdre une réponse.
 

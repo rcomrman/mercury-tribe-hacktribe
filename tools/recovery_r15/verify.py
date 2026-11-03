@@ -46,6 +46,8 @@ def main():
    for mark,state in ((72,3),(73,4)):
     assert [e['header'][3:5] for e in events if e['header'][2]==mark]==[[i,state] for i in executions.get(case,[])]
    assert [e['header'][3:5] for e in events if e['header'][2]==70]==[[i,0] for i in executions.get(case,[])]
+   extra=[e['header'][3:5] for e in events if e['header'][2]==74]
+   assert extra==[[2,0x11112222]]*(len(executions.get(case,[]))-(case==3))+([[2,0]] if case==3 else [])
    payload=[e['header'][3:5] for e in events if e['header'][2]==71]
    assert payload==[[0x12345678,0x87654321]]*(len(executions.get(case,[]))-(case==3))+([[0,0]] if case==3 else [])
    if executions.get(case):assert b'0xc003b7fc:' in trace and b'0xc0015dd0:' in trace
@@ -68,6 +70,23 @@ def main():
   assert x['events']==y['events'] and x['exit']==y['exit']
   line=lambda vi:re.findall(rb'^0xc0[01][0-9a-f]{5}:.*$',gzip.decompress((out/f'{vi}_{case}.trace.gz').read_bytes()),re.M)
   assert line(0)==line(1)
+ comparisons=[]
+ previous='a0565ae28887bfb396f7b573c4329954b323dcf3'
+ for vi in range(2):
+  for case in range(29):
+   stem=f'reports/recovery_r15/{vi}_{case}'
+   before=gzip.decompress(subprocess.check_output(['git','show',previous+':'+stem+'.records.gz'],cwd=ROOT))
+   after=gzip.decompress((ROOT/(stem+'.records.gz')).read_bytes());normalized=[]
+   for n in range(0,len(after),2112):
+    block=bytearray(after[n:n+2112])
+    if struct.unpack_from('<I',block,8)[0]==74:continue
+    struct.pack_into('<I',block,20,len(normalized));normalized.append(block)
+   assert b''.join(normalized)==before,(vi,case,'unexpected replay difference')
+   native=lambda b:re.findall(rb'^0xc0[01][0-9a-f]{5}:.*$',b,re.M)
+   oldtrace=gzip.decompress(subprocess.check_output(['git','show',previous+':'+stem+'.trace.gz'],cwd=ROOT))
+   newtrace=gzip.decompress((ROOT/(stem+'.trace.gz')).read_bytes());assert native(oldtrace)==native(newtrace)
+   comparisons.append({'vsb':vi,'case':case,'raw_records_identical':before==after,'identical_after_only_stage74_removed_and_sequence_renumbered':True,'native_instruction_lines_identical':True})
+ (out/'replay_comparison.json').write_text(json.dumps({'previous_evidence_commit':previous,'scope':'Final R15 replay adds explicit diagnostic for scalar words0/3; all prior snapshots/statuses unchanged; R14 archives untouched','cases':comparisons},indent=2)+'\n')
  oldfiles=subprocess.check_output(['git','ls-tree','-r','--name-only',BASE],cwd=ROOT,text=True).splitlines();assert not subprocess.check_output(['git','diff',BASE,'--',*oldfiles],cwd=ROOT)
  prior=json.loads((ROOT/'reports/recovery_r14/provenance.json').read_text())
  for n,h in prior['sha256'].items():assert sha((ROOT/n).read_bytes())==h,n

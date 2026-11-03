@@ -1,0 +1,30 @@
+{
+  "status": "R15 research complete",
+  "date": "2026-11-03",
+  "base_commit": "81d6dcbe84d9d75ca817633c8d035b827a9409ad",
+  "native_cases": 58,
+  "normal_exits": 54,
+  "expected_gpio_faults": 4,
+  "exact_cross_vsb_records": true,
+  "exact_cross_vsb_native_instruction_lines": true,
+  "audit_identical_ranges": 21,
+  "model_states": 1360,
+  "model_transitions": 4068,
+  "prior_manifest_entries_verified": 155,
+  "all_r1_r14_paths_preserved": true,
+  "queue_bytes": 128,
+  "local_lifetime_bytes": 20,
+  "combined_structures_bytes": 3324,
+  "decision": "GO bounded software research; NO GO transparent native integration/global CPU cessation/peripheral quiescence/independent recovery",
+  "native_cancellation_proven": false,
+  "forced_release_performed": false,
+  "hardware_actions": false,
+  "r16_started": false,
+  "diagnostic_comparison": "Stage74 added only; comparison against a0565ae preserves all old records after explicit normalization",
+  "evidence_commits": [
+    "d96f19f501cb1d457ebbcd21620f6a3964e95490",
+    "f25dfd2b4fefcb8f27ff2b948ec1e00fdd9d8d34",
+    "df68ef4de67641f64454cdf6872b83e52e19b27e",
+    "a0565ae28887bfb396f7b573c4329954b323dcf3"
+  ]
+}

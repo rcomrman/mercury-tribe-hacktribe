@@ -4,5 +4,6 @@
   "exploratory_archive_sha256": "c4e43c2ca667e7227c537fd96eccf2dad04f8cb666e889ddd0d5bd99e1113d7f",
   "verifier_initial": "Oracle metadata table omitted closed command1 for expected fault18. Existing C source explicitly closes this running command; corrected table to refused0/close1/last1/head0. Native expected fault and snapshots unchanged.",
   "unexpected_arm_failures": [],
-  "hardware_expectations_relaxed": false
+  "hardware_expectations_relaxed": false,
+  "final_observation": "Added explicit stage74 for opcode/fourth scalar word; stage71 already observes second/third. No native result/fault expectation changed. Final replay distinguished from earlier published R15 records."
 }
