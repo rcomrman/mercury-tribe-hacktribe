@@ -42,6 +42,8 @@ def validate(case,rc,events,trace,frames):
   oracle=bytearray([0x11])*1024
   for x in range(9,65):oracle[7*128+x]=0x71
   assert stages[90]['source_sha256']==stages[90]['shadow_sha256']==sha(oracle) and '0xc006038c:' in trace
+ if case==16:assert stages[88]['header'][3:5]==[1,0]
+ if case==18:assert stages[18]['header'][3:5]==[32,0x00200020]
  if case==3:assert stages[1]['source_sha256']!=sha(bytes([0xee])*384+bytes([0x11])*640)
 def main():
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('custom',type=Path);p.add_argument('backup',type=Path);p.add_argument('--explore',action='store_true');a=p.parse_args();os.chdir(ROOT);resource.setrlimit(resource.RLIMIT_CORE,(0,0))

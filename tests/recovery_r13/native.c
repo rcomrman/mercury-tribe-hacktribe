@@ -17,7 +17,7 @@ static unsigned callbacks;
 static void check(void){CHECK(source[-1]==0x39&&storage.before==0x13579bdf&&storage.after==0x2468ace0,230);
  for(unsigned i=0;i<4;i++)CHECK(W(0xc031bb4c+4*i)==0x12345678,231);}
 static void observe(unsigned stage){emit(stage,gate.phase,(gate.pending<<24)|(P->m.reader<<16)|gate.written);}
-static void r13_fault(int sig,void*info,void*ctx){(void)ctx;check();observe(89);emit(90,((uint32_t*)info)[3],sig);finish(88);}
+static void r13_fault(int sig,void*info,void*ctx){(void)ctx;check();if(R13_CASE==16){CHECK(progress[3]==1,281);emit(88,progress[3],0);}observe(89);emit(90,((uint32_t*)info)[3],sig);finish(88);}
 static void publish(const uint8_t*data){struct r12_handle h={R12_NONE,0};CHECK(r12_begin(P,&h)&&r12_write(P,h,data,1024)&&r12_commit(P,h),232);}
 static void copy(unsigned n){CHECK(n<=1024-gate.written,233);for(unsigned i=0;i<n;i++)source[gate.written+i]=P->image[gate.held.slot][gate.written+i];gate.written+=n;}
 static void equal(const volatile uint8_t*a,const uint8_t*b){for(unsigned i=0;i<1024;i++)CHECK(a[i]==b[i],234);}
@@ -91,14 +91,14 @@ int main(void){
  publish(fresh);CHECK(r13_draw_begin(&gate,P),278);copy(128);gate.phase=R13_FAULT;P->m.closing=1;
  CHECK(!r13_draw_begin(&gate,P)&&!r12_closed(P)&&!r13_read_begin(&gate),279);observe(1);
  }else if(R13_CASE==16){
- publish(fresh);CHECK(r13_draw_begin(&gate,P),280);copy(384);r13_request(&gate);FN(void(*)(void*,unsigned,unsigned,unsigned),0xc006040c)(progress,0,100,0);CHECK(progress[3]==1,281);finish(282);
+ publish(fresh);CHECK(r13_draw_begin(&gate,P),280);copy(384);r13_request(&gate);FN(void(*)(void*,unsigned,unsigned,unsigned),0xc006040c)(progress,0,100,0);finish(282);
  }else if(R13_CASE==17){
  publish(fresh);CHECK(r13_draw_begin(&gate,P),284);copy(384);
  uint32_t timer[4]={0,1,1,(uintptr_t)request_callback};FN(void(*)(void*),0xc002a7ec)(timer);
  CHECK(callbacks==1&&gate.pending==1&&gate.phase==R13_DRAW,285);equal(shadow,initial);observe(1);
  copy(640);CHECK(r13_draw_end(&gate,P),286);CHECK(r13_read_begin(&gate),287);command(2,0);observe(2);worker(0);finish(288);
  }else if(R13_CASE==18){
- publish(frames);CHECK(r13_draw_begin(&gate,P),289);alternate();CHECK(callbacks==32&&gate.pending==1,290);CHECK(r13_draw_end(&gate,P),291);equal(shadow,initial);observe(1);
+ publish(frames);CHECK(r13_draw_begin(&gate,P),289);alternate();CHECK(callbacks==32&&gate.pending==1,290);emit(18,callbacks,(queue[2]<<16)|queue[3]);CHECK(r13_draw_end(&gate,P),291);equal(shadow,initial);observe(1);
  }else if(R13_CASE==19){
  CHECK(r13_critical_begin(&gate)&&!r13_draw_begin(&gate,P),292);CHECK(!r13_request(&gate),293);observe(1);
  FN(void(*)(void*,unsigned),0xc006038c)(progress,50);finish(294);
