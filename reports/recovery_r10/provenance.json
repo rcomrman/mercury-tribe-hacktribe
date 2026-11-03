@@ -1,0 +1,17 @@
+{
+  "base_commit": "43a57b986478992c7082e0615578e7a5c573c7d2",
+  "native_cases": 26,
+  "previous_R9_cases_checked_without_replay": 40,
+  "scope": "RESEARCH_ONLY; no MMIO emulation; not a hardware safety proof",
+  "source_sha256": {
+    "RECOVERY_R10_RAPPORT_FR.md": "14272edc85a33e4246c49a119bf2a32ea5f77b0744517b962c4b08ef7e387516",
+    "tests/recovery_r10/native.c": "fc828257784b1549d0958f29addee9880c7d0dfbd26ca26faab9c57bbb23b9c1",
+    "tests/recovery_r2/sys.h": "3690a847aa6fe5aa8fe3a57f4b2eaf7089fb97612a8ff920391c096418ce31c8",
+    "tests/recovery_r9/lcd.c": "0c977c5b3fcdee833b3e3c769124cf34c138def9091a5b5f043928206e7f3a64",
+    "tests/run_recovery_r10.sh": "c08a01b24716f5f34f966694289f671e8cd0673ee147c56f248faf45f580e1bb",
+    "tools/recovery_r10/audit.py": "218bcfef18394269faf74b8f5250885001730c5739c9a1ba70783beff78da97c",
+    "tools/recovery_r10/run.py": "41e0c7f07bd57374b8617a7f6aa5aa56d27d585bdfd7342b421a2489110f3f8a",
+    "tools/recovery_r10/verify.py": "fe7416ca8e0d2feab7d136a0ff26c6e4bdfc3f245e3394f0ea39d92f7a36044c"
+  },
+  "historical_and_artistic_sources_unchanged": true
+}

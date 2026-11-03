@@ -1,0 +1,282 @@
+{
+  "vsb_sha256": [
+    "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+  ],
+  "ranges": [
+    {
+      "name": "board_configuration",
+      "start": "0xc00163c8",
+      "end_exclusive": "0xc0016478",
+      "sha256": "4034b8361c464f4640f5163238f8c8c3f1b44d8431a9c17db173968fc522f066",
+      "identical": true
+    },
+    {
+      "name": "counter_configuration",
+      "start": "0xc0019040",
+      "end_exclusive": "0xc00191e0",
+      "sha256": "4dcf0aebc6e843d44c088ccd6f68c0c7621b456e149126ac73981a0575b0f999",
+      "identical": true
+    },
+    {
+      "name": "spi_configuration",
+      "start": "0xc0018d24",
+      "end_exclusive": "0xc0018ddc",
+      "sha256": "5c1f229b7c278fe5704360e008944f93b1edcb13bce6445bebffec64ae60ac27",
+      "identical": true
+    },
+    {
+      "name": "other_block_configuration",
+      "start": "0xc001932c",
+      "end_exclusive": "0xc00193c0",
+      "sha256": "58c52a6350df63ec237e5b39d92b89fee2d84a5b1ac7b8447997ea5272acbffa",
+      "identical": true
+    },
+    {
+      "name": "auxiliary_object",
+      "start": "0xc00119ac",
+      "end_exclusive": "0xc0011ab8",
+      "sha256": "ae87eddbbca60d58e237062eeef34e103cd6b0944300e26729a9be4ee1f0053f",
+      "identical": true
+    },
+    {
+      "name": "lcd_helpers",
+      "start": "0xc0015c48",
+      "end_exclusive": "0xc0015c98",
+      "sha256": "7a1b23eb19622c9da3615e2472af1539c7a3edc3f89ec7a8b603bed4617f76a1",
+      "identical": true
+    },
+    {
+      "name": "countdowns_and_tasks",
+      "start": "0xc002a7ac",
+      "end_exclusive": "0xc002ab48",
+      "sha256": "60dea4e920106b914a3755227603ee3bf4bbc3febcc41d75dc9a03411915c455",
+      "identical": true
+    },
+    {
+      "name": "startup",
+      "start": "0xc002ab7c",
+      "end_exclusive": "0xc002ac64",
+      "sha256": "4a1dfa55d910855e952545a15e27017cc7982a0650236f2d7edc2830b67a8a10",
+      "identical": true
+    },
+    {
+      "name": "task_table",
+      "start": "0xc00a37a8",
+      "end_exclusive": "0xc00a38a8",
+      "sha256": "5da1ea935d9a085ce5d181f6125e5352c59382c136eba1ec9942719d6aae4743",
+      "identical": true
+    },
+    {
+      "name": "type0_and_dispatch",
+      "start": "0xc00834fc",
+      "end_exclusive": "0xc00839f0",
+      "sha256": "02fd9c97e71daa855d6a97344197393aef299e3634a01493816bc25d075672e2",
+      "identical": true
+    },
+    {
+      "name": "ui_vtable",
+      "start": "0xc00e4c50",
+      "end_exclusive": "0xc00e4ca0",
+      "sha256": "406a7e74c0e13edff63b96fc667f1b8b30a8f6755f0a935841381524ff0db56f",
+      "identical": true
+    },
+    {
+      "name": "fatal_path",
+      "start": "0xc00298bc",
+      "end_exclusive": "0xc0029a10",
+      "sha256": "57e8b0b4eb74dba54177197023aee1b5066a2baeaea41433338aaf6c9b504f50",
+      "identical": true
+    },
+    {
+      "name": "irq_and_context",
+      "start": "0xc0000040",
+      "end_exclusive": "0xc0000068",
+      "sha256": "4a0bc3f31096a1b697e18cc05da2ce81fc4ee662eaf5e53d5de4fefba78d6745",
+      "identical": true
+    },
+    {
+      "name": "task_identifier",
+      "start": "0xc0001480",
+      "end_exclusive": "0xc00014ec",
+      "sha256": "29f0e0e1666bd2b2b53df23d5b77fe804ced46641ddf4df5723753e17d9e90a2",
+      "identical": true
+    },
+    {
+      "name": "dirty_rectangle",
+      "start": "0xc001531c",
+      "end_exclusive": "0xc00154c8",
+      "sha256": "e71c5333250d1498fc944cff546ef03a272a5d64a9f95141f1415f9f0be26202",
+      "identical": true
+    },
+    {
+      "name": "contrast_adapter",
+      "start": "0xc009a8c8",
+      "end_exclusive": "0xc009a900",
+      "sha256": "784b14bc11137c058f734926c832ab94a93ceeee49c262e78b6212c6ad48888b",
+      "identical": true
+    },
+    {
+      "name": "progress_lcd",
+      "start": "0xc006038c",
+      "end_exclusive": "0xc006040c",
+      "sha256": "24aaf312a4d658001240c792f0d588854eece1c7290857986ee3220f0248745f",
+      "identical": true
+    }
+  ],
+  "aligned_branch_candidates": {
+    "0xc0015c48": [
+      "0xc002984c"
+    ],
+    "0xc00163c8": [
+      "0xc0015c5c"
+    ],
+    "0xc002a7ec": [
+      "0xc002a85c",
+      "0xc002a864",
+      "0xc002a86c",
+      "0xc002a874",
+      "0xc002a87c",
+      "0xc002a8b8",
+      "0xc002a8c0"
+    ],
+    "0xc00298bc": [
+      "0xc001278c",
+      "0xc00127f8",
+      "0xc001287c",
+      "0xc0012900",
+      "0xc0012984",
+      "0xc0012a04",
+      "0xc0012a8c",
+      "0xc0012b0c",
+      "0xc0012b90",
+      "0xc0012c08",
+      "0xc0012c88",
+      "0xc0012d10",
+      "0xc0012d94",
+      "0xc0012e18",
+      "0xc0012e9c",
+      "0xc0012f20",
+      "0xc0012fa4",
+      "0xc0013024",
+      "0xc0013154",
+      "0xc0013284",
+      "0xc0013308",
+      "0xc001353c",
+      "0xc0013770",
+      "0xc00137f4",
+      "0xc00139b0",
+      "0xc0013a30",
+      "0xc0013ab4",
+      "0xc0013b3c",
+      "0xc0013d48",
+      "0xc0013de0",
+      "0xc0014240",
+      "0xc00142cc",
+      "0xc0014340",
+      "0xc00143a8",
+      "0xc0014418",
+      "0xc00176fc",
+      "0xc0017a78",
+      "0xc0017c10",
+      "0xc0017dc8",
+      "0xc0017f60",
+      "0xc0018138",
+      "0xc0018438",
+      "0xc0018504",
+      "0xc0018584",
+      "0xc00186bc",
+      "0xc0018740",
+      "0xc001882c",
+      "0xc00188b0",
+      "0xc0018a14",
+      "0xc0018a98",
+      "0xc0018b70",
+      "0xc0018bf0",
+      "0xc0018d0c",
+      "0xc0018ffc",
+      "0xc00195c4",
+      "0xc0019644",
+      "0xc001974c",
+      "0xc00199e0",
+      "0xc0019ccc",
+      "0xc0019d20",
+      "0xc0019d70",
+      "0xc0019d8c",
+      "0xc001a934",
+      "0xc001aa60",
+      "0xc001bcf4",
+      "0xc001c164",
+      "0xc001c8c8",
+      "0xc001d1f0",
+      "0xc001d310",
+      "0xc001d48c",
+      "0xc001d854",
+      "0xc001d94c",
+      "0xc001d960",
+      "0xc001da18",
+      "0xc001dad8",
+      "0xc001e4e0",
+      "0xc001e504",
+      "0xc001e5bc",
+      "0xc001e6ec",
+      "0xc001e710",
+      "0xc001e7f4",
+      "0xc001e818",
+      "0xc001e8c0",
+      "0xc001eae4",
+      "0xc001eb68",
+      "0xc001fe84",
+      "0xc0020210",
+      "0xc0020e4c",
+      "0xc0020ebc",
+      "0xc0020f54",
+      "0xc0020fbc",
+      "0xc0021020",
+      "0xc0021088",
+      "0xc0021468",
+      "0xc00214f4",
+      "0xc0021584",
+      "0xc002160c",
+      "0xc0023030",
+      "0xc0024ccc",
+      "0xc0024e8c",
+      "0xc00256f4",
+      "0xc002a3f0",
+      "0xc002a5c4",
+      "0xc002a618",
+      "0xc002aa64",
+      "0xc002aaf8",
+      "0xc002abb0",
+      "0xc002b170",
+      "0xc002b1dc",
+      "0xc002b250",
+      "0xc002c6c0",
+      "0xc002c8c4",
+      "0xc002c9ac",
+      "0xc009af3c"
+    ],
+    "0xc0015dd0": [
+      "0xc00298e8",
+      "0xc00299b4",
+      "0xc00299c4",
+      "0xc002a728",
+      "0xc002ac4c",
+      "0xc002ac5c",
+      "0xc0038bc4",
+      "0xc00603f0",
+      "0xc0060404",
+      "0xc00833e8",
+      "0xc008370c",
+      "0xc009a8f0"
+    ]
+  },
+  "caveat": "Aligned ARM candidate scan, not exhaustive indirect/Thumb call graph. Data may decode as instructions.",
+  "previous_evidence_checked_without_rerunning": [
+    {
+      "mission": 9,
+      "commit": "43a57b986478992c7082e0615578e7a5c573c7d2",
+      "reused": "loader, records, fault diagnostics only; prior scripts unchanged"
+    }
+  ]
+}

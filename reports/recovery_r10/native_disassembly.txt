@@ -1,0 +1,1404 @@
+
+board_configuration
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c00163c8: e92d4800     	push	{r11, lr}
+c00163cc: e28db004     	add	r11, sp, #4
+c00163d0: e24dd008     	sub	sp, sp, #8
+c00163d4: e50b0008     	str	r0, [r11, #-0x8]
+c00163d8: e51b0008     	ldr	r0, [r11, #-0x8]
+c00163dc: eb000055     	bl	0xc0016538 <image+0x16538> @ imm = #0x154
+c00163e0: e1a03000     	mov	r3, r0
+c00163e4: e1a00003     	mov	r0, r3
+c00163e8: eb000b14     	bl	0xc0019040 <image+0x19040> @ imm = #0x2c50
+c00163ec: e51b0008     	ldr	r0, [r11, #-0x8]
+c00163f0: eb000050     	bl	0xc0016538 <image+0x16538> @ imm = #0x140
+c00163f4: e1a03000     	mov	r3, r0
+c00163f8: e1a00003     	mov	r0, r3
+c00163fc: eb000b60     	bl	0xc0019184 <image+0x19184> @ imm = #0x2d80
+c0016400: e51b0008     	ldr	r0, [r11, #-0x8]
+c0016404: eb0000c1     	bl	0xc0016710 <image+0x16710> @ imm = #0x304
+c0016408: e1a03000     	mov	r3, r0
+c001640c: e1a00003     	mov	r0, r3
+c0016410: eb00017d     	bl	0xc0016a0c <image+0x16a0c> @ imm = #0x5f4
+c0016414: e51b0008     	ldr	r0, [r11, #-0x8]
+c0016418: eb000076     	bl	0xc00165f8 <image+0x165f8> @ imm = #0x1d8
+c001641c: e1a03000     	mov	r3, r0
+c0016420: e1a00003     	mov	r0, r3
+c0016424: eb000be5     	bl	0xc00193c0 <image+0x193c0> @ imm = #0x2f94
+c0016428: ebffed57     	bl	0xc001198c <image+0x1198c> @ imm = #-0x4aa4
+c001642c: e1a03000     	mov	r3, r0
+c0016430: e1a00003     	mov	r0, r3
+c0016434: eb000086     	bl	0xc0016654 <image+0x16654> @ imm = #0x218
+c0016438: e1a03000     	mov	r3, r0
+c001643c: e1a00003     	mov	r0, r3
+c0016440: e3a01000     	mov	r1, #0
+c0016444: eb000a36     	bl	0xc0018d24 <image+0x18d24> @ imm = #0x28d8
+c0016448: e51b0008     	ldr	r0, [r11, #-0x8]
+c001644c: eb00005d     	bl	0xc00165c8 <image+0x165c8> @ imm = #0x174
+c0016450: e1a03000     	mov	r3, r0
+c0016454: e1a00003     	mov	r0, r3
+c0016458: eb000bb3     	bl	0xc001932c <image+0x1932c> @ imm = #0x2ecc
+c001645c: e51b0008     	ldr	r0, [r11, #-0x8]
+c0016460: eb00001c     	bl	0xc00164d8 <image+0x164d8> @ imm = #0x70
+c0016464: e1a03000     	mov	r3, r0
+c0016468: e1a00003     	mov	r0, r3
+c001646c: eb000b16     	bl	0xc00190cc <image+0x190cc> @ imm = #0x2c58
+c0016470: e24bd004     	sub	sp, r11, #4
+c0016474: e8bd8800     	pop	{r11, pc}
+
+counter_configuration
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c0019040: e52db004     	str	r11, [sp, #-0x4]!
+c0019044: e28db000     	add	r11, sp, #0
+c0019048: e24dd00c     	sub	sp, sp, #12
+c001904c: e50b0008     	str	r0, [r11, #-0x8]
+c0019050: e51b3008     	ldr	r3, [r11, #-0x8]
+c0019054: e5933020     	ldr	r3, [r3, #0x20]
+c0019058: e3c320c0     	bic	r2, r3, #192
+c001905c: e51b3008     	ldr	r3, [r11, #-0x8]
+c0019060: e5832020     	str	r2, [r3, #0x20]
+c0019064: e24bd000     	sub	sp, r11, #0
+c0019068: e49db004     	ldr	r11, [sp], #4
+c001906c: e12fff1e     	bx	lr
+c0019070: e52db004     	str	r11, [sp, #-0x4]!
+c0019074: e28db000     	add	r11, sp, #0
+c0019078: e24dd00c     	sub	sp, sp, #12
+c001907c: e50b0008     	str	r0, [r11, #-0x8]
+c0019080: e51b3008     	ldr	r3, [r11, #-0x8]
+c0019084: e3a02001     	mov	r2, #1
+c0019088: e5832004     	str	r2, [r3, #0x4]
+c001908c: e51b3008     	ldr	r3, [r11, #-0x8]
+c0019090: e3a02005     	mov	r2, #5
+c0019094: e5832024     	str	r2, [r3, #0x24]
+c0019098: e51b3008     	ldr	r3, [r11, #-0x8]
+c001909c: e59f2024     	ldr	r2, [pc, #0x24]         @ 0xc00190c8 <image+0x190c8>
+c00190a0: e5832018     	str	r2, [r3, #0x18]
+c00190a4: e51b3008     	ldr	r3, [r11, #-0x8]
+c00190a8: e3a02080     	mov	r2, #128
+c00190ac: e5832020     	str	r2, [r3, #0x20]
+c00190b0: e51b3008     	ldr	r3, [r11, #-0x8]
+c00190b4: e3a02003     	mov	r2, #3
+c00190b8: e5832044     	str	r2, [r3, #0x44]
+c00190bc: e24bd000     	sub	sp, r11, #0
+c00190c0: e49db004     	ldr	r11, [sp], #4
+c00190c4: e12fff1e     	bx	lr
+c00190c8: 00005dbf     	strheq	r5, [r0], -pc
+c00190cc: e52db004     	str	r11, [sp, #-0x4]!
+c00190d0: e28db000     	add	r11, sp, #0
+c00190d4: e24dd00c     	sub	sp, sp, #12
+c00190d8: e50b0008     	str	r0, [r11, #-0x8]
+c00190dc: e51b3008     	ldr	r3, [r11, #-0x8]
+c00190e0: e3a02001     	mov	r2, #1
+c00190e4: e5832004     	str	r2, [r3, #0x4]
+c00190e8: e51b3008     	ldr	r3, [r11, #-0x8]
+c00190ec: e3a0200b     	mov	r2, #11
+c00190f0: e5832024     	str	r2, [r3, #0x24]
+c00190f4: e51b3008     	ldr	r3, [r11, #-0x8]
+c00190f8: e59f2024     	ldr	r2, [pc, #0x24]         @ 0xc0019124 <image+0x19124>
+c00190fc: e5832018     	str	r2, [r3, #0x18]
+c0019100: e51b3008     	ldr	r3, [r11, #-0x8]
+c0019104: e3a02080     	mov	r2, #128
+c0019108: e5832020     	str	r2, [r3, #0x20]
+c001910c: e51b3008     	ldr	r3, [r11, #-0x8]
+c0019110: e3a02003     	mov	r2, #3
+c0019114: e5832044     	str	r2, [r3, #0x44]
+c0019118: e24bd000     	sub	sp, r11, #0
+c001911c: e49db004     	ldr	r11, [sp], #4
+c0019120: e12fff1e     	bx	lr
+c0019124: 016e35ff     	strdeq	r3, r4, [lr, #-95]!
+c0019128: e52db004     	str	r11, [sp, #-0x4]!
+c001912c: e28db000     	add	r11, sp, #0
+c0019130: e24dd00c     	sub	sp, sp, #12
+c0019134: e50b0008     	str	r0, [r11, #-0x8]
+c0019138: e51b3008     	ldr	r3, [r11, #-0x8]
+c001913c: e3a02001     	mov	r2, #1
+c0019140: e5832004     	str	r2, [r3, #0x4]
+c0019144: e51b3008     	ldr	r3, [r11, #-0x8]
+c0019148: e3a02005     	mov	r2, #5
+c001914c: e5832024     	str	r2, [r3, #0x24]
+c0019150: e51b3008     	ldr	r3, [r11, #-0x8]
+c0019154: e59f2024     	ldr	r2, [pc, #0x24]         @ 0xc0019180 <image+0x19180>
+c0019158: e5832018     	str	r2, [r3, #0x18]
+c001915c: e51b3008     	ldr	r3, [r11, #-0x8]
+c0019160: e3a02080     	mov	r2, #128
+c0019164: e5832020     	str	r2, [r3, #0x20]
+c0019168: e51b3008     	ldr	r3, [r11, #-0x8]
+c001916c: e3a02003     	mov	r2, #3
+c0019170: e5832044     	str	r2, [r3, #0x44]
+c0019174: e24bd000     	sub	sp, r11, #0
+c0019178: e49db004     	ldr	r11, [sp], #4
+c001917c: e12fff1e     	bx	lr
+c0019180: 000124f7     	strdeq	r2, r3, [r1], -r7
+c0019184: e52db004     	str	r11, [sp, #-0x4]!
+c0019188: e28db000     	add	r11, sp, #0
+c001918c: e24dd00c     	sub	sp, sp, #12
+c0019190: e50b0008     	str	r0, [r11, #-0x8]
+c0019194: e51b3008     	ldr	r3, [r11, #-0x8]
+c0019198: e3a02001     	mov	r2, #1
+c001919c: e5832004     	str	r2, [r3, #0x4]
+c00191a0: e51b3008     	ldr	r3, [r11, #-0x8]
+c00191a4: e3a02005     	mov	r2, #5
+c00191a8: e5832024     	str	r2, [r3, #0x24]
+c00191ac: e51b3008     	ldr	r3, [r11, #-0x8]
+c00191b0: e59f2024     	ldr	r2, [pc, #0x24]         @ 0xc00191dc <image+0x191dc>
+c00191b4: e5832018     	str	r2, [r3, #0x18]
+c00191b8: e51b3008     	ldr	r3, [r11, #-0x8]
+c00191bc: e3a02080     	mov	r2, #128
+c00191c0: e5832020     	str	r2, [r3, #0x20]
+c00191c4: e51b3008     	ldr	r3, [r11, #-0x8]
+c00191c8: e3a02002     	mov	r2, #2
+c00191cc: e5832044     	str	r2, [r3, #0x44]
+c00191d0: e24bd000     	sub	sp, r11, #0
+c00191d4: e49db004     	ldr	r11, [sp], #4
+c00191d8: e12fff1e     	bx	lr
+c00191dc: 08f0d17f     	ldmeq	r0!, {r0, r1, r2, r3, r4, r5, r6, r8, r12, lr, pc} ^
+
+spi_configuration
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c0018d24: e92d4800     	push	{r11, lr}
+c0018d28: e28db004     	add	r11, sp, #4
+c0018d2c: e24dd010     	sub	sp, sp, #16
+c0018d30: e50b0010     	str	r0, [r11, #-0x10]
+c0018d34: e1a03001     	mov	r3, r1
+c0018d38: e54b3011     	strb	r3, [r11, #-0x11]
+c0018d3c: e51b3010     	ldr	r3, [r11, #-0x10]
+c0018d40: e3a02000     	mov	r2, #0
+c0018d44: e5832000     	str	r2, [r3]
+c0018d48: ebffe30f     	bl	0xc001198c <image+0x1198c> @ imm = #-0x73c4
+c0018d4c: e1a03000     	mov	r3, r0
+c0018d50: e1a00003     	mov	r0, r3
+c0018d54: e3a01005     	mov	r1, #5
+c0018d58: ebfff677     	bl	0xc001673c <image+0x1673c> @ imm = #-0x2624
+c0018d5c: e51b3010     	ldr	r3, [r11, #-0x10]
+c0018d60: e5933000     	ldr	r3, [r3]
+c0018d64: e3832001     	orr	r2, r3, #1
+c0018d68: e51b3010     	ldr	r3, [r11, #-0x10]
+c0018d6c: e5832000     	str	r2, [r3]
+c0018d70: e51b3010     	ldr	r3, [r11, #-0x10]
+c0018d74: e3a02003     	mov	r2, #3
+c0018d78: e5832004     	str	r2, [r3, #0x4]
+c0018d7c: e51b3010     	ldr	r3, [r11, #-0x10]
+c0018d80: e59f204c     	ldr	r2, [pc, #0x4c]         @ 0xc0018dd4 <image+0x18dd4>
+c0018d84: e5832014     	str	r2, [r3, #0x14]
+c0018d88: e51b3010     	ldr	r3, [r11, #-0x10]
+c0018d8c: e3a02001     	mov	r2, #1
+c0018d90: e5832018     	str	r2, [r3, #0x18]
+c0018d94: e3a0301d     	mov	r3, #29
+c0018d98: e54b3005     	strb	r3, [r11, #-0x5]
+c0018d9c: e3a03008     	mov	r3, #8
+c0018da0: e54b3006     	strb	r3, [r11, #-0x6]
+c0018da4: e55b2011     	ldrb	r2, [r11, #-0x11]
+c0018da8: e51b3010     	ldr	r3, [r11, #-0x10]
+c0018dac: e2822014     	add	r2, r2, #20
+c0018db0: e59f1020     	ldr	r1, [pc, #0x20]         @ 0xc0018dd8 <image+0x18dd8>
+c0018db4: e7831102     	str	r1, [r3, r2, lsl #2]
+c0018db8: e51b3010     	ldr	r3, [r11, #-0x10]
+c0018dbc: e5933004     	ldr	r3, [r3, #0x4]
+c0018dc0: e3832401     	orr	r2, r3, #16777216
+c0018dc4: e51b3010     	ldr	r3, [r11, #-0x10]
+c0018dc8: e5832004     	str	r2, [r3, #0x4]
+c0018dcc: e24bd004     	sub	sp, r11, #4
+c0018dd0: e8bd8800     	pop	{r11, pc}
+c0018dd4: 00000601     	andeq	r0, r0, r1, lsl #12
+c0018dd8: 00011d08     	andeq	r1, r1, r8, lsl #26
+
+other_block_configuration
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c001932c: e92d4800     	push	{r11, lr}
+c0019330: e28db004     	add	r11, sp, #4
+c0019334: e24dd010     	sub	sp, sp, #16
+c0019338: e50b0010     	str	r0, [r11, #-0x10]
+c001933c: e3a03064     	mov	r3, #100
+c0019340: e14b30b6     	strh	r3, [r11, #-6]
+c0019344: e51b3010     	ldr	r3, [r11, #-0x10]
+c0019348: e3a02001     	mov	r2, #1
+c001934c: e5832034     	str	r2, [r3, #0x34]
+c0019350: e51b3010     	ldr	r3, [r11, #-0x10]
+c0019354: e3a02080     	mov	r2, #128
+c0019358: e583200c     	str	r2, [r3, #0xc]
+c001935c: e15b30b6     	ldrh	r3, [r11, #-6]
+c0019360: e1a03423     	lsr	r3, r3, #8
+c0019364: e1a03803     	lsl	r3, r3, #16
+c0019368: e1a03823     	lsr	r3, r3, #16
+c001936c: e1a02003     	mov	r2, r3
+c0019370: e51b3010     	ldr	r3, [r11, #-0x10]
+c0019374: e5832024     	str	r2, [r3, #0x24]
+c0019378: e15b30b6     	ldrh	r3, [r11, #-6]
+c001937c: e20320ff     	and	r2, r3, #255
+c0019380: e51b3010     	ldr	r3, [r11, #-0x10]
+c0019384: e5832020     	str	r2, [r3, #0x20]
+c0019388: e51b3010     	ldr	r3, [r11, #-0x10]
+c001938c: e3a02003     	mov	r2, #3
+c0019390: e583200c     	str	r2, [r3, #0xc]
+c0019394: e51b0010     	ldr	r0, [r11, #-0x10]
+c0019398: ebffffcc     	bl	0xc00192d0 <image+0x192d0> @ imm = #-0xd0
+c001939c: e51b3010     	ldr	r3, [r11, #-0x10]
+c00193a0: e59f2014     	ldr	r2, [pc, #0x14]         @ 0xc00193bc <image+0x193bc>
+c00193a4: e5832030     	str	r2, [r3, #0x30]
+c00193a8: e51b3010     	ldr	r3, [r11, #-0x10]
+c00193ac: e3a02005     	mov	r2, #5
+c00193b0: e5832004     	str	r2, [r3, #0x4]
+c00193b4: e24bd004     	sub	sp, r11, #4
+c00193b8: e8bd8800     	pop	{r11, pc}
+c00193bc: 00006001     	andeq	r6, r0, r1
+
+auxiliary_object
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c00119ac: e92d4800     	push	{r11, lr}
+c00119b0: e28db004     	add	r11, sp, #4
+c00119b4: e24dd008     	sub	sp, sp, #8
+c00119b8: e50b0008     	str	r0, [r11, #-0x8]
+c00119bc: ebfffff2     	bl	0xc001198c <image+0x1198c> @ imm = #-0x38
+c00119c0: e1a03000     	mov	r3, r0
+c00119c4: e1a00003     	mov	r0, r3
+c00119c8: eb0012e6     	bl	0xc0016568 <image+0x16568> @ imm = #0x4b98
+c00119cc: e1a02000     	mov	r2, r0
+c00119d0: e51b3008     	ldr	r3, [r11, #-0x8]
+c00119d4: e5832004     	str	r2, [r3, #0x4]
+c00119d8: ebffffeb     	bl	0xc001198c <image+0x1198c> @ imm = #-0x54
+c00119dc: e1a03000     	mov	r3, r0
+c00119e0: e1a00003     	mov	r0, r3
+c00119e4: eb001332     	bl	0xc00166b4 <image+0x166b4> @ imm = #0x4cc8
+c00119e8: e1a02000     	mov	r2, r0
+c00119ec: e51b3008     	ldr	r3, [r11, #-0x8]
+c00119f0: e5832000     	str	r2, [r3]
+c00119f4: e51b3008     	ldr	r3, [r11, #-0x8]
+c00119f8: e1a00003     	mov	r0, r3
+c00119fc: e24bd004     	sub	sp, r11, #4
+c0011a00: e8bd8800     	pop	{r11, pc}
+c0011a04: e92d4800     	push	{r11, lr}
+c0011a08: e28db004     	add	r11, sp, #4
+c0011a0c: e24dd008     	sub	sp, sp, #8
+c0011a10: e50b0008     	str	r0, [r11, #-0x8]
+c0011a14: e51b3008     	ldr	r3, [r11, #-0x8]
+c0011a18: e5933000     	ldr	r3, [r3]
+c0011a1c: e1a00003     	mov	r0, r3
+c0011a20: e3a01001     	mov	r1, #1
+c0011a24: eb001d19     	bl	0xc0018e90 <image+0x18e90> @ imm = #0x7464
+c0011a28: e51b3008     	ldr	r3, [r11, #-0x8]
+c0011a2c: e5933004     	ldr	r3, [r3, #0x4]
+c0011a30: e1a00003     	mov	r0, r3
+c0011a34: e3a01000     	mov	r1, #0
+c0011a38: eb0015b9     	bl	0xc0017124 <image+0x17124> @ imm = #0x56e4
+c0011a3c: ebffffd2     	bl	0xc001198c <image+0x1198c> @ imm = #-0xb8
+c0011a40: e1a03000     	mov	r3, r0
+c0011a44: e1a00003     	mov	r0, r3
+c0011a48: e59f1008     	ldr	r1, [pc, #0x8]          @ 0xc0011a58 <image+0x11a58>
+c0011a4c: eb00133a     	bl	0xc001673c <image+0x1673c> @ imm = #0x4ce8
+c0011a50: e24bd004     	sub	sp, r11, #4
+c0011a54: e8bd8800     	pop	{r11, pc}
+c0011a58: 00000834     	andeq	r0, r0, r4, lsr r8
+c0011a5c: e92d4800     	push	{r11, lr}
+c0011a60: e28db004     	add	r11, sp, #4
+c0011a64: e24dd008     	sub	sp, sp, #8
+c0011a68: e50b0008     	str	r0, [r11, #-0x8]
+c0011a6c: e51b3008     	ldr	r3, [r11, #-0x8]
+c0011a70: e5933004     	ldr	r3, [r3, #0x4]
+c0011a74: e1a00003     	mov	r0, r3
+c0011a78: e3a01001     	mov	r1, #1
+c0011a7c: eb0015a8     	bl	0xc0017124 <image+0x17124> @ imm = #0x56a0
+c0011a80: ebffffc1     	bl	0xc001198c <image+0x1198c> @ imm = #-0xfc
+c0011a84: e1a03000     	mov	r3, r0
+c0011a88: e1a00003     	mov	r0, r3
+c0011a8c: e3a01ffa     	mov	r1, #1000
+c0011a90: eb001329     	bl	0xc001673c <image+0x1673c> @ imm = #0x4ca4
+c0011a94: e59f3014     	ldr	r3, [pc, #0x14]         @ 0xc0011ab0 <image+0x11ab0>
+c0011a98: e51b0008     	ldr	r0, [r11, #-0x8]
+c0011a9c: e59f1010     	ldr	r1, [pc, #0x10]         @ 0xc0011ab4 <image+0x11ab4>
+c0011aa0: e1a02003     	mov	r2, r3
+c0011aa4: eb000003     	bl	0xc0011ab8 <image+0x11ab8> @ imm = #0xc
+c0011aa8: e24bd004     	sub	sp, r11, #4
+c0011aac: e8bd8800     	pop	{r11, pc}
+c0011ab0: 000422a0     	andeq	r2, r4, r0, lsr #5
+c0011ab4: c00f9e10     	andgt	r9, pc, r0, lsl lr
+
+lcd_helpers
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c0015c48: e92d4800     	push	{r11, lr}
+c0015c4c: e28db004     	add	r11, sp, #4
+c0015c50: ebffef4d     	bl	0xc001198c <image+0x1198c> @ imm = #-0x42cc
+c0015c54: e1a03000     	mov	r3, r0
+c0015c58: e1a00003     	mov	r0, r3
+c0015c5c: eb0001d9     	bl	0xc00163c8 <image+0x163c8> @ imm = #0x764
+c0015c60: ebffef49     	bl	0xc001198c <image+0x1198c> @ imm = #-0x42dc
+c0015c64: e1a03000     	mov	r3, r0
+c0015c68: e1a00003     	mov	r0, r3
+c0015c6c: e3a0100a     	mov	r1, #10
+c0015c70: eb0002b1     	bl	0xc001673c <image+0x1673c> @ imm = #0xac4
+c0015c74: e8bd8800     	pop	{r11, pc}
+c0015c78: e92d4800     	push	{r11, lr}
+c0015c7c: e28db004     	add	r11, sp, #4
+c0015c80: e59f000c     	ldr	r0, [pc, #0xc]          @ 0xc0015c94 <image+0x15c94>
+c0015c84: ebffef5e     	bl	0xc0011a04 <image+0x11a04> @ imm = #-0x4288
+c0015c88: e59f0004     	ldr	r0, [pc, #0x4]          @ 0xc0015c94 <image+0x15c94>
+c0015c8c: ebffef72     	bl	0xc0011a5c <image+0x11a5c> @ imm = #-0x4238
+c0015c90: e8bd8800     	pop	{r11, pc}
+c0015c94: c031bb24     	eorsgt	r11, r1, r4, lsr #22
+
+countdowns_and_tasks
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c002a7ac: e1a04000     	mov	r4, r0
+c002a7b0: e92d4008     	push	{r3, lr}
+c002a7b4: ebff57fc     	bl	0xc00007ac <image+0x7ac> @ imm = #-0x2a010
+c002a7b8: e5943000     	ldr	r3, [r4]
+c002a7bc: e1a00004     	mov	r0, r4
+c002a7c0: e593300c     	ldr	r3, [r3, #0xc]
+c002a7c4: e12fff33     	blx	r3
+c002a7c8: eafffff9     	b	0xc002a7b4 <image+0x2a7b4> @ imm = #-0x1c
+c002a7cc: e1a04000     	mov	r4, r0
+c002a7d0: e92d4008     	push	{r3, lr}
+c002a7d4: ebff57f4     	bl	0xc00007ac <image+0x7ac> @ imm = #-0x2a030
+c002a7d8: e5943000     	ldr	r3, [r4]
+c002a7dc: e1a00004     	mov	r0, r4
+c002a7e0: e593300c     	ldr	r3, [r3, #0xc]
+c002a7e4: e12fff33     	blx	r3
+c002a7e8: eafffff9     	b	0xc002a7d4 <image+0x2a7d4> @ imm = #-0x1c
+c002a7ec: e92d4008     	push	{r3, lr}
+c002a7f0: e5903004     	ldr	r3, [r0, #0x4]
+c002a7f4: e2433001     	sub	r3, r3, #1
+c002a7f8: e3530000     	cmp	r3, #0
+c002a7fc: e5803004     	str	r3, [r0, #0x4]
+c002a800: c8bd8008     	popgt	{r3, pc}
+c002a804: e5903008     	ldr	r3, [r0, #0x8]
+c002a808: e5803004     	str	r3, [r0, #0x4]
+c002a80c: e590300c     	ldr	r3, [r0, #0xc]
+c002a810: e12fff33     	blx	r3
+c002a814: e8bd8008     	pop	{r3, pc}
+c002a818: e92d4010     	push	{r4, lr}
+c002a81c: e24dd018     	sub	sp, sp, #24
+c002a820: e1a04000     	mov	r4, r0
+c002a824: ebffeb4f     	bl	0xc0025568 <image+0x25568> @ imm = #-0x52c4
+c002a828: ebffeaf8     	bl	0xc0025410 <image+0x25410> @ imm = #-0x5420
+c002a82c: e3500000     	cmp	r0, #0
+c002a830: 0a000006     	beq	0xc002a850 <image+0x2a850> @ imm = #0x18
+c002a834: e28d0004     	add	r0, sp, #4
+c002a838: ebfff079     	bl	0xc0026a24 <image+0x26a24> @ imm = #-0x3e1c
+c002a83c: e28d0004     	add	r0, sp, #4
+c002a840: ebfff04f     	bl	0xc0026984 <image+0x26984> @ imm = #-0x3ec4
+c002a844: e59f0058     	ldr	r0, [pc, #0x58]         @ 0xc002a8a4 <image+0x2a8a4>
+c002a848: e28d1004     	add	r1, sp, #4
+c002a84c: ebffe884     	bl	0xc0024a64 <image+0x24a64> @ imm = #-0x5df0
+c002a850: e59f0050     	ldr	r0, [pc, #0x50]         @ 0xc002a8a8 <image+0x2a8a8>
+c002a854: eb00058c     	bl	0xc002be8c <image+0x2be8c> @ imm = #0x1630
+c002a858: e5940008     	ldr	r0, [r4, #0x8]
+c002a85c: ebffffe2     	bl	0xc002a7ec <image+0x2a7ec> @ imm = #-0x78
+c002a860: e594000c     	ldr	r0, [r4, #0xc]
+c002a864: ebffffe0     	bl	0xc002a7ec <image+0x2a7ec> @ imm = #-0x80
+c002a868: e5940014     	ldr	r0, [r4, #0x14]
+c002a86c: ebffffde     	bl	0xc002a7ec <image+0x2a7ec> @ imm = #-0x88
+c002a870: e5940018     	ldr	r0, [r4, #0x18]
+c002a874: ebffffdc     	bl	0xc002a7ec <image+0x2a7ec> @ imm = #-0x90
+c002a878: e594001c     	ldr	r0, [r4, #0x1c]
+c002a87c: ebffffda     	bl	0xc002a7ec <image+0x2a7ec> @ imm = #-0x98
+c002a880: e5944010     	ldr	r4, [r4, #0x10]
+c002a884: e3a01000     	mov	r1, #0
+c002a888: e1a00004     	mov	r0, r4
+c002a88c: ebfff8f1     	bl	0xc0028c58 <image+0x28c58> @ imm = #-0x1c3c
+c002a890: e1a00004     	mov	r0, r4
+c002a894: ebfff8e5     	bl	0xc0028c30 <image+0x28c30> @ imm = #-0x1c6c
+c002a898: eb01c43d     	bl	0xc009b994 <image+0x9b994> @ imm = #0x710f4
+c002a89c: e28dd018     	add	sp, sp, #24
+c002a8a0: e8bd8010     	pop	{r4, pc}
+c002a8a4: c033e550     	eorsgt	lr, r3, r0, asr r5
+c002a8a8: c03403b8     	ldrhtgt	r0, [r4], -r8
+c002a8ac: e92d4010     	push	{r4, lr}
+c002a8b0: e1a04000     	mov	r4, r0
+c002a8b4: e5900008     	ldr	r0, [r0, #0x8]
+c002a8b8: ebffffcb     	bl	0xc002a7ec <image+0x2a7ec> @ imm = #-0xd4
+c002a8bc: e594000c     	ldr	r0, [r4, #0xc]
+c002a8c0: ebffffc9     	bl	0xc002a7ec <image+0x2a7ec> @ imm = #-0xdc
+c002a8c4: e5940010     	ldr	r0, [r4, #0x10]
+c002a8c8: e3a01001     	mov	r1, #1
+c002a8cc: e8bd4010     	pop	{r4, lr}
+c002a8d0: eafff8e0     	b	0xc0028c58 <image+0x28c58> @ imm = #-0x1c80
+c002a8d4: e92d4070     	push	{r4, r5, r6, lr}
+c002a8d8: e59f6084     	ldr	r6, [pc, #0x84]         @ 0xc002a964 <image+0x2a964>
+c002a8dc: e1a04000     	mov	r4, r0
+c002a8e0: ebffff55     	bl	0xc002a63c <image+0x2a63c> @ imm = #-0x2ac
+c002a8e4: e59f307c     	ldr	r3, [pc, #0x7c]         @ 0xc002a968 <image+0x2a968>
+c002a8e8: e3a00010     	mov	r0, #16
+c002a8ec: e5843000     	str	r3, [r4]
+c002a8f0: ebfff935     	bl	0xc0028dcc <image+0x28dcc> @ imm = #-0x1b2c
+c002a8f4: e59f3070     	ldr	r3, [pc, #0x70]         @ 0xc002a96c <image+0x2a96c>
+c002a8f8: e3a05014     	mov	r5, #20
+c002a8fc: e5805008     	str	r5, [r0, #0x8]
+c002a900: e5805004     	str	r5, [r0, #0x4]
+c002a904: e580300c     	str	r3, [r0, #0xc]
+c002a908: e5806000     	str	r6, [r0]
+c002a90c: e5840008     	str	r0, [r4, #0x8]
+c002a910: e3a00010     	mov	r0, #16
+c002a914: ebfff92c     	bl	0xc0028dcc <image+0x28dcc> @ imm = #-0x1b50
+c002a918: e59f3050     	ldr	r3, [pc, #0x50]         @ 0xc002a970 <image+0x2a970>
+c002a91c: e5805008     	str	r5, [r0, #0x8]
+c002a920: e5805004     	str	r5, [r0, #0x4]
+c002a924: e59f5048     	ldr	r5, [pc, #0x48]         @ 0xc002a974 <image+0x2a974>
+c002a928: e580300c     	str	r3, [r0, #0xc]
+c002a92c: e5953000     	ldr	r3, [r5]
+c002a930: e5806000     	str	r6, [r0]
+c002a934: e3530000     	cmp	r3, #0
+c002a938: e584000c     	str	r0, [r4, #0xc]
+c002a93c: 1a000004     	bne	0xc002a954 <image+0x2a954> @ imm = #0x10
+c002a940: e3a0001c     	mov	r0, #28
+c002a944: ebfff920     	bl	0xc0028dcc <image+0x28dcc> @ imm = #-0x1b80
+c002a948: e1a06000     	mov	r6, r0
+c002a94c: ebfff88a     	bl	0xc0028b7c <image+0x28b7c> @ imm = #-0x1dd8
+c002a950: e5856000     	str	r6, [r5]
+c002a954: e5953000     	ldr	r3, [r5]
+c002a958: e1a00004     	mov	r0, r4
+c002a95c: e5843010     	str	r3, [r4, #0x10]
+c002a960: e8bd8070     	pop	{r4, r5, r6, pc}
+c002a964: c00a45b8     	strhgt	r4, [r10], -r8
+c002a968: c00a45a0     	andgt	r4, r10, r0, lsr #11
+c002a96c: c00839c8     	andgt	r3, r8, r8, asr #19
+c002a970: c002a71c     	andgt	r10, r2, r12, lsl r7
+c002a974: c033e6b4     	ldrhtgt	lr, [r3], -r4
+c002a978: e92d4070     	push	{r4, r5, r6, lr}
+c002a97c: e59f607c     	ldr	r6, [pc, #0x7c]         @ 0xc002aa00 <image+0x2aa00>
+c002a980: e1a04000     	mov	r4, r0
+c002a984: ebffffd2     	bl	0xc002a8d4 <image+0x2a8d4> @ imm = #-0xb8
+c002a988: e59f3074     	ldr	r3, [pc, #0x74]         @ 0xc002aa04 <image+0x2aa04>
+c002a98c: e3a00010     	mov	r0, #16
+c002a990: e5843000     	str	r3, [r4]
+c002a994: ebfff90c     	bl	0xc0028dcc <image+0x28dcc> @ imm = #-0x1bd0
+c002a998: e59f3068     	ldr	r3, [pc, #0x68]         @ 0xc002aa08 <image+0x2aa08>
+c002a99c: e3a05014     	mov	r5, #20
+c002a9a0: e5806000     	str	r6, [r0]
+c002a9a4: e5805008     	str	r5, [r0, #0x8]
+c002a9a8: e5805004     	str	r5, [r0, #0x4]
+c002a9ac: e580300c     	str	r3, [r0, #0xc]
+c002a9b0: e5840014     	str	r0, [r4, #0x14]
+c002a9b4: e3a00010     	mov	r0, #16
+c002a9b8: ebfff903     	bl	0xc0028dcc <image+0x28dcc> @ imm = #-0x1bf4
+c002a9bc: e59f3048     	ldr	r3, [pc, #0x48]         @ 0xc002aa0c <image+0x2aa0c>
+c002a9c0: e5806000     	str	r6, [r0]
+c002a9c4: e5805008     	str	r5, [r0, #0x8]
+c002a9c8: e5805004     	str	r5, [r0, #0x4]
+c002a9cc: e580300c     	str	r3, [r0, #0xc]
+c002a9d0: e5840018     	str	r0, [r4, #0x18]
+c002a9d4: e3a00010     	mov	r0, #16
+c002a9d8: ebfff8fb     	bl	0xc0028dcc <image+0x28dcc> @ imm = #-0x1c14
+c002a9dc: e3a03032     	mov	r3, #50
+c002a9e0: e5803008     	str	r3, [r0, #0x8]
+c002a9e4: e5803004     	str	r3, [r0, #0x4]
+c002a9e8: e59f3020     	ldr	r3, [pc, #0x20]         @ 0xc002aa10 <image+0x2aa10>
+c002a9ec: e5806000     	str	r6, [r0]
+c002a9f0: e580300c     	str	r3, [r0, #0xc]
+c002a9f4: e584001c     	str	r0, [r4, #0x1c]
+c002a9f8: e1a00004     	mov	r0, r4
+c002a9fc: e8bd8070     	pop	{r4, r5, r6, pc}
+c002aa00: c00a45b8     	strhgt	r4, [r10], -r8
+c002aa04: c00a45e0     	andgt	r4, r10, r0, ror #11
+c002aa08: c002a770     	andgt	r10, r2, r0, ror r7
+c002aa0c: c002a734     	andgt	r10, r2, r4, lsr r7
+c002aa10: c002a730     	andgt	r10, r2, r0, lsr r7
+c002aa14: e92d4010     	push	{r4, lr}
+c002aa18: e1a04000     	mov	r4, r0
+c002aa1c: ebffffac     	bl	0xc002a8d4 <image+0x2a8d4> @ imm = #-0x150
+c002aa20: e59f3008     	ldr	r3, [pc, #0x8]          @ 0xc002aa30 <image+0x2aa30>
+c002aa24: e1a00004     	mov	r0, r4
+c002aa28: e5843000     	str	r3, [r4]
+c002aa2c: e8bd8010     	pop	{r4, pc}
+c002aa30: c00a45c8     	andgt	r4, r10, r8, asr #11
+c002aa34: e92d4030     	push	{r4, r5, lr}
+c002aa38: e24dd02c     	sub	sp, sp, #44
+c002aa3c: e28d0004     	add	r0, sp, #4
+c002aa40: ebff5a8e     	bl	0xc0001480 <image+0x1480> @ imm = #-0x295c8
+c002aa44: e59f3074     	ldr	r3, [pc, #0x74]         @ 0xc002aac0 <image+0x2aac0>
+c002aa48: e59d2004     	ldr	r2, [sp, #0x4]
+c002aa4c: e5933000     	ldr	r3, [r3]
+c002aa50: e1520003     	cmp	r2, r3
+c002aa54: 0a000003     	beq	0xc002aa68 <image+0x2aa68> @ imm = #0xc
+c002aa58: e3a000d8     	mov	r0, #216
+c002aa5c: e59f1060     	ldr	r1, [pc, #0x60]         @ 0xc002aac4 <image+0x2aac4>
+c002aa60: e3a020a5     	mov	r2, #165
+c002aa64: ebfffb94     	bl	0xc00298bc <image+0x298bc> @ imm = #-0x11b0
+c002aa68: e59f4058     	ldr	r4, [pc, #0x58]         @ 0xc002aac8 <image+0x2aac8>
+c002aa6c: e5943000     	ldr	r3, [r4]
+c002aa70: e3530000     	cmp	r3, #0
+c002aa74: 1a000004     	bne	0xc002aa8c <image+0x2aa8c> @ imm = #0x10
+c002aa78: e3a00028     	mov	r0, #40
+c002aa7c: ebfff8d2     	bl	0xc0028dcc <image+0x28dcc> @ imm = #-0x1cb8
+c002aa80: e1a05000     	mov	r5, r0
+c002aa84: ebfff740     	bl	0xc002878c <image+0x2878c> @ imm = #-0x2300
+c002aa88: e5845000     	str	r5, [r4]
+c002aa8c: e5943000     	ldr	r3, [r4]
+c002aa90: e28d0008     	add	r0, sp, #8
+c002aa94: e5d33020     	ldrb	r3, [r3, #0x20]
+c002aa98: e2432001     	sub	r2, r3, #1
+c002aa9c: e3530009     	cmp	r3, #9
+c002aaa0: 13520005     	cmpne	r2, #5
+c002aaa4: 8a000002     	bhi	0xc002aab4 <image+0x2aab4> @ imm = #0x8
+c002aaa8: ebffffd9     	bl	0xc002aa14 <image+0x2aa14> @ imm = #-0x9c
+c002aaac: e28d0008     	add	r0, sp, #8
+c002aab0: ebffff45     	bl	0xc002a7cc <image+0x2a7cc> @ imm = #-0x2ec
+c002aab4: ebffffaf     	bl	0xc002a978 <image+0x2a978> @ imm = #-0x144
+c002aab8: e28d0008     	add	r0, sp, #8
+c002aabc: ebffff3a     	bl	0xc002a7ac <image+0x2a7ac> @ imm = #-0x318
+c002aac0: c00f9328     	andgt	r9, pc, r8, lsr #6
+c002aac4: c00a438f     	andgt	r4, r10, pc, lsl #7
+c002aac8: c033e6f8     	ldrshtgt	lr, [r3], -r8
+c002aacc: e92d4037     	push	{r0, r1, r2, r4, r5, lr}
+c002aad0: e28d0004     	add	r0, sp, #4
+c002aad4: ebff5a69     	bl	0xc0001480 <image+0x1480> @ imm = #-0x2965c
+c002aad8: e59f305c     	ldr	r3, [pc, #0x5c]         @ 0xc002ab3c <image+0x2ab3c>
+c002aadc: e59d2004     	ldr	r2, [sp, #0x4]
+c002aae0: e5933000     	ldr	r3, [r3]
+c002aae4: e1520003     	cmp	r2, r3
+c002aae8: 0a000003     	beq	0xc002aafc <image+0x2aafc> @ imm = #0xc
+c002aaec: e3a000d8     	mov	r0, #216
+c002aaf0: e59f1048     	ldr	r1, [pc, #0x48]         @ 0xc002ab40 <image+0x2ab40>
+c002aaf4: e3a02018     	mov	r2, #24
+c002aaf8: ebfffb6f     	bl	0xc00298bc <image+0x298bc> @ imm = #-0x1244
+c002aafc: e59f4040     	ldr	r4, [pc, #0x40]         @ 0xc002ab44 <image+0x2ab44>
+c002ab00: e3a00000     	mov	r0, #0
+c002ab04: ebff57f0     	bl	0xc0000acc <image+0xacc> @ imm = #-0x2a040
+c002ab08: ebff5727     	bl	0xc00007ac <image+0x7ac> @ imm = #-0x2a364
+c002ab0c: eb00b308     	bl	0xc0057734 <image+0x57734> @ imm = #0x2cc20
+c002ab10: e5943000     	ldr	r3, [r4]
+c002ab14: e3530000     	cmp	r3, #0
+c002ab18: 1a000004     	bne	0xc002ab30 <image+0x2ab30> @ imm = #0x10
+c002ab1c: e3a0003c     	mov	r0, #60
+c002ab20: ebfff8a9     	bl	0xc0028dcc <image+0x28dcc> @ imm = #-0x1d5c
+c002ab24: e1a05000     	mov	r5, r0
+c002ab28: eb004375     	bl	0xc003b904 <image+0x3b904> @ imm = #0x10dd4
+c002ab2c: e5845000     	str	r5, [r4]
+c002ab30: e5940000     	ldr	r0, [r4]
+c002ab34: eb004532     	bl	0xc003c004 <image+0x3c004> @ imm = #0x114c8
+c002ab38: eaffffef     	b	0xc002aafc <image+0x2aafc> @ imm = #-0x44
+c002ab3c: c00f932c     	andgt	r9, pc, r12, lsr #6
+c002ab40: c00a43bb     	strhgt	r4, [r10], -r11
+c002ab44: c0340298     	<unknown>
+
+startup
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c002ab7c: e92d40f0     	push	{r4, r5, r6, r7, lr}
+c002ab80: e24dd014     	sub	sp, sp, #20
+c002ab84: ebff78c7     	bl	0xc0008ea8 <image+0x8ea8> @ imm = #-0x21ce4
+c002ab88: e1a0000d     	mov	r0, sp
+c002ab8c: ebff5a3b     	bl	0xc0001480 <image+0x1480> @ imm = #-0x29714
+c002ab90: e59f350c     	ldr	r3, [pc, #0x50c]        @ 0xc002b0a4 <image+0x2b0a4>
+c002ab94: e59d2000     	ldr	r2, [sp]
+c002ab98: e5933000     	ldr	r3, [r3]
+c002ab9c: e1520003     	cmp	r2, r3
+c002aba0: 0a000003     	beq	0xc002abb4 <image+0x2abb4> @ imm = #0xc
+c002aba4: e3a000d8     	mov	r0, #216
+c002aba8: e59f14f8     	ldr	r1, [pc, #0x4f8]        @ 0xc002b0a8 <image+0x2b0a8>
+c002abac: e3a02082     	mov	r2, #130
+c002abb0: ebfffb41     	bl	0xc00298bc <image+0x298bc> @ imm = #-0x12fc
+c002abb4: e59f44f0     	ldr	r4, [pc, #0x4f0]        @ 0xc002b0ac <image+0x2b0ac>
+c002abb8: e5943000     	ldr	r3, [r4]
+c002abbc: e3530000     	cmp	r3, #0
+c002abc0: 1a000004     	bne	0xc002abd8 <image+0x2abd8> @ imm = #0x10
+c002abc4: e3a00f46     	mov	r0, #280
+c002abc8: ebfff87f     	bl	0xc0028dcc <image+0x28dcc> @ imm = #-0x1e04
+c002abcc: e1a05000     	mov	r5, r0
+c002abd0: eb007166     	bl	0xc0047170 <image+0x47170> @ imm = #0x1c598
+c002abd4: e5845000     	str	r5, [r4]
+c002abd8: e59f04d0     	ldr	r0, [pc, #0x4d0]        @ 0xc002b0b0 <image+0x2b0b0>
+c002abdc: e5945000     	ldr	r5, [r4]
+c002abe0: ebffae60     	bl	0xc0016568 <image+0x16568> @ imm = #-0x14680
+c002abe4: e3a01001     	mov	r1, #1
+c002abe8: e1a04000     	mov	r4, r0
+c002abec: ebffb029     	bl	0xc0016c98 <image+0x16c98> @ imm = #-0x13f5c
+c002abf0: e1a00004     	mov	r0, r4
+c002abf4: e3a01001     	mov	r1, #1
+c002abf8: ebffb038     	bl	0xc0016ce0 <image+0x16ce0> @ imm = #-0x13f20
+c002abfc: e3a01001     	mov	r1, #1
+c002ac00: e1a00004     	mov	r0, r4
+c002ac04: ebffb047     	bl	0xc0016d28 <image+0x16d28> @ imm = #-0x13ee4
+c002ac08: e59f04a4     	ldr	r0, [pc, #0x4a4]        @ 0xc002b0b4 <image+0x2b0b4>
+c002ac0c: ebffac65     	bl	0xc0015da8 <image+0x15da8> @ imm = #-0x14e6c
+c002ac10: e3a04000     	mov	r4, #0
+c002ac14: eb00512e     	bl	0xc003f0d4 <image+0x3f0d4> @ imm = #0x144b8
+c002ac18: eb005139     	bl	0xc003f104 <image+0x3f104> @ imm = #0x144e4
+c002ac1c: e3a0300d     	mov	r3, #13
+c002ac20: e28d000c     	add	r0, sp, #12
+c002ac24: e28d1008     	add	r1, sp, #8
+c002ac28: e28d2004     	add	r2, sp, #4
+c002ac2c: e58d300c     	str	r3, [sp, #0xc]
+c002ac30: e58d4008     	str	r4, [sp, #0x8]
+c002ac34: e58d4004     	str	r4, [sp, #0x4]
+c002ac38: eb005284     	bl	0xc003f650 <image+0x3f650> @ imm = #0x14a10
+c002ac3c: eb005131     	bl	0xc003f108 <image+0x3f108> @ imm = #0x144c4
+c002ac40: e1a02004     	mov	r2, r4
+c002ac44: e3a01002     	mov	r1, #2
+c002ac48: e59f0464     	ldr	r0, [pc, #0x464]        @ 0xc002b0b4 <image+0x2b0b4>
+c002ac4c: ebffac5f     	bl	0xc0015dd0 <image+0x15dd0> @ imm = #-0x14e84
+c002ac50: e1a02004     	mov	r2, r4
+c002ac54: e3a01003     	mov	r1, #3
+c002ac58: e59f0454     	ldr	r0, [pc, #0x454]        @ 0xc002b0b4 <image+0x2b0b4>
+c002ac5c: ebffac5b     	bl	0xc0015dd0 <image+0x15dd0> @ imm = #-0x14e94
+c002ac60: ebffac04     	bl	0xc0015c78 <image+0x15c78> @ imm = #-0x14ff0
+
+task_table
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c00a37a8: 00000002     	andeq	r0, r0, r2
+c00a37ac: 00000001     	andeq	r0, r0, r1
+c00a37b0: c002ab7c     	andgt	r10, r2, r12, ror r11
+c00a37b4: 00000008     	andeq	r0, r0, r8
+c00a37b8: 000023a8     	andeq	r2, r0, r8, lsr #7
+c00a37bc: c0200000     	eorgt	r0, r0, r0
+		...
+c00a37cc: 00000001     	andeq	r0, r0, r1
+c00a37d0: c002aa34     	andgt	r10, r2, r4, lsr r10
+c00a37d4: 00000001     	andeq	r0, r0, r1
+c00a37d8: 00002400     	andeq	r2, r0, r0, lsl #8
+c00a37dc: c02023a8     	eorgt	r2, r0, r8, lsr #7
+		...
+c00a37ec: 00000001     	andeq	r0, r0, r1
+c00a37f0: c002a3c0     	andgt	r10, r2, r0, asr #7
+c00a37f4: 00000003     	andeq	r0, r0, r3
+c00a37f8: 00004800     	andeq	r4, r0, r0, lsl #16
+c00a37fc: c02047a8     	eorgt	r4, r0, r8, lsr #15
+		...
+c00a380c: 00000001     	andeq	r0, r0, r1
+c00a3810: c002b144     	andgt	r11, r2, r4, asr #2
+c00a3814: 00000004     	andeq	r0, r0, r4
+c00a3818: 00002400     	andeq	r2, r0, r0, lsl #8
+c00a381c: c0208fa8     	eorgt	r8, r0, r8, lsr #31
+		...
+c00a382c: 00000001     	andeq	r0, r0, r1
+c00a3830: c002a598     	<unknown>
+c00a3834: 00000006     	andeq	r0, r0, r6
+c00a3838: 00100000     	andseq	r0, r0, r0
+c00a383c: c020b3a8     	eorgt	r11, r0, r8, lsr #7
+		...
+c00a384c: 00000001     	andeq	r0, r0, r1
+c00a3850: c00245f0     	strdgt	r4, r5, [r2], -r0
+c00a3854: 00000000     	andeq	r0, r0, r0
+c00a3858: 00002400     	andeq	r2, r0, r0, lsl #8
+c00a385c: c030b3a8     	eorsgt	r11, r0, r8, lsr #7
+		...
+c00a386c: 00000001     	andeq	r0, r0, r1
+c00a3870: c002c980     	andgt	r12, r2, r0, lsl #19
+c00a3874: 00000000     	andeq	r0, r0, r0
+c00a3878: 00002400     	andeq	r2, r0, r0, lsl #8
+c00a387c: c030d7a8     	eorsgt	sp, r0, r8, lsr #15
+		...
+c00a388c: 00000001     	andeq	r0, r0, r1
+c00a3890: c001da9c     	<unknown>
+c00a3894: 00000005     	andeq	r0, r0, r5
+c00a3898: 00002400     	andeq	r2, r0, r0, lsl #8
+c00a389c: c030fba8     	eorsgt	pc, r0, r8, lsr #23
+		...
+
+type0_and_dispatch
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c00834fc: e92d4008     	push	{r3, lr}
+c0083500: e1d130d4     	ldrsb	r3, [r1, #4]
+c0083504: e3530017     	cmp	r3, #23
+c0083508: 979ff103     	ldrls	pc, [pc, r3, lsl #2]
+c008350c: ea00005d     	b	0xc0083688 <image+0x83688> @ imm = #0x174
+c0083510: c008357c     	andgt	r3, r8, r12, ror r5
+c0083514: c0083588     	andgt	r3, r8, r8, lsl #11
+c0083518: c00835a0     	andgt	r3, r8, r0, lsr #11
+c008351c: c0083570     	andgt	r3, r8, r0, ror r5
+c0083520: c00835b8     	strhgt	r3, [r8], -r8
+c0083524: c00835ac     	andgt	r3, r8, r12, lsr #11
+c0083528: c00835c4     	andgt	r3, r8, r4, asr #11
+c008352c: c0083600     	andgt	r3, r8, r0, lsl #12
+c0083530: c0083594     	<unknown>
+c0083534: c00835e8     	andgt	r3, r8, r8, ror #11
+c0083538: c00835f4     	strdgt	r3, r4, [r8], -r4
+c008353c: c008360c     	andgt	r3, r8, r12, lsl #12
+c0083540: c0083624     	andgt	r3, r8, r4, lsr #12
+c0083544: c0083630     	andgt	r3, r8, r0, lsr r6
+c0083548: c008363c     	andgt	r3, r8, r12, lsr r6
+c008354c: c0083618     	andgt	r3, r8, r8, lsl r6
+c0083550: c00835d0     	ldrdgt	r3, r4, [r8], -r0
+c0083554: c00835dc     	ldrdgt	r3, r4, [r8], -r12
+c0083558: c0083648     	andgt	r3, r8, r8, asr #12
+c008355c: c0083654     	andgt	r3, r8, r4, asr r6
+c0083560: c0083664     	andgt	r3, r8, r4, ror #12
+c0083564: c0083670     	andgt	r3, r8, r0, ror r6
+c0083568: c0083688     	andgt	r3, r8, r8, lsl #13
+c008356c: c008367c     	andgt	r3, r8, r12, ror r6
+c0083570: e5903000     	ldr	r3, [r0]
+c0083574: e5933028     	ldr	r3, [r3, #0x28]
+c0083578: ea000041     	b	0xc0083684 <image+0x83684> @ imm = #0x104
+c008357c: e5903000     	ldr	r3, [r0]
+c0083580: e5933018     	ldr	r3, [r3, #0x18]
+c0083584: ea00003e     	b	0xc0083684 <image+0x83684> @ imm = #0xf8
+c0083588: e5903000     	ldr	r3, [r0]
+c008358c: e5933014     	ldr	r3, [r3, #0x14]
+c0083590: ea00003b     	b	0xc0083684 <image+0x83684> @ imm = #0xec
+c0083594: e5903000     	ldr	r3, [r0]
+c0083598: e593301c     	ldr	r3, [r3, #0x1c]
+c008359c: ea000038     	b	0xc0083684 <image+0x83684> @ imm = #0xe0
+c00835a0: e5903000     	ldr	r3, [r0]
+c00835a4: e5933020     	ldr	r3, [r3, #0x20]
+c00835a8: ea000035     	b	0xc0083684 <image+0x83684> @ imm = #0xd4
+c00835ac: e5903000     	ldr	r3, [r0]
+c00835b0: e5933024     	ldr	r3, [r3, #0x24]
+c00835b4: ea000032     	b	0xc0083684 <image+0x83684> @ imm = #0xc8
+c00835b8: e5903000     	ldr	r3, [r0]
+c00835bc: e593302c     	ldr	r3, [r3, #0x2c]
+c00835c0: ea00002f     	b	0xc0083684 <image+0x83684> @ imm = #0xbc
+c00835c4: e5903000     	ldr	r3, [r0]
+c00835c8: e5933030     	ldr	r3, [r3, #0x30]
+c00835cc: ea00002c     	b	0xc0083684 <image+0x83684> @ imm = #0xb0
+c00835d0: e5903000     	ldr	r3, [r0]
+c00835d4: e5933034     	ldr	r3, [r3, #0x34]
+c00835d8: ea000029     	b	0xc0083684 <image+0x83684> @ imm = #0xa4
+c00835dc: e5903000     	ldr	r3, [r0]
+c00835e0: e5933038     	ldr	r3, [r3, #0x38]
+c00835e4: ea000026     	b	0xc0083684 <image+0x83684> @ imm = #0x98
+c00835e8: e5903000     	ldr	r3, [r0]
+c00835ec: e593303c     	ldr	r3, [r3, #0x3c]
+c00835f0: ea000023     	b	0xc0083684 <image+0x83684> @ imm = #0x8c
+c00835f4: e5903000     	ldr	r3, [r0]
+c00835f8: e5933040     	ldr	r3, [r3, #0x40]
+c00835fc: ea000020     	b	0xc0083684 <image+0x83684> @ imm = #0x80
+c0083600: e5903000     	ldr	r3, [r0]
+c0083604: e5933044     	ldr	r3, [r3, #0x44]
+c0083608: ea00001d     	b	0xc0083684 <image+0x83684> @ imm = #0x74
+c008360c: e5903000     	ldr	r3, [r0]
+c0083610: e5933048     	ldr	r3, [r3, #0x48]
+c0083614: ea00001a     	b	0xc0083684 <image+0x83684> @ imm = #0x68
+c0083618: e5903000     	ldr	r3, [r0]
+c008361c: e593304c     	ldr	r3, [r3, #0x4c]
+c0083620: ea000017     	b	0xc0083684 <image+0x83684> @ imm = #0x5c
+c0083624: e5903000     	ldr	r3, [r0]
+c0083628: e5933050     	ldr	r3, [r3, #0x50]
+c008362c: ea000014     	b	0xc0083684 <image+0x83684> @ imm = #0x50
+c0083630: e5903000     	ldr	r3, [r0]
+c0083634: e5933054     	ldr	r3, [r3, #0x54]
+c0083638: ea000011     	b	0xc0083684 <image+0x83684> @ imm = #0x44
+c008363c: e5903000     	ldr	r3, [r0]
+c0083640: e5933058     	ldr	r3, [r3, #0x58]
+c0083644: ea00000e     	b	0xc0083684 <image+0x83684> @ imm = #0x38
+c0083648: e5903000     	ldr	r3, [r0]
+c008364c: e593305c     	ldr	r3, [r3, #0x5c]
+c0083650: ea000001     	b	0xc008365c <image+0x8365c> @ imm = #0x4
+c0083654: e5903000     	ldr	r3, [r0]
+c0083658: e5933060     	ldr	r3, [r3, #0x60]
+c008365c: e12fff33     	blx	r3
+c0083660: e8bd8008     	pop	{r3, pc}
+c0083664: e5903000     	ldr	r3, [r0]
+c0083668: e5933064     	ldr	r3, [r3, #0x64]
+c008366c: ea000004     	b	0xc0083684 <image+0x83684> @ imm = #0x10
+c0083670: e5903000     	ldr	r3, [r0]
+c0083674: e5933068     	ldr	r3, [r3, #0x68]
+c0083678: ea000001     	b	0xc0083684 <image+0x83684> @ imm = #0x4
+c008367c: e5903000     	ldr	r3, [r0]
+c0083680: e593306c     	ldr	r3, [r3, #0x6c]
+c0083684: e12fff33     	blx	r3
+c0083688: e8bd8008     	pop	{r3, pc}
+c008368c: e5913008     	ldr	r3, [r1, #0x8]
+c0083690: e5803004     	str	r3, [r0, #0x4]
+c0083694: e591300c     	ldr	r3, [r1, #0xc]
+c0083698: e5803008     	str	r3, [r0, #0x8]
+c008369c: e12fff1e     	bx	lr
+c00836a0: e59f3004     	ldr	r3, [pc, #0x4]          @ 0xc00836ac <image+0x836ac>
+c00836a4: e5803000     	str	r3, [r0]
+c00836a8: e12fff1e     	bx	lr
+c00836ac: c00e4c40     	andgt	r4, lr, r0, asr #24
+c00836b0: e59f3014     	ldr	r3, [pc, #0x14]         @ 0xc00836cc <image+0x836cc>
+c00836b4: e92d4010     	push	{r4, lr}
+c00836b8: e1a04000     	mov	r4, r0
+c00836bc: e5803000     	str	r3, [r0]
+c00836c0: ebfe95c3     	bl	0xc0028dd4 <image+0x28dd4> @ imm = #-0x5a8f4
+c00836c4: e1a00004     	mov	r0, r4
+c00836c8: e8bd8010     	pop	{r4, pc}
+c00836cc: c00e4c40     	andgt	r4, lr, r0, asr #24
+c00836d0: e1a03001     	mov	r3, r1
+c00836d4: e2800010     	add	r0, r0, #16
+c00836d8: e5911008     	ldr	r1, [r1, #0x8]
+c00836dc: e593200c     	ldr	r2, [r3, #0xc]
+c00836e0: eafface8     	b	0xc006ea88 <image+0x6ea88> @ imm = #-0x14c60
+c00836e4: e92d4010     	push	{r4, lr}
+c00836e8: e2804010     	add	r4, r0, #16
+c00836ec: e1a00004     	mov	r0, r4
+c00836f0: ebffacfa     	bl	0xc006eae0 <image+0x6eae0> @ imm = #-0x14c18
+c00836f4: e1a00004     	mov	r0, r4
+c00836f8: ebffae9e     	bl	0xc006f178 <image+0x6f178> @ imm = #-0x14588
+c00836fc: e59f000c     	ldr	r0, [pc, #0xc]          @ 0xc0083710 <image+0x83710>
+c0083700: e3a01002     	mov	r1, #2
+c0083704: e3a02000     	mov	r2, #0
+c0083708: e8bd4010     	pop	{r4, lr}
+c008370c: eafe49af     	b	0xc0015dd0 <image+0x15dd0> @ imm = #-0x6d944
+c0083710: c031bb2c     	eorsgt	r11, r1, r12, lsr #22
+c0083714: e1a03001     	mov	r3, r1
+c0083718: e2800010     	add	r0, r0, #16
+c008371c: e5911008     	ldr	r1, [r1, #0x8]
+c0083720: e593200c     	ldr	r2, [r3, #0xc]
+c0083724: eaffac64     	b	0xc006e8bc <image+0x6e8bc> @ imm = #-0x14e70
+c0083728: e1a03001     	mov	r3, r1
+c008372c: e2800010     	add	r0, r0, #16
+c0083730: e5911008     	ldr	r1, [r1, #0x8]
+c0083734: e593200c     	ldr	r2, [r3, #0xc]
+c0083738: eaffad0e     	b	0xc006eb78 <image+0x6eb78> @ imm = #-0x14bc8
+c008373c: e1a03001     	mov	r3, r1
+c0083740: e2800010     	add	r0, r0, #16
+c0083744: e5911008     	ldr	r1, [r1, #0x8]
+c0083748: e593200c     	ldr	r2, [r3, #0xc]
+c008374c: ea03b357     	b	0xc01704b0 <image+0x1704b0> @ imm = #0xecd5c
+c0083750: e1a03001     	mov	r3, r1
+c0083754: e2800010     	add	r0, r0, #16
+c0083758: e5911008     	ldr	r1, [r1, #0x8]
+c008375c: e593200c     	ldr	r2, [r3, #0xc]
+c0083760: eaffad33     	b	0xc006ec34 <image+0x6ec34> @ imm = #-0x14b34
+c0083764: e1a03001     	mov	r3, r1
+c0083768: e2800010     	add	r0, r0, #16
+c008376c: e5911008     	ldr	r1, [r1, #0x8]
+c0083770: e593200c     	ldr	r2, [r3, #0xc]
+c0083774: eaffad2e     	b	0xc006ec34 <image+0x6ec34> @ imm = #-0x14b48
+c0083778: e591300c     	ldr	r3, [r1, #0xc]
+c008377c: e2800010     	add	r0, r0, #16
+c0083780: e2032001     	and	r2, r3, #1
+c0083784: e5911008     	ldr	r1, [r1, #0x8]
+c0083788: e1a03843     	asr	r3, r3, #16
+c008378c: eaffadb0     	b	0xc006ee54 <image+0x6ee54> @ imm = #-0x14940
+c0083790: e2800010     	add	r0, r0, #16
+c0083794: e5911008     	ldr	r1, [r1, #0x8]
+c0083798: eaffaef3     	b	0xc006f36c <image+0x6f36c> @ imm = #-0x14434
+c008379c: e1a03001     	mov	r3, r1
+c00837a0: e2800010     	add	r0, r0, #16
+c00837a4: e5911008     	ldr	r1, [r1, #0x8]
+c00837a8: e593200c     	ldr	r2, [r3, #0xc]
+c00837ac: eaffaf03     	b	0xc006f3c0 <image+0x6f3c0> @ imm = #-0x143f4
+c00837b0: e2800010     	add	r0, r0, #16
+c00837b4: eaffad43     	b	0xc006ecc8 <image+0x6ecc8> @ imm = #-0x14af4
+c00837b8: e1a03001     	mov	r3, r1
+c00837bc: e2800010     	add	r0, r0, #16
+c00837c0: e5911008     	ldr	r1, [r1, #0x8]
+c00837c4: e593200c     	ldr	r2, [r3, #0xc]
+c00837c8: eaffac8a     	b	0xc006e9f8 <image+0x6e9f8> @ imm = #-0x14dd8
+c00837cc: e2800010     	add	r0, r0, #16
+c00837d0: eaffadfe     	b	0xc006efd0 <image+0x6efd0> @ imm = #-0x14808
+c00837d4: e2800010     	add	r0, r0, #16
+c00837d8: e5911008     	ldr	r1, [r1, #0x8]
+c00837dc: eaffad29     	b	0xc006ec88 <image+0x6ec88> @ imm = #-0x14b5c
+c00837e0: e2800010     	add	r0, r0, #16
+c00837e4: e5911008     	ldr	r1, [r1, #0x8]
+c00837e8: eaffaee5     	b	0xc006f384 <image+0x6f384> @ imm = #-0x1446c
+c00837ec: e2800010     	add	r0, r0, #16
+c00837f0: eaffaeed     	b	0xc006f3ac <image+0x6f3ac> @ imm = #-0x1444c
+c00837f4: e591200c     	ldr	r2, [r1, #0xc]
+c00837f8: e2800010     	add	r0, r0, #16
+c00837fc: e2922000     	adds	r2, r2, #0
+c0083800: e5911008     	ldr	r1, [r1, #0x8]
+c0083804: 13a02001     	movne	r2, #1
+c0083808: eaffad75     	b	0xc006ede4 <image+0x6ede4> @ imm = #-0x14a2c
+c008380c: e591200c     	ldr	r2, [r1, #0xc]
+c0083810: e2800010     	add	r0, r0, #16
+c0083814: e2922000     	adds	r2, r2, #0
+c0083818: e5911008     	ldr	r1, [r1, #0x8]
+c008381c: 13a02001     	movne	r2, #1
+c0083820: eaffad76     	b	0xc006ee00 <image+0x6ee00> @ imm = #-0x14a28
+c0083824: e2800010     	add	r0, r0, #16
+c0083828: e5911008     	ldr	r1, [r1, #0x8]
+c008382c: eaffae0e     	b	0xc006f06c <image+0x6f06c> @ imm = #-0x147c8
+c0083830: e2800010     	add	r0, r0, #16
+c0083834: eaffae01     	b	0xc006f040 <image+0x6f040> @ imm = #-0x147fc
+c0083838: e2800010     	add	r0, r0, #16
+c008383c: eaffae03     	b	0xc006f050 <image+0x6f050> @ imm = #-0x147f4
+c0083840: e2800010     	add	r0, r0, #16
+c0083844: eaffae0e     	b	0xc006f084 <image+0x6f084> @ imm = #-0x147c8
+c0083848: e92d401f     	push	{r0, r1, r2, r3, r4, lr}
+c008384c: e5d03070     	ldrb	r3, [r0, #0x70]
+c0083850: e1a04000     	mov	r4, r0
+c0083854: e3530000     	cmp	r3, #0
+c0083858: 0a00000c     	beq	0xc0083890 <image+0x83890> @ imm = #0x30
+c008385c: e1a0000d     	mov	r0, sp
+c0083860: ebffb47e     	bl	0xc0070a60 <image+0x70a60> @ imm = #-0x12e08
+c0083864: e594000c     	ldr	r0, [r4, #0xc]
+c0083868: e1a0100d     	mov	r1, sp
+c008386c: ebffb4a7     	bl	0xc0070b10 <image+0x70b10> @ imm = #-0x12d64
+c0083870: e3500000     	cmp	r0, #0
+c0083874: 0a000005     	beq	0xc0083890 <image+0x83890> @ imm = #0x14
+c0083878: e5943000     	ldr	r3, [r4]
+c008387c: e1a00004     	mov	r0, r4
+c0083880: e5933010     	ldr	r3, [r3, #0x10]
+c0083884: e1a0100d     	mov	r1, sp
+c0083888: e12fff33     	blx	r3
+c008388c: eafffff4     	b	0xc0083864 <image+0x83864> @ imm = #-0x30
+c0083890: e28dd010     	add	sp, sp, #16
+c0083894: e8bd8010     	pop	{r4, pc}
+c0083898: e59f301c     	ldr	r3, [pc, #0x1c]         @ 0xc00838bc <image+0x838bc>
+c008389c: e92d4010     	push	{r4, lr}
+c00838a0: e1a04000     	mov	r4, r0
+c00838a4: e4803010     	str	r3, [r0], #16
+c00838a8: ebffab80     	bl	0xc006e6b0 <image+0x6e6b0> @ imm = #-0x15200
+c00838ac: e59f300c     	ldr	r3, [pc, #0xc]          @ 0xc00838c0 <image+0x838c0>
+c00838b0: e1a00004     	mov	r0, r4
+c00838b4: e5843000     	str	r3, [r4]
+c00838b8: e8bd8010     	pop	{r4, pc}
+c00838bc: c00e4c50     	andgt	r4, lr, r0, asr r12
+c00838c0: c00e4c40     	andgt	r4, lr, r0, asr #24
+c00838c4: e92d4010     	push	{r4, lr}
+c00838c8: e1a04000     	mov	r4, r0
+c00838cc: ebfffff1     	bl	0xc0083898 <image+0x83898> @ imm = #-0x3c
+c00838d0: e1a00004     	mov	r0, r4
+c00838d4: ebfe953e     	bl	0xc0028dd4 <image+0x28dd4> @ imm = #-0x5ab08
+c00838d8: e1a00004     	mov	r0, r4
+c00838dc: e8bd8010     	pop	{r4, pc}
+c00838e0: e92d4038     	push	{r3, r4, r5, lr}
+c00838e4: e59f3030     	ldr	r3, [pc, #0x30]         @ 0xc008391c <image+0x8391c>
+c00838e8: e3a05000     	mov	r5, #0
+c00838ec: e1a04000     	mov	r4, r0
+c00838f0: e5803000     	str	r3, [r0]
+c00838f4: e5805004     	str	r5, [r0, #0x4]
+c00838f8: e5805008     	str	r5, [r0, #0x8]
+c00838fc: e580500c     	str	r5, [r0, #0xc]
+c0083900: e2800010     	add	r0, r0, #16
+c0083904: ebffab78     	bl	0xc006e6ec <image+0x6e6ec> @ imm = #-0x15220
+c0083908: e3e03000     	mvn	r3, #0
+c008390c: e5c45070     	strb	r5, [r4, #0x70]
+c0083910: e5c43071     	strb	r3, [r4, #0x71]
+c0083914: e1a00004     	mov	r0, r4
+c0083918: e8bd8038     	pop	{r3, r4, r5, pc}
+c008391c: c00e4c50     	andgt	r4, lr, r0, asr r12
+c0083920: e92d4070     	push	{r4, r5, r6, lr}
+c0083924: e1a04000     	mov	r4, r0
+c0083928: e24dd020     	sub	sp, sp, #32
+c008392c: e59f0088     	ldr	r0, [pc, #0x88]         @ 0xc00839bc <image+0x839bc>
+c0083930: ebfe9525     	bl	0xc0028dcc <image+0x28dcc> @ imm = #-0x5ab6c
+c0083934: e59f3084     	ldr	r3, [pc, #0x84]         @ 0xc00839c0 <image+0x839c0>
+c0083938: e1a05000     	mov	r5, r0
+c008393c: e4803004     	str	r3, [r0], #4
+c0083940: ebffcf29     	bl	0xc00775ec <image+0x775ec> @ imm = #-0xc35c
+c0083944: e59f3078     	ldr	r3, [pc, #0x78]         @ 0xc00839c4 <image+0x839c4>
+c0083948: e2840010     	add	r0, r4, #16
+c008394c: e5853000     	str	r3, [r5]
+c0083950: e584500c     	str	r5, [r4, #0xc]
+c0083954: ebffad5a     	bl	0xc006eec4 <image+0x6eec4> @ imm = #-0x14a98
+c0083958: e1d457d1     	ldrsb	r5, [r4, #113]
+c008395c: e3750001     	cmn	r5, #1
+c0083960: 0a000011     	beq	0xc00839ac <image+0x839ac> @ imm = #0x44
+c0083964: e3e03000     	mvn	r3, #0
+c0083968: e5c43071     	strb	r3, [r4, #0x71]
+c008396c: e1a0000d     	mov	r0, sp
+c0083970: ebffb43a     	bl	0xc0070a60 <image+0x70a60> @ imm = #-0x12f18
+c0083974: e2755001     	rsbs	r5, r5, #1
+c0083978: 33a05000     	movlo	r5, #0
+c008397c: e58d5008     	str	r5, [sp, #0x8]
+c0083980: e594500c     	ldr	r5, [r4, #0xc]
+c0083984: e3a0300b     	mov	r3, #11
+c0083988: e5cd3004     	strb	r3, [sp, #0x4]
+c008398c: e5953000     	ldr	r3, [r5]
+c0083990: e1a0100d     	mov	r1, sp
+c0083994: e28d0010     	add	r0, sp, #16
+c0083998: e5936008     	ldr	r6, [r3, #0x8]
+c008399c: ebffb437     	bl	0xc0070a80 <image+0x70a80> @ imm = #-0x12f24
+c00839a0: e1a00005     	mov	r0, r5
+c00839a4: e28d1010     	add	r1, sp, #16
+c00839a8: e12fff36     	blx	r6
+c00839ac: e3a03001     	mov	r3, #1
+c00839b0: e5c43070     	strb	r3, [r4, #0x70]
+c00839b4: e28dd020     	add	sp, sp, #32
+c00839b8: e8bd8070     	pop	{r4, r5, r6, pc}
+c00839bc: 00001014     	andeq	r1, r0, r4, lsl r0
+c00839c0: c00e4098     	<unknown>
+c00839c4: c00e40c8     	andgt	r4, lr, r8, asr #1
+c00839c8: e92d401f     	push	{r0, r1, r2, r3, r4, lr}
+c00839cc: e3a01000     	mov	r1, #0
+c00839d0: e1a02001     	mov	r2, r1
+c00839d4: e1a03001     	mov	r3, r1
+c00839d8: e1a0000d     	mov	r0, sp
+c00839dc: ebffb443     	bl	0xc0070af0 <image+0x70af0> @ imm = #-0x12ef4
+c00839e0: e1a0000d     	mov	r0, sp
+c00839e4: eb00017f     	bl	0xc0083fe8 <image+0x83fe8> @ imm = #0x5fc
+c00839e8: e28dd014     	add	sp, sp, #20
+c00839ec: e49df004     	ldr	pc, [sp], #4
+
+ui_vtable
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c00e4c50: c0083898     	<unknown>
+c00e4c54: c00838c4     	andgt	r3, r8, r4, asr #17
+c00e4c58: c0083920     	andgt	r3, r8, r0, lsr #18
+c00e4c5c: c0083848     	andgt	r3, r8, r8, asr #16
+c00e4c60: c00834fc     	strdgt	r3, r4, [r8], -r12
+c00e4c64: c00836d0     	ldrdgt	r3, r4, [r8], -r0
+c00e4c68: c00836e4     	andgt	r3, r8, r4, ror #13
+c00e4c6c: c0083714     	andgt	r3, r8, r4, lsl r7
+c00e4c70: c0083728     	andgt	r3, r8, r8, lsr #14
+c00e4c74: c008373c     	andgt	r3, r8, r12, lsr r7
+c00e4c78: c0083750     	andgt	r3, r8, r0, asr r7
+c00e4c7c: c0083778     	andgt	r3, r8, r8, ror r7
+c00e4c80: c0083790     	<unknown>
+c00e4c84: c008379c     	<unknown>
+c00e4c88: c00837b0     	strhgt	r3, [r8], -r0
+c00e4c8c: c00837b8     	strhgt	r3, [r8], -r8
+c00e4c90: c00837cc     	andgt	r3, r8, r12, asr #15
+c00e4c94: c00837d4     	ldrdgt	r3, r4, [r8], -r4
+c00e4c98: c00837e0     	andgt	r3, r8, r0, ror #15
+c00e4c9c: c00837ec     	andgt	r3, r8, r12, ror #15
+
+fatal_path
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c00298bc: e92d40f0     	push	{r4, r5, r6, r7, lr}
+c00298c0: e24dd014     	sub	sp, sp, #20
+c00298c4: e1a05001     	mov	r5, r1
+c00298c8: e1a07002     	mov	r7, r2
+c00298cc: e1a06000     	mov	r6, r0
+c00298d0: ebff59da     	bl	0xc0000040 <image+0x40> @ imm = #-0x29898
+c00298d4: e3a01001     	mov	r1, #1
+c00298d8: e3a02000     	mov	r2, #0
+c00298dc: e3a04000     	mov	r4, #0
+c00298e0: e58d0008     	str	r0, [sp, #0x8]
+c00298e4: e59f010c     	ldr	r0, [pc, #0x10c]        @ 0xc00299f8 <image+0x299f8>
+c00298e8: ebffb138     	bl	0xc0015dd0 <image+0x15dd0> @ imm = #-0x13b20
+c00298ec: eb005604     	bl	0xc003f104 <image+0x3f104> @ imm = #0x15810
+c00298f0: e28d0010     	add	r0, sp, #16
+c00298f4: e5204004     	str	r4, [r0, #-0x4]!
+c00298f8: eb00578c     	bl	0xc003f730 <image+0x3f730> @ imm = #0x15e30
+c00298fc: e1a01004     	mov	r1, r4
+c0029900: e1a02004     	mov	r2, r4
+c0029904: e1a03004     	mov	r3, r4
+c0029908: e58d4000     	str	r4, [sp]
+c002990c: e59f00e8     	ldr	r0, [pc, #0xe8]         @ 0xc00299fc <image+0x299fc>
+c0029910: eb0057ae     	bl	0xc003f7d0 <image+0x3f7d0> @ imm = #0x15eb8
+c0029914: e1a00004     	mov	r0, r4
+c0029918: ebff5ed8     	bl	0xc0001480 <image+0x1480> @ imm = #-0x284a0
+c002991c: e1a04000     	mov	r4, r0
+c0029920: e1a00005     	mov	r0, r5
+c0029924: ebff848a     	bl	0xc000ab54 <image+0xab54> @ imm = #-0x1edd8
+c0029928: e2400001     	sub	r0, r0, #1
+c002992c: e3500000     	cmp	r0, #0
+c0029930: ba000002     	blt	0xc0029940 <image+0x29940> @ imm = #0x8
+c0029934: e19520d0     	ldrsb	r2, [r5, r0]
+c0029938: e352002f     	cmp	r2, #47
+c002993c: 1afffff9     	bne	0xc0029928 <image+0x29928> @ imm = #-0x1c
+c0029940: e3740019     	cmn	r4, #25
+c0029944: e0853000     	add	r3, r5, r0
+c0029948: 1a000006     	bne	0xc0029968 <image+0x29968> @ imm = #0x18
+c002994c: e1d330d1     	ldrsb	r3, [r3, #1]
+c0029950: e59f10a8     	ldr	r1, [pc, #0xa8]         @ 0xc0029a00 <image+0x29a00>
+c0029954: e58d7000     	str	r7, [sp]
+c0029958: e1a02006     	mov	r2, r6
+c002995c: e59f00a0     	ldr	r0, [pc, #0xa0]         @ 0xc0029a04 <image+0x29a04>
+c0029960: ebff8308     	bl	0xc000a588 <image+0xa588> @ imm = #-0x1f3e0
+c0029964: ea000007     	b	0xc0029988 <image+0x29988> @ imm = #0x1c
+c0029968: e1d330d1     	ldrsb	r3, [r3, #1]
+c002996c: e59f0090     	ldr	r0, [pc, #0x90]         @ 0xc0029a04 <image+0x29a04>
+c0029970: e88d0088     	stm	sp, {r3, r7}
+c0029974: e59f108c     	ldr	r1, [pc, #0x8c]         @ 0xc0029a08 <image+0x29a08>
+c0029978: e3a03000     	mov	r3, #0
+c002997c: e1a02006     	mov	r2, r6
+c0029980: e5933000     	ldr	r3, [r3]
+c0029984: ebff82ff     	bl	0xc000a588 <image+0xa588> @ imm = #-0x1f404
+c0029988: e3a04000     	mov	r4, #0
+c002998c: e1a03004     	mov	r3, r4
+c0029990: e59f006c     	ldr	r0, [pc, #0x6c]         @ 0xc0029a04 <image+0x29a04>
+c0029994: e1a01004     	mov	r1, r4
+c0029998: e3a02014     	mov	r2, #20
+c002999c: e58d4000     	str	r4, [sp]
+c00299a0: eb00578a     	bl	0xc003f7d0 <image+0x3f7d0> @ imm = #0x15e28
+c00299a4: eb0055d7     	bl	0xc003f108 <image+0x3f108> @ imm = #0x1575c
+c00299a8: e3a01002     	mov	r1, #2
+c00299ac: e1a02004     	mov	r2, r4
+c00299b0: e59f0040     	ldr	r0, [pc, #0x40]         @ 0xc00299f8 <image+0x299f8>
+c00299b4: ebffb105     	bl	0xc0015dd0 <image+0x15dd0> @ imm = #-0x13bec
+c00299b8: e1a02004     	mov	r2, r4
+c00299bc: e3a01003     	mov	r1, #3
+c00299c0: e59f0030     	ldr	r0, [pc, #0x30]         @ 0xc00299f8 <image+0x299f8>
+c00299c4: ebffb101     	bl	0xc0015dd0 <image+0x15dd0> @ imm = #-0x13bfc
+c00299c8: e59f003c     	ldr	r0, [pc, #0x3c]         @ 0xc0029a0c <image+0x29a0c>
+c00299cc: ebffb2e5     	bl	0xc0016568 <image+0x16568> @ imm = #-0x1346c
+c00299d0: e1a01004     	mov	r1, r4
+c00299d4: e1a05000     	mov	r5, r0
+c00299d8: ebffb4ae     	bl	0xc0016c98 <image+0x16c98> @ imm = #-0x12d48
+c00299dc: e1a00005     	mov	r0, r5
+c00299e0: e1a01004     	mov	r1, r4
+c00299e4: ebffb4bd     	bl	0xc0016ce0 <image+0x16ce0> @ imm = #-0x12d0c
+c00299e8: e1a00005     	mov	r0, r5
+c00299ec: e1a01004     	mov	r1, r4
+c00299f0: ebffb4cc     	bl	0xc0016d28 <image+0x16d28> @ imm = #-0x12cd0
+c00299f4: eafffffe     	b	0xc00299f4 <image+0x299f4> @ imm = #-0x8
+c00299f8: c031bb2c     	eorsgt	r11, r1, r12, lsr #22
+c00299fc: c00a42f7     	strdgt	r4, r5, [r10], -r7
+c0029a00: c00a4304     	andgt	r4, r10, r4, lsl #6
+c0029a04: c033ef6c     	eorsgt	lr, r3, r12, ror #30
+c0029a08: c00a4315     	andgt	r4, r10, r5, lsl r3
+c0029a0c: c031bb20     	eorsgt	r11, r1, r0, lsr #22
+
+irq_and_context
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c0000040: e10f0000     	mrs	r0, apsr
+c0000044: e380c080     	orr	r12, r0, #128
+c0000048: e121f00c     	msr	CPSR_c, r12
+c000004c: e1a0f00e     	mov	pc, lr
+c0000050: e2003080     	and	r3, r0, #128
+c0000054: e10f0000     	mrs	r0, apsr
+c0000058: e3c02080     	bic	r2, r0, #128
+c000005c: e1822003     	orr	r2, r2, r3
+c0000060: e121f002     	msr	CPSR_c, r2
+c0000064: e1a0f00e     	mov	pc, lr
+
+task_identifier
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c0001480: e59f3058     	ldr	r3, [pc, #0x58]         @ 0xc00014e0 <image+0x14e0>
+c0001484: e5933000     	ldr	r3, [r3]
+c0001488: e3530000     	cmp	r3, #0
+c000148c: 1a000011     	bne	0xc00014d8 <image+0x14d8> @ imm = #0x44
+c0001490: e10f3000     	mrs	r3, apsr
+c0001494: e3130080     	tst	r3, #128
+c0001498: 1a00000e     	bne	0xc00014d8 <image+0x14d8> @ imm = #0x38
+c000149c: e10f3000     	mrs	r3, apsr
+c00014a0: e3833080     	orr	r3, r3, #128
+c00014a4: e129f003     	msr	CPSR_fc, r3
+c00014a8: e59f3034     	ldr	r3, [pc, #0x34]         @ 0xc00014e4 <image+0x14e4>
+c00014ac: e5932000     	ldr	r2, [r3]
+c00014b0: e59f3030     	ldr	r3, [pc, #0x30]         @ 0xc00014e8 <image+0x14e8>
+c00014b4: e0633002     	rsb	r3, r3, r2
+c00014b8: e1a032c3     	asr	r3, r3, #5
+c00014bc: e2833001     	add	r3, r3, #1
+c00014c0: e5803000     	str	r3, [r0]
+c00014c4: e10f3000     	mrs	r3, apsr
+c00014c8: e3c33080     	bic	r3, r3, #128
+c00014cc: e129f003     	msr	CPSR_fc, r3
+c00014d0: e3a00000     	mov	r0, #0
+c00014d4: e12fff1e     	bx	lr
+c00014d8: e3e00018     	mvn	r0, #24
+c00014dc: e12fff1e     	bx	lr
+c00014e0: c06a2894     	<unknown>
+c00014e4: c06a289c     	<unknown>
+c00014e8: c06a24e4     	rsbgt	r2, r10, r4, ror #9
+
+dirty_rectangle
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c001531c: e92d4800     	push	{r11, lr}
+c0015320: e28db004     	add	r11, sp, #4
+c0015324: e24dd028     	sub	sp, sp, #40
+c0015328: e50b0018     	str	r0, [r11, #-0x18]
+c001532c: e50b101c     	str	r1, [r11, #-0x1c]
+c0015330: e50b2020     	str	r2, [r11, #-0x20]
+c0015334: e50b3024     	str	r3, [r11, #-0x24]
+c0015338: e24b3014     	sub	r3, r11, #20
+c001533c: e51b2024     	ldr	r2, [r11, #-0x24]
+c0015340: e58d2000     	str	r2, [sp]
+c0015344: e1a00003     	mov	r0, r3
+c0015348: e51b1018     	ldr	r1, [r11, #-0x18]
+c001534c: e51b201c     	ldr	r2, [r11, #-0x1c]
+c0015350: e51b3020     	ldr	r3, [r11, #-0x20]
+c0015354: eb00001b     	bl	0xc00153c8 <image+0x153c8> @ imm = #0x6c
+c0015358: e24b3014     	sub	r3, r11, #20
+c001535c: e59f000c     	ldr	r0, [pc, #0xc]          @ 0xc0015370 <image+0x15370>
+c0015360: e1a01003     	mov	r1, r3
+c0015364: eb00002f     	bl	0xc0015428 <image+0x15428> @ imm = #0xbc
+c0015368: e24bd004     	sub	sp, r11, #4
+c001536c: e8bd8800     	pop	{r11, pc}
+c0015370: c031bb10     	eorsgt	r11, r1, r0, lsl r11
+c0015374: e52db004     	str	r11, [sp, #-0x4]!
+c0015378: e28db000     	add	r11, sp, #0
+c001537c: e24dd00c     	sub	sp, sp, #12
+c0015380: e50b0008     	str	r0, [r11, #-0x8]
+c0015384: e51b3008     	ldr	r3, [r11, #-0x8]
+c0015388: e3a02000     	mov	r2, #0
+c001538c: e5832000     	str	r2, [r3]
+c0015390: e51b3008     	ldr	r3, [r11, #-0x8]
+c0015394: e3a02000     	mov	r2, #0
+c0015398: e5832004     	str	r2, [r3, #0x4]
+c001539c: e51b3008     	ldr	r3, [r11, #-0x8]
+c00153a0: e3a02000     	mov	r2, #0
+c00153a4: e5832008     	str	r2, [r3, #0x8]
+c00153a8: e51b3008     	ldr	r3, [r11, #-0x8]
+c00153ac: e3a02000     	mov	r2, #0
+c00153b0: e583200c     	str	r2, [r3, #0xc]
+c00153b4: e51b3008     	ldr	r3, [r11, #-0x8]
+c00153b8: e1a00003     	mov	r0, r3
+c00153bc: e24bd000     	sub	sp, r11, #0
+c00153c0: e49db004     	ldr	r11, [sp], #4
+c00153c4: e12fff1e     	bx	lr
+c00153c8: e52db004     	str	r11, [sp, #-0x4]!
+c00153cc: e28db000     	add	r11, sp, #0
+c00153d0: e24dd014     	sub	sp, sp, #20
+c00153d4: e50b0008     	str	r0, [r11, #-0x8]
+c00153d8: e50b100c     	str	r1, [r11, #-0xc]
+c00153dc: e50b2010     	str	r2, [r11, #-0x10]
+c00153e0: e50b3014     	str	r3, [r11, #-0x14]
+c00153e4: e51b3008     	ldr	r3, [r11, #-0x8]
+c00153e8: e51b200c     	ldr	r2, [r11, #-0xc]
+c00153ec: e5832000     	str	r2, [r3]
+c00153f0: e51b3008     	ldr	r3, [r11, #-0x8]
+c00153f4: e51b2014     	ldr	r2, [r11, #-0x14]
+c00153f8: e5832004     	str	r2, [r3, #0x4]
+c00153fc: e51b3008     	ldr	r3, [r11, #-0x8]
+c0015400: e51b2010     	ldr	r2, [r11, #-0x10]
+c0015404: e5832008     	str	r2, [r3, #0x8]
+c0015408: e51b3008     	ldr	r3, [r11, #-0x8]
+c001540c: e59b2004     	ldr	r2, [r11, #0x4]
+c0015410: e583200c     	str	r2, [r3, #0xc]
+c0015414: e51b3008     	ldr	r3, [r11, #-0x8]
+c0015418: e1a00003     	mov	r0, r3
+c001541c: e24bd000     	sub	sp, r11, #0
+c0015420: e49db004     	ldr	r11, [sp], #4
+c0015424: e12fff1e     	bx	lr
+c0015428: e92d4800     	push	{r11, lr}
+c001542c: e28db004     	add	r11, sp, #4
+c0015430: e24dd018     	sub	sp, sp, #24
+c0015434: e50b0018     	str	r0, [r11, #-0x18]
+c0015438: e50b101c     	str	r1, [r11, #-0x1c]
+c001543c: e24b3014     	sub	r3, r11, #20
+c0015440: e1a00003     	mov	r0, r3
+c0015444: e51b1018     	ldr	r1, [r11, #-0x18]
+c0015448: e51b201c     	ldr	r2, [r11, #-0x1c]
+c001544c: eb00001d     	bl	0xc00154c8 <image+0x154c8> @ imm = #0x74
+c0015450: e24b3014     	sub	r3, r11, #20
+c0015454: e51b0018     	ldr	r0, [r11, #-0x18]
+c0015458: e1a01003     	mov	r1, r3
+c001545c: eb000001     	bl	0xc0015468 <image+0x15468> @ imm = #0x4
+c0015460: e24bd004     	sub	sp, r11, #4
+c0015464: e8bd8800     	pop	{r11, pc}
+c0015468: e52db004     	str	r11, [sp, #-0x4]!
+c001546c: e28db000     	add	r11, sp, #0
+c0015470: e24dd00c     	sub	sp, sp, #12
+c0015474: e50b0008     	str	r0, [r11, #-0x8]
+c0015478: e50b100c     	str	r1, [r11, #-0xc]
+c001547c: e51b300c     	ldr	r3, [r11, #-0xc]
+c0015480: e5932000     	ldr	r2, [r3]
+c0015484: e51b3008     	ldr	r3, [r11, #-0x8]
+c0015488: e5832000     	str	r2, [r3]
+c001548c: e51b300c     	ldr	r3, [r11, #-0xc]
+c0015490: e5932004     	ldr	r2, [r3, #0x4]
+c0015494: e51b3008     	ldr	r3, [r11, #-0x8]
+c0015498: e5832004     	str	r2, [r3, #0x4]
+c001549c: e51b300c     	ldr	r3, [r11, #-0xc]
+c00154a0: e5932008     	ldr	r2, [r3, #0x8]
+c00154a4: e51b3008     	ldr	r3, [r11, #-0x8]
+c00154a8: e5832008     	str	r2, [r3, #0x8]
+c00154ac: e51b300c     	ldr	r3, [r11, #-0xc]
+c00154b0: e593200c     	ldr	r2, [r3, #0xc]
+c00154b4: e51b3008     	ldr	r3, [r11, #-0x8]
+c00154b8: e583200c     	str	r2, [r3, #0xc]
+c00154bc: e24bd000     	sub	sp, r11, #0
+c00154c0: e49db004     	ldr	r11, [sp], #4
+c00154c4: e12fff1e     	bx	lr
+
+contrast_adapter
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c009a8c8: e3500011     	cmp	r0, #17
+c009a8cc: e92d4007     	push	{r0, r1, r2, lr}
+c009a8d0: d3a00012     	movle	r0, #18
+c009a8d4: da000001     	ble	0xc009a8e0 <image+0x9a8e0> @ imm = #0x4
+c009a8d8: e350002a     	cmp	r0, #42
+c009a8dc: a3a0002a     	movge	r0, #42
+c009a8e0: e28d2008     	add	r2, sp, #8
+c009a8e4: e5620004     	strb	r0, [r2, #-0x4]!
+c009a8e8: e3a01004     	mov	r1, #4
+c009a8ec: e59f0008     	ldr	r0, [pc, #0x8]          @ 0xc009a8fc <image+0x9a8fc>
+c009a8f0: ebfded36     	bl	0xc0015dd0 <image+0x15dd0> @ imm = #-0x84b28
+c009a8f4: e28dd00c     	add	sp, sp, #12
+c009a8f8: e49df004     	ldr	pc, [sp], #4
+c009a8fc: c031bb2c     	eorsgt	r11, r1, r12, lsr #22
+
+progress_lcd
+
+build/recovery_r10/STATIC_INSPECTION_ONLY.elf:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+c0000000 <image>:
+c006038c: e92d4010     	push	{r4, lr}
+c0060390: e5904004     	ldr	r4, [r0, #0x4]
+c0060394: e1a03000     	mov	r3, r0
+c0060398: e5900008     	ldr	r0, [r0, #0x8]
+c006039c: e0640000     	rsb	r0, r4, r0
+c00603a0: e0000091     	<unknown>
+c00603a4: e593100c     	ldr	r1, [r3, #0xc]
+c00603a8: ebfe87d8     	bl	0xc0002310 <image+0x2310> @ imm = #-0x5e0a0
+c00603ac: e3a03071     	mov	r3, #113
+c00603b0: e3a01064     	mov	r1, #100
+c00603b4: e0840000     	add	r0, r4, r0
+c00603b8: e0000093     	<unknown>
+c00603bc: ebfe87d3     	bl	0xc0002310 <image+0x2310> @ imm = #-0x5e0b4
+c00603c0: e1a04000     	mov	r4, r0
+c00603c4: ebff7b4e     	bl	0xc003f104 <image+0x3f104> @ imm = #-0x212c8
+c00603c8: e1a02004     	mov	r2, r4
+c00603cc: e59f4034     	ldr	r4, [pc, #0x34]         @ 0xc0060408 <image+0x60408>
+c00603d0: e3a00009     	mov	r0, #9
+c00603d4: e3a0103d     	mov	r1, #61
+c00603d8: e3a03002     	mov	r3, #2
+c00603dc: ebff7c5e     	bl	0xc003f55c <image+0x3f55c> @ imm = #-0x20e88
+c00603e0: ebff7b48     	bl	0xc003f108 <image+0x3f108> @ imm = #-0x212e0
+c00603e4: e1a00004     	mov	r0, r4
+c00603e8: e3a01002     	mov	r1, #2
+c00603ec: e3a02000     	mov	r2, #0
+c00603f0: ebfed676     	bl	0xc0015dd0 <image+0x15dd0> @ imm = #-0x4a628
+c00603f4: e1a00004     	mov	r0, r4
+c00603f8: e3a01003     	mov	r1, #3
+c00603fc: e3a02000     	mov	r2, #0
+c0060400: e8bd4010     	pop	{r4, lr}
+c0060404: eafed671     	b	0xc0015dd0 <image+0x15dd0> @ imm = #-0x4a63c
+c0060408: c031bb2c     	eorsgt	r11, r1, r12, lsr #22
