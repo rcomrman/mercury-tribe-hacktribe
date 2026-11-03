@@ -1,0 +1,152 @@
+Static R2: 19 identical native ranges; five opcode contracts checked
+0 native_heap -11
+0 native_page 0
+0 mixed_mercury 0
+0 vector_growth 0
+0 duplicate_alias 84
+0 active_destroy timeout
+0 append_in_draw 0
+0 destroy_in_draw timeout
+0 null_child -11
+0 native_repeat 0
+0 nondeleting 0
+0 native_heap_cycles 0
+0 native_heap_mercury 0
+0 missing_deleting_callback 0
+0 native_heap_readonly_data -11
+0 native_data_without_heap -11
+0 uninitialized_graphics 0
+1 native_heap -11
+1 native_page 0
+1 mixed_mercury 0
+1 vector_growth 0
+1 duplicate_alias 84
+1 active_destroy timeout
+1 append_in_draw 0
+1 destroy_in_draw timeout
+1 null_child -11
+1 native_repeat 0
+1 nondeleting 0
+1 native_heap_cycles 0
+1 native_heap_mercury 0
+1 missing_deleting_callback 0
+1 native_heap_readonly_data -11
+1 native_data_without_heap -11
+1 uninitialized_graphics 0
+R2: 17 scenarios per original, all expected outcomes verified; RESEARCH ONLY
+0 0 0 extra pixels 0
+0 1 0 extra pixels 91
+0 2 0 extra pixels 0
+0 3 0 extra pixels 0
+0 4 0 extra pixels 91
+0 5 0 extra pixels 91
+0 6 0 extra pixels 0
+0 7 timeout extra pixels 0
+1 0 0 extra pixels 0
+1 1 0 extra pixels 91
+1 2 0 extra pixels 0
+1 3 0 extra pixels 0
+1 4 0 extra pixels 91
+1 5 0 extra pixels 91
+1 6 0 extra pixels 0
+1 7 timeout extra pixels 0
+0 0 0
+0 0 0 validated
+0 1 0
+0 1 0 validated
+0 2 0
+0 2 0 validated
+0 3 0
+0 3 0 validated
+0 4 0
+0 4 0 validated
+0 5 0
+0 5 0 validated
+0 6 0
+0 6 0 validated
+0 7 0
+0 7 0 validated
+0 8 0
+0 8 0 validated
+0 9 0
+0 9 0 validated
+0 10 0
+0 10 0 validated
+0 11 0
+0 11 0 validated
+0 12 0
+0 12 0 validated
+0 13 0
+0 13 0 validated
+0 14 0
+0 14 0 validated
+0 15 -11
+0 15 -11 validated
+1 0 0
+1 0 0 validated
+1 1 0
+1 1 0 validated
+1 2 0
+1 2 0 validated
+1 3 0
+1 3 0 validated
+1 4 0
+1 4 0 validated
+1 5 0
+1 5 0 validated
+1 6 0
+1 6 0 validated
+1 7 0
+1 7 0 validated
+1 8 0
+1 8 0 validated
+1 9 0
+1 9 0 validated
+1 10 0
+1 10 0 validated
+1 11 0
+1 11 0 validated
+1 12 0
+1 12 0 validated
+1 13 0
+1 13 0 validated
+1 14 0
+1 14 0 validated
+1 15 -11
+1 15 -11 validated
+0 0 0
+0 0 0 validated
+0 1 0
+0 1 0 validated
+0 2 0
+0 2 0 validated
+0 3 0
+0 3 0 validated
+0 4 0
+0 4 0 validated
+0 5 0
+0 5 0 validated
+0 6 0
+0 6 0 validated
+0 7 0
+0 7 0 validated
+0 8 0
+0 8 0 validated
+1 0 0
+1 0 0 validated
+1 1 0
+1 1 0 validated
+1 2 0
+1 2 0 validated
+1 3 0
+1 3 0 validated
+1 4 0
+1 4 0 validated
+1 5 0
+1 5 0 validated
+1 6 0
+1 6 0 validated
+1 7 0
+1 7 0 validated
+1 8 0
+1 8 0 validated

@@ -1,0 +1,134 @@
+{
+  "vsb_sha256": [
+    "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+  ],
+  "ranges": [
+    {
+      "name": "packet_decode",
+      "start": "0xc002814c",
+      "end_exclusive": "0xc00282a0",
+      "sha256": "910df98a7c082bab4bcc4de52d72fd287de74cb3b9a536a0e161bc1330bbf592",
+      "identical": true
+    },
+    {
+      "name": "byte_assembly",
+      "start": "0xc00282d8",
+      "end_exclusive": "0xc0028544",
+      "sha256": "504b079a7a5d488f2bc408e8485e98e9209d121c26e55304d59d045e2811ef6f",
+      "identical": true
+    },
+    {
+      "name": "event_task",
+      "start": "0xc002a38c",
+      "end_exclusive": "0xc002a598",
+      "sha256": "14303e871e3e37ecd156fabedf7b45d14a5fe59a35e56ebc24fa49a690755a54",
+      "identical": true
+    },
+    {
+      "name": "input_state_repeat",
+      "start": "0xc008241c",
+      "end_exclusive": "0xc0082620",
+      "sha256": "51402666607f4c3df50abfa049d10db92db223b2a2985dc048372f308dbc17c1",
+      "identical": true
+    },
+    {
+      "name": "repeat_tables",
+      "start": "0xc00e4af8",
+      "end_exclusive": "0xc00e4b40",
+      "sha256": "51cfa32fece0135f38198da2529e7c6a0c1f53747984d55705077b7f6920cc76",
+      "identical": true
+    },
+    {
+      "name": "type1_producer",
+      "start": "0xc00839f0",
+      "end_exclusive": "0xc0083a18",
+      "sha256": "60d53a86cb047226f80877aed4f7b2dd5b1f99a62eee9f4aacc93169afc1903d",
+      "identical": true
+    },
+    {
+      "name": "graphics_manager",
+      "start": "0xc006e6ec",
+      "end_exclusive": "0xc006f178",
+      "sha256": "51f010992abd7d4db3e4a081ce07788d28160b8d67c6572f209a56808330796c",
+      "identical": true
+    },
+    {
+      "name": "navigation",
+      "start": "0xc00700d8",
+      "end_exclusive": "0xc00705dc",
+      "sha256": "afe1ef7a625bc22772048641e5b1ef0497ea1a41c9269fa90a5118b7315cd5c6",
+      "identical": true
+    },
+    {
+      "name": "extension",
+      "start": "0xc0170b80",
+      "end_exclusive": "0xc0170ca8",
+      "sha256": "705e2619062e40b052ffd7cbdcc8904265266de468a6ac09d6e2a7ec9a6732cf",
+      "identical": true
+    },
+    {
+      "name": "extension_service",
+      "start": "0xc0170170",
+      "end_exclusive": "0xc01702f8",
+      "sha256": "06960ea448b79fa1c991a4ee89849879d41aeae7a96586439436d3703e4ef910",
+      "identical": true
+    }
+  ],
+  "aligned_branch_candidates": {
+    "0xc00824c8": [
+      "0xc0082600"
+    ],
+    "0xc00839f0": [
+      "0xc0028208",
+      "0xc0028cb4",
+      "0xc0042c14",
+      "0xc006547c",
+      "0xc00654d8"
+    ],
+    "0xc002814c": [
+      "0xc002a4dc"
+    ],
+    "0xc0170b80": [
+      "0xc006ead4"
+    ]
+  },
+  "caveat": "Data can decode as instructions; indirect calls, Thumb and calculated targets not exhaustive.",
+  "thresholds": [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+  ]
+}
