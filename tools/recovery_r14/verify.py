@@ -49,16 +49,34 @@ def main():
    if case==20:assert snapshots[20][0][9]&255==0 and src!=shd and b'0xc001613c:' not in trace
    if case in (15,16):assert src!=old and b'0xc0015ab4:' in trace
  for x,y in zip(r['cases'][:28],r['cases'][28:]):assert x['events']==y['events'] and x['exit']==y['exit']
+ # Independent new recovery-boundary experiments; never equate ready with resumed.
+ recovery=json.loads((out/'results_recovery.json').read_text());assert len(recovery['cases'])==8
+ for vi in range(2):
+  for case in range(28,32):
+   row=recovery['cases'][vi*4+case-28];assert (row['vsb'],row['case'],row['exit'])==(vi,case,0)
+   raw=gzip.decompress((out/f'{vi}_{case}.records.gz').read_bytes());assert raw and len(raw)%2112==0;ev=[];st={}
+   for pos in range(0,len(raw),2112):
+    h=list(struct.unpack_from('<16I',raw,pos));assert h[:2]==[0x52394c43,300+case] and h[5]==len(ev) and h[6]==0x39 and h[2] not in (99,90)
+    src=raw[pos+64:pos+1088];shd=raw[pos+1088:pos+2112];assert src==shd==old
+    ev.append(dict(header=h,source_sha256=sha(src),shadow_sha256=sha(shd)));st[h[2]]=h
+   assert ev==row['events'] and st[0][3:5]==[64,3112]
+   assert st[20][3:5]==([4,0x5000000] if case==29 else [2,0x2100000]) and st[120][3:5]==[1,0x3300000]
+   trace=gzip.decompress((out/f'{vi}_{case}.trace.gz').read_bytes())
+   if case in (28,29):assert st[60][3:5]==[0xffffffce,1] and st[61][3:5]==[1,0xc06a24e4] and b'0xc0001c7c:' in trace
+   if case==30:assert st[60][3:5]==[0xffffffe7,0] and b'0xc0000d80:' in trace
+   if case==31:assert st[60][3:5]==[0xc06a2544,6] and st[61][3:5]==[0xc06a24e4,0] and b'0xc00018f0:' in trace
+   assert b'0xc0015fa0:' not in trace
+ for x,y in zip(recovery['cases'][:4],recovery['cases'][4:]):assert x['events']==y['events'] and x['exit']==y['exit']
  # Preserve all previous research, not just selected source files.
  names=subprocess.check_output(['git','ls-tree','-r','--name-only',BASE],cwd=ROOT,text=True).splitlines()
  assert not subprocess.check_output(['git','diff',BASE,'--',*names],cwd=ROOT)
  p=json.loads((ROOT/'reports/recovery_r13/provenance.json').read_text())
  for n,h in p['sha256'].items():assert sha((ROOT/n).read_bytes())==h,n
- a=json.loads((out/'audit.json').read_text());assert len(a['ranges'])==18 and [c['service'] for c in a['contexts']]==[17,35] and all(c['progress_argument']==0 for c in a['contexts'])
+ a=json.loads((out/'audit.json').read_text());assert len(a['ranges'])==20 and [c['service'] for c in a['contexts']]==[17,35] and all(c['progress_argument']==0 for c in a['contexts'])
  m=json.loads((out/'models.json').read_text());assert m['admission']['states']==1180 and m['admission']['transitions']==2181 and m['admission']['completed_scan_edges']==40 and not m['recovery_capabilities']['cancellation'] and not m['recovery_capabilities']['restoration']
- msg='PASS:56 R14 ARM cases;50 normal exits;6 expected GPIO faults;32 V30 frames/VSB;exact cross-VSB records;owner/ticket/pages/close/stall oracles;201 R13 manifest entries and all R1-R13 tracked paths unchanged'
+ msg='PASS:64 R14 ARM cases;58 normal exits;6 expected GPIO faults;32 V30 frames/VSB;exact cross-VSB records;owner/ticket/pages/close/stall oracles;201 R13 manifest entries and all R1-R13 tracked paths unchanged'
  (out/'independent_verification.log').write_text(msg+'\n');print(msg)
  paths=[p for d in ('tests/recovery_r14','tools/recovery_r14','reports/recovery_r14') for p in sorted((ROOT/d).rglob('*')) if p.is_file() and '__pycache__' not in p.parts and p!=out/'provenance.json']
  paths += [p for p in (ROOT/'RECOVERY_R14_RAPPORT_FR.md',ROOT/'documents/RECOVERY_R14_GRAPHICS_CONTEXT_MAP_FR.md',ROOT/'documents/RECOVERY_R14_ADMISSION_ARCHITECTURE_FR.md',ROOT/'tests/run_recovery_r14.sh') if p.exists()]
- (out/'provenance.json').write_text(json.dumps({'base_commit':BASE,'scope':'RESEARCH_ONLY; native code RX; no hardware replies; serialized laboratory transitions; no native cancellation proof','native_cases':56,'normal_exits':50,'expected_gpio_faults':6,'original_vsb_sha256':r['vsb_sha256'],'sha256':{str(p.relative_to(ROOT)):sha(p.read_bytes()) for p in paths}},indent=2)+'\n')
+ (out/'provenance.json').write_text(json.dumps({'base_commit':BASE,'scope':'RESEARCH_ONLY; native code RX; no hardware replies; serialized laboratory transitions; no native cancellation proof','native_cases':64,'normal_exits':58,'expected_gpio_faults':6,'original_vsb_sha256':r['vsb_sha256'],'sha256':{str(p.relative_to(ROOT)):sha(p.read_bytes()) for p in paths}},indent=2)+'\n')
 if __name__=='__main__':main()

@@ -1,6 +1,6 @@
 # R14 — carte des contextes et couverture
 
-Base cb0d8ca. Carte additive : aucune preuve R13 réécrite. Instructions originales identiques sur les deux VSB dans les 18 plages de l'audit R14. Le scan ARM aligné est un ensemble de candidats, pas une preuve exhaustive sur appels indirects, Thumb, alias, IRQ/FIQ ou DMA.
+Base cb0d8ca. Carte additive : aucune preuve R13 réécrite. Instructions originales identiques sur les deux VSB dans les 20 plages de l'audit R14. Le scan ARM aligné est un ensemble de candidats, pas une preuve exhaustive sur appels indirects, Thumb, alias, IRQ/FIQ ou DMA.
 
 ## Contextes nouvellement attribués
 

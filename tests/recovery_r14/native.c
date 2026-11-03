@@ -66,6 +66,21 @@ int main(void){
  else if(R14_CASE==25){t=r14_critical(&a,P,5);CHECK(t&&r14_observe_stall(&a,t,a.heartbeat),253);r14_close(&a,P);CHECK(!r14_critical_returned(&a,5,t)&&!r14_closed(&a,P),254);snap(1);}
  else if(R14_CASE==26){a.g.source_epoch=0xffffffffu;CHECK(!r14_draw(&a,P,4)&&!r14_critical(&a,P,5),255);r13_request(&a.g);CHECK(!r14_read(&a,2),256);}
  else if(R14_CASE==27){begin();unsigned stale=t;draw(1024);end();pub(old);t=r14_draw(&a,P,4);CHECK(t&&t!=stale&&!r14_copy(&a,P,4,stale,source,64)&&!r14_draw_done(&a,P,4,stale),257);draw(1024);end();snap(1);}
+ else if(R14_CASE>=28&&R14_CASE<=31){
+ CHECK(sys(192,0xc06a2000,0x2000,3,0x32,-1,0)==0xc06a2000,258);
+ if(R14_CASE==29)t=r14_critical(&a,P,5);else{r13_request(&a.g);t=r14_read(&a,2);}CHECK(t,259);
+ volatile uint8_t*tc=(void*)0xc06a24e4;W(0xc06a289c)=0xc06a24e4;W(0xc06a2928)=1;
+ if(R14_CASE==28||R14_CASE==29){
+ unsigned sink=0xabcdef;uint32_t*list=(void*)0xc06a28c4;list[0]=list[1]=(uintptr_t)list;tc[12]=10;tc[13]=4;W(0xc06a24f8)=(uintptr_t)&sink;
+ FN(void(*)(void*),0xc0001c7c)((void*)tc);CHECK(sink==(unsigned)-50&&tc[12]==1&&W(0xc06a28a0)==1,260);emit(60,sink,W(0xc06a28a0));emit(61,tc[12],W(0xc06a2924));
+ }else if(R14_CASE==30){W(0xc06a2894)=1;int rc=FN(int(*)(unsigned),0xc0000d80)(1);CHECK(rc==-25,261);emit(60,rc,0);}
+ else{uint32_t*list=(void*)0xc06a28d4;list[0]=list[1]=(uintptr_t)list;tc[13]=6;((volatile uint8_t*)0xc06a2544)[13]=1;W(0xc06a2924)=0xc06a2544;
+ FN(int(*)(void*),0xc00018f0)((void*)tc);CHECK(W(0xc06a2924)==0xc06a2544,262);emit(60,W(0xc06a2924),tc[13]);
+ /* Isolated second selection fixture, not a simulated context switch. */
+ list[0]=list[1]=(uintptr_t)list;W(0xc06a2898)=0;
+ list=(void*)0xc06a28a4;list[0]=list[1]=(uintptr_t)list;tc[13]=0;FN(int(*)(void*),0xc00018f0)((void*)tc);CHECK(W(0xc06a2924)==0xc06a24e4,263);emit(61,W(0xc06a2924),tc[13]);}
+ CHECK(a.g.phase==(R14_CASE==29?R13_CRITICAL:R13_READ)&&a.owner==(R14_CASE==29?5u:2u),264);snap(1);
+ }
  else finish(249);
  snap(20);return 0;
 }

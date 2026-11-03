@@ -4,7 +4,7 @@ import gzip,hashlib,json,struct,subprocess,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 HASHES=['81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03','06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052']
-RANGES={'task5':(0x2a598,0x2a63c),'service_manager':(0x2d65c,0x2de48),'service17':(0x30f00,0x31398),'service35':(0x38d80,0x38e88),'service35_ctor':(0x392a4,0x392d0),'service_tables17':(0xa7608,0xa7628),'service_tables35':(0xa7b58,0xa7b78),'progress_io':(0x4d598,0x4de94),'progress_leaf':(0x60360,0x60424),'startup_call':(0x2ae84,0x2ae94),'lcd_worker':(0x15d14,0x160c4),'spi_poll':(0x15cdc,0x15d14),'fatal':(0x298bc,0x29a00),'terminal':(0x144,0x22c),'kernel_timer':(0x1394,0x14a0),'irq':(0x1560,0x18f0),'wait_semaphore':(0x1bc8,0x1e10),'kernel_semaphore':(0xca8,0xe9c)}
+RANGES={'spi_status':(0x117c8,0x11804),'ready_selection':(0x18f0,0x1a24),'task5':(0x2a598,0x2a63c),'service_manager':(0x2d65c,0x2de48),'service17':(0x30f00,0x31398),'service35':(0x38d80,0x38e88),'service35_ctor':(0x392a4,0x392d0),'service_tables17':(0xa7608,0xa7628),'service_tables35':(0xa7b58,0xa7b78),'progress_io':(0x4d598,0x4de94),'progress_leaf':(0x60360,0x60424),'startup_call':(0x2ae84,0x2ae94),'lcd_worker':(0x15d14,0x160c4),'spi_poll':(0x15cdc,0x15d14),'fatal':(0x298bc,0x29a00),'terminal':(0x144,0x22c),'kernel_timer':(0x1394,0x14a0),'irq':(0x1560,0x18f0),'wait_semaphore':(0x1bc8,0x1e10),'kernel_semaphore':(0xca8,0xe9c)}
 def main():
  out=ROOT/'reports/recovery_r14';build=ROOT/'build/recovery_r14';build.mkdir(parents=True,exist_ok=True)
  images=[]

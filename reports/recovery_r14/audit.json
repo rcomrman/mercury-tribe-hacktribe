@@ -5,6 +5,18 @@
   ],
   "ranges": [
     {
+      "name": "spi_status",
+      "start": "0xc00117c8",
+      "end_exclusive": "0xc0011804",
+      "sha256": "0ae125e57014ac6772852cc4479088e02807817aaf1263ee541c2983d60ec056"
+    },
+    {
+      "name": "ready_selection",
+      "start": "0xc00018f0",
+      "end_exclusive": "0xc0001a24",
+      "sha256": "9aa6138cab24858b54cc26271c4ce5e4273502c61ff3a39f098d36d0dc5e47b7"
+    },
+    {
       "name": "task5",
       "start": "0xc002a598",
       "end_exclusive": "0xc002a63c",
