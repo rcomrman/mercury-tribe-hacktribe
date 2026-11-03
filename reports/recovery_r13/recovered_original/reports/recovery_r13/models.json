@@ -1,0 +1,90 @@
+{
+  "scope": "SERIAL ABSTRACT MODEL; metadata actions atomic by assumption; page steps simplify native byte operations; no RTOS, IRQ/FIQ, DMA, cache, transport or independent recovery emulated",
+  "participating_protocol": {
+    "states": 168,
+    "transitions": 252,
+    "complete_scan_edges_checked": 6,
+    "draw_states_with_deferred_request": 27,
+    "max_commits": 2,
+    "pages": 8
+  },
+  "conditional_safety": "All eight-page reads begun through the coordinator see one committed source generation, if every writer/reader participates and no aborted partial draw is returned to IDLE. No liveness claim without return/fairness bounds.",
+  "counterexamples": {
+    "timer_only": {
+      "draw_pages_done": 3,
+      "direct_progress_or_compare_bypass_versions": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "copy_only": {
+      "actions": [
+        "scan pages0..2 of A without reader lease",
+        "serialize and fully publish B",
+        "scan pages3..7 of B"
+      ],
+      "versions": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "same_owner_recursive_lock": {
+      "actions": [
+        "outer native UI composition incomplete",
+        "same thread calls progress draw+scan",
+        "recursive lock permits it",
+        "reader sees incomplete outer composition"
+      ],
+      "coherent": false
+    },
+    "nonrecursive_lock": {
+      "actions": [
+        "outer DRAW holds lock",
+        "synchronous progress requests same lock",
+        "caller waits for itself before outer DRAW can finish"
+      ],
+      "progress_possible_without_external_action": false
+    },
+    "critical_drop": {
+      "actions": [
+        "UI gate refuses synchronous progress worker",
+        "caller interprets ordinary return as completed critical service"
+      ],
+      "semantic_equivalence_proved": false
+    },
+    "queue_drain": {
+      "producer_iterations": 256,
+      "occupancy_always": 1,
+      "empty_boundary_reached": false,
+      "limit": "Finite witness plus inductive repeating transition; not a hardware rate claim."
+    },
+    "blocked_worker": {
+      "phase": "READ or KORG_CRITICAL",
+      "caller_can_release_by_cooperative_timeout": false,
+      "independent_abort_authority_proved": false
+    },
+    "fatal_bypass": {
+      "phase": "any",
+      "diagnostic_uses_same_lcd": true,
+      "safe_global_gate_found": false
+    }
+  },
+  "candidate_domain_contract": {
+    "entry": "IDLE and known complete source, no active borrow/reader",
+    "critical": "exclude new compositions and periodic scans, execute complete original progress composite; internal draw precedes internal read",
+    "exit": "only on actual return; no forced release while native code may still run",
+    "remaining": "all callers, fatal entries, hardware waits, latency bounds and IRQ writers must still be qualified"
+  }
+}

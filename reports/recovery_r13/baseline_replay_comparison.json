@@ -1,0 +1,366 @@
+{
+  "scope": "First replay using identical checkpoint C/header/runner before final observation instrumentation; originals never overwritten",
+  "all_40_records_identical": true,
+  "cases": [
+    {
+      "vsb": 0,
+      "case": 0,
+      "records_identical": true,
+      "original_records_sha256": "054bc915e2eac16c880cc0268f9c8c2030920824f08829f8d8468e7076eb9184",
+      "replay_records_sha256": "054bc915e2eac16c880cc0268f9c8c2030920824f08829f8d8468e7076eb9184",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 1,
+      "records_identical": true,
+      "original_records_sha256": "5c5f63c94408bbabf0299030bcf5d159ace074ad60d6cfa6809a165691c22a28",
+      "replay_records_sha256": "5c5f63c94408bbabf0299030bcf5d159ace074ad60d6cfa6809a165691c22a28",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 2,
+      "records_identical": true,
+      "original_records_sha256": "a6d33debb0275dac65a661e219843c18d6ba3c467e7079388af70314e0f20dfe",
+      "replay_records_sha256": "a6d33debb0275dac65a661e219843c18d6ba3c467e7079388af70314e0f20dfe",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 3,
+      "records_identical": true,
+      "original_records_sha256": "238390b7e9f8fcf551fc8e7ee5e07701232b5984c95a8977e1952a3208444be6",
+      "replay_records_sha256": "238390b7e9f8fcf551fc8e7ee5e07701232b5984c95a8977e1952a3208444be6",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 4,
+      "records_identical": true,
+      "original_records_sha256": "abcdb1903087da814d328ce0dba4aa2a8492fb3570e408d185ebd8bef73921b9",
+      "replay_records_sha256": "abcdb1903087da814d328ce0dba4aa2a8492fb3570e408d185ebd8bef73921b9",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 5,
+      "records_identical": true,
+      "original_records_sha256": "ef28c573c114d968768a51fe6dfe11d4a57410a295abca93c10e596fade2f8ee",
+      "replay_records_sha256": "ef28c573c114d968768a51fe6dfe11d4a57410a295abca93c10e596fade2f8ee",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 6,
+      "records_identical": true,
+      "original_records_sha256": "ee66276669213738a4b395bfd4c4a3d2f8ede3f754ad0d0868c36829c6d3e584",
+      "replay_records_sha256": "ee66276669213738a4b395bfd4c4a3d2f8ede3f754ad0d0868c36829c6d3e584",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 7,
+      "records_identical": true,
+      "original_records_sha256": "183b5979eb08a570064f68efe9f63d3c77a9ad1b7614ecf46759edb6519e43c1",
+      "replay_records_sha256": "183b5979eb08a570064f68efe9f63d3c77a9ad1b7614ecf46759edb6519e43c1",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 8,
+      "records_identical": true,
+      "original_records_sha256": "6f8c5df225ce19b087dfe24274702075e950a258bd6182785bdae3fc16a25401",
+      "replay_records_sha256": "6f8c5df225ce19b087dfe24274702075e950a258bd6182785bdae3fc16a25401",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 9,
+      "records_identical": true,
+      "original_records_sha256": "b4fe071d07957a117d7d48337f9c2ebb8722ddb8373936d1da73dea14029c7d2",
+      "replay_records_sha256": "b4fe071d07957a117d7d48337f9c2ebb8722ddb8373936d1da73dea14029c7d2",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 10,
+      "records_identical": true,
+      "original_records_sha256": "d81a62947f631b6a64761b582659b1aae047276a899bf385c19f51b65ff8e033",
+      "replay_records_sha256": "d81a62947f631b6a64761b582659b1aae047276a899bf385c19f51b65ff8e033",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 11,
+      "records_identical": true,
+      "original_records_sha256": "9c7d3ba42f9a959b76508907b10971db3d59f53a60c365423721c71da9a34694",
+      "replay_records_sha256": "9c7d3ba42f9a959b76508907b10971db3d59f53a60c365423721c71da9a34694",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 12,
+      "records_identical": true,
+      "original_records_sha256": "6cdb345cb83e05449cb8bf4404b37e24c4f59fa1da9348de8f70dd985f7e4301",
+      "replay_records_sha256": "6cdb345cb83e05449cb8bf4404b37e24c4f59fa1da9348de8f70dd985f7e4301",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 13,
+      "records_identical": true,
+      "original_records_sha256": "c9a2ab96379129f3e2e73e0cde9c229a3dbb5ce255d6b8ff76ed81dd030adcd7",
+      "replay_records_sha256": "c9a2ab96379129f3e2e73e0cde9c229a3dbb5ce255d6b8ff76ed81dd030adcd7",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 14,
+      "records_identical": true,
+      "original_records_sha256": "223e3641e442fac13f2686d1998a170f946d2ce4e54cb5fb2cf059f07570a36d",
+      "replay_records_sha256": "223e3641e442fac13f2686d1998a170f946d2ce4e54cb5fb2cf059f07570a36d",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 15,
+      "records_identical": true,
+      "original_records_sha256": "9c99b7d3b11bded9b4b2638543304020f75717385d338f6e31b3f10fd9c61a97",
+      "replay_records_sha256": "9c99b7d3b11bded9b4b2638543304020f75717385d338f6e31b3f10fd9c61a97",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 16,
+      "records_identical": true,
+      "original_records_sha256": "daaebaf79a16077fb88dd837b5fac16555fc13f016a5e1c5acdf226a07717de2",
+      "replay_records_sha256": "daaebaf79a16077fb88dd837b5fac16555fc13f016a5e1c5acdf226a07717de2",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 17,
+      "records_identical": true,
+      "original_records_sha256": "a66aa6503505d2ab8e7d2d01147b20d3d3e0e43f59fca830be704ab807894850",
+      "replay_records_sha256": "a66aa6503505d2ab8e7d2d01147b20d3d3e0e43f59fca830be704ab807894850",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 18,
+      "records_identical": true,
+      "original_records_sha256": "2dacf186dae487fb27caea34fe11469d68689e0ca6ac79f7aef532d23d532081",
+      "replay_records_sha256": "2dacf186dae487fb27caea34fe11469d68689e0ca6ac79f7aef532d23d532081",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 19,
+      "records_identical": true,
+      "original_records_sha256": "e1eba901f77db83f47354a89cf5e2bbcab6de6bbfbd576ce5458178229eed365",
+      "replay_records_sha256": "e1eba901f77db83f47354a89cf5e2bbcab6de6bbfbd576ce5458178229eed365",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 0,
+      "records_identical": true,
+      "original_records_sha256": "054bc915e2eac16c880cc0268f9c8c2030920824f08829f8d8468e7076eb9184",
+      "replay_records_sha256": "054bc915e2eac16c880cc0268f9c8c2030920824f08829f8d8468e7076eb9184",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 1,
+      "records_identical": true,
+      "original_records_sha256": "5c5f63c94408bbabf0299030bcf5d159ace074ad60d6cfa6809a165691c22a28",
+      "replay_records_sha256": "5c5f63c94408bbabf0299030bcf5d159ace074ad60d6cfa6809a165691c22a28",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 2,
+      "records_identical": true,
+      "original_records_sha256": "a6d33debb0275dac65a661e219843c18d6ba3c467e7079388af70314e0f20dfe",
+      "replay_records_sha256": "a6d33debb0275dac65a661e219843c18d6ba3c467e7079388af70314e0f20dfe",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 3,
+      "records_identical": true,
+      "original_records_sha256": "238390b7e9f8fcf551fc8e7ee5e07701232b5984c95a8977e1952a3208444be6",
+      "replay_records_sha256": "238390b7e9f8fcf551fc8e7ee5e07701232b5984c95a8977e1952a3208444be6",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 4,
+      "records_identical": true,
+      "original_records_sha256": "abcdb1903087da814d328ce0dba4aa2a8492fb3570e408d185ebd8bef73921b9",
+      "replay_records_sha256": "abcdb1903087da814d328ce0dba4aa2a8492fb3570e408d185ebd8bef73921b9",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 5,
+      "records_identical": true,
+      "original_records_sha256": "ef28c573c114d968768a51fe6dfe11d4a57410a295abca93c10e596fade2f8ee",
+      "replay_records_sha256": "ef28c573c114d968768a51fe6dfe11d4a57410a295abca93c10e596fade2f8ee",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 6,
+      "records_identical": true,
+      "original_records_sha256": "ee66276669213738a4b395bfd4c4a3d2f8ede3f754ad0d0868c36829c6d3e584",
+      "replay_records_sha256": "ee66276669213738a4b395bfd4c4a3d2f8ede3f754ad0d0868c36829c6d3e584",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 7,
+      "records_identical": true,
+      "original_records_sha256": "183b5979eb08a570064f68efe9f63d3c77a9ad1b7614ecf46759edb6519e43c1",
+      "replay_records_sha256": "183b5979eb08a570064f68efe9f63d3c77a9ad1b7614ecf46759edb6519e43c1",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 8,
+      "records_identical": true,
+      "original_records_sha256": "6f8c5df225ce19b087dfe24274702075e950a258bd6182785bdae3fc16a25401",
+      "replay_records_sha256": "6f8c5df225ce19b087dfe24274702075e950a258bd6182785bdae3fc16a25401",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 9,
+      "records_identical": true,
+      "original_records_sha256": "b4fe071d07957a117d7d48337f9c2ebb8722ddb8373936d1da73dea14029c7d2",
+      "replay_records_sha256": "b4fe071d07957a117d7d48337f9c2ebb8722ddb8373936d1da73dea14029c7d2",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 10,
+      "records_identical": true,
+      "original_records_sha256": "d81a62947f631b6a64761b582659b1aae047276a899bf385c19f51b65ff8e033",
+      "replay_records_sha256": "d81a62947f631b6a64761b582659b1aae047276a899bf385c19f51b65ff8e033",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 11,
+      "records_identical": true,
+      "original_records_sha256": "9c7d3ba42f9a959b76508907b10971db3d59f53a60c365423721c71da9a34694",
+      "replay_records_sha256": "9c7d3ba42f9a959b76508907b10971db3d59f53a60c365423721c71da9a34694",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 12,
+      "records_identical": true,
+      "original_records_sha256": "6cdb345cb83e05449cb8bf4404b37e24c4f59fa1da9348de8f70dd985f7e4301",
+      "replay_records_sha256": "6cdb345cb83e05449cb8bf4404b37e24c4f59fa1da9348de8f70dd985f7e4301",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 13,
+      "records_identical": true,
+      "original_records_sha256": "c9a2ab96379129f3e2e73e0cde9c229a3dbb5ce255d6b8ff76ed81dd030adcd7",
+      "replay_records_sha256": "c9a2ab96379129f3e2e73e0cde9c229a3dbb5ce255d6b8ff76ed81dd030adcd7",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 14,
+      "records_identical": true,
+      "original_records_sha256": "223e3641e442fac13f2686d1998a170f946d2ce4e54cb5fb2cf059f07570a36d",
+      "replay_records_sha256": "223e3641e442fac13f2686d1998a170f946d2ce4e54cb5fb2cf059f07570a36d",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 15,
+      "records_identical": true,
+      "original_records_sha256": "9c99b7d3b11bded9b4b2638543304020f75717385d338f6e31b3f10fd9c61a97",
+      "replay_records_sha256": "9c99b7d3b11bded9b4b2638543304020f75717385d338f6e31b3f10fd9c61a97",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 16,
+      "records_identical": true,
+      "original_records_sha256": "daaebaf79a16077fb88dd837b5fac16555fc13f016a5e1c5acdf226a07717de2",
+      "replay_records_sha256": "daaebaf79a16077fb88dd837b5fac16555fc13f016a5e1c5acdf226a07717de2",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 17,
+      "records_identical": true,
+      "original_records_sha256": "a66aa6503505d2ab8e7d2d01147b20d3d3e0e43f59fca830be704ab807894850",
+      "replay_records_sha256": "a66aa6503505d2ab8e7d2d01147b20d3d3e0e43f59fca830be704ab807894850",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 18,
+      "records_identical": true,
+      "original_records_sha256": "2dacf186dae487fb27caea34fe11469d68689e0ca6ac79f7aef532d23d532081",
+      "replay_records_sha256": "2dacf186dae487fb27caea34fe11469d68689e0ca6ac79f7aef532d23d532081",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 19,
+      "records_identical": true,
+      "original_records_sha256": "e1eba901f77db83f47354a89cf5e2bbcab6de6bbfbd576ce5458178229eed365",
+      "replay_records_sha256": "e1eba901f77db83f47354a89cf5e2bbcab6de6bbfbd576ce5458178229eed365",
+      "trace_bytes_identical": false,
+      "native_translated_instruction_lines_identical": true
+    }
+  ]
+}

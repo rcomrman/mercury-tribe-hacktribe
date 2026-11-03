@@ -1,0 +1,8 @@
+{
+  "states": 168,
+  "transitions": 252,
+  "complete_scan_edges_checked": 6,
+  "draw_states_with_deferred_request": 27,
+  "max_commits": 2,
+  "pages": 8
+}

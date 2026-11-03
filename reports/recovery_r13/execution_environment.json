@@ -1,0 +1,15 @@
+{
+  "versions": {
+    "clang": "Debian clang version 19.1.7 (3+b1)",
+    "ld.lld": "Debian LLD 19.1.7 (compatible with GNU linkers)",
+    "qemu-arm": "qemu-arm version 10.0.13 (Debian 1:10.0.13+ds-0+deb13u1)"
+  },
+  "target": "arm-none-eabi ARM926EJ-S, ARM mode, -O2, freestanding",
+  "qemu_cpu": "arm926",
+  "scope": "Linux user-mode only; native code RX; no MMIO emulation",
+  "originals": {
+    "custom_sha256": "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "backup_sha256": "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052",
+    "size_each": 2097408
+  }
+}

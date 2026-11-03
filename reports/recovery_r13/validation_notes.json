@@ -1,0 +1,25 @@
+{
+  "scope": "Review findings during R13 finalization; no hardware instruction was modified",
+  "failed_arm_expectations": [],
+  "pre_instrumentation_replay": "The saved launcher succeeded for all40 cases before any C change; recovered and first-replay raw records were identical for all40 cases",
+  "findings": [
+    {
+      "case":16,
+      "classification":"coverage_gap_in_fixture_assertion",
+      "observation":"CHECK(progress[3]==1) was after C006040C, but that native call reaches expected GPIO SIGSEGV before returning. The assertion was therefore unreachable in the tested path.",
+      "correction":"Move the same assertion into the Linux fault observer and emit diagnostic stage88 with divisor1. Keep the expected GPIO address, native call, flags and all image expectations unchanged.",
+      "historical_limit":"Recovered original records prove native entry and GPIO boundary; the divisor value in that old run was supported by disassembly, not by this unreachable assertion. Final records now directly observe it."
+    },
+    {
+      "case":18,
+      "classification":"additional_observation",
+      "correction":"Emit diagnostic stage18 with callbacks32 and queue indices32/32, allowing the independent verifier to check the existing runtime assertions directly.",
+      "expectation_changed":false
+    },
+    {
+      "files":["tools/recovery_r13/audit.py","tools/recovery_r13/models.py"],
+      "classification":"checkpoint_transcription_omissions",
+      "correction":"Restore genuine original richer coverage rows and model explanations. Core coordinator.h, native.c and run.py were byte-identical to checkpoint before final instrumentation."
+    }
+  ]
+}

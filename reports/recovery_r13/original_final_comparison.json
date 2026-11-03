@@ -1,0 +1,285 @@
+{
+  "scope": "Genuine original versus new replay; differences limited to diagnostic records16/18; raw archives both retained",
+  "cases": [
+    {
+      "vsb": 0,
+      "case": 0,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 1,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 2,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 3,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 4,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 5,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 6,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 7,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 8,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 9,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 10,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 11,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 12,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 13,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 14,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 15,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 16,
+      "raw_records_identical": false,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 17,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 18,
+      "raw_records_identical": false,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 19,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 0,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 1,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 2,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 3,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 4,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 5,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 6,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 7,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 8,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 9,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 10,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 11,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 12,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 13,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 14,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 15,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 16,
+      "raw_records_identical": false,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 17,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 18,
+      "raw_records_identical": false,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 19,
+      "raw_records_identical": true,
+      "identical_after_explicit_new_diagnostic_records_removed": true,
+      "native_instruction_lines_identical": true
+    }
+  ]
+}

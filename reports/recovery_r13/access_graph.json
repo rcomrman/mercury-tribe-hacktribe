@@ -1,0 +1,1231 @@
+{
+  "vsb_sha256": [
+    "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+  ],
+  "ranges": [
+    {
+      "name": "fixed_source_primitives",
+      "start": "0xc0015804",
+      "end_exclusive": "0xc0015b50",
+      "sha256": "7509ecb0ffa47692d97f7af813b25a9dbdd0f41e7f0e8afb1e9d1551db17e460"
+    },
+    {
+      "name": "lcd_entry_worker",
+      "start": "0xc0015d14",
+      "end_exclusive": "0xc00160c4",
+      "sha256": "5c33efee128215a53e7060bb625faedd5189d7e76ca6b96a3bc06d420c7a8c8f"
+    },
+    {
+      "name": "lcd_controls",
+      "start": "0xc0016230",
+      "end_exclusive": "0xc00163c8",
+      "sha256": "b6a876077b535531f22bf182427a3a0aab659cc63bfcab56c212a81729097702"
+    },
+    {
+      "name": "poll",
+      "start": "0xc0015cdc",
+      "end_exclusive": "0xc0015d14",
+      "sha256": "2797bb4e3daf9f2063762092bdb0ca63f37fe46de296c0d6948841c6437c2121"
+    },
+    {
+      "name": "progress_leaf",
+      "start": "0xc0060300",
+      "end_exclusive": "0xc0060424",
+      "sha256": "1876d034b975a4db9bf7d4edd6e0899c5e3373433ed0cec8fe30f8e09079bb6e"
+    },
+    {
+      "name": "progress_owner_getter",
+      "start": "0xc004d598",
+      "end_exclusive": "0xc004d5cc",
+      "sha256": "059cfbcb621eadfb04505ee543f862ddb8f2704be3f27d1eb3de84fa4dbca0eb"
+    },
+    {
+      "name": "progress_io_read",
+      "start": "0xc004d5cc",
+      "end_exclusive": "0xc004d860",
+      "sha256": "0fe51afde44ce5c707d79ca8f5cbac63258999ff3c2de85fa837681d37429d3f"
+    },
+    {
+      "name": "progress_io_outer",
+      "start": "0xc004d860",
+      "end_exclusive": "0xc004de60",
+      "sha256": "1cf6be8af97c0a95f59d40dca2c98193ceaa0d26314dbe74d6a115706d39b2a8"
+    },
+    {
+      "name": "progress_upstream_service",
+      "start": "0xc0031234",
+      "end_exclusive": "0xc0031344",
+      "sha256": "268153f776e4b9bf9c718ec57a853060d3b1e50f508ac1f4adf62dcc66123af1"
+    },
+    {
+      "name": "progress_upstream_other",
+      "start": "0xc0038d80",
+      "end_exclusive": "0xc0038e88",
+      "sha256": "5b6a55ad794862a1957039aefdf7cd8d6179145ca44c85e7b05c18ede711512e"
+    },
+    {
+      "name": "startup",
+      "start": "0xc002ab7c",
+      "end_exclusive": "0xc002b110",
+      "sha256": "392f759d868d620b0210b6a2c57068bf2c336f2753e38888aa5841e0b7747f7c"
+    },
+    {
+      "name": "task_ui",
+      "start": "0xc002b144",
+      "end_exclusive": "0xc002b220",
+      "sha256": "429c501f00f852027967ebbf31847c87e277a8f965c6ce5a7f74db768247fdeb"
+    },
+    {
+      "name": "wrapper_mode_select",
+      "start": "0xc002d030",
+      "end_exclusive": "0xc002d238",
+      "sha256": "71386a5b2445ea7c9ed8780ddbd8c2ddf5548e3937f662eda363c2e79826f283"
+    },
+    {
+      "name": "ui_alternate",
+      "start": "0xc0083374",
+      "end_exclusive": "0xc00834fc",
+      "sha256": "80df6b49e090a987dcc8ae60d8554aa1c39a969ba4168845ea6868a21969f3a3"
+    },
+    {
+      "name": "ui_main_dispatch_tick",
+      "start": "0xc00834fc",
+      "end_exclusive": "0xc0083714",
+      "sha256": "3c5bf763c03587d8730cf516c26b382e9ddab1b2de15a7e485e0aa5a0ef3ab14"
+    },
+    {
+      "name": "ui_drain",
+      "start": "0xc0083848",
+      "end_exclusive": "0xc0083898",
+      "sha256": "bcd126632d87187bfeb55cdfeb5c8f69556416c2582288f8ed4cd650ddc950c2"
+    },
+    {
+      "name": "timer_callback_loop",
+      "start": "0xc002a71c",
+      "end_exclusive": "0xc002a978",
+      "sha256": "b25c70684147474c0c743ef444104cb6506414d5893b6a0d5c24a173fc471880"
+    },
+    {
+      "name": "secondary_requests",
+      "start": "0xc006eae0",
+      "end_exclusive": "0xc006eb78",
+      "sha256": "85f8c6722a077c307fc7dde1dc4f24cfbdf3da9d520612373b046cb65510c24e"
+    },
+    {
+      "name": "secondary_create",
+      "start": "0xc006e9a0",
+      "end_exclusive": "0xc006ea10",
+      "sha256": "b3a7de73c225f3a19c7f440089683c1786d3b26ad0d3b86504f45e475c8cb563"
+    },
+    {
+      "name": "secondary_delete",
+      "start": "0xc006efd0",
+      "end_exclusive": "0xc006f178",
+      "sha256": "feacfcd38d61499fae360674c4e50a419c720ff66ef8c492831d9c8a582bab98"
+    },
+    {
+      "name": "graphic_cycle",
+      "start": "0xc006f178",
+      "end_exclusive": "0xc006f370",
+      "sha256": "eaa9ea4df472210cbf7113710c82a038ceb2d304a819d3c1217c208cd9cd25d7"
+    },
+    {
+      "name": "fatal",
+      "start": "0xc00298bc",
+      "end_exclusive": "0xc0029a00",
+      "sha256": "330105de3db7fd939765e00dfe294092367c4f7db2b3308af2f56d2aeb8d0c5d"
+    },
+    {
+      "name": "graphics_stubs",
+      "start": "0xc003f0d4",
+      "end_exclusive": "0xc003f10c",
+      "sha256": "4b056dda09137ee8896f2a3fd7af103ae8db483520a4ab4800b6d51ed4f128ab"
+    },
+    {
+      "name": "rectangle",
+      "start": "0xc003f55c",
+      "end_exclusive": "0xc003f650",
+      "sha256": "8d330c478fe4c19dc48020846e2e92159f18938dc47da983511167a360e8945b"
+    },
+    {
+      "name": "widget_pixel_reader",
+      "start": "0xc0071e84",
+      "end_exclusive": "0xc0071ef4",
+      "sha256": "558a7cedf8dfe925b5e232ef46b5c00d3f15704d54f36a68a9cb6b04a8973742"
+    },
+    {
+      "name": "ui_tables",
+      "start": "0xc00e4bb8",
+      "end_exclusive": "0xc00e4c70",
+      "sha256": "e49ae8ea43345e7bc798b68c09b0c3c218c2ecea686e9c25223455a3abf97e1d"
+    },
+    {
+      "name": "task_table",
+      "start": "0xc00a37a8",
+      "end_exclusive": "0xc00a38e8",
+      "sha256": "a9816eed44bc576239dffa6d18728144d8db9bd1d0831142f2d241b0d851244a"
+    },
+    {
+      "name": "kernel_priority",
+      "start": "0xc00006a0",
+      "end_exclusive": "0xc00007ac",
+      "sha256": "606923ce5bfaf27ef957f2e448971174d03e4dee83b81a852cc24860f8a801cc"
+    },
+    {
+      "name": "kernel_wait_dispatch",
+      "start": "0xc00007ac",
+      "end_exclusive": "0xc0000928",
+      "sha256": "7fdd1be8abff659b868e8006641be78ec9b9a375acfe4e51c0f025865d85391f"
+    },
+    {
+      "name": "irq_switch",
+      "start": "0xc0001648",
+      "end_exclusive": "0xc00018f0",
+      "sha256": "6b704ddeb2324c01a636ef0a89c178c113b6ea8c320cb799dc3515a3b7245e3d"
+    },
+    {
+      "name": "terminal_stop",
+      "start": "0xc0000144",
+      "end_exclusive": "0xc000022c",
+      "sha256": "9501b5bf06048a67c950ed8c167018bd8e55aec9729b13bcaf898b825f10de12"
+    }
+  ],
+  "direct_branch_candidates": {
+    "0xc0015804": [
+      "0xc0015f94",
+      "0xc003f0fc"
+    ],
+    "0xc0015824": [
+      "0xc003f154",
+      "0xc0071ee0",
+      "0xc0073034",
+      "0xc00730ec"
+    ],
+    "0xc0015900": [
+      "0xc0071ec8"
+    ],
+    "0xc0015988": [
+      "0xc003f5f0"
+    ],
+    "0xc0015ab4": [
+      "0xc0016084"
+    ],
+    "0xc0015dd0": [
+      "0xc00298e8",
+      "0xc00299b4",
+      "0xc00299c4",
+      "0xc002a728",
+      "0xc002ac4c",
+      "0xc002ac5c",
+      "0xc0038bc4",
+      "0xc00603f0",
+      "0xc0060404",
+      "0xc00833e8",
+      "0xc008370c",
+      "0xc009a8f0"
+    ],
+    "0xc0015fa0": [
+      "0xc0015e58",
+      "0xc0015f38"
+    ],
+    "0xc006038c": [
+      "0xc004d81c",
+      "0xc004d928",
+      "0xc0060420"
+    ],
+    "0xc006040c": [
+      "0xc004d8b4",
+      "0xc004dcd0"
+    ],
+    "0xc004d598": [
+      "0xc004d814",
+      "0xc004d874",
+      "0xc004d8a4",
+      "0xc004d920",
+      "0xc004dcc0",
+      "0xc004de18"
+    ],
+    "0xc004d5cc": [
+      "0xc004dcf4",
+      "0xc004dd80"
+    ],
+    "0xc004d860": [
+      "0xc002ae90",
+      "0xc0031250",
+      "0xc0038e40"
+    ],
+    "0xc006f178": [
+      "0xc00836f8"
+    ],
+    "0xc006e9a0": [
+      "0xc006ea0c",
+      "0xc006eb54"
+    ],
+    "0xc006efd0": [
+      "0xc00837d0"
+    ],
+    "0xc0083374": [],
+    "0xc0083428": [],
+    "0xc0083848": [],
+    "0xc002d030": [
+      "0xc002b1ec"
+    ],
+    "0xc003f55c": [
+      "0xc0029628",
+      "0xc00603dc",
+      "0xc006819c",
+      "0xc0068218",
+      "0xc0068340",
+      "0xc00684f4",
+      "0xc006c294",
+      "0xc006de84",
+      "0xc006def0",
+      "0xc006e3f0",
+      "0xc006f1b0",
+      "0xc0071ae8",
+      "0xc0071b70",
+      "0xc0071bc8",
+      "0xc0071c84",
+      "0xc0071ce8",
+      "0xc0071d20",
+      "0xc0071d74",
+      "0xc0071d88",
+      "0xc0071dec",
+      "0xc0071e18",
+      "0xc0071f60",
+      "0xc0071fc0",
+      "0xc0072004",
+      "0xc0072590",
+      "0xc00725c4",
+      "0xc00726a8",
+      "0xc00727ac",
+      "0xc00727d4",
+      "0xc00727e8",
+      "0xc00727fc",
+      "0xc0072820",
+      "0xc0072838",
+      "0xc0072f7c",
+      "0xc0072fb8",
+      "0xc0073188",
+      "0xc0073590",
+      "0xc0084058",
+      "0xc0084424",
+      "0xc0084a34",
+      "0xc0084c50",
+      "0xc0084cc4",
+      "0xc008506c",
+      "0xc00850d8",
+      "0xc0085170",
+      "0xc00854f8",
+      "0xc0085594",
+      "0xc0085a4c",
+      "0xc0085b54",
+      "0xc0085c00",
+      "0xc008656c",
+      "0xc0086d80",
+      "0xc00871d0",
+      "0xc008724c",
+      "0xc008a1a0",
+      "0xc008a348",
+      "0xc008a4f0",
+      "0xc008a6cc",
+      "0xc008a8ec",
+      "0xc008ab94",
+      "0xc008b360",
+      "0xc008b3e0",
+      "0xc008b548",
+      "0xc008b60c",
+      "0xc008b680",
+      "0xc008ba8c",
+      "0xc008bc7c",
+      "0xc008c7c8",
+      "0xc008c9c0",
+      "0xc008cdec",
+      "0xc008ce6c",
+      "0xc008cf30",
+      "0xc008e96c",
+      "0xc0170044"
+    ]
+  },
+  "branch_edges": [
+    {
+      "callsite": "0xc0015e58",
+      "target": "0xc0015fa0",
+      "word": "0xeb000050",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0015f38",
+      "target": "0xc0015fa0",
+      "word": "0xeb000018",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0015f94",
+      "target": "0xc0015804",
+      "word": "0xebfffe1a",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0016084",
+      "target": "0xc0015ab4",
+      "word": "0xebfffe8a",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0029628",
+      "target": "0xc003f55c",
+      "word": "0xeb0057cb",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00298e8",
+      "target": "0xc0015dd0",
+      "word": "0xebffb138",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00299b4",
+      "target": "0xc0015dd0",
+      "word": "0xebffb105",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00299c4",
+      "target": "0xc0015dd0",
+      "word": "0xebffb101",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc002a728",
+      "target": "0xc0015dd0",
+      "word": "0xeaffada8",
+      "kind": "B"
+    },
+    {
+      "callsite": "0xc002ac4c",
+      "target": "0xc0015dd0",
+      "word": "0xebffac5f",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc002ac5c",
+      "target": "0xc0015dd0",
+      "word": "0xebffac5b",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc002ae90",
+      "target": "0xc004d860",
+      "word": "0xeb008a72",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc002b1ec",
+      "target": "0xc002d030",
+      "word": "0xeb00078f",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0031250",
+      "target": "0xc004d860",
+      "word": "0xeb007182",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0038bc4",
+      "target": "0xc0015dd0",
+      "word": "0xebff7481",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0038e40",
+      "target": "0xc004d860",
+      "word": "0xeb005286",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc003f0fc",
+      "target": "0xc0015804",
+      "word": "0xeaff59c0",
+      "kind": "B"
+    },
+    {
+      "callsite": "0xc003f154",
+      "target": "0xc0015824",
+      "word": "0xebff59b2",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc003f5f0",
+      "target": "0xc0015988",
+      "word": "0xebff58e4",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc004d814",
+      "target": "0xc004d598",
+      "word": "0xebffff5f",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc004d81c",
+      "target": "0xc006038c",
+      "word": "0xeb004ada",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc004d874",
+      "target": "0xc004d598",
+      "word": "0xebffff47",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc004d8a4",
+      "target": "0xc004d598",
+      "word": "0xebffff3b",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc004d8b4",
+      "target": "0xc006040c",
+      "word": "0xeb004ad4",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc004d920",
+      "target": "0xc004d598",
+      "word": "0xebffff1c",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc004d928",
+      "target": "0xc006038c",
+      "word": "0xeb004a97",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc004dcc0",
+      "target": "0xc004d598",
+      "word": "0xebfffe34",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc004dcd0",
+      "target": "0xc006040c",
+      "word": "0xeb0049cd",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc004dcf4",
+      "target": "0xc004d5cc",
+      "word": "0xebfffe34",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc004dd80",
+      "target": "0xc004d5cc",
+      "word": "0xebfffe11",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc004de18",
+      "target": "0xc004d598",
+      "word": "0xebfffdde",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00603dc",
+      "target": "0xc003f55c",
+      "word": "0xebff7c5e",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00603f0",
+      "target": "0xc0015dd0",
+      "word": "0xebfed676",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0060404",
+      "target": "0xc0015dd0",
+      "word": "0xeafed671",
+      "kind": "B"
+    },
+    {
+      "callsite": "0xc0060420",
+      "target": "0xc006038c",
+      "word": "0xeaffffd9",
+      "kind": "B"
+    },
+    {
+      "callsite": "0xc006819c",
+      "target": "0xc003f55c",
+      "word": "0xebff5cee",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0068218",
+      "target": "0xc003f55c",
+      "word": "0xebff5ccf",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0068340",
+      "target": "0xc003f55c",
+      "word": "0xebff5c85",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00684f4",
+      "target": "0xc003f55c",
+      "word": "0xebff5c18",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc006c294",
+      "target": "0xc003f55c",
+      "word": "0xebff4cb0",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc006de84",
+      "target": "0xc003f55c",
+      "word": "0xebff45b4",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc006def0",
+      "target": "0xc003f55c",
+      "word": "0xebff4599",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc006e3f0",
+      "target": "0xc003f55c",
+      "word": "0xebff4459",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc006ea0c",
+      "target": "0xc006e9a0",
+      "word": "0xeaffffe3",
+      "kind": "B"
+    },
+    {
+      "callsite": "0xc006eb54",
+      "target": "0xc006e9a0",
+      "word": "0xebffff91",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc006f1b0",
+      "target": "0xc003f55c",
+      "word": "0xebff40e9",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0071ae8",
+      "target": "0xc003f55c",
+      "word": "0xebff369b",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0071b70",
+      "target": "0xc003f55c",
+      "word": "0xebff3679",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0071bc8",
+      "target": "0xc003f55c",
+      "word": "0xebff3663",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0071c84",
+      "target": "0xc003f55c",
+      "word": "0xebff3634",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0071ce8",
+      "target": "0xc003f55c",
+      "word": "0xebff361b",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0071d20",
+      "target": "0xc003f55c",
+      "word": "0xebff360d",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0071d74",
+      "target": "0xc003f55c",
+      "word": "0xebff35f8",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0071d88",
+      "target": "0xc003f55c",
+      "word": "0xebff35f3",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0071dec",
+      "target": "0xc003f55c",
+      "word": "0xebff35da",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0071e18",
+      "target": "0xc003f55c",
+      "word": "0xebff35cf",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0071ec8",
+      "target": "0xc0015900",
+      "word": "0xebfe8e8c",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0071ee0",
+      "target": "0xc0015824",
+      "word": "0xebfe8e4f",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0071f60",
+      "target": "0xc003f55c",
+      "word": "0xebff357d",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0071fc0",
+      "target": "0xc003f55c",
+      "word": "0xebff3565",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0072004",
+      "target": "0xc003f55c",
+      "word": "0xebff3554",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0072590",
+      "target": "0xc003f55c",
+      "word": "0xebff33f1",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00725c4",
+      "target": "0xc003f55c",
+      "word": "0xebff33e4",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00726a8",
+      "target": "0xc003f55c",
+      "word": "0xebff33ab",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00727ac",
+      "target": "0xc003f55c",
+      "word": "0xebff336a",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00727d4",
+      "target": "0xc003f55c",
+      "word": "0xebff3360",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00727e8",
+      "target": "0xc003f55c",
+      "word": "0xebff335b",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00727fc",
+      "target": "0xc003f55c",
+      "word": "0xebff3356",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0072820",
+      "target": "0xc003f55c",
+      "word": "0xebff334d",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0072838",
+      "target": "0xc003f55c",
+      "word": "0xebff3347",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0072f7c",
+      "target": "0xc003f55c",
+      "word": "0xebff3176",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0072fb8",
+      "target": "0xc003f55c",
+      "word": "0xebff3167",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0073034",
+      "target": "0xc0015824",
+      "word": "0xebfe89fa",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00730ec",
+      "target": "0xc0015824",
+      "word": "0xebfe89cc",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0073188",
+      "target": "0xc003f55c",
+      "word": "0xebff30f3",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0073590",
+      "target": "0xc003f55c",
+      "word": "0xebff2ff1",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00833e8",
+      "target": "0xc0015dd0",
+      "word": "0xeafe4a78",
+      "kind": "B"
+    },
+    {
+      "callsite": "0xc00836f8",
+      "target": "0xc006f178",
+      "word": "0xebffae9e",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008370c",
+      "target": "0xc0015dd0",
+      "word": "0xeafe49af",
+      "kind": "B"
+    },
+    {
+      "callsite": "0xc00837d0",
+      "target": "0xc006efd0",
+      "word": "0xeaffadfe",
+      "kind": "B"
+    },
+    {
+      "callsite": "0xc0084058",
+      "target": "0xc003f55c",
+      "word": "0xebfeed3f",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0084424",
+      "target": "0xc003f55c",
+      "word": "0xebfeec4c",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0084a34",
+      "target": "0xc003f55c",
+      "word": "0xebfeeac8",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0084c50",
+      "target": "0xc003f55c",
+      "word": "0xebfeea41",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0084cc4",
+      "target": "0xc003f55c",
+      "word": "0xebfeea24",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008506c",
+      "target": "0xc003f55c",
+      "word": "0xebfee93a",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00850d8",
+      "target": "0xc003f55c",
+      "word": "0xebfee91f",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0085170",
+      "target": "0xc003f55c",
+      "word": "0xebfee8f9",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00854f8",
+      "target": "0xc003f55c",
+      "word": "0xebfee817",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0085594",
+      "target": "0xc003f55c",
+      "word": "0xebfee7f0",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0085a4c",
+      "target": "0xc003f55c",
+      "word": "0xebfee6c2",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0085b54",
+      "target": "0xc003f55c",
+      "word": "0xebfee680",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0085c00",
+      "target": "0xc003f55c",
+      "word": "0xebfee655",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008656c",
+      "target": "0xc003f55c",
+      "word": "0xebfee3fa",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0086d80",
+      "target": "0xc003f55c",
+      "word": "0xebfee1f5",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc00871d0",
+      "target": "0xc003f55c",
+      "word": "0xebfee0e1",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008724c",
+      "target": "0xc003f55c",
+      "word": "0xebfee0c2",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008a1a0",
+      "target": "0xc003f55c",
+      "word": "0xebfed4ed",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008a348",
+      "target": "0xc003f55c",
+      "word": "0xebfed483",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008a4f0",
+      "target": "0xc003f55c",
+      "word": "0xebfed419",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008a6cc",
+      "target": "0xc003f55c",
+      "word": "0xebfed3a2",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008a8ec",
+      "target": "0xc003f55c",
+      "word": "0xebfed31a",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008ab94",
+      "target": "0xc003f55c",
+      "word": "0xebfed270",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008b360",
+      "target": "0xc003f55c",
+      "word": "0xebfed07d",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008b3e0",
+      "target": "0xc003f55c",
+      "word": "0xebfed05d",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008b548",
+      "target": "0xc003f55c",
+      "word": "0xebfed003",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008b60c",
+      "target": "0xc003f55c",
+      "word": "0xebfecfd2",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008b680",
+      "target": "0xc003f55c",
+      "word": "0xebfecfb5",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008ba8c",
+      "target": "0xc003f55c",
+      "word": "0xebfeceb2",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008bc7c",
+      "target": "0xc003f55c",
+      "word": "0xebfece36",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008c7c8",
+      "target": "0xc003f55c",
+      "word": "0xebfecb63",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008c9c0",
+      "target": "0xc003f55c",
+      "word": "0xebfecae5",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008cdec",
+      "target": "0xc003f55c",
+      "word": "0xebfec9da",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008ce6c",
+      "target": "0xc003f55c",
+      "word": "0xebfec9ba",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008cf30",
+      "target": "0xc003f55c",
+      "word": "0xebfec989",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc008e96c",
+      "target": "0xc003f55c",
+      "word": "0xebfec2fa",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc009a8f0",
+      "target": "0xc0015dd0",
+      "word": "0xebfded36",
+      "kind": "BL"
+    },
+    {
+      "callsite": "0xc0170044",
+      "target": "0xc003f55c",
+      "word": "0xebfb3d44",
+      "kind": "BL"
+    }
+  ],
+  "aligned_pointer_candidates": {
+    "0xc0015804": [],
+    "0xc0015824": [],
+    "0xc0015900": [],
+    "0xc0015988": [],
+    "0xc0015ab4": [],
+    "0xc0015dd0": [],
+    "0xc0015fa0": [],
+    "0xc006038c": [],
+    "0xc006040c": [],
+    "0xc004d598": [],
+    "0xc004d5cc": [],
+    "0xc004d860": [],
+    "0xc006f178": [],
+    "0xc006e9a0": [],
+    "0xc006efd0": [],
+    "0xc0083374": [
+      "0xc00e4bd0"
+    ],
+    "0xc0083428": [
+      "0xc00e4bc4"
+    ],
+    "0xc0083848": [
+      "0xc00e4c5c"
+    ],
+    "0xc002d030": [],
+    "0xc003f55c": []
+  },
+  "fixed_address_literals": {
+    "0xc031b310": [
+      "0xc0015820",
+      "0xc00158fc",
+      "0xc0015984",
+      "0xc0015a3c",
+      "0xc0015b4c"
+    ],
+    "0xc031b710": [
+      "0xc0015a5c",
+      "0xc0015a94"
+    ]
+  },
+  "coverage": [
+    {
+      "id": "ui_main",
+      "context": "task4 / verified reference UI mode",
+      "chain": "C002B144\u2192C002D030\u2192C0083848\u2192C00834FC\u2192C00836E4\u2192C006F178",
+      "candidate_outer_point": "C002D030 outer invocation",
+      "lab_coverage": "conditional",
+      "evidence": "R7/R11 archives; R13 does not repeat full main cycle",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "ui_alternate",
+      "context": "task4 when selected UI mode2 (service mode7)",
+      "chain": "C002D030\u2192C0083428\u2192C00833F0\u2192C0083374",
+      "candidate_outer_point": "same wrapper plus alternate draw coverage",
+      "lab_coverage": "protected_in_fixture",
+      "evidence": "cases5/6: native queue/dispatch/loop, fixture widget",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "secondary_pages",
+      "context": "task4 along tick, other callers not exhausted",
+      "chain": "C00836E4\u2192C006EAE0\u2192C006E9A0 and C006F178 two slots",
+      "candidate_outer_point": "whole UI transaction before update, not Mercury callback only",
+      "lab_coverage": "conditional",
+      "evidence": "static calls and R7/R8 evidence; no global lock installed",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "periodic_worker",
+      "context": "task2 timer callback",
+      "chain": "C002A7EC\u2192callback+C\u2192C002A71C\u2192C0015DD0(3)\u2192C0015FA0",
+      "candidate_outer_point": "timer callback+C outer adapter",
+      "lab_coverage": "protected_in_fixture",
+      "evidence": "case17: callback fixture defers; later worker hits GPIO fault",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "progress",
+      "context": "task1 startup proven route; service callers also exist",
+      "chain": "C002AE90\u2192C004D860\u2192C006040C/C006038C\u2192draw+op2+op3",
+      "candidate_outer_point": "top-level progress operation domain, not timer",
+      "lab_coverage": "unprotected",
+      "evidence": "cases3/4/16; callers C0031250,C0038E40 also traced, contexts incomplete",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "startup",
+      "context": "task1",
+      "chain": "C002AB7C\u2192C0015DA8\u2192C0015EB8\u2192clear source/shadow\u2192forced worker",
+      "candidate_outer_point": "exclusive startup lifecycle before any Mercury ownership",
+      "lab_coverage": "unprotected",
+      "evidence": "direct initializer bypasses dispatcher for forced worker",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "fatal",
+      "context": "many callers, arbitrary failure phase",
+      "chain": "C00298BC\u2192clear/draw\u2192op2/op3\u2192GPIO\u2192C00299F4",
+      "candidate_outer_point": "fault domain; no safe suppression/recovery proven",
+      "lab_coverage": "unprotected",
+      "evidence": "R10 fault archive; nested error/transport dependence remains",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "direct_compare",
+      "context": "worker known caller; arbitrary probe/adapter aliases unknown",
+      "chain": "C0015AB4 reads fixed source without descriptor or private gate",
+      "candidate_outer_point": "full reader interval mediation",
+      "lab_coverage": "unprotected",
+      "evidence": "cases2/9/14",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "lcd_controls",
+      "context": "service shutdown and parameter calls, full task contexts unknown",
+      "chain": "C0015DD0(7)\u2192C00162C4\u2192GPIO/SPI; op4 sets pending",
+      "candidate_outer_point": "transport/control domain separate from worker request",
+      "lab_coverage": "unprotected",
+      "evidence": "case10; op5 is no-op, op1 clears source",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "pixel_writer",
+      "context": "UI and service widget chains, all contexts not assigned",
+      "chain": "C003F154/C0071EE0/C0073034/C00730EC\u2192C0015824",
+      "candidate_outer_point": "all composition domains",
+      "lab_coverage": "unknown",
+      "evidence": "four direct call sites; indirect widget entry/context not exhaustive",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "range_writer",
+      "context": "many widgets and service paths",
+      "chain": "C003F55C\u2192C0015988, plus pixel line paths",
+      "candidate_outer_point": "all composition domains",
+      "lab_coverage": "unknown",
+      "evidence": "all aligned rectangle call candidates retained",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "pixel_reader",
+      "context": "widget function context not fully assigned",
+      "chain": "C0071EC8\u2192C0015900",
+      "candidate_outer_point": "reader coverage when source consistency required",
+      "lab_coverage": "unknown",
+      "evidence": "R12 pixel observations preserved",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "calculated_aliases",
+      "context": "unknown / IRQ / FIQ / DMA not proven absent",
+      "chain": "computed addresses, indirect/native observer aliases",
+      "candidate_outer_point": "must identify or explicitly exclude",
+      "lab_coverage": "unknown",
+      "evidence": "literal/branch scan cannot establish absence",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "queue_drain_liveness",
+      "context": "task4 consumer and producers",
+      "chain": "C002D030\u2192drain until empty",
+      "candidate_outer_point": "bound complete domain duration",
+      "lab_coverage": "unprotected",
+      "evidence": "case18:32 messages consumed in one call; unbounded producer model",
+      "installed_in_native_firmware": false
+    }
+  ],
+  "scope": "No original instruction patched; laboratory coverage only. No global safe outer dominator found in inspected graph. Unknown contexts are explicit; no exhaustive indirect, Thumb, IRQ/FIQ/DMA exclusion claimed."
+}

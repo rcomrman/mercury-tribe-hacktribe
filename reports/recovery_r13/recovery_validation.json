@@ -1,0 +1,45 @@
+{
+  "scope": "Original local artifacts preserved before synchronization/replay; records independently parsed with identical checkpoint runner; not regenerated",
+  "cases": 40,
+  "normal_exits": 26,
+  "fault_exits": 14,
+  "original_vsb_hashes": [
+    "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+  ],
+  "exact_cross_vsb_records": true,
+  "model_recomputed": true,
+  "source_comparison": [
+    {
+      "path": "tests/recovery_r13/coordinator.h",
+      "original_sha256": "9733c0afb936212dfc2d8158c196ab1cf28c8a317c26db2b2b10dbf25ab8e5ea",
+      "checkpoint_sha256": "9733c0afb936212dfc2d8158c196ab1cf28c8a317c26db2b2b10dbf25ab8e5ea",
+      "identical": true
+    },
+    {
+      "path": "tests/recovery_r13/native.c",
+      "original_sha256": "dc7d50f6295d2c9fa238bbb06742359b6360e40c0a396818048dfb9b96a89857",
+      "checkpoint_sha256": "dc7d50f6295d2c9fa238bbb06742359b6360e40c0a396818048dfb9b96a89857",
+      "identical": true
+    },
+    {
+      "path": "tools/recovery_r13/audit.py",
+      "original_sha256": "71eac8ba1a17acca1074d4e10a1b244643f8e653f69471669c689e5025874054",
+      "checkpoint_sha256": "65370692e878d2b9be1a8cb433a13365e1fca13d7273e47cc5d85644660c1ee3",
+      "identical": false
+    },
+    {
+      "path": "tools/recovery_r13/models.py",
+      "original_sha256": "ad589f1bfa1b8119dd70eedaf0dac729bee0564851800cb079c7287fdc3c87f5",
+      "checkpoint_sha256": "db712c246d084159b025655a561bcf12dbb5af0f677198adbcfe3450e48066e0",
+      "identical": false
+    },
+    {
+      "path": "tools/recovery_r13/run.py",
+      "original_sha256": "24c8cd9c1ecfebab2c30049d9d4734530e601030f9d4e7daecc1c50ab7e8e5c5",
+      "checkpoint_sha256": "24c8cd9c1ecfebab2c30049d9d4734530e601030f9d4e7daecc1c50ab7e8e5c5",
+      "identical": true
+    }
+  ],
+  "differences": "Audit checkpoint omitted coverage rows; model checkpoint shortened explanations. Core C, coordinator and ARM runner are identical. Restore richer originals for audit/models; no change to test expectations."
+}
