@@ -1,6 +1,6 @@
 # R15 — frontières de dispatch et couverture
 
-RESEARCH_ONLY, base81d6dcb. Aucun hook ni changement d'instruction.19 plages identiques sur les deux VSB ; appels et pointeurs ARM alignés candidats dans audit.json. « PROUVÉ » qualifie le fait indiqué, pas une protection globale.
+RESEARCH_ONLY, base81d6dcb. Aucun hook ni changement d'instruction.21 plages identiques sur les deux VSB ; appels et pointeurs ARM alignés candidats dans audit.json. « PROUVÉ » qualifie le fait indiqué, pas une protection globale.
 
 ## UI : C002D030
 
@@ -12,9 +12,11 @@ Différer **l'invocation** de C002D030 ne signifie pas différer exactement une 
 
 ## Services : C002D684
 
-r0=gestionnaire de services ; r1=message16 octets : vtable à0, type signé8 bits à+4, mots à+8/+0xC. Appel direct C002D87C dans le consommateur C002D844, depuis tâche5. La publication C002D5D8 crée/cop ie un message et appelle la queue par slot+8. Le consommateur C003B81C copie type et deux mots, puis retire l'élément.
+r0=gestionnaire de services ; r1=message16 octets : vtable à0, type signé8 bits à+4, mots à+8/+0xC. Appel direct C002D87C dans le consommateur C002D844, depuis tâche5. La publication C002D5D8 crée/copie un message et appelle la queue par slot+8. Le consommateur C003B81C copie type et deux mots, puis retire l'élément.
 
 C002D684 pose manager+0x10=1, choisit l'objet dans C03404C8[type], écrit manager+0xC=type, remet objet+0x19 à0 et appelle slots+0xC, +8 puis +0x10. Il peut émettre des changements UI25/26/28/29, afficher un résultat27 et publier un message UI16 contenant objet+4 et statut+0x18. Il remet manager+0xC à−1 et manager+0x10 à0 avant de nettoyer ses deux handles temporaires.
+
+La table C00A4758 fournit le destructeur+4 C002D434, qui appelle C0028DD4 pour libérer le petit objet lui-même, sans copie profonde du mot+4. Cette route est vérifiée statiquement ; le service complet et son allocateur ne sont pas rejoués.
 
 Les deux mots du message deviennent les champs+4 de petits objets alloués ; leurs adresses sont placées dans deux handles sur **la pile du dispatcher**. Le slot+8 reçoit r1=sp et r2=sp+4. Au retour, C002D5B0 appelle le destructeur virtuel+4 des objets. **Copier ces handles ou conserver leurs adresses au-delà du retour n'est pas une conservation de commande sûre.** Un report doit précéder leur construction, ou disposer de vrais contrats de propriété profonde. Les mots+8/+0xC peuvent être des pointeurs dont la durée de vie n'est pas prolongée par une copie16 octets.
 

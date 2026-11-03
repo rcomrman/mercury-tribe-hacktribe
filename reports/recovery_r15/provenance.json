@@ -11,10 +11,10 @@
   "sha256": {
     "tests/recovery_r15/commands.h": "a720884d101b828bedf9f9aa68d5ec6aee9151aea52decdeb477d716106a9173",
     "tests/recovery_r15/native.c": "547e030e3fb4686950d39f945b8beefb2ba2058099b1177fe2ccbc66b92eaec2",
-    "tools/recovery_r15/audit.py": "c1103462b18889cac4257d53ca958bab55887f406e95d8cfc82f55314e57d614",
+    "tools/recovery_r15/audit.py": "6bdad02ef6cb03a9791c98b8ab48466a240e52869fedc353c8408394ff76e713",
     "tools/recovery_r15/models.py": "36b30d55f04749794cfd64b624c8549b4b84e9ef14573221febc59acf40cab2d",
     "tools/recovery_r15/run.py": "fe5452ebccc33b43248972641ce132dd6293b8cbb1182a260eaf958507e487ba",
-    "tools/recovery_r15/verify.py": "f46a5e4ee9f31ee99d755613c2b6422ba9893b4a7a2449c6afa51a3ff54c5224",
+    "tools/recovery_r15/verify.py": "030e86f38bba678c328c4e17c54e81b0e2e2b918fc22bc1ae482ee117f4df90a",
     "reports/recovery_r15/0_0.records.gz": "e715ae71bfc65baf782cb30a2cc13cc527c9625e8e0c5666fcb9651b32ac7a13",
     "reports/recovery_r15/0_0.trace.gz": "aa6d1d2ba7484eaeea06707f678abc97283f10beb73f28785450e0e41f120d7f",
     "reports/recovery_r15/0_1.records.gz": "106d573984e0d11c8874ed011c8e3434502a0746b5b9ed7c5186dc65d8c08019",
@@ -131,14 +131,15 @@
     "reports/recovery_r15/1_8.trace.gz": "6fba9037011507a2c4f9a389b3f8365f106d4eb7c5f63d299fa1fa024a05b19c",
     "reports/recovery_r15/1_9.records.gz": "8573c97c14e8e6d607a8757b7d26ba2bd743f9f3ea7bf3a78217811915b19e9a",
     "reports/recovery_r15/1_9.trace.gz": "a0fb1a895e2908402710908c082e1b56351eb089530e2cc9c8922aafe6f31626",
-    "reports/recovery_r15/audit.json": "d5afb224ef6aaa86aedeeebd8862127818e979a6168db8b21c57d04c3a115a2b",
-    "reports/recovery_r15/audit.log": "16e1e4cbca18b7d086154a41ed9706e0c75c9f4546cc101ea8388dd57a649360",
+    "reports/recovery_r15/audit.json": "5fe8cb7ff37c559ca3ccfb6e80f0fed2ebfcad008c87adc63e39570fef38d77b",
+    "reports/recovery_r15/audit.log": "bee03fbce2911be27b06008c9b7bc8dacbbffce8c7c03780e2d75e4137629925",
+    "reports/recovery_r15/cessation_matrix.json": "f0a8da73b990eb3886e1cbe5b25e0213b95b9cfc154eee3274ec57e3a9c8b410",
     "reports/recovery_r15/failures/compile_initial.log": "36de19cfa0c49435abfe6422bedea25c143beffb79dd7f5e7df567cd73dff343",
     "reports/recovery_r15/failures/verify_initial.log": "ed2551e8969cf73b717d940b7fb11027cb349f252e93d75bdeefcd297549c1d9",
     "reports/recovery_r15/independent_verification.log": "890e57c004341b5eebe2433fdf8d3b6fcc2338c5a18d7d4cb9164fb8eb46b823",
     "reports/recovery_r15/models.json": "68e9867f4293385817d5e3b6b70dcc21f9dbb32199790dc2cfd51bcc7eee551f",
     "reports/recovery_r15/models.log": "b6dbb1953ccfd32eb171e6328ddd82cdceb656679b34b059328a305ec6db3450",
-    "reports/recovery_r15/native_disassembly.txt.gz": "3c67d319ddc98e6aa7c00c3b31387c7f909f2d9cfcd12bac7756d94bbaed2e00",
+    "reports/recovery_r15/native_disassembly.txt.gz": "75ebe342149076acba0c3073b58123eb7880ad24e1f7f7a4c8bef8d22caadf31",
     "reports/recovery_r15/phase1.json": "37da0731047fb128ecaf2f4baeadccd47b3d90fb0a5505dfb73ed75416b34850",
     "reports/recovery_r15/pre_ack_exploratory.tar.gz": "c4e43c2ca667e7227c537fd96eccf2dad04f8cb666e889ddd0d5bd99e1113d7f",
     "reports/recovery_r15/results.json": "d1f4ac50ea209c1f4cf26c497e11c323eca2a98a3cb4c168ad254c00b05cc4b2",
@@ -147,6 +148,6 @@
     "tests/run_recovery_r15.sh": "af91b20199d1cc4dac3ebcc3e9f8f0010ea33b8c0119781f9927b12c5e2c5e54",
     "documents/RECOVERY_R15_ACCESS_CESSATION_FR.md": "b65c6ea0e9bede63e3b5d918d9b96332eb3a8d4a4c736ea3c00ed3773b54d3ff",
     "documents/RECOVERY_R15_COMMAND_CONSERVATION_FR.md": "1d114565db5270f2cb5c7c9aebd16fa4554a91d95c9bfd7bbd506d2019dc68b1",
-    "documents/RECOVERY_R15_DISPATCH_BOUNDARIES_FR.md": "154d6cee555106b0bc5287611d73c78de4b6d21ee4260b33e1959ef19fd6b8ae"
+    "documents/RECOVERY_R15_DISPATCH_BOUNDARIES_FR.md": "2cd03126346b0f7814a748520ad0318e35fa6e0bb6ee092d6e8e6e4c12a747b7"
   }
 }

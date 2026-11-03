@@ -1,0 +1,58 @@
+{
+  "scope": "No global/native resource-release certificate established",
+  "levels": [
+    {
+      "observation": "stop requested",
+      "native": "C002D88C\u2192vtable+0x14; common C002DE78 stores byte+0x19",
+      "cases": [
+        13,
+        28
+      ],
+      "global_cpu_cessation": false,
+      "device_cessation": false
+    },
+    {
+      "observation": "timeout or wake/task-state update",
+      "native": "C0000ACC consumes wake bit; C0000A00 readies TCB but no callback executed",
+      "cases": [
+        19,
+        26
+      ],
+      "global_cpu_cessation": false,
+      "device_cessation": false
+    },
+    {
+      "observation": "callback inner return",
+      "cases": [
+        12
+      ],
+      "outer_depth_still_active": true,
+      "global_cpu_cessation": false,
+      "device_cessation": false
+    },
+    {
+      "observation": "enumerated local refs zero",
+      "cases": [
+        14,
+        20,
+        27
+      ],
+      "hidden_alias_counterexample": 27,
+      "global_cpu_cessation": false,
+      "device_cessation": false
+    },
+    {
+      "observation": "worker enters inaccessible GPIO boundary",
+      "cases": [
+        17,
+        18
+      ],
+      "expected_fault": "01E260BC signal11",
+      "handler_scope": "Linux process terminates; no native recovery or cancellation",
+      "release_allowed": false
+    }
+  ],
+  "native_cancel_proven": false,
+  "native_restore_proven": false,
+  "forced_release_performed": false
+}

@@ -5,6 +5,18 @@
   ],
   "ranges": [
     {
+      "name": "temporary_value_destructor",
+      "start": "0xc002d334",
+      "end_exclusive": "0xc002d454",
+      "sha256": "7f995804c015590b556b3b80ec7a3c9c2f0064e3738d7078f5017214cf36aef1"
+    },
+    {
+      "name": "temporary_value_table",
+      "start": "0xc00a4758",
+      "end_exclusive": "0xc00a4770",
+      "sha256": "10595b2a7ff6986bd34ebc7f923c368439f0b8c4c1133b65a1b8ee9ef5981caa"
+    },
+    {
       "name": "ui_boundary",
       "start": "0xc002d030",
       "end_exclusive": "0xc002d048",
@@ -120,6 +132,8 @@
     }
   ],
   "instruction_contracts": {
+    "0xc00a475c": "0xc002d434",
+    "0xc002d444": "0xebffee62",
     "0xc002d030": "0xe5900004",
     "0xc002d03c": "0xe593300c",
     "0xc002d040": "0xe12fff33",

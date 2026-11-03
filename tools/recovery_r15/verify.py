@@ -71,7 +71,7 @@ def main():
  oldfiles=subprocess.check_output(['git','ls-tree','-r','--name-only',BASE],cwd=ROOT,text=True).splitlines();assert not subprocess.check_output(['git','diff',BASE,'--',*oldfiles],cwd=ROOT)
  prior=json.loads((ROOT/'reports/recovery_r14/provenance.json').read_text())
  for n,h in prior['sha256'].items():assert sha((ROOT/n).read_bytes())==h,n
- audit=json.loads((out/'audit.json').read_text());assert len(audit['ranges'])==19
+ audit=json.loads((out/'audit.json').read_text());assert len(audit['ranges'])==21
  model=json.loads((out/'models.json').read_text());assert model['conservation']['states']==1360 and model['conservation']['transitions']==4068 and model['conservation']['actual_return_edges']==152 and not model['cancellation_demonstrated'] and not model['native_sync_compatibility']
  message='PASS:58 R15 ARM cases;54 normal exits;4 expected GPIO faults;exact cross-VSB records/native instruction lines;FIFO/argument/ACK/generation/lifetime oracles;155 R14 manifest entries and all R1-R14 paths unchanged'
  (out/'independent_verification.log').write_text(message+'\n');print(message)
