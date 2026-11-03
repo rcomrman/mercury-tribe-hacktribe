@@ -1,0 +1,211 @@
+{
+  "vsb_sha256": [
+    "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+  ],
+  "ranges": [
+    {
+      "name": "task5",
+      "start": "0xc002a598",
+      "end_exclusive": "0xc002a63c",
+      "sha256": "db6ebe5c3e9f279efc7b7923e529f4f4a27bbf74a47157d48b97632d08666a18"
+    },
+    {
+      "name": "service_manager",
+      "start": "0xc002d65c",
+      "end_exclusive": "0xc002de48",
+      "sha256": "ddb1ad84adaaef0cc0229e14e1f23b3407ef4aa1f0625f46b1c269f3d24a6208"
+    },
+    {
+      "name": "service17",
+      "start": "0xc0030f00",
+      "end_exclusive": "0xc0031398",
+      "sha256": "4a125836257ee8a1ac7f8c32c7e13eeb0ceab825125c1206da33f59cbf446ffd"
+    },
+    {
+      "name": "service35",
+      "start": "0xc0038d80",
+      "end_exclusive": "0xc0038e88",
+      "sha256": "5b6a55ad794862a1957039aefdf7cd8d6179145ca44c85e7b05c18ede711512e"
+    },
+    {
+      "name": "service35_ctor",
+      "start": "0xc00392a4",
+      "end_exclusive": "0xc00392d0",
+      "sha256": "2dd030a29e80676d4fe8b23be7d5f517c793d115fa57d2dbfb223c719ee8c840"
+    },
+    {
+      "name": "service_tables17",
+      "start": "0xc00a7608",
+      "end_exclusive": "0xc00a7628",
+      "sha256": "84fcfc9f1922eb0009c8bba1af75aa4d16f0486841cecaee3d763605fc8db1eb"
+    },
+    {
+      "name": "service_tables35",
+      "start": "0xc00a7b58",
+      "end_exclusive": "0xc00a7b78",
+      "sha256": "aca1b7ad5d80736d3d4bce709e0a5a5e0bf97390939fb49e6dd58e5ad9991a06"
+    },
+    {
+      "name": "progress_io",
+      "start": "0xc004d598",
+      "end_exclusive": "0xc004de94",
+      "sha256": "0738c565f9244e384777fdc94e04227d4686c8080e8bde5e53112a5dcea7a063"
+    },
+    {
+      "name": "progress_leaf",
+      "start": "0xc0060360",
+      "end_exclusive": "0xc0060424",
+      "sha256": "d98dc52f46f379fe33aae18bf8debff0be01022330934d10930142b74077589b"
+    },
+    {
+      "name": "startup_call",
+      "start": "0xc002ae84",
+      "end_exclusive": "0xc002ae94",
+      "sha256": "298395a17fd667a778d35180472d40003bd4a93aab2953463d2aae1ee4740a35"
+    },
+    {
+      "name": "lcd_worker",
+      "start": "0xc0015d14",
+      "end_exclusive": "0xc00160c4",
+      "sha256": "5c33efee128215a53e7060bb625faedd5189d7e76ca6b96a3bc06d420c7a8c8f"
+    },
+    {
+      "name": "spi_poll",
+      "start": "0xc0015cdc",
+      "end_exclusive": "0xc0015d14",
+      "sha256": "2797bb4e3daf9f2063762092bdb0ca63f37fe46de296c0d6948841c6437c2121"
+    },
+    {
+      "name": "fatal",
+      "start": "0xc00298bc",
+      "end_exclusive": "0xc0029a00",
+      "sha256": "330105de3db7fd939765e00dfe294092367c4f7db2b3308af2f56d2aeb8d0c5d"
+    },
+    {
+      "name": "terminal",
+      "start": "0xc0000144",
+      "end_exclusive": "0xc000022c",
+      "sha256": "9501b5bf06048a67c950ed8c167018bd8e55aec9729b13bcaf898b825f10de12"
+    },
+    {
+      "name": "kernel_timer",
+      "start": "0xc0001394",
+      "end_exclusive": "0xc00014a0",
+      "sha256": "8080a97b0fae74d55de21ce1de4b4957fedf5ec7190ad31684459003aff498a2"
+    },
+    {
+      "name": "irq",
+      "start": "0xc0001560",
+      "end_exclusive": "0xc00018f0",
+      "sha256": "c9e8b417d4b0bd824dc0baec0cbc48f26af010507cd1d1ba6cd41bf680abae9d"
+    },
+    {
+      "name": "wait_semaphore",
+      "start": "0xc0001bc8",
+      "end_exclusive": "0xc0001e10",
+      "sha256": "42226c9438b8858d3b00fd195391c974a68c0880a2d8a4b7f33d590cc3fefd84"
+    },
+    {
+      "name": "kernel_semaphore",
+      "start": "0xc0000ca8",
+      "end_exclusive": "0xc0000e9c",
+      "sha256": "ec19431c9d775c10971727653535b705dea9b0afea54ee049bf07b54e502b92c"
+    }
+  ],
+  "instruction_contracts": {
+    "0xc00a7610": "0xc003128c",
+    "0xc00a7b60": "0xc0038d80",
+    "0xc0031250": "0xeb007182",
+    "0xc0031248": "0xe3a00000",
+    "0xc003124c": "0xe1a01000",
+    "0xc0038e38": "0xe1a00007",
+    "0xc0038e3c": "0xe1a01007",
+    "0xc004d864": "0xe2517000",
+    "0xc004d898": "0xe1570006",
+    "0xc004d91c": "0xaffffeb",
+    "0xc004dcf0": "0xe1a02007",
+    "0xc004dd78": "0xe1a02007",
+    "0xc0030ff8": "0xc00a7608",
+    "0xc00392cc": "0xc00a7b58"
+  },
+  "references": {
+    "0xc0031234": {
+      "branches": [
+        "0xc0031338"
+      ],
+      "aligned_pointers": []
+    },
+    "0xc003128c": {
+      "branches": [],
+      "aligned_pointers": [
+        "0xc00a7610"
+      ]
+    },
+    "0xc0038d80": {
+      "branches": [],
+      "aligned_pointers": [
+        "0xc00a7b60"
+      ]
+    },
+    "0xc004d860": {
+      "branches": [
+        "0xc002ae90",
+        "0xc0031250",
+        "0xc0038e40"
+      ],
+      "aligned_pointers": []
+    },
+    "0xc004d5cc": {
+      "branches": [
+        "0xc004dcf4",
+        "0xc004dd80"
+      ],
+      "aligned_pointers": []
+    },
+    "0xc006038c": {
+      "branches": [
+        "0xc004d81c",
+        "0xc004d928",
+        "0xc0060420"
+      ],
+      "aligned_pointers": []
+    },
+    "0xc006040c": {
+      "branches": [
+        "0xc004d8b4",
+        "0xc004dcd0"
+      ],
+      "aligned_pointers": []
+    },
+    "0xc002d844": {
+      "branches": [
+        "0xc002a628"
+      ],
+      "aligned_pointers": []
+    },
+    "0xc002d684": {
+      "branches": [
+        "0xc002d87c"
+      ],
+      "aligned_pointers": []
+    }
+  },
+  "contexts": [
+    {
+      "service": 17,
+      "table": "C00A7608",
+      "slot8": "C003128C",
+      "chain": "task5 C002A598\u2192C002D844\u2192C002D684\u2192slot8\u2192C003128C\u2192C0031234",
+      "progress_argument": 0
+    },
+    {
+      "service": 35,
+      "table": "C00A7B58",
+      "slot8": "C0038D80",
+      "chain": "task5 C002A598\u2192C002D844\u2192C002D684\u2192slot8\u2192C0038D80",
+      "progress_argument": 0
+    }
+  ],
+  "scope": "Configured task5 dispatch routes established; additional indirect callers/aliases and side effects of all callees not excluded. No global lock or recovery authority established."
+}
