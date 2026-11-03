@@ -1,34 +1,51 @@
-# Mercury Dust — R13, sauvegarde intermédiaire : coordination graphique Korg
+# Mercury Dust — R13 : coordination graphique et finalisation des preuves
 
-3 novembre 2026. Branche exclusive recovery/mercury-dust. Base : 9c4ba62541648ff057800c3b98619cdaa30092d8.
+3 novembre 2026 — branche exclusive `recovery/mercury-dust`. Base technique R12 : **9c4ba62541648ff057800c3b98619cdaa30092d8**. Reprise du commit intermédiaire **58bbfba748f499135a44170d170ec36d63023fa4**, conservé dans l'historique.
 
-**MISSION INTERROMPUE, NON VALIDÉE FINALEMENT. RESEARCH_ONLY.** L'environnement est devenu indisponible après les essais, avant le vérificateur indépendant et la publication des archives brutes. Cette sauvegarde est publiée par le connecteur GitHub. Elle ne doit pas être confondue avec un rapport R13 achevé.
+**R13 est achevée comme recherche logicielle bornée : les vingt scénarios par VSB, les archives originales retrouvées, le rejeu et la vérification indépendante ont effectivement réussi.** Aucun point de coordination global sûr ni récupération indépendante sur instrument n'est pour autant démontré. **RESEARCH_ONLY : aucun flash, firmware installable, intervention matérielle ou modification de routine native.** R14 est seulement proposée, pas commencée.
 
-## 1. État exact de la preuve
+La dernière reprise a retrouvé le volume intact, conservé une archive avant synchronisation et intégré **2c2c578e9e3d7c1b3aed7f24112a525331ed47d1** sans réécriture de l’historique. Les preuves ont été publiées en priorité dans **6e413908a00edb9d877a6f7844b7ed9eca4b4786**, dont la tête distante a été vérifiée. Le vérificateur indépendant a réussi à nouveau sur ces archives ; les SHA-256 du manifeste et des deux VSB originaux ont été revérifiés. Cette reprise finale ne présente aucun nouveau rejeu comme une archive historique.
 
-Les rapports R11/R12 et l'architecture R12 ont été lus intégralement. Le dépôt a été synchronisé sur R12 ; les deux VSB ont leurs SHA de référence. Les commandes ARM ont terminé avant l'interruption :
-- 40 scénarios, vingt par VSB : 26 sorties normales de processus et quatorze fautes attendues à 01E260BC.
-- Le runner exigeait les résultats, les empreintes des images, les chemins natifs et la correspondance exacte des records entre VSB.
-- Le cas0 traitait les 32 images V30 sur chacun des deux VSB.
-- L'audit exécuté indiquait 31 plages originales identiques et 118 candidats d'arêtes directes.
-- Le modèle exécuté indiquait 168 états et 252 transitions pour deux compositions et des scans de huit pages.
+## 1. Ce qui a été retrouvé, comparé et reproduit
 
-**Les records, traces et JSON complets produits localement sont devenus inaccessibles avant leur publication.** Ces chiffres sont des observations de session, pas des archives indépendamment consultables dans ce commit. Aucun fichier de trace ou hash de trace n'a été fabriqué. Le vérificateur indépendant n'a pas été exécuté. Les sources sauvegardées ont été retranscrites depuis les commandes de la conversation ; leur identité octet par octet avec le volume inaccessible ne peut pas être vérifiée. Leur recompilation et leur réexécution sont obligatoires.
+Le volume de la première session a été retrouvé avec la tête locale R12 et les répertoires R13 non suivis. Les **92 fichiers originaux** — sources, records, traces, résultats et audit — ont été conservés et hashés avant la synchronisation sur la sauvegarde GitHub. Leur origine est établie par cette conservation préalable et les contrôles croisés, pas par une déduction fondée uniquement sur leurs dates. Ce n'est pas une attestation cryptographique antérieure à l'interruption.
 
-[État structuré](reports/recovery_r13/observations_intermediaires.json), [extrait des sorties](reports/recovery_r13/extrait_sorties_observees.txt).
+Les trois fichiers exécutables centraux, `tests/recovery_r13/coordinator.h`, `native.c` et `tools/recovery_r13/run.py`, étaient **identiques octet par octet** à la retranscription du commit intermédiaire. La retranscription de l'audit avait omis les quatorze lignes de couverture ; celle des modèles avait raccourci des explications et contre-exemples. Les versions originales plus complètes ont été restaurées. Aucune différence du programme ARM ou de ses attentes n'a été nécessaire pour obtenir le premier rejeu réussi.
 
-## 2. Conclusion technique provisoire
+Deux validations distinctes sont publiées :
 
-**Aucun point de coordination extérieur unique, sûr et couvrant tous les accès n'est identifié dans le graphe inspecté.** Une coordination entre acteurs participants protège bien la composition dans le banc ; les accès qui ne la consultent pas passent toujours outre.
+1. **Archives originales retrouvées** : reparsing des quarante cas, oracles d'image, fautes exactes, correspondance entre VSB et modèle recalculé. Elles restent séparées dans `reports/recovery_r13/recovered_original/` avec un manifeste SHA de 92 fichiers.
+2. **Nouvelles exécutions** : reconstruction du banc et rejeu du lanceur demandé. Le premier rejeu, avant instrumentation complémentaire, produit des records bruts identiques aux originaux pour les **40 cas**. Les traces binaires diffèrent ; leurs lignes d'instructions natives sont identiques pour les 40 cas. Les traces originales ne sont ni réétiquetées ni remplacées par le rejeu.
 
-La piste à approfondir consiste à coordonner des domaines complets :
-1. composition UI, y compris les variantes de gestionnaire et les pages secondaires ;
-2. lecture périodique LCD ;
-3. opérations Korg synchrones qui dessinent puis appellent elles-mêmes le LCD ;
-4. démarrage exclusif ;
-5. erreurs, encore sans solution sûre démontrée.
+La revue a identifié une lacune d'observation réelle au **cas 16** : l'assertion vérifiant le diviseur corrigé était placée après un appel natif qui atteint la faute GPIO avant de retourner. Elle était donc inaccessible. La même assertion a été déplacée dans l'observateur de faute Linux, avec un record de diagnostic de valeur1. Le cas 18 émet maintenant explicitement ses 32 callbacks et ses indices de queue32/32. **Les fautes attendues, les images et les instructions Korg ne sont pas modifiées.** Cette lacune et sa correction sont conservées dans [validation_notes.json](reports/recovery_r13/validation_notes.json) ; aucun test ARM n'a échoué sur les attentes sauvegardées pendant la reprise.
 
-Le triple buffer privé R12 est inclus tel quel par le nouveau banc. Il ne remplace pas la protection de C031B310. Aucun fichier R1–R12, V30, IFX ou VSB n'est volontairement modifié. La sauvegarde distante ajoute seulement des chemins R13 au tree de R12.
+Après ces deux ajouts d'observation, le lanceur complet puis le vérificateur autonome passent à nouveau :
+
+- **40 scénarios ARM**, vingt par VSB, tous identiques entre les deux VSB ;
+- **26 sorties normales de processus et 14 fautes attendues**, sept par VSB, toutes à **01E260BC**, signal11 ;
+- **32 images V30 par VSB** comparées intégralement par SHA à l'oracle R1 ;
+- états **DRAW, READ, CRITICAL et FAULT**, demandes différées, emprunts et refus vérifiés par des oracles explicites ;
+- **31 plages originales identiques**, 118 candidats d'arêtes directes et matrice de 14 domaines ;
+- modèle borné : **168 états, 252 transitions**, six arêtes de fin de scan et 27 états de dessin avec demande différée ;
+- 52 archives de records R12 relues sans réexécuter R12, dont ses contre-exemples de publication et de sémaphore ;
+- 92 fichiers originaux retrouvés toujours conformes au manifeste, et tous les chemins suivis avant R13 identiques à R12.
+
+Les records finaux sont identiques aux originaux pour **36 cas sur 40**. Les quatre différences correspondent exactement aux deux nouveaux diagnostics sur chacun des VSB. Une fois ces diagnostics retirés et les numéros de séquence renormalisés pour comparaison, les **40 flux correspondent exactement**. Les lignes d'instructions natives correspondent aussi pour les 40 cas. Voir [comparaison du premier rejeu](reports/recovery_r13/baseline_replay_comparison.json) et [comparaison originale/finale](reports/recovery_r13/original_final_comparison.json).
+
+Les fichiers `observations_intermediaires.json` et `extrait_sorties_observees.txt` restent des témoignages historiques de l'interruption. Leurs mentions d'archives alors inaccessibles décrivent l'état au commit58bbfba, pas l'état final présent. Le rapport de ce commit reste consultable dans l'historique.
+
+## 2. Résultat technique et décision
+
+**Aucun point de coordination extérieur unique, sûr et couvrant tous les accès n'est identifié dans le graphe inspecté.** Une coordination entre acteurs participants protège la composition dans le banc ; les accès qui ne la consultent pas passent toujours outre. L'absence de point global prouvé est un résultat de recherche, pas un motif pour patcher les routines ou fabriquer une réponse périphérique.
+
+La piste retenue pour une recherche ultérieure consiste à coordonner des domaines complets : composition UI, lecture périodique LCD, opérations Korg synchrones dessin+LCD, démarrage exclusif et erreurs. L'admission de ces domaines et leur progression restent à prouver. La couverture finale est détaillée dans la [carte des accès](documents/RECOVERY_R13_GRAPHICS_ACCESS_MAP_FR.md) et les choix dans les [architectures](documents/RECOVERY_R13_PUBLICATION_ARCHITECTURES_FR.md).
+
+Le triple buffer privé R12 est inclus tel quel. Tous les fichiers R1–R12, V30, huit presets, douze paramètres, quatre mini-LFO au total et IFX sont préservés. Aucun VSB n'est publié ou modifié. Les originaux de **0x200100 octets** sont contrôlés avant/après :
+
+| Original | SHA-256 |
+|---|---|
+| user_custom (2).VSB | `81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03` |
+| user_backup.VSB | `06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052` |
 
 ## 3. Découvertes natives
 
@@ -71,7 +88,7 @@ Mettre directement active=0 dans une fixture bloque le worker, mais pas un appel
 
 [Architectures comparées](documents/RECOVERY_R13_PUBLICATION_ARCHITECTURES_FR.md).
 
-Le nouveau coordinateur a les états IDLE, DRAW, READ, FAULT et CRITICAL. Son état C mesuré par les records initiaux vaut32 octets, incluant le handle privé. Le pool R12 reste3112 octets. Ce sont des tailles du banc ARM, pas de la RAM instrument disponible.
+Le nouveau coordinateur a les états IDLE, DRAW, READ, FAULT et CRITICAL. Son état C mesuré par les records initiaux vaut 32 octets, incluant le handle privé. Le pool R12 reste à 3 112 octets. Ce sont des tailles du banc ARM, pas de la RAM instrument disponible.
 
 - begin DRAW retient une image du triple buffer.
 - La copie est comptée ; end DRAW refuse une composition incomplète.
@@ -86,9 +103,9 @@ Le code est séquentiel, sans atomiques, IRQ mask ni sémaphore installé. Chaqu
 
 La préparation par huit appels au comparateur original est un oracle de cohérence mémoire. Elle ne constitue pas un envoi et ne doit surtout pas être suivie d'une prétendue validation LCD fondée sur source=shadow.
 
-## 5. Expériences observées avant interruption
+## 5. Expériences finales reproduites et vérifiées
 
-| Cas | Expérience | Observation attendue et exigée par le runner |
+| Cas | Expérience | Résultat vérifié par le runner et les oracles indépendants |
 |---:|---|---|
 | 0 | Triple R12, 32 compositions en deux morceaux, demandes médiatisées | Scan différé ; 32 images source/shadow conformes |
 | 1 | Tentative end DRAW après64 octets | Refus, emprunt conservé ; fin complète puis scan |
@@ -133,29 +150,47 @@ L'opcode7 n'est pas un arrêt logiciel acquis du worker : il commence lui-même 
 
 **GO recherche logicielle ; NO GO installation, flash, récupération indépendante et garantie globale de cohérence sur instrument.**
 
-## 8. Reprise reproductible obligatoire
+## 8. Preuves publiées et reproduction finale
 
-    export PATH=/workspace/mercury-tools/bin:$PATH
-    bash tests/run_recovery_r13.sh custom.VSB backup.VSB
+```bash
+export PATH=/workspace/mercury-tools/bin:$PATH
+bash tests/run_recovery_r13.sh 'custom.VSB' 'backup.VSB'
+python3 tools/recovery_r13/verify.py
+```
 
-Le lanceur retranscrit doit être relu/recompilé. Il réutilise les sources R1/R9/R12 et produit seulement des ELF Linux de laboratoire dans build/. Les deux SHA VSB exacts sont exigés avant/après. Rejouer R13 pour régénérer les preuves si le volume original ne revient pas ; ne pas refaire R1–R12.
+Le lanceur compile le banc ARM926, exécute les vingt cas sur chacun des deux VSB, reconstruit l'audit statique et les modèles puis appelle le vérificateur. Le second appel ci-dessus permet de relire indépendamment les archives sans rejouer les expériences. Aucun ancien banc R1–R12 n'est relancé ; seul le générateur d'entrées R1 inchangé régénère les images V30 et son SHA publié est exigé.
 
-Avant de conclure :
-1. Récupérer si possible le volume initial et ses traces ; ne pas déclarer les données perdues définitivement.
-2. Comparer les sources retranscrites à celles du volume s'il revient.
-3. Exécuter le lanceur complet et le vérificateur indépendant.
-4. Publier les véritables records/traces, JSON et provenance ; ne pas remplacer les archives manquantes par des données reconstruites.
-5. Contrôler tous les chemins suivis par R12, puis créer un commit de finalisation distinct.
-6. Conserver cette sauvegarde intermédiaire dans l'historique, sans force-push.
+Le vérificateur final **n'importe ni `run.decode` ni `run.validate`**. Il parse les records, construit ses oracles d'octets et contrôle séparément les phases, les demandes, le slot retenu, le nombre d'octets copiés, les codes de sortie, les fautes et les chemins natifs. Il compare les VSB, contrôle les archives originales et R12, puis exige l'absence de modification de tous les chemins R12 et la présence du commit intermédiaire dans les ancêtres Git.
 
-## 9. Proposition R14
+- [Résultats finaux](reports/recovery_r13/results.json), [journal ARM](reports/recovery_r13/validation.log), [journal du lanceur](reports/recovery_r13/launcher_validation.log), [vérification indépendante](reports/recovery_r13/independent_verification.log).
+- Records et traces **du rejeu final** : `reports/recovery_r13/{0,1}_{0..19}.{records,trace}.gz`.
+- Archives **de la première session retrouvée** : [manifeste original](reports/recovery_r13/recovered_original/manifest.json), puis mêmes noms de records/traces sous `recovered_original/reports/recovery_r13/`. Les sources originales archivées servent à l'identité et à la provenance ; la reproduction utilise les outils à la racine du dépôt.
+- [Comparaison des sources et validation de récupération](reports/recovery_r13/recovery_validation.json), [notes de validation](reports/recovery_r13/validation_notes.json).
+- [Audit et matrice structurée](reports/recovery_r13/access_graph.json), [désassemblage natif](reports/recovery_r13/native_disassembly.txt.gz), [journal audit](reports/recovery_r13/audit.log).
+- [Modèles et contre-exemples](reports/recovery_r13/models.json), [journal modèle](reports/recovery_r13/models.log), [outillage](reports/recovery_r13/execution_environment.json), [provenance et SHA](reports/recovery_r13/provenance.json), [statut final](reports/recovery_r13/finalization.json).
 
-Après finalisation de R13 : **R14, admission des domaines Korg exclusifs et récupération indépendante**.
-- Attribuer les contextes C0031234/C0038D80 et les autres appelants de progression.
-- Qualifier une entrée exclusive à partir d'une source complète et sans emprunt actif.
-- Étudier l'encadrement par callbacks/objets RAM sans modifier les instructions natives, avec durées de vie et couverture explicites.
-- Définir le traitement des services synchrones et diagnostics sans les faire passer pour achevés quand ils sont différés.
-- Borner les vidanges UI et les demandes sans casser leur sémantique native.
-- Établir une autorité de reprise hors LCD, ou maintenir NO GO avec frontière précise.
+Chaque record reprend le format R9 de2112 octets : seize u32 d'en-tête,1024 octets source et1024 octets shadow. Le numéro de cas vaut200+cas R13. Les observations de phase (étapes1/2/89) utilisent h3=phase et h4=(pending<<24)|(slot_lecteur<<16)|octets_copiés. Étape88 du cas16 observe le diviseur ; étape18 du cas18 observe les callbacks et les indices ; étape90 enregistre faute/signal ; étape20 enregistre phase finale et prepared_epoch. L'octet h7 appartient au rectangle dirty natif et ne doit pas être traité comme canari universel.
 
-Mercury conserve ses images privées et peut préparer des copies cohérentes dans un banc qui contrôle tous les accès. Ce qui manque pour l'Electribe reste une protection commune de toutes les voies natives et un retour sûr quand le transport bloque. Cette mission demeure inachevée faute de sauvegarde des preuves et de vérification finale.
+Les traces `in_asm` montrent des blocs traduits, pas chaque occurrence d'instruction. Les gardes de pool/zone adjacente sont contrôlées par assertions dans le banc, y compris dans l'observateur de faute ; les snapshots vérifient la source, la shadow et le descripteur. L'observation de SIGSEGV est une frontière Linux de laboratoire et n'est pas une exception Korg récupérée.
+
+La compilation est Clang19.1.7, ARM926EJ-S en mode ARM, freestanding, -O2 ; QEMU utilise `-cpu arm926`. Les ELF Linux et les VSB lus restent hors Git. Aucune borne de cycles, pile native, RAM instrument disponible, IRQ/FIQ, DMA, cache/MMU ou coexistence audio/IFX n'est déduite des succès QEMU.
+
+## 9. Limites et décision finale
+
+R13 remplit la mission de recherche et de publication reproductible. Elle ne prouve ni la couverture de tous les appels indirects ou alias calculés, ni la possibilité d'installer un coordinateur sans modifier le fonctionnement réel de Korg. Les deux contextes de services amont de progression restent ouverts ; les diagnostics, le démarrage et les opérations de contrôle ne sont pas globalement médiatisés.
+
+Les helpers du coordinateur sont des contrats séquentiels de fixture : `read_end` suppose que le lecteur a réellement terminé ; `critical_begin` suppose une source complète à IDLE et une admission déjà sérialisée. Ces préconditions ne sont pas des primitives noyau ni une preuve de détection d'un appelant non coopératif. La phase FAULT du cas15 est injectée par le banc ; lors des fautes GPIO, la phase DRAW/READ/CRITICAL antérieure est observée conservée jusqu'à l'arrêt du processus, pas convertie par une récupération native inventée.
+
+**GO pour poursuivre la recherche logicielle. NO GO garantie de publication globale sur Electribe, récupération indépendante ou intégration matérielle.** Aucun flash, aucun force-push et aucune modification de main.
+
+## 10. Proposition R14 — non commencée
+
+**R14 : admission des domaines Korg exclusifs et autorité de reprise indépendante.** À partir des résultats réellement reproduits de R13 :
+
+1. Attribuer les contextes de C0031234/C0038D80 et les autres entrées de progression ; conserver les accès inconnus dans la matrice.
+2. Qualifier l'admission d'une opération native complète depuis une source cohérente, sans emprunt ni lecture actifs, et vérifier les retours/refus sans simuler un succès de service.
+3. Étudier les points extérieurs RAM/callbacks et leurs durées de vie, sans installer de hook ; prouver la couverture des UI alternatives, pages secondaires et lecteurs synchrones.
+4. Définir une borne ou une politique vérifiable pour les vidanges UI et les opérations bloquantes ; ne pas relâcher des ressources encore utilisées.
+5. Établir une autorité de détection/confinement hors LCD, ou maintenir NO GO avec la frontière précise. Les chemins fatals doivent être traités explicitement.
+
+Cette proposition ne lance ni de nouveaux tests R14 ni d'intégration. Mercury sait conserver et composer des images cohérentes quand le banc maîtrise tous les accès ; les vraies voies Korg non participantes et les blocages matériels empêchent encore d'en garantir l'affichage fiable et le retour sûr sur la véritable Electribe.

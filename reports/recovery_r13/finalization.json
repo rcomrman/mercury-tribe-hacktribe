@@ -1,0 +1,31 @@
+{
+  "status": "R13 research complete",
+  "date_utc": "2026-11-03",
+  "evidence_commit": "6e413908a00edb9d877a6f7844b7ed9eca4b4786",
+  "preserved_checkpoints": [
+    "58bbfba748f499135a44170d170ec36d63023fa4",
+    "2c2c578e9e3d7c1b3aed7f24112a525331ed47d1"
+  ],
+  "recovery": "Previous workspace recovered intact; no historical archive regenerated or overwritten",
+  "recovered_original_files": 92,
+  "arm_cases": 40,
+  "normal_exits": 26,
+  "expected_gpio_faults": 14,
+  "v30_images_per_vsb": 32,
+  "exact_cross_vsb_events": true,
+  "case16": "Divisor=1 asserted and recorded at expected fault",
+  "case18": "32 callbacks and queue indices32/32 observed",
+  "independent_verifier": "PASS on recovered published replay during finalization; see independent_verification.log",
+  "original_comparison": "36/40 raw record streams identical;40/40 after removing only explicit new diagnostics16/18 and renumbering sequence",
+  "preservation": "All tracked R1-R12 paths unchanged; original VSB SHA-256 checked; native instructions unmodified",
+  "publication": "Evidence commit pushed and remote branch SHA verified with git ls-remote",
+  "limits": [
+    "Cooperative sequential fixture only",
+    "Native bypasses retained as negative controls",
+    "No hardware LCD receipt proof",
+    "No independent recovery proved",
+    "No IRQ/FIQ/DMA or real scheduler safety claim"
+  ],
+  "r14_started": false,
+  "hardware_actions": false
+}

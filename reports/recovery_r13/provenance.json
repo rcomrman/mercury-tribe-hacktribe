@@ -105,6 +105,7 @@
     "reports/recovery_r13/baseline_replay_comparison.json": "fcdc1dcd03cc1f356ebd58124fae02fbeec988afc4083ab07174d0789fc34186",
     "reports/recovery_r13/execution_environment.json": "82ef419f2d5946d0fca05ab103c9aeeacab017ea648bf3100a50ec837fb2f21a",
     "reports/recovery_r13/extrait_sorties_observees.txt": "91f2a9349d031682d6ca05831728fef08611beeedaddb1221fac7381a0c1827b",
+    "reports/recovery_r13/finalization.json": "02106a367f6698a49f4c88865b6bf6d71e14bcd08b27836d33b251627e45ffa0",
     "reports/recovery_r13/independent_verification.log": "cb7d72feee73e2ab0ea4afcdd5567647b1ada8e7abc7cee21fb036587aa0c848",
     "reports/recovery_r13/launcher_validation.log": "cb7d72feee73e2ab0ea4afcdd5567647b1ada8e7abc7cee21fb036587aa0c848",
     "reports/recovery_r13/models.json": "04650ceedcbd1f5adeb1bebade097bed8b309600c2f57abe7288eac2537c5d2b",
@@ -209,7 +210,7 @@
     "reports/recovery_r13/results.json": "a8066a85d1cc46c9971fab9e5ad3eff58241733d940242b2bc719c4726339e32",
     "reports/recovery_r13/validation.log": "57ecb20ec700d6fae97b7a1064593fbcad93e3ba1beb956cc562342198f77d5a",
     "reports/recovery_r13/validation_notes.json": "9ce71d756f34d5e71b12043578b451b089e21157534c0f8168873e255304511c",
-    "RECOVERY_R13_RAPPORT_FR.md": "119f0a90e688413cc787c48a8a1cf019fd4091bfb0212db0945e1d4c44f95828",
+    "RECOVERY_R13_RAPPORT_FR.md": "29d7658a425ca0cf64ad904fc9b31c9bfb39712cfc2b0af80385ac228b9b70b9",
     "documents/RECOVERY_R13_GRAPHICS_ACCESS_MAP_FR.md": "f12955d3fcd0ce4c8ef72f91ce02a0ef5a7cd552707d5937dd24888b59a8d092",
     "documents/RECOVERY_R13_PUBLICATION_ARCHITECTURES_FR.md": "2ea46125982d8708922163d10630081cb7133c26bd36ef57d08bc2c833281b69",
     "tests/run_recovery_r13.sh": "e14b2a511cb510fa63011b8652f1691f631ec3ecdeb490a99d32d9c9d60f8bc0"

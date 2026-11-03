@@ -1,4 +1,4 @@
-# R13 — architectures de publication candidates, intermédiaire
+# R13 — architectures candidates après validation logicielle
 
 RESEARCH_ONLY. Le triple buffer privé tests/recovery_r12/pool.h est conservé sans modification. Aucune des architectures ci-dessous n'est installée ou déclarée sûre sur Electribe.
 
@@ -64,4 +64,12 @@ Une lecture bloquée ne peut pas être débloquée par un timeout coopératif si
 
 La piste exige une autorité indépendante de détection et de confinement/annulation avec état mémoire connu. Rien dans les essais ne démontre cette autorité.
 
-Décision provisoire : GO recherche des domaines et de leur admission ; NO GO garantie de cohérence globale, récupération indépendante ou matériel. La mission R13 elle-même reste à finaliser après récupération/rejeu des preuves.
+**R13 est finalisée comme recherche logicielle reproductible** : originaux retrouvés, rejeu des quarante scénarios et vérification indépendante réussis. Décision technique : GO recherche des domaines et de leur admission ; NO GO garantie de cohérence globale, récupération indépendante ou matériel. R14 est proposée uniquement dans le rapport ; elle n'est pas commencée.
+
+## 6. Portée exacte de la validation
+
+Le modèle borné de coordination examine168 états et252 transitions pour deux publications et huit pages. Tous les scans qui respectent les transitions voient une seule génération. Le modèle suppose ses transactions atomiques et ne prouve pas une progression lorsque le lecteur ne retourne jamais. Les cas ARM utilisent des entrelacements séquentiels injectés, pas un noyau Korg/IRQ simulé.
+
+`read_end` repose sur la précondition « lectures réellement terminées » ; il n'a pas de compteur matériel de huit pages. `critical_begin` teste la phase locale, mais l'état complet et l'absence d'acteur non participant restent des préconditions. Le diagramme exprime un contrat candidat : ses flèches de retour CRITICAL/FAULT ne constituent pas des routines d'annulation ou de reprise implantées dans ce banc.
+
+Les records finaux rendent explicites le diviseur1 au moment de la faute du cas16 et les32 callbacks/indices32/32 du cas18. Les attentes GPIO/SPI n'ont pas été remplacées : quatorze exécutions se terminent sur la faute matérielle attendue, y compris CRITICAL.

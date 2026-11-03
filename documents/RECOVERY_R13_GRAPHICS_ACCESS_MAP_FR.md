@@ -1,4 +1,4 @@
-# R13 — carte et matrice de couverture graphique, intermédiaire
+# R13 — carte finale et matrice de couverture graphique
 
 Base R12 9c4ba62541648ff057800c3b98619cdaa30092d8. Aucun protocole R13 installé dans le firmware. Les mentions « protégé » concernent exclusivement des appels médiatisés dans la fixture. Le graphe indirect, les accès calculés, IRQ/FIQ et DMA ne sont pas exhaustivement établis.
 
@@ -60,6 +60,15 @@ flowchart TD
 
 C002D030 est une candidate commune à plusieurs gestionnaires UI, pas à toutes les opérations graphiques. Le champ callback+C d'un compteur est un point de coordination extérieur pour ce compteur seulement. Le dispatcher LCD concentre beaucoup de commandes, mais l'initialisation appelle aussi directement le worker et des commandes ne sont pas de simples demandes graphiques.
 
-Le scan aligné exécuté avant interruption donnait31 plages identiques et118 arêtes candidates pour les cibles choisies. Des données peuvent se décoder comme branches ARM ; ce résultat ne prouve ni un graphe indirect exhaustif ni un point dominant global.
+Le scan aligné a été reproduit après récupération : **31 plages identiques et 118 arêtes candidates** pour les cibles choisies. Le [JSON final](../reports/recovery_r13/access_graph.json) comprend les quatorze domaines de cette matrice et leurs preuves. Les quarante scénarios ont été rejoués sur les deux VSB et validés indépendamment. Des données peuvent se décoder comme branches ARM ; ce résultat ne prouve ni un graphe indirect exhaustif ni un point dominant global.
 
-Les traces et JSON bruts correspondants sont inaccessibles au moment de cette sauvegarde. Le script d'audit retranscrit doit être réexécuté avant validation finale.
+Les [archives originales retrouvées](../reports/recovery_r13/recovered_original/manifest.json) et les [résultats du rejeu final](../reports/recovery_r13/results.json) sont publiés séparément. L'audit original plus complet a été restauré, puis réexécuté. Le commit intermédiaire58bbfba conserve l'ancien état documentaire.
+
+## Lecture finale de la couverture
+
+- **Protégés dans la fixture uniquement** : appels UI alternatifs encadrés (cas5), demande du callback de timer médiatisée (cas17), lecture/composition coopératives (cas0/1/13).
+- **Non protégés par la seule garde UI/timer** : progression synchrone, initialisation, diagnostic, contrôle7 et comparateur direct. Les cas2/3/4/6/8/9/10/14/16 montrent les contournements.
+- **Conditionnels** : wrapper UI principale et pages secondaires, dont les preuves R7/R11 sont conservées ; phase CRITICAL isolée du cas19 cohérente jusqu'à la faute matérielle, sans preuve de retour.
+- **Inconnus** : tous les contextes des widgets/services, aliases calculés et interactions IRQ/FIQ/DMA non recensées exhaustivement.
+
+Aucun des quatorze domaines n'est marqué « installé dans le firmware ». Le coordinateur ne protège pas un accès non participant ; la matrice ne transforme pas un succès de fixture en exclusion réelle.
