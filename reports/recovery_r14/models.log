@@ -1,0 +1,1 @@
+PASS {"atomic_transitions_assumed": true, "closing_with_active_authority_states": 536, "completed_scan_edges": 40, "max_generations": 2, "states": 1180, "transitions": 2181}

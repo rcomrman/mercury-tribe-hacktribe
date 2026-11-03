@@ -1,0 +1,29 @@
+{
+  "admission": {
+    "states": 1180,
+    "transitions": 2181,
+    "completed_scan_edges": 40,
+    "closing_with_active_authority_states": 536,
+    "max_generations": 2,
+    "atomic_transitions_assumed": true
+  },
+  "scheduling_counterexample": {
+    "100_dispatches_rank6_observer": 0,
+    "rank0_observer_selected_under_model": true,
+    "limits": "Initial strict priorities only; IRQ masking, dispatch inhibit, shared waits, real CPU time and scheduling setup not simulated"
+  },
+  "counterexamples": {
+    "copy_only": "publish A; read pages0..2; publish B; read3..7 -> mixed",
+    "unmediated_writer": "begin READ; three pages; direct native write; remaining pages -> mixed despite valid page counter",
+    "cooperative_timeout": "enter worker; never return; code after call never executes",
+    "false_stall": "No heartbeat change can be legitimate peripheral wait or starvation; suspicion is not proven fault",
+    "unsafe_unlock": "observer clears READ; writer reuses source; old worker resumes -> mixed/use-after-lifetime",
+    "admission_race": "two actors read IDLE before either stores owner -> both admitted unless metadata serialized"
+  },
+  "recovery_capabilities": {
+    "detection": "Injected abstract observer only; no native independent authority proved",
+    "containment": "Cooperative refusal retains active owner and borrow",
+    "cancellation": false,
+    "restoration": false
+  }
+}

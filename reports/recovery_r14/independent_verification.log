@@ -1,0 +1,1 @@
+PASS:56 R14 ARM cases;50 normal exits;6 expected GPIO faults;32 V30 frames/VSB;exact cross-VSB records;owner/ticket/pages/close/stall oracles;201 R13 manifest entries and all R1-R13 tracked paths unchanged
