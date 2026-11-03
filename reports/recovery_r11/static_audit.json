@@ -1,0 +1,1894 @@
+{
+  "vsb_sha256": [
+    "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+  ],
+  "range_count": 27,
+  "evidence": [
+    {
+      "vsb": 0,
+      "ranges": [
+        {
+          "start": "0xc0000000",
+          "end_exclusive": "0xc0000040",
+          "sha256": "7705ba23687479ada5fdfb4a2ccf1ccb492089a2c6a5e54acccbe4ffdf046786"
+        },
+        {
+          "start": "0xc0000040",
+          "end_exclusive": "0xc0000084",
+          "sha256": "2f5cc334c09537c3d7129ebff64e76409ded523224b38621fa01bc80a95b135b"
+        },
+        {
+          "start": "0xc00000f4",
+          "end_exclusive": "0xc0000144",
+          "sha256": "cc9141a53c4b0f2b5fc6c366e9d4c3963a6adb725d41ae90fdaf5cee8ff03866"
+        },
+        {
+          "start": "0xc0000144",
+          "end_exclusive": "0xc000022c",
+          "sha256": "9501b5bf06048a67c950ed8c167018bd8e55aec9729b13bcaf898b825f10de12"
+        },
+        {
+          "start": "0xc00002b4",
+          "end_exclusive": "0xc0000454",
+          "sha256": "0f97413bc48ba9ecf6ddd896f0e4832353b0213dfae5be6671211d2e6ef376c3"
+        },
+        {
+          "start": "0xc0000454",
+          "end_exclusive": "0xc000059c",
+          "sha256": "fab49ca757986bc6bdc344ee0aaddbb8aab97947fe6c13886ef64a9ceaaacd28"
+        },
+        {
+          "start": "0xc00005a0",
+          "end_exclusive": "0xc00007ac",
+          "sha256": "53b25b07dadcc3c80c2dbaf4f2f75582d7519789899cfcdf1d027c15f57b4966"
+        },
+        {
+          "start": "0xc00007ac",
+          "end_exclusive": "0xc0000acc",
+          "sha256": "9aea4647786dc34024f14595eb2c119479c13aea953932659c39211a7de9a924"
+        },
+        {
+          "start": "0xc0001394",
+          "end_exclusive": "0xc0001480",
+          "sha256": "cb71f76f0b8f8c700f4a2410c3d8671aebbd2733ae14e3c8723d407b1fba1f48"
+        },
+        {
+          "start": "0xc0001480",
+          "end_exclusive": "0xc0001504",
+          "sha256": "95db08ac1fde1ed62af1a2bd78440bae5e6ab2d1dbfc8a9f8b16f2b7b99b6304"
+        },
+        {
+          "start": "0xc0001504",
+          "end_exclusive": "0xc00018f0",
+          "sha256": "26e6b505935a69f14269afb5d74f58f4d5abeead7e45a3cced7e6b4f58724609"
+        },
+        {
+          "start": "0xc00018f0",
+          "end_exclusive": "0xc0001a64",
+          "sha256": "2be43c439f12285ac444203d2c15943619d8799a734e0ae9bae068791b2c6994"
+        },
+        {
+          "start": "0xc0001bc8",
+          "end_exclusive": "0xc0001cd4",
+          "sha256": "e349b9146d6b9f7513521f350c5d3efe59c36965a55532a56e741682d78cf244"
+        },
+        {
+          "start": "0xc0002114",
+          "end_exclusive": "0xc0002164",
+          "sha256": "5cc3d53ffd029ff5c54517b3b37433af3cc58583bd859601fed1157b67dfef2c"
+        },
+        {
+          "start": "0xc0025300",
+          "end_exclusive": "0xc0025814",
+          "sha256": "4707a40a6de88dc1544626531bbc5090fdc4091ca345047e80b9759eec9197a7"
+        },
+        {
+          "start": "0xc00298bc",
+          "end_exclusive": "0xc0029a40",
+          "sha256": "559d87d89866a1f768425949d2f9bb33d0d997e7fa2bc380e7184d01101294ae"
+        },
+        {
+          "start": "0xc002a598",
+          "end_exclusive": "0xc002aacc",
+          "sha256": "f5e87480595fa8924e8ecad553c25975a89af29e83fb0f25b6c5bb43e131f4e0"
+        },
+        {
+          "start": "0xc002ab7c",
+          "end_exclusive": "0xc002b220",
+          "sha256": "0eac6a1d00940c4eaafdaf9d1694bcb393c3c5ffe2036258b324e6f5befb2dc6"
+        },
+        {
+          "start": "0xc002d030",
+          "end_exclusive": "0xc002d238",
+          "sha256": "71386a5b2445ea7c9ed8780ddbd8c2ddf5548e3937f662eda363c2e79826f283"
+        },
+        {
+          "start": "0xc00834fc",
+          "end_exclusive": "0xc00835c0",
+          "sha256": "e22dac5e1e8b8987f67012bad4fe9a292c4eccf923d299b9476c9b4f89a628fe"
+        },
+        {
+          "start": "0xc0083848",
+          "end_exclusive": "0xc0083898",
+          "sha256": "bcd126632d87187bfeb55cdfeb5c8f69556416c2582288f8ed4cd650ddc950c2"
+        },
+        {
+          "start": "0xc00839c8",
+          "end_exclusive": "0xc0083a10",
+          "sha256": "4dd751e8417ccd6b537e1366e1967610f187a93cd247b4d58476f33cc8896069"
+        },
+        {
+          "start": "0xc0083fe8",
+          "end_exclusive": "0xc008403c",
+          "sha256": "8cda103615180d3c933e373650540b565555bcea0f81944e55704e6b6fcc9c00"
+        },
+        {
+          "start": "0xc00a3640",
+          "end_exclusive": "0xc00a3900",
+          "sha256": "ef72ba399cdeece2bda024383e6534e19965ac58fce6f7e7c84ef2ead6a5315a"
+        },
+        {
+          "start": "0xc00e4c50",
+          "end_exclusive": "0xc00e4c70",
+          "sha256": "126b41d5ba8fb479658de53b019a9095c9e6706ac4d0ba72b97452a805eec63c"
+        },
+        {
+          "start": "0xc00f9320",
+          "end_exclusive": "0xc00f9340",
+          "sha256": "cd65c920f0ff9f04d87495fc683e87311e1502ed5eb1039b910878452f97e8f2"
+        },
+        {
+          "start": "0xc0170b60",
+          "end_exclusive": "0xc0170b78",
+          "sha256": "12172f662bdf4a530282cc62efb1e67ab7be738959e360a8b2c337cc1cb1ebf7"
+        }
+      ],
+      "tasks": [
+        {
+          "id": 1,
+          "record": "0xc00a37a8",
+          "words": [
+            "0x2",
+            "0x1",
+            "0xc002ab7c",
+            "0x8",
+            "0x23a8",
+            "0xc0200000",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002ab7c",
+          "initial_priority": 8,
+          "stack_bytes": 9128,
+          "stack_base": "0xc0200000"
+        },
+        {
+          "id": 2,
+          "record": "0xc00a37c8",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc002aa34",
+            "0x1",
+            "0x2400",
+            "0xc02023a8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002aa34",
+          "initial_priority": 1,
+          "stack_bytes": 9216,
+          "stack_base": "0xc02023a8"
+        },
+        {
+          "id": 3,
+          "record": "0xc00a37e8",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc002a3c0",
+            "0x3",
+            "0x4800",
+            "0xc02047a8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002a3c0",
+          "initial_priority": 3,
+          "stack_bytes": 18432,
+          "stack_base": "0xc02047a8"
+        },
+        {
+          "id": 4,
+          "record": "0xc00a3808",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc002b144",
+            "0x4",
+            "0x2400",
+            "0xc0208fa8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002b144",
+          "initial_priority": 4,
+          "stack_bytes": 9216,
+          "stack_base": "0xc0208fa8"
+        },
+        {
+          "id": 5,
+          "record": "0xc00a3828",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc002a598",
+            "0x6",
+            "0x100000",
+            "0xc020b3a8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002a598",
+          "initial_priority": 6,
+          "stack_bytes": 1048576,
+          "stack_base": "0xc020b3a8"
+        },
+        {
+          "id": 6,
+          "record": "0xc00a3848",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc00245f0",
+            "0x0",
+            "0x2400",
+            "0xc030b3a8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc00245f0",
+          "initial_priority": 0,
+          "stack_bytes": 9216,
+          "stack_base": "0xc030b3a8"
+        },
+        {
+          "id": 7,
+          "record": "0xc00a3868",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc002c980",
+            "0x0",
+            "0x2400",
+            "0xc030d7a8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002c980",
+          "initial_priority": 0,
+          "stack_bytes": 9216,
+          "stack_base": "0xc030d7a8"
+        },
+        {
+          "id": 8,
+          "record": "0xc00a3888",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc001da9c",
+            "0x5",
+            "0x2400",
+            "0xc030fba8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc001da9c",
+          "initial_priority": 5,
+          "stack_bytes": 9216,
+          "stack_base": "0xc030fba8"
+        },
+        {
+          "id": 9,
+          "record": "0xc00a38a8",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc002b220",
+            "0x7",
+            "0x2400",
+            "0xc0311fa8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002b220",
+          "initial_priority": 7,
+          "stack_bytes": 9216,
+          "stack_base": "0xc0311fa8"
+        },
+        {
+          "id": 10,
+          "record": "0xc00a38c8",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc002aacc",
+            "0x2",
+            "0x2400",
+            "0xc03143a8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002aacc",
+          "initial_priority": 2,
+          "stack_bytes": 9216,
+          "stack_base": "0xc03143a8"
+        }
+      ],
+      "irq_record": [
+        "0x15",
+        "0x0",
+        "0xc0025798"
+      ],
+      "task_count": 10,
+      "cyclic_record": [
+        "0x2",
+        "0x0",
+        "0xc002572c",
+        "0x2",
+        "0x0"
+      ],
+      "direct_branch_candidates": [
+        {
+          "from": "0xc001278c",
+          "target": "0xc00298bc",
+          "word": "0xeb005c4a"
+        },
+        {
+          "from": "0xc00127f8",
+          "target": "0xc00298bc",
+          "word": "0xeb005c2f"
+        },
+        {
+          "from": "0xc001287c",
+          "target": "0xc00298bc",
+          "word": "0xeb005c0e"
+        },
+        {
+          "from": "0xc0012900",
+          "target": "0xc00298bc",
+          "word": "0xeb005bed"
+        },
+        {
+          "from": "0xc0012984",
+          "target": "0xc00298bc",
+          "word": "0xeb005bcc"
+        },
+        {
+          "from": "0xc0012a04",
+          "target": "0xc00298bc",
+          "word": "0xeb005bac"
+        },
+        {
+          "from": "0xc0012a8c",
+          "target": "0xc00298bc",
+          "word": "0xeb005b8a"
+        },
+        {
+          "from": "0xc0012b0c",
+          "target": "0xc00298bc",
+          "word": "0xeb005b6a"
+        },
+        {
+          "from": "0xc0012b90",
+          "target": "0xc00298bc",
+          "word": "0xeb005b49"
+        },
+        {
+          "from": "0xc0012c08",
+          "target": "0xc00298bc",
+          "word": "0xeb005b2b"
+        },
+        {
+          "from": "0xc0012c88",
+          "target": "0xc00298bc",
+          "word": "0xeb005b0b"
+        },
+        {
+          "from": "0xc0012d10",
+          "target": "0xc00298bc",
+          "word": "0xeb005ae9"
+        },
+        {
+          "from": "0xc0012d94",
+          "target": "0xc00298bc",
+          "word": "0xeb005ac8"
+        },
+        {
+          "from": "0xc0012e18",
+          "target": "0xc00298bc",
+          "word": "0xeb005aa7"
+        },
+        {
+          "from": "0xc0012e9c",
+          "target": "0xc00298bc",
+          "word": "0xeb005a86"
+        },
+        {
+          "from": "0xc0012f20",
+          "target": "0xc00298bc",
+          "word": "0xeb005a65"
+        },
+        {
+          "from": "0xc0012fa4",
+          "target": "0xc00298bc",
+          "word": "0xeb005a44"
+        },
+        {
+          "from": "0xc0013024",
+          "target": "0xc00298bc",
+          "word": "0xeb005a24"
+        },
+        {
+          "from": "0xc0013154",
+          "target": "0xc00298bc",
+          "word": "0xeb0059d8"
+        },
+        {
+          "from": "0xc0013284",
+          "target": "0xc00298bc",
+          "word": "0xeb00598c"
+        },
+        {
+          "from": "0xc0013308",
+          "target": "0xc00298bc",
+          "word": "0xeb00596b"
+        },
+        {
+          "from": "0xc001353c",
+          "target": "0xc00298bc",
+          "word": "0xeb0058de"
+        },
+        {
+          "from": "0xc0013770",
+          "target": "0xc00298bc",
+          "word": "0xeb005851"
+        },
+        {
+          "from": "0xc00137f4",
+          "target": "0xc00298bc",
+          "word": "0xeb005830"
+        },
+        {
+          "from": "0xc00139b0",
+          "target": "0xc00298bc",
+          "word": "0xeb0057c1"
+        },
+        {
+          "from": "0xc0013a30",
+          "target": "0xc00298bc",
+          "word": "0xeb0057a1"
+        },
+        {
+          "from": "0xc0013ab4",
+          "target": "0xc00298bc",
+          "word": "0xeb005780"
+        },
+        {
+          "from": "0xc0013b3c",
+          "target": "0xc00298bc",
+          "word": "0xeb00575e"
+        },
+        {
+          "from": "0xc0013d48",
+          "target": "0xc00298bc",
+          "word": "0xeb0056db"
+        },
+        {
+          "from": "0xc0013de0",
+          "target": "0xc00298bc",
+          "word": "0xeb0056b5"
+        },
+        {
+          "from": "0xc0014240",
+          "target": "0xc00298bc",
+          "word": "0xeb00559d"
+        },
+        {
+          "from": "0xc00142cc",
+          "target": "0xc00298bc",
+          "word": "0xeb00557a"
+        },
+        {
+          "from": "0xc0014340",
+          "target": "0xc00298bc",
+          "word": "0xeb00555d"
+        },
+        {
+          "from": "0xc00143a8",
+          "target": "0xc00298bc",
+          "word": "0xeb005543"
+        },
+        {
+          "from": "0xc0014418",
+          "target": "0xc00298bc",
+          "word": "0xeb005527"
+        },
+        {
+          "from": "0xc00176fc",
+          "target": "0xc00298bc",
+          "word": "0xeb00486e"
+        },
+        {
+          "from": "0xc0017a78",
+          "target": "0xc00298bc",
+          "word": "0xeb00478f"
+        },
+        {
+          "from": "0xc0017c10",
+          "target": "0xc00298bc",
+          "word": "0xeb004729"
+        },
+        {
+          "from": "0xc0017dc8",
+          "target": "0xc00298bc",
+          "word": "0xeb0046bb"
+        },
+        {
+          "from": "0xc0017f60",
+          "target": "0xc00298bc",
+          "word": "0xeb004655"
+        },
+        {
+          "from": "0xc0018138",
+          "target": "0xc00298bc",
+          "word": "0xeb0045df"
+        },
+        {
+          "from": "0xc0018438",
+          "target": "0xc00298bc",
+          "word": "0xeb00451f"
+        },
+        {
+          "from": "0xc0018504",
+          "target": "0xc00298bc",
+          "word": "0xeb0044ec"
+        },
+        {
+          "from": "0xc0018584",
+          "target": "0xc00298bc",
+          "word": "0xeb0044cc"
+        },
+        {
+          "from": "0xc00186bc",
+          "target": "0xc00298bc",
+          "word": "0xeb00447e"
+        },
+        {
+          "from": "0xc0018740",
+          "target": "0xc00298bc",
+          "word": "0xeb00445d"
+        },
+        {
+          "from": "0xc001882c",
+          "target": "0xc00298bc",
+          "word": "0xeb004422"
+        },
+        {
+          "from": "0xc00188b0",
+          "target": "0xc00298bc",
+          "word": "0xeb004401"
+        },
+        {
+          "from": "0xc0018a14",
+          "target": "0xc00298bc",
+          "word": "0xeb0043a8"
+        },
+        {
+          "from": "0xc0018a98",
+          "target": "0xc00298bc",
+          "word": "0xeb004387"
+        },
+        {
+          "from": "0xc0018b70",
+          "target": "0xc00298bc",
+          "word": "0xeb004351"
+        },
+        {
+          "from": "0xc0018bf0",
+          "target": "0xc00298bc",
+          "word": "0xeb004331"
+        },
+        {
+          "from": "0xc0018d0c",
+          "target": "0xc00298bc",
+          "word": "0xeb0042ea"
+        },
+        {
+          "from": "0xc0018ffc",
+          "target": "0xc00298bc",
+          "word": "0xeb00422e"
+        },
+        {
+          "from": "0xc00195c4",
+          "target": "0xc00298bc",
+          "word": "0xeb0040bc"
+        },
+        {
+          "from": "0xc0019644",
+          "target": "0xc00298bc",
+          "word": "0xeb00409c"
+        },
+        {
+          "from": "0xc001974c",
+          "target": "0xc00298bc",
+          "word": "0xeb00405a"
+        },
+        {
+          "from": "0xc00199e0",
+          "target": "0xc00298bc",
+          "word": "0xeb003fb5"
+        },
+        {
+          "from": "0xc0019ccc",
+          "target": "0xc00298bc",
+          "word": "0xeb003efa"
+        },
+        {
+          "from": "0xc0019d20",
+          "target": "0xc00298bc",
+          "word": "0xeb003ee5"
+        },
+        {
+          "from": "0xc0019d70",
+          "target": "0xc00298bc",
+          "word": "0xeb003ed1"
+        },
+        {
+          "from": "0xc0019d8c",
+          "target": "0xc00298bc",
+          "word": "0xeb003eca"
+        },
+        {
+          "from": "0xc001a934",
+          "target": "0xc00298bc",
+          "word": "0xeb003be0"
+        },
+        {
+          "from": "0xc001aa60",
+          "target": "0xc00298bc",
+          "word": "0xeb003b95"
+        },
+        {
+          "from": "0xc001bcf4",
+          "target": "0xc00298bc",
+          "word": "0xeb0036f0"
+        },
+        {
+          "from": "0xc001c164",
+          "target": "0xc00298bc",
+          "word": "0xeb0035d4"
+        },
+        {
+          "from": "0xc001c8c8",
+          "target": "0xc00298bc",
+          "word": "0xeb0033fb"
+        },
+        {
+          "from": "0xc001d1f0",
+          "target": "0xc00298bc",
+          "word": "0xeb0031b1"
+        },
+        {
+          "from": "0xc001d310",
+          "target": "0xc00298bc",
+          "word": "0xeb003169"
+        },
+        {
+          "from": "0xc001d48c",
+          "target": "0xc00298bc",
+          "word": "0xeb00310a"
+        },
+        {
+          "from": "0xc001d854",
+          "target": "0xc00298bc",
+          "word": "0xeb003018"
+        },
+        {
+          "from": "0xc001d94c",
+          "target": "0xc00298bc",
+          "word": "0xeb002fda"
+        },
+        {
+          "from": "0xc001d960",
+          "target": "0xc00298bc",
+          "word": "0xeb002fd5"
+        },
+        {
+          "from": "0xc001da18",
+          "target": "0xc00298bc",
+          "word": "0xeb002fa7"
+        },
+        {
+          "from": "0xc001dad8",
+          "target": "0xc00298bc",
+          "word": "0xeb002f77"
+        },
+        {
+          "from": "0xc001e4e0",
+          "target": "0xc00298bc",
+          "word": "0xeb002cf5"
+        },
+        {
+          "from": "0xc001e504",
+          "target": "0xc00298bc",
+          "word": "0xeb002cec"
+        },
+        {
+          "from": "0xc001e5bc",
+          "target": "0xc00298bc",
+          "word": "0xeb002cbe"
+        },
+        {
+          "from": "0xc001e6ec",
+          "target": "0xc00298bc",
+          "word": "0xeb002c72"
+        },
+        {
+          "from": "0xc001e710",
+          "target": "0xc00298bc",
+          "word": "0xeb002c69"
+        },
+        {
+          "from": "0xc001e7f4",
+          "target": "0xc00298bc",
+          "word": "0xeb002c30"
+        },
+        {
+          "from": "0xc001e818",
+          "target": "0xc00298bc",
+          "word": "0xeb002c27"
+        },
+        {
+          "from": "0xc001e8c0",
+          "target": "0xc00298bc",
+          "word": "0xeb002bfd"
+        },
+        {
+          "from": "0xc001eae4",
+          "target": "0xc00298bc",
+          "word": "0xeb002b74"
+        },
+        {
+          "from": "0xc001eb68",
+          "target": "0xc00298bc",
+          "word": "0xeb002b53"
+        },
+        {
+          "from": "0xc001fe84",
+          "target": "0xc00298bc",
+          "word": "0xeb00268c"
+        },
+        {
+          "from": "0xc0020210",
+          "target": "0xc00298bc",
+          "word": "0xeb0025a9"
+        },
+        {
+          "from": "0xc0020e4c",
+          "target": "0xc00298bc",
+          "word": "0xeb00229a"
+        },
+        {
+          "from": "0xc0020ebc",
+          "target": "0xc00298bc",
+          "word": "0xeb00227e"
+        },
+        {
+          "from": "0xc0020f54",
+          "target": "0xc00298bc",
+          "word": "0xeb002258"
+        },
+        {
+          "from": "0xc0020fbc",
+          "target": "0xc00298bc",
+          "word": "0xeb00223e"
+        },
+        {
+          "from": "0xc0021020",
+          "target": "0xc00298bc",
+          "word": "0xeb002225"
+        },
+        {
+          "from": "0xc0021088",
+          "target": "0xc00298bc",
+          "word": "0xeb00220b"
+        },
+        {
+          "from": "0xc0021468",
+          "target": "0xc00298bc",
+          "word": "0xeb002113"
+        },
+        {
+          "from": "0xc00214f4",
+          "target": "0xc00298bc",
+          "word": "0xeb0020f0"
+        },
+        {
+          "from": "0xc0021584",
+          "target": "0xc00298bc",
+          "word": "0xeb0020cc"
+        },
+        {
+          "from": "0xc002160c",
+          "target": "0xc00298bc",
+          "word": "0xeb0020aa"
+        },
+        {
+          "from": "0xc0023030",
+          "target": "0xc00298bc",
+          "word": "0xeb001a21"
+        },
+        {
+          "from": "0xc0024ccc",
+          "target": "0xc00298bc",
+          "word": "0xeb0012fa"
+        },
+        {
+          "from": "0xc0024e8c",
+          "target": "0xc00298bc",
+          "word": "0xeb00128a"
+        },
+        {
+          "from": "0xc00256f4",
+          "target": "0xc00298bc",
+          "word": "0xea001070"
+        },
+        {
+          "from": "0xc0025738",
+          "target": "0xc0000a00",
+          "word": "0xebff6cb0"
+        },
+        {
+          "from": "0xc0025748",
+          "target": "0xc0000a00",
+          "word": "0xeaff6cac"
+        },
+        {
+          "from": "0xc00257f8",
+          "target": "0xc0000454",
+          "word": "0xeaff6b15"
+        },
+        {
+          "from": "0xc002a3f0",
+          "target": "0xc00298bc",
+          "word": "0xebfffd31"
+        },
+        {
+          "from": "0xc002a5c4",
+          "target": "0xc00298bc",
+          "word": "0xebfffcbc"
+        },
+        {
+          "from": "0xc002a618",
+          "target": "0xc00298bc",
+          "word": "0xebfffca7"
+        },
+        {
+          "from": "0xc002aa64",
+          "target": "0xc00298bc",
+          "word": "0xebfffb94"
+        },
+        {
+          "from": "0xc002aaf8",
+          "target": "0xc00298bc",
+          "word": "0xebfffb6f"
+        },
+        {
+          "from": "0xc002abb0",
+          "target": "0xc00298bc",
+          "word": "0xebfffb41"
+        },
+        {
+          "from": "0xc002b170",
+          "target": "0xc00298bc",
+          "word": "0xebfff9d1"
+        },
+        {
+          "from": "0xc002b1dc",
+          "target": "0xc00298bc",
+          "word": "0xebfff9b6"
+        },
+        {
+          "from": "0xc002b1ec",
+          "target": "0xc002d030",
+          "word": "0xeb00078f"
+        },
+        {
+          "from": "0xc002b250",
+          "target": "0xc00298bc",
+          "word": "0xebfff999"
+        },
+        {
+          "from": "0xc002c6c0",
+          "target": "0xc00298bc",
+          "word": "0xebfff47d"
+        },
+        {
+          "from": "0xc002c8c4",
+          "target": "0xc00298bc",
+          "word": "0xeafff3fc"
+        },
+        {
+          "from": "0xc002c9ac",
+          "target": "0xc00298bc",
+          "word": "0xebfff3c2"
+        },
+        {
+          "from": "0xc003fcac",
+          "target": "0xc0000928",
+          "word": "0xebff031d"
+        },
+        {
+          "from": "0xc003fd80",
+          "target": "0xc0000928",
+          "word": "0xebff02e8"
+        },
+        {
+          "from": "0xc009af3c",
+          "target": "0xc00298bc",
+          "word": "0xebfe3a5e"
+        },
+        {
+          "from": "0xc0170b74",
+          "target": "0xc000066c",
+          "word": "0xeafa3ebc"
+        }
+      ]
+    },
+    {
+      "vsb": 1,
+      "ranges": [
+        {
+          "start": "0xc0000000",
+          "end_exclusive": "0xc0000040",
+          "sha256": "7705ba23687479ada5fdfb4a2ccf1ccb492089a2c6a5e54acccbe4ffdf046786"
+        },
+        {
+          "start": "0xc0000040",
+          "end_exclusive": "0xc0000084",
+          "sha256": "2f5cc334c09537c3d7129ebff64e76409ded523224b38621fa01bc80a95b135b"
+        },
+        {
+          "start": "0xc00000f4",
+          "end_exclusive": "0xc0000144",
+          "sha256": "cc9141a53c4b0f2b5fc6c366e9d4c3963a6adb725d41ae90fdaf5cee8ff03866"
+        },
+        {
+          "start": "0xc0000144",
+          "end_exclusive": "0xc000022c",
+          "sha256": "9501b5bf06048a67c950ed8c167018bd8e55aec9729b13bcaf898b825f10de12"
+        },
+        {
+          "start": "0xc00002b4",
+          "end_exclusive": "0xc0000454",
+          "sha256": "0f97413bc48ba9ecf6ddd896f0e4832353b0213dfae5be6671211d2e6ef376c3"
+        },
+        {
+          "start": "0xc0000454",
+          "end_exclusive": "0xc000059c",
+          "sha256": "fab49ca757986bc6bdc344ee0aaddbb8aab97947fe6c13886ef64a9ceaaacd28"
+        },
+        {
+          "start": "0xc00005a0",
+          "end_exclusive": "0xc00007ac",
+          "sha256": "53b25b07dadcc3c80c2dbaf4f2f75582d7519789899cfcdf1d027c15f57b4966"
+        },
+        {
+          "start": "0xc00007ac",
+          "end_exclusive": "0xc0000acc",
+          "sha256": "9aea4647786dc34024f14595eb2c119479c13aea953932659c39211a7de9a924"
+        },
+        {
+          "start": "0xc0001394",
+          "end_exclusive": "0xc0001480",
+          "sha256": "cb71f76f0b8f8c700f4a2410c3d8671aebbd2733ae14e3c8723d407b1fba1f48"
+        },
+        {
+          "start": "0xc0001480",
+          "end_exclusive": "0xc0001504",
+          "sha256": "95db08ac1fde1ed62af1a2bd78440bae5e6ab2d1dbfc8a9f8b16f2b7b99b6304"
+        },
+        {
+          "start": "0xc0001504",
+          "end_exclusive": "0xc00018f0",
+          "sha256": "26e6b505935a69f14269afb5d74f58f4d5abeead7e45a3cced7e6b4f58724609"
+        },
+        {
+          "start": "0xc00018f0",
+          "end_exclusive": "0xc0001a64",
+          "sha256": "2be43c439f12285ac444203d2c15943619d8799a734e0ae9bae068791b2c6994"
+        },
+        {
+          "start": "0xc0001bc8",
+          "end_exclusive": "0xc0001cd4",
+          "sha256": "e349b9146d6b9f7513521f350c5d3efe59c36965a55532a56e741682d78cf244"
+        },
+        {
+          "start": "0xc0002114",
+          "end_exclusive": "0xc0002164",
+          "sha256": "5cc3d53ffd029ff5c54517b3b37433af3cc58583bd859601fed1157b67dfef2c"
+        },
+        {
+          "start": "0xc0025300",
+          "end_exclusive": "0xc0025814",
+          "sha256": "4707a40a6de88dc1544626531bbc5090fdc4091ca345047e80b9759eec9197a7"
+        },
+        {
+          "start": "0xc00298bc",
+          "end_exclusive": "0xc0029a40",
+          "sha256": "559d87d89866a1f768425949d2f9bb33d0d997e7fa2bc380e7184d01101294ae"
+        },
+        {
+          "start": "0xc002a598",
+          "end_exclusive": "0xc002aacc",
+          "sha256": "f5e87480595fa8924e8ecad553c25975a89af29e83fb0f25b6c5bb43e131f4e0"
+        },
+        {
+          "start": "0xc002ab7c",
+          "end_exclusive": "0xc002b220",
+          "sha256": "0eac6a1d00940c4eaafdaf9d1694bcb393c3c5ffe2036258b324e6f5befb2dc6"
+        },
+        {
+          "start": "0xc002d030",
+          "end_exclusive": "0xc002d238",
+          "sha256": "71386a5b2445ea7c9ed8780ddbd8c2ddf5548e3937f662eda363c2e79826f283"
+        },
+        {
+          "start": "0xc00834fc",
+          "end_exclusive": "0xc00835c0",
+          "sha256": "e22dac5e1e8b8987f67012bad4fe9a292c4eccf923d299b9476c9b4f89a628fe"
+        },
+        {
+          "start": "0xc0083848",
+          "end_exclusive": "0xc0083898",
+          "sha256": "bcd126632d87187bfeb55cdfeb5c8f69556416c2582288f8ed4cd650ddc950c2"
+        },
+        {
+          "start": "0xc00839c8",
+          "end_exclusive": "0xc0083a10",
+          "sha256": "4dd751e8417ccd6b537e1366e1967610f187a93cd247b4d58476f33cc8896069"
+        },
+        {
+          "start": "0xc0083fe8",
+          "end_exclusive": "0xc008403c",
+          "sha256": "8cda103615180d3c933e373650540b565555bcea0f81944e55704e6b6fcc9c00"
+        },
+        {
+          "start": "0xc00a3640",
+          "end_exclusive": "0xc00a3900",
+          "sha256": "ef72ba399cdeece2bda024383e6534e19965ac58fce6f7e7c84ef2ead6a5315a"
+        },
+        {
+          "start": "0xc00e4c50",
+          "end_exclusive": "0xc00e4c70",
+          "sha256": "126b41d5ba8fb479658de53b019a9095c9e6706ac4d0ba72b97452a805eec63c"
+        },
+        {
+          "start": "0xc00f9320",
+          "end_exclusive": "0xc00f9340",
+          "sha256": "cd65c920f0ff9f04d87495fc683e87311e1502ed5eb1039b910878452f97e8f2"
+        },
+        {
+          "start": "0xc0170b60",
+          "end_exclusive": "0xc0170b78",
+          "sha256": "12172f662bdf4a530282cc62efb1e67ab7be738959e360a8b2c337cc1cb1ebf7"
+        }
+      ],
+      "tasks": [
+        {
+          "id": 1,
+          "record": "0xc00a37a8",
+          "words": [
+            "0x2",
+            "0x1",
+            "0xc002ab7c",
+            "0x8",
+            "0x23a8",
+            "0xc0200000",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002ab7c",
+          "initial_priority": 8,
+          "stack_bytes": 9128,
+          "stack_base": "0xc0200000"
+        },
+        {
+          "id": 2,
+          "record": "0xc00a37c8",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc002aa34",
+            "0x1",
+            "0x2400",
+            "0xc02023a8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002aa34",
+          "initial_priority": 1,
+          "stack_bytes": 9216,
+          "stack_base": "0xc02023a8"
+        },
+        {
+          "id": 3,
+          "record": "0xc00a37e8",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc002a3c0",
+            "0x3",
+            "0x4800",
+            "0xc02047a8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002a3c0",
+          "initial_priority": 3,
+          "stack_bytes": 18432,
+          "stack_base": "0xc02047a8"
+        },
+        {
+          "id": 4,
+          "record": "0xc00a3808",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc002b144",
+            "0x4",
+            "0x2400",
+            "0xc0208fa8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002b144",
+          "initial_priority": 4,
+          "stack_bytes": 9216,
+          "stack_base": "0xc0208fa8"
+        },
+        {
+          "id": 5,
+          "record": "0xc00a3828",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc002a598",
+            "0x6",
+            "0x100000",
+            "0xc020b3a8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002a598",
+          "initial_priority": 6,
+          "stack_bytes": 1048576,
+          "stack_base": "0xc020b3a8"
+        },
+        {
+          "id": 6,
+          "record": "0xc00a3848",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc00245f0",
+            "0x0",
+            "0x2400",
+            "0xc030b3a8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc00245f0",
+          "initial_priority": 0,
+          "stack_bytes": 9216,
+          "stack_base": "0xc030b3a8"
+        },
+        {
+          "id": 7,
+          "record": "0xc00a3868",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc002c980",
+            "0x0",
+            "0x2400",
+            "0xc030d7a8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002c980",
+          "initial_priority": 0,
+          "stack_bytes": 9216,
+          "stack_base": "0xc030d7a8"
+        },
+        {
+          "id": 8,
+          "record": "0xc00a3888",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc001da9c",
+            "0x5",
+            "0x2400",
+            "0xc030fba8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc001da9c",
+          "initial_priority": 5,
+          "stack_bytes": 9216,
+          "stack_base": "0xc030fba8"
+        },
+        {
+          "id": 9,
+          "record": "0xc00a38a8",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc002b220",
+            "0x7",
+            "0x2400",
+            "0xc0311fa8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002b220",
+          "initial_priority": 7,
+          "stack_bytes": 9216,
+          "stack_base": "0xc0311fa8"
+        },
+        {
+          "id": 10,
+          "record": "0xc00a38c8",
+          "words": [
+            "0x0",
+            "0x1",
+            "0xc002aacc",
+            "0x2",
+            "0x2400",
+            "0xc03143a8",
+            "0x0",
+            "0x0"
+          ],
+          "entry": "0xc002aacc",
+          "initial_priority": 2,
+          "stack_bytes": 9216,
+          "stack_base": "0xc03143a8"
+        }
+      ],
+      "irq_record": [
+        "0x15",
+        "0x0",
+        "0xc0025798"
+      ],
+      "task_count": 10,
+      "cyclic_record": [
+        "0x2",
+        "0x0",
+        "0xc002572c",
+        "0x2",
+        "0x0"
+      ],
+      "direct_branch_candidates": [
+        {
+          "from": "0xc001278c",
+          "target": "0xc00298bc",
+          "word": "0xeb005c4a"
+        },
+        {
+          "from": "0xc00127f8",
+          "target": "0xc00298bc",
+          "word": "0xeb005c2f"
+        },
+        {
+          "from": "0xc001287c",
+          "target": "0xc00298bc",
+          "word": "0xeb005c0e"
+        },
+        {
+          "from": "0xc0012900",
+          "target": "0xc00298bc",
+          "word": "0xeb005bed"
+        },
+        {
+          "from": "0xc0012984",
+          "target": "0xc00298bc",
+          "word": "0xeb005bcc"
+        },
+        {
+          "from": "0xc0012a04",
+          "target": "0xc00298bc",
+          "word": "0xeb005bac"
+        },
+        {
+          "from": "0xc0012a8c",
+          "target": "0xc00298bc",
+          "word": "0xeb005b8a"
+        },
+        {
+          "from": "0xc0012b0c",
+          "target": "0xc00298bc",
+          "word": "0xeb005b6a"
+        },
+        {
+          "from": "0xc0012b90",
+          "target": "0xc00298bc",
+          "word": "0xeb005b49"
+        },
+        {
+          "from": "0xc0012c08",
+          "target": "0xc00298bc",
+          "word": "0xeb005b2b"
+        },
+        {
+          "from": "0xc0012c88",
+          "target": "0xc00298bc",
+          "word": "0xeb005b0b"
+        },
+        {
+          "from": "0xc0012d10",
+          "target": "0xc00298bc",
+          "word": "0xeb005ae9"
+        },
+        {
+          "from": "0xc0012d94",
+          "target": "0xc00298bc",
+          "word": "0xeb005ac8"
+        },
+        {
+          "from": "0xc0012e18",
+          "target": "0xc00298bc",
+          "word": "0xeb005aa7"
+        },
+        {
+          "from": "0xc0012e9c",
+          "target": "0xc00298bc",
+          "word": "0xeb005a86"
+        },
+        {
+          "from": "0xc0012f20",
+          "target": "0xc00298bc",
+          "word": "0xeb005a65"
+        },
+        {
+          "from": "0xc0012fa4",
+          "target": "0xc00298bc",
+          "word": "0xeb005a44"
+        },
+        {
+          "from": "0xc0013024",
+          "target": "0xc00298bc",
+          "word": "0xeb005a24"
+        },
+        {
+          "from": "0xc0013154",
+          "target": "0xc00298bc",
+          "word": "0xeb0059d8"
+        },
+        {
+          "from": "0xc0013284",
+          "target": "0xc00298bc",
+          "word": "0xeb00598c"
+        },
+        {
+          "from": "0xc0013308",
+          "target": "0xc00298bc",
+          "word": "0xeb00596b"
+        },
+        {
+          "from": "0xc001353c",
+          "target": "0xc00298bc",
+          "word": "0xeb0058de"
+        },
+        {
+          "from": "0xc0013770",
+          "target": "0xc00298bc",
+          "word": "0xeb005851"
+        },
+        {
+          "from": "0xc00137f4",
+          "target": "0xc00298bc",
+          "word": "0xeb005830"
+        },
+        {
+          "from": "0xc00139b0",
+          "target": "0xc00298bc",
+          "word": "0xeb0057c1"
+        },
+        {
+          "from": "0xc0013a30",
+          "target": "0xc00298bc",
+          "word": "0xeb0057a1"
+        },
+        {
+          "from": "0xc0013ab4",
+          "target": "0xc00298bc",
+          "word": "0xeb005780"
+        },
+        {
+          "from": "0xc0013b3c",
+          "target": "0xc00298bc",
+          "word": "0xeb00575e"
+        },
+        {
+          "from": "0xc0013d48",
+          "target": "0xc00298bc",
+          "word": "0xeb0056db"
+        },
+        {
+          "from": "0xc0013de0",
+          "target": "0xc00298bc",
+          "word": "0xeb0056b5"
+        },
+        {
+          "from": "0xc0014240",
+          "target": "0xc00298bc",
+          "word": "0xeb00559d"
+        },
+        {
+          "from": "0xc00142cc",
+          "target": "0xc00298bc",
+          "word": "0xeb00557a"
+        },
+        {
+          "from": "0xc0014340",
+          "target": "0xc00298bc",
+          "word": "0xeb00555d"
+        },
+        {
+          "from": "0xc00143a8",
+          "target": "0xc00298bc",
+          "word": "0xeb005543"
+        },
+        {
+          "from": "0xc0014418",
+          "target": "0xc00298bc",
+          "word": "0xeb005527"
+        },
+        {
+          "from": "0xc00176fc",
+          "target": "0xc00298bc",
+          "word": "0xeb00486e"
+        },
+        {
+          "from": "0xc0017a78",
+          "target": "0xc00298bc",
+          "word": "0xeb00478f"
+        },
+        {
+          "from": "0xc0017c10",
+          "target": "0xc00298bc",
+          "word": "0xeb004729"
+        },
+        {
+          "from": "0xc0017dc8",
+          "target": "0xc00298bc",
+          "word": "0xeb0046bb"
+        },
+        {
+          "from": "0xc0017f60",
+          "target": "0xc00298bc",
+          "word": "0xeb004655"
+        },
+        {
+          "from": "0xc0018138",
+          "target": "0xc00298bc",
+          "word": "0xeb0045df"
+        },
+        {
+          "from": "0xc0018438",
+          "target": "0xc00298bc",
+          "word": "0xeb00451f"
+        },
+        {
+          "from": "0xc0018504",
+          "target": "0xc00298bc",
+          "word": "0xeb0044ec"
+        },
+        {
+          "from": "0xc0018584",
+          "target": "0xc00298bc",
+          "word": "0xeb0044cc"
+        },
+        {
+          "from": "0xc00186bc",
+          "target": "0xc00298bc",
+          "word": "0xeb00447e"
+        },
+        {
+          "from": "0xc0018740",
+          "target": "0xc00298bc",
+          "word": "0xeb00445d"
+        },
+        {
+          "from": "0xc001882c",
+          "target": "0xc00298bc",
+          "word": "0xeb004422"
+        },
+        {
+          "from": "0xc00188b0",
+          "target": "0xc00298bc",
+          "word": "0xeb004401"
+        },
+        {
+          "from": "0xc0018a14",
+          "target": "0xc00298bc",
+          "word": "0xeb0043a8"
+        },
+        {
+          "from": "0xc0018a98",
+          "target": "0xc00298bc",
+          "word": "0xeb004387"
+        },
+        {
+          "from": "0xc0018b70",
+          "target": "0xc00298bc",
+          "word": "0xeb004351"
+        },
+        {
+          "from": "0xc0018bf0",
+          "target": "0xc00298bc",
+          "word": "0xeb004331"
+        },
+        {
+          "from": "0xc0018d0c",
+          "target": "0xc00298bc",
+          "word": "0xeb0042ea"
+        },
+        {
+          "from": "0xc0018ffc",
+          "target": "0xc00298bc",
+          "word": "0xeb00422e"
+        },
+        {
+          "from": "0xc00195c4",
+          "target": "0xc00298bc",
+          "word": "0xeb0040bc"
+        },
+        {
+          "from": "0xc0019644",
+          "target": "0xc00298bc",
+          "word": "0xeb00409c"
+        },
+        {
+          "from": "0xc001974c",
+          "target": "0xc00298bc",
+          "word": "0xeb00405a"
+        },
+        {
+          "from": "0xc00199e0",
+          "target": "0xc00298bc",
+          "word": "0xeb003fb5"
+        },
+        {
+          "from": "0xc0019ccc",
+          "target": "0xc00298bc",
+          "word": "0xeb003efa"
+        },
+        {
+          "from": "0xc0019d20",
+          "target": "0xc00298bc",
+          "word": "0xeb003ee5"
+        },
+        {
+          "from": "0xc0019d70",
+          "target": "0xc00298bc",
+          "word": "0xeb003ed1"
+        },
+        {
+          "from": "0xc0019d8c",
+          "target": "0xc00298bc",
+          "word": "0xeb003eca"
+        },
+        {
+          "from": "0xc001a934",
+          "target": "0xc00298bc",
+          "word": "0xeb003be0"
+        },
+        {
+          "from": "0xc001aa60",
+          "target": "0xc00298bc",
+          "word": "0xeb003b95"
+        },
+        {
+          "from": "0xc001bcf4",
+          "target": "0xc00298bc",
+          "word": "0xeb0036f0"
+        },
+        {
+          "from": "0xc001c164",
+          "target": "0xc00298bc",
+          "word": "0xeb0035d4"
+        },
+        {
+          "from": "0xc001c8c8",
+          "target": "0xc00298bc",
+          "word": "0xeb0033fb"
+        },
+        {
+          "from": "0xc001d1f0",
+          "target": "0xc00298bc",
+          "word": "0xeb0031b1"
+        },
+        {
+          "from": "0xc001d310",
+          "target": "0xc00298bc",
+          "word": "0xeb003169"
+        },
+        {
+          "from": "0xc001d48c",
+          "target": "0xc00298bc",
+          "word": "0xeb00310a"
+        },
+        {
+          "from": "0xc001d854",
+          "target": "0xc00298bc",
+          "word": "0xeb003018"
+        },
+        {
+          "from": "0xc001d94c",
+          "target": "0xc00298bc",
+          "word": "0xeb002fda"
+        },
+        {
+          "from": "0xc001d960",
+          "target": "0xc00298bc",
+          "word": "0xeb002fd5"
+        },
+        {
+          "from": "0xc001da18",
+          "target": "0xc00298bc",
+          "word": "0xeb002fa7"
+        },
+        {
+          "from": "0xc001dad8",
+          "target": "0xc00298bc",
+          "word": "0xeb002f77"
+        },
+        {
+          "from": "0xc001e4e0",
+          "target": "0xc00298bc",
+          "word": "0xeb002cf5"
+        },
+        {
+          "from": "0xc001e504",
+          "target": "0xc00298bc",
+          "word": "0xeb002cec"
+        },
+        {
+          "from": "0xc001e5bc",
+          "target": "0xc00298bc",
+          "word": "0xeb002cbe"
+        },
+        {
+          "from": "0xc001e6ec",
+          "target": "0xc00298bc",
+          "word": "0xeb002c72"
+        },
+        {
+          "from": "0xc001e710",
+          "target": "0xc00298bc",
+          "word": "0xeb002c69"
+        },
+        {
+          "from": "0xc001e7f4",
+          "target": "0xc00298bc",
+          "word": "0xeb002c30"
+        },
+        {
+          "from": "0xc001e818",
+          "target": "0xc00298bc",
+          "word": "0xeb002c27"
+        },
+        {
+          "from": "0xc001e8c0",
+          "target": "0xc00298bc",
+          "word": "0xeb002bfd"
+        },
+        {
+          "from": "0xc001eae4",
+          "target": "0xc00298bc",
+          "word": "0xeb002b74"
+        },
+        {
+          "from": "0xc001eb68",
+          "target": "0xc00298bc",
+          "word": "0xeb002b53"
+        },
+        {
+          "from": "0xc001fe84",
+          "target": "0xc00298bc",
+          "word": "0xeb00268c"
+        },
+        {
+          "from": "0xc0020210",
+          "target": "0xc00298bc",
+          "word": "0xeb0025a9"
+        },
+        {
+          "from": "0xc0020e4c",
+          "target": "0xc00298bc",
+          "word": "0xeb00229a"
+        },
+        {
+          "from": "0xc0020ebc",
+          "target": "0xc00298bc",
+          "word": "0xeb00227e"
+        },
+        {
+          "from": "0xc0020f54",
+          "target": "0xc00298bc",
+          "word": "0xeb002258"
+        },
+        {
+          "from": "0xc0020fbc",
+          "target": "0xc00298bc",
+          "word": "0xeb00223e"
+        },
+        {
+          "from": "0xc0021020",
+          "target": "0xc00298bc",
+          "word": "0xeb002225"
+        },
+        {
+          "from": "0xc0021088",
+          "target": "0xc00298bc",
+          "word": "0xeb00220b"
+        },
+        {
+          "from": "0xc0021468",
+          "target": "0xc00298bc",
+          "word": "0xeb002113"
+        },
+        {
+          "from": "0xc00214f4",
+          "target": "0xc00298bc",
+          "word": "0xeb0020f0"
+        },
+        {
+          "from": "0xc0021584",
+          "target": "0xc00298bc",
+          "word": "0xeb0020cc"
+        },
+        {
+          "from": "0xc002160c",
+          "target": "0xc00298bc",
+          "word": "0xeb0020aa"
+        },
+        {
+          "from": "0xc0023030",
+          "target": "0xc00298bc",
+          "word": "0xeb001a21"
+        },
+        {
+          "from": "0xc0024ccc",
+          "target": "0xc00298bc",
+          "word": "0xeb0012fa"
+        },
+        {
+          "from": "0xc0024e8c",
+          "target": "0xc00298bc",
+          "word": "0xeb00128a"
+        },
+        {
+          "from": "0xc00256f4",
+          "target": "0xc00298bc",
+          "word": "0xea001070"
+        },
+        {
+          "from": "0xc0025738",
+          "target": "0xc0000a00",
+          "word": "0xebff6cb0"
+        },
+        {
+          "from": "0xc0025748",
+          "target": "0xc0000a00",
+          "word": "0xeaff6cac"
+        },
+        {
+          "from": "0xc00257f8",
+          "target": "0xc0000454",
+          "word": "0xeaff6b15"
+        },
+        {
+          "from": "0xc002a3f0",
+          "target": "0xc00298bc",
+          "word": "0xebfffd31"
+        },
+        {
+          "from": "0xc002a5c4",
+          "target": "0xc00298bc",
+          "word": "0xebfffcbc"
+        },
+        {
+          "from": "0xc002a618",
+          "target": "0xc00298bc",
+          "word": "0xebfffca7"
+        },
+        {
+          "from": "0xc002aa64",
+          "target": "0xc00298bc",
+          "word": "0xebfffb94"
+        },
+        {
+          "from": "0xc002aaf8",
+          "target": "0xc00298bc",
+          "word": "0xebfffb6f"
+        },
+        {
+          "from": "0xc002abb0",
+          "target": "0xc00298bc",
+          "word": "0xebfffb41"
+        },
+        {
+          "from": "0xc002b170",
+          "target": "0xc00298bc",
+          "word": "0xebfff9d1"
+        },
+        {
+          "from": "0xc002b1dc",
+          "target": "0xc00298bc",
+          "word": "0xebfff9b6"
+        },
+        {
+          "from": "0xc002b1ec",
+          "target": "0xc002d030",
+          "word": "0xeb00078f"
+        },
+        {
+          "from": "0xc002b250",
+          "target": "0xc00298bc",
+          "word": "0xebfff999"
+        },
+        {
+          "from": "0xc002c6c0",
+          "target": "0xc00298bc",
+          "word": "0xebfff47d"
+        },
+        {
+          "from": "0xc002c8c4",
+          "target": "0xc00298bc",
+          "word": "0xeafff3fc"
+        },
+        {
+          "from": "0xc002c9ac",
+          "target": "0xc00298bc",
+          "word": "0xebfff3c2"
+        },
+        {
+          "from": "0xc003fcac",
+          "target": "0xc0000928",
+          "word": "0xebff031d"
+        },
+        {
+          "from": "0xc003fd80",
+          "target": "0xc0000928",
+          "word": "0xebff02e8"
+        },
+        {
+          "from": "0xc009af3c",
+          "target": "0xc00298bc",
+          "word": "0xebfe3a5e"
+        },
+        {
+          "from": "0xc0170b74",
+          "target": "0xc000066c",
+          "word": "0xeafa3ebc"
+        }
+      ]
+    }
+  ],
+  "warning": "Direct branch candidates include data decoded as instructions; inspect call context before attributing function semantics."
+}
