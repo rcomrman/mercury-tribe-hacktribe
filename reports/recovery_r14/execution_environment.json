@@ -1,0 +1,13 @@
+{
+  "versions": {
+    "clang": "Debian clang version 19.1.7 (3+b1)",
+    "ld.lld": "Debian LLD 19.1.7 (compatible with GNU linkers)",
+    "qemu-arm": "qemu-arm version 10.0.13 (Debian 1:10.0.13+ds-0+deb13u1)"
+  },
+  "target": "ARM926EJ-S ARMv5TE ARM mode -O2 freestanding",
+  "qemu": "Linux user mode; no native scheduler/MMIO simulation",
+  "sizeof_admission": 64,
+  "sizeof_pool_r12": 3112,
+  "combined_structures_bytes": 3176,
+  "vsb_original_size": 2097408
+}

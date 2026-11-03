@@ -2,7 +2,7 @@
 """Independent raw record, image, phase, lifetime and preservation oracles.
 Does not import runner or admission implementation. No peripheral oracle.
 """
-import gzip,hashlib,json,struct,subprocess
+import gzip,hashlib,json,struct,subprocess,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 BASE='cb0d8caf9cb70d182f6e64ea7e72d8c796cd4e96'
@@ -72,8 +72,21 @@ def main():
  assert not subprocess.check_output(['git','diff',BASE,'--',*names],cwd=ROOT)
  p=json.loads((ROOT/'reports/recovery_r13/provenance.json').read_text())
  for n,h in p['sha256'].items():assert sha((ROOT/n).read_bytes())==h,n
- a=json.loads((out/'audit.json').read_text());assert len(a['ranges'])==20 and [c['service'] for c in a['contexts']]==[17,35] and all(c['progress_argument']==0 for c in a['contexts'])
+ a=json.loads((out/'audit.json').read_text());assert len(a['ranges'])==20 and [c['service'] for c in a['contexts']]==[17,34] and all(c['progress_argument']==0 for c in a['contexts'])
  m=json.loads((out/'models.json').read_text());assert m['admission']['states']==1180 and m['admission']['transitions']==2181 and m['admission']['completed_scan_edges']==40 and not m['recovery_capabilities']['cancellation'] and not m['recovery_capabilities']['restoration']
+ comparisons=[]
+ previous='5353f5ba8785c367d85d1c4b1108774c4e0e8dd5'
+ for vi in range(2):
+  for case in range(32):
+   name=f'reports/recovery_r14/{vi}_{case}'
+   original=gzip.decompress(subprocess.check_output(['git','show',previous+':'+name+'.records.gz'],cwd=ROOT))
+   current=gzip.decompress((ROOT/(name+'.records.gz')).read_bytes());assert original==current
+   oldtrace=gzip.decompress(subprocess.check_output(['git','show',previous+':'+name+'.trace.gz'],cwd=ROOT))
+   newtrace=gzip.decompress((ROOT/(name+'.trace.gz')).read_bytes());lines=lambda b:re.findall(rb'^0xc0[01][0-9a-f]{5}:.*$',b,re.M)
+   assert lines(oldtrace)==lines(newtrace)
+   peer=gzip.decompress((out/f'{1-vi}_{case}.trace.gz').read_bytes());assert lines(peer)==lines(newtrace)
+   comparisons.append({'vsb':vi,'case':case,'records_identical_to_prior_published_run':True,'native_instruction_lines_identical_to_prior_run':True,'native_instruction_lines_identical_across_vsb':True})
+ (out/'replay_comparison.json').write_text(json.dumps({'prior_evidence_commit':previous,'scope':'Final launcher versus prior R14 published runs; R13 archives not regenerated','cases':comparisons},indent=2)+'\n')
  msg='PASS:64 R14 ARM cases;58 normal exits;6 expected GPIO faults;32 V30 frames/VSB;exact cross-VSB records;owner/ticket/pages/close/stall oracles;201 R13 manifest entries and all R1-R13 tracked paths unchanged'
  (out/'independent_verification.log').write_text(msg+'\n');print(msg)
  paths=[p for d in ('tests/recovery_r14','tools/recovery_r14','reports/recovery_r14') for p in sorted((ROOT/d).rglob('*')) if p.is_file() and '__pycache__' not in p.parts and p!=out/'provenance.json']

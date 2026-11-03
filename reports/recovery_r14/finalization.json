@@ -1,0 +1,32 @@
+{
+  "status": "R14 research complete",
+  "base_commit": "cb0d8caf9cb70d182f6e64ea7e72d8c796cd4e96",
+  "native_arm_cases": 64,
+  "normal_exits": 58,
+  "expected_gpio_faults": 6,
+  "vsb_count": 2,
+  "v30_images_per_vsb": 32,
+  "cross_vsb_records_exact": true,
+  "final_launcher_exit": 0,
+  "independent_verifier": "PASS",
+  "r13_manifest_entries_unchanged": 201,
+  "all_r1_r13_tracked_paths_unchanged": true,
+  "native_context_services": [
+    17,
+    34
+  ],
+  "memory_admission_bytes": 64,
+  "memory_pool_bytes": 3112,
+  "model_states": 1180,
+  "model_transitions": 2181,
+  "scope": "Sequential cooperative laboratory protocol; no hardware validation",
+  "decision": "GO software research; NO GO global instrument coherence, independent recovery and hardware integration",
+  "r15_started": false,
+  "static_correction": "See validation_notes.json for service35→34 correction; ARM expectations unchanged",
+  "evidence_commits": [
+    "894af9860b3ff4e69f4696a095008101e709026e",
+    "115c9574a6fa9463a25a86d51ae626e8be469b91",
+    "712c77b2bcd008ec3c19de11db1e40e00f29a674",
+    "5353f5ba8785c367d85d1c4b1108774c4e0e8dd5"
+  ]
+}

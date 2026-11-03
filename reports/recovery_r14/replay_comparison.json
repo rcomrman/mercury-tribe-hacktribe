@@ -1,0 +1,454 @@
+{
+  "prior_evidence_commit": "5353f5ba8785c367d85d1c4b1108774c4e0e8dd5",
+  "scope": "Final launcher versus prior R14 published runs; R13 archives not regenerated",
+  "cases": [
+    {
+      "vsb": 0,
+      "case": 0,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 1,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 2,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 3,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 4,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 5,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 6,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 7,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 8,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 9,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 10,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 11,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 12,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 13,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 14,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 15,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 16,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 17,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 18,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 19,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 20,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 21,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 22,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 23,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 24,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 25,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 26,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 27,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 28,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 29,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 30,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 0,
+      "case": 31,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 0,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 1,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 2,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 3,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 4,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 5,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 6,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 7,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 8,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 9,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 10,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 11,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 12,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 13,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 14,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 15,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 16,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 17,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 18,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 19,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 20,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 21,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 22,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 23,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 24,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 25,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 26,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 27,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 28,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 29,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 30,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    },
+    {
+      "vsb": 1,
+      "case": 31,
+      "records_identical_to_prior_published_run": true,
+      "native_instruction_lines_identical_to_prior_run": true,
+      "native_instruction_lines_identical_across_vsb": true
+    }
+  ]
+}

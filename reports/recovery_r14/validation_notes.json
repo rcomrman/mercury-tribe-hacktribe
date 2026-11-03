@@ -1,0 +1,9 @@
+{
+  "scope": "Final review correction to static context attribution, not an ARM expectation change",
+  "intermediate_error": "Service35 incorrectly attributed to C0038D80 by reading neighboring construction site",
+  "corrected": "Service34: r1=34 at C002DD08; BL C00392A4 at C002DD10; table store offset0x88 at C002DD18; vtable C00A7B58 slot8 C0038D80",
+  "added_validation": "Exact words at both service17 and34 construction sites and progress inner guard now asserted",
+  "arm_expected_faults_unchanged": true,
+  "unexpected_arm_failures": [],
+  "history": "Intermediate commits retained; final report/audit supersede incorrect index"
+}

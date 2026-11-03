@@ -7,8 +7,8 @@ Base cb0d8ca. Carte additive : aucune preuve R13 réécrite. Instructions origin
 La tâche **5**, entrée C002A598, attend via C000085C(4) puis appelle C002D844. Ce consommateur dépile via C003B81C et appelle C002D684. Le dispatcher choisit l'objet dans C03404C8 suivant le type signé du message, appelle sa vtable+0xC, son slot+8, puis +0x10. Il émet aussi des commandes UI et possède allocations/destructions. Ce n'est ni la tâche4 ni une transaction graphique atomique.
 
 - Service **17** : C002DB78 construit par C0030F3C et range l'objet à table+0x44. Le constructeur installe C00A7608 ; slot+8=C003128C, qui appelle C0031234 à C0031338 après deux autres opérations réussies. C0031234 appelle C004D860 à C0031250 avec r0=0, **r1=0**.
-- Service **35** : C002DD28 construit par C00392A4 et range à table+0x8C. Le constructeur installe C00A7B58 ; slot+8=C0038D80. Le chemin C0038E00 conserve r7=0 quand il peut atteindre C0038E40 ; ce dernier appelle C004D860 avec r0=r7=0, **r1=r7=0**.
-- Ne pas confondre service24, C0038C64/table C00A7AF8/slot C0038A54, avec service35. La proximité des adresses ne suffit pas à identifier l'objet.
+- Service **34** : C002DD10 construit par C00392A4 et range à table+0x88. Le constructeur installe C00A7B58 ; slot+8=C0038D80. Le chemin C0038E00 conserve r7=0 quand il peut atteindre C0038E40 ; ce dernier appelle C004D860 avec r0=r7=0, **r1=r7=0**.
+- Ne pas confondre service24, C0038C64/table C00A7AF8/slot C0038A54, avec service34. La proximité des adresses ne suffit pas à identifier l'objet.
 
 Dans C004D860, r1 est conservé en r7. Le test de ce drapeau conditionne C0060384, C006040C à C004D8B4 et C004DCD0, et C006038C à C004D928. Les appels C004D5CC à C004DCF4/C004DD80 reçoivent ce même drapeau dans r2 ; son test conditionne aussi la progression interne. Ainsi **les deux routes précédemment ouvertes atteignent un service contenant du graphisme, mais désactivent ses appels de progression identifiés**. Cela ne prouve pas que tout sous-service, message UI ou appel indirect soit sans effet graphique.
 
@@ -24,7 +24,7 @@ Le démarrage C002AE90 passe au contraire **r1=1**. Le getter C004D598 fournit l
 | UI alternative | tâche4, C0083428/C00833F0/C0083374 | Couvert par admission de fixture ; contournement conservé |
 | Pages secondaires | tick principal C006EAE0 puis C006F178 | Conditionnel à enveloppe avant update/destruction ; autres appels inconnus |
 | Service17 | tâche5 configurée, slot8 C003128C | Route attribuée ; progression désactivée dans C004D860 ; médiation globale absente |
-| Service35 | tâche5 configurée, slot8 C0038D80 | Même restriction ; erreurs/prérequis de stockage non rejoués intégralement |
+| Service34 | tâche5 configurée, slot8 C0038D80 | Même restriction ; erreurs/prérequis de stockage non rejoués intégralement |
 | Progression démarrage | tâche1, r1=1 | Non couverte par seule garde UI ; admission CRITICAL candidate |
 | Progression feuille | appelants directs recensés, objet partagé | Couvert seulement si l'appel extérieur est admis ; contournement prouvé |
 | Worker périodique | tâche2, priorité initiale1 | READ coopératif couvert ; worker réel conserve son autorité à la faute |
@@ -41,4 +41,4 @@ La boucle de tâche5 attend une durée logique4, puis vide sa queue sans quota n
 
 C002D684 est un point extérieur candidat pour **les services qu'il distribue**, C002D030 pour l'UI, et le callback de compteur pour le worker périodique. Aucun n'est un dominateur de tous les dessins, diagnostics ou accès LCD. Le sémaphore natif n'est une exclusion que pour ceux qui l'acquièrent. Les attentes noyau, listes de tâches et sorties de tâche ne démontrent pas une annulation des accès mémoire/périphériques.
 
-Preuves reproductibles : `tools/recovery_r14/audit.py`, `reports/recovery_r14/audit.json` et `native_disassembly.txt.gz`. La qualification des routes est statique ; l'exécution complète des services17/35, du stockage et de leur ordonnanceur reste explicitement hors preuve dynamique.
+Preuves reproductibles : `tools/recovery_r14/audit.py`, `reports/recovery_r14/audit.json` et `native_disassembly.txt.gz`. La qualification des routes est statique ; l'exécution complète des services17/34, du stockage et de leur ordonnanceur reste explicitement hors preuve dynamique.
