@@ -1,0 +1,75 @@
+PASS: 13 identical LCD ranges; 86 prior archived cases checked without replay
+0 0 exit 0 faults [] stages [0, 20]
+0 1 exit 0 faults [] stages [0, 20]
+0 2 exit 0 faults [] stages [0, 1, 2, 3, 20]
+0 3 exit 0 faults [] stages [0, 1, 2, 20]
+0 4 exit 88 faults ['0xbc'] stages [0, 1, 90]
+0 5 exit 88 faults ['0x1e260bc'] stages [0, 1, 90]
+0 6 exit 0 faults [] stages [0, 1, 2, 20]
+0 7 exit 88 faults ['0xbc'] stages [0, 1, 90]
+0 8 exit 0 faults [] stages [0, 1, 2, 20]
+0 9 exit 88 faults ['0xbc'] stages [0, 1, 90]
+0 10 exit 88 faults ['0xbc'] stages [0, 1, 2, 3, 90]
+0 11 exit 88 faults ['0x1e260bc'] stages [0, 1, 90]
+0 12 exit 88 faults ['0x1c41010'] stages [0, 1, 90]
+0 13 exit 0 faults [] stages [0, 10, 11, 12, 13, 14, 15, 16, 17, 20]
+0 14 exit 0 faults [] stages [0, 20]
+0 15 exit 88 faults ['0xbc'] stages [0, 1, 90, 91]
+0 16 exit 0 faults [] stages [0, 20]
+0 17 exit 0 faults [] stages [0, 1, 2, 20]
+0 18 exit 88 faults ['0xbc'] stages [0, 1, 90]
+0 19 exit 0 faults [] stages [0, 1, 2, 20]
+1 0 exit 0 faults [] stages [0, 20]
+1 1 exit 0 faults [] stages [0, 20]
+1 2 exit 0 faults [] stages [0, 1, 2, 3, 20]
+1 3 exit 0 faults [] stages [0, 1, 2, 20]
+1 4 exit 88 faults ['0xbc'] stages [0, 1, 90]
+1 5 exit 88 faults ['0x1e260bc'] stages [0, 1, 90]
+1 6 exit 0 faults [] stages [0, 1, 2, 20]
+1 7 exit 88 faults ['0xbc'] stages [0, 1, 90]
+1 8 exit 0 faults [] stages [0, 1, 2, 20]
+1 9 exit 88 faults ['0xbc'] stages [0, 1, 90]
+1 10 exit 88 faults ['0xbc'] stages [0, 1, 2, 3, 90]
+1 11 exit 88 faults ['0x1e260bc'] stages [0, 1, 90]
+1 12 exit 88 faults ['0x1c41010'] stages [0, 1, 90]
+1 13 exit 0 faults [] stages [0, 10, 11, 12, 13, 14, 15, 16, 17, 20]
+1 14 exit 0 faults [] stages [0, 20]
+1 15 exit 88 faults ['0xbc'] stages [0, 1, 90, 91]
+1 16 exit 0 faults [] stages [0, 20]
+1 17 exit 0 faults [] stages [0, 1, 2, 20]
+1 18 exit 88 faults ['0xbc'] stages [0, 1, 90]
+1 19 exit 0 faults [] stages [0, 1, 2, 20]
+{
+  "counts": {
+    "shared": {
+      "coherent": 2860,
+      "mixed": 10010
+    },
+    "phase_serialized": {
+      "coherent": 12870,
+      "mixed": 0
+    }
+  },
+  "roles": {
+    "2": {
+      "role_assignments": 4,
+      "candidate_checks": 8,
+      "states_without_free_slot": 2
+    },
+    "3": {
+      "role_assignments": 9,
+      "candidate_checks": 27,
+      "states_without_free_slot": 0
+    }
+  },
+  "epoch": {
+    "schedules": 12870,
+    "accepted_coherent": 2,
+    "rejected": 12868
+  }
+}
+PASS negative: mutable callback source can advance software shadow beyond logical sent bytes
+PASS positive: frozen snapshot preserves source/committed-shadow/logical-send equality
+{'existing_md15_bridge': 4348, 'existing_lcd_source_mux': 1060, 'candidate_phase_metadata': 24, 'candidate_double_images_and_metadata': 2072, 'candidate_triple_images_and_metadata': 3096, 'candidate_epoch_snapshot': 1028}
+PASS: two figures generated from complete native records
+PASS: 40 archived cases independently parsed; all source/shadow hashes and both guards verified; artistic sources unchanged

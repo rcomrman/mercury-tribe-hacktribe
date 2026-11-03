@@ -1,0 +1,2 @@
+PASS negative: mutable callback source can advance software shadow beyond logical sent bytes
+PASS positive: frozen snapshot preserves source/committed-shadow/logical-send equality

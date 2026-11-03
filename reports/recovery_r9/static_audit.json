@@ -1,0 +1,164 @@
+{
+  "vsb_sha256": [
+    "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+  ],
+  "ranges": [
+    {
+      "name": "comparator_and_shadow",
+      "start": "0xc0015a40",
+      "end_exclusive": "0xc0015b50",
+      "sha256": "31a3d062f83157d2d20a655dbe6875a464eca159e202e6529fe77d8c601cbd45",
+      "identical": true
+    },
+    {
+      "name": "descriptor_to_sender",
+      "start": "0xc0015d14",
+      "end_exclusive": "0xc00163c8",
+      "sha256": "e8df1bf8460d1f3e48e63e52a5ce88dc1c177234a98f92d7440b167b1d674bed",
+      "identical": true
+    },
+    {
+      "name": "board_getter",
+      "start": "0xc001198c",
+      "end_exclusive": "0xc00119ac",
+      "sha256": "b6c2ba8f414814e3e10cf94dd50e0778f70b3cddd426e1606ba675d4d03a6f2d",
+      "identical": true
+    },
+    {
+      "name": "spi_ready",
+      "start": "0xc00117c8",
+      "end_exclusive": "0xc0011804",
+      "sha256": "0ae125e57014ac6772852cc4479088e02807817aaf1263ee541c2983d60ec056",
+      "identical": true
+    },
+    {
+      "name": "hardware_getters",
+      "start": "0xc0016538",
+      "end_exclusive": "0xc001673c",
+      "sha256": "b89131eed79ba997f896b0a434b61cc6cd8f19622abb7e52409a6279277f3b20",
+      "identical": true
+    },
+    {
+      "name": "clock_delay",
+      "start": "0xc001673c",
+      "end_exclusive": "0xc0016880",
+      "sha256": "b4b8b0c27dacbf408c7d16582815f7a7a477c722e249df1e72afa8ba76d3e5ee",
+      "identical": true
+    },
+    {
+      "name": "gpio_control",
+      "start": "0xc0016abc",
+      "end_exclusive": "0xc0016c50",
+      "sha256": "60612c05823e5520e50006e0b4763873847ac546eac6418b0c5029688a00f853",
+      "identical": true
+    },
+    {
+      "name": "spi_write",
+      "start": "0xc0018398",
+      "end_exclusive": "0xc00186d4",
+      "sha256": "5730415c028a046df5d64b3d8df6a271782ef88d16a98984a1f0852c3e78a765",
+      "identical": true
+    },
+    {
+      "name": "lcd_startup_task",
+      "start": "0xc002ab80",
+      "end_exclusive": "0xc002ac64",
+      "sha256": "5444891e9a2cda3d40d752a54731da602e09feeab706f87e02523326748c0b93",
+      "identical": true
+    },
+    {
+      "name": "task_literals",
+      "start": "0xc002b0a4",
+      "end_exclusive": "0xc002b0bc",
+      "sha256": "10f33a30975156d1305c76fb7e39c77fceffd7cb03375fa9d2ea77cdc448ede8",
+      "identical": true
+    },
+    {
+      "name": "fatal_lcd_path",
+      "start": "0xc00298bc",
+      "end_exclusive": "0xc0029a00",
+      "sha256": "330105de3db7fd939765e00dfe294092367c4f7db2b3308af2f56d2aeb8d0c5d",
+      "identical": true
+    },
+    {
+      "name": "ui_tick",
+      "start": "0xc00836e4",
+      "end_exclusive": "0xc0083714",
+      "sha256": "7fffd70a33191caa7f1a31ddc23f842969e50978ab7e4a6532c9280fcc985042",
+      "identical": true
+    },
+    {
+      "name": "graphics_lock_stubs",
+      "start": "0xc003f104",
+      "end_exclusive": "0xc003f10c",
+      "sha256": "3e63fd86284d4f366713766768bffb3b9de240a29f16077d59fb8833734eb877",
+      "identical": true
+    }
+  ],
+  "aligned_branch_candidates": {
+    "0xc0015dd0": [
+      "0xc00298e8",
+      "0xc00299b4",
+      "0xc00299c4",
+      "0xc002a728",
+      "0xc002ac4c",
+      "0xc002ac5c",
+      "0xc0038bc4",
+      "0xc00603f0",
+      "0xc0060404",
+      "0xc00833e8",
+      "0xc008370c",
+      "0xc009a8f0"
+    ],
+    "0xc0015fa0": [
+      "0xc0015e58",
+      "0xc0015f38"
+    ],
+    "0xc0015ab4": [
+      "0xc0016084"
+    ],
+    "0xc001613c": [
+      "0xc00160a0"
+    ],
+    "0xc0015d14": [
+      "0xc0015758"
+    ],
+    "0xc0015eb8": [
+      "0xc0015dbc",
+      "0xc0015e3c"
+    ],
+    "0xc0015cdc": [
+      "0xc0016028",
+      "0xc00161b0",
+      "0xc0016210",
+      "0xc001630c",
+      "0xc0016350",
+      "0xc0016394"
+    ]
+  },
+  "caveat": "Aligned ARM candidate scan, not exhaustive indirect/Thumb call graph. Data may decode as instructions.",
+  "previous_evidence_checked_without_rerunning": [
+    {
+      "mission": 6,
+      "cases": 34,
+      "trace_bytes_read": 6919938,
+      "unique_native_instruction_addresses": 4591,
+      "records_verified": true
+    },
+    {
+      "mission": 7,
+      "cases": 34,
+      "trace_bytes_read": 5523738,
+      "unique_native_instruction_addresses": 3830,
+      "records_verified": true
+    },
+    {
+      "mission": 8,
+      "cases": 18,
+      "trace_bytes_read": 3616598,
+      "unique_native_instruction_addresses": 3449,
+      "records_verified": true
+    }
+  ]
+}

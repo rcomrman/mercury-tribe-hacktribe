@@ -1,0 +1,178 @@
+{
+  "scope": "SEQUENTIAL ABSTRACT MODELS; no native scheduler, MMIO, DMA or ARM memory model",
+  "page_bytes": 128,
+  "pages": 8,
+  "interleavings_per_policy": 12870,
+  "phase_serialized_unique_legal_orders": 2,
+  "counts": {
+    "shared": {
+      "coherent": 2860,
+      "mixed": 10010
+    },
+    "phase_serialized": {
+      "coherent": 12870,
+      "mixed": 0
+    }
+  },
+  "counterexamples": {
+    "shared": {
+      "schedule": "WWWWWWWRRRRRRRRW",
+      "actions": [
+        "write_page_0",
+        "write_page_1",
+        "write_page_2",
+        "write_page_3",
+        "write_page_4",
+        "write_page_5",
+        "write_page_6",
+        "read_page_0",
+        "read_page_1",
+        "read_page_2",
+        "read_page_3",
+        "read_page_4",
+        "read_page_5",
+        "read_page_6",
+        "read_page_7",
+        "write_page_7"
+      ],
+      "observed_page_versions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    "double_unpinned": {
+      "actions": [
+        "reader borrows slot 0 (version 0)",
+        "writer fills slot 1 (version 1)",
+        "publish slot 1",
+        "writer reuses slot 0 (version 2)"
+      ],
+      "reader_expected": 0,
+      "reader_observed": 2
+    },
+    "copy_to_native_without_phase": {
+      "schedule": "WWWWWWWRRRRRRRRW",
+      "observed_page_versions": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    "memcmp_copy_gap": {
+      "actions": [
+        "memcmp(source,shadow) sees equal version 0",
+        "writer commits source version 1",
+        "unconditional memcpy copies version 1 into shadow",
+        "comparator returns cached changed=false"
+      ],
+      "source_version": 1,
+      "shadow_version": 1,
+      "displayed_version_logical_only": 0,
+      "model_only": "Interrupting native comparator not executed under QEMU; gap established statically."
+    },
+    "version_wrap": {
+      "counter_bits": 8,
+      "completed_writes": 128,
+      "initial_epoch": 0,
+      "final_epoch": 0,
+      "false_accept_possible": true,
+      "32_bit_equivalent_writes": 2147483648
+    },
+    "shadow_not_ack": {
+      "source_version": 1,
+      "shadow_version": 1,
+      "displayed_version_logical_only": 0,
+      "native_comparator_would_report_changed": false
+    }
+  },
+  "pinned_buffer_roles": {
+    "2": {
+      "role_assignments": 4,
+      "candidate_checks": 8,
+      "states_without_free_slot": 2
+    },
+    "3": {
+      "role_assignments": 9,
+      "candidate_checks": 27,
+      "states_without_free_slot": 0
+    }
+  },
+  "triple_publications_under_one_pinned_reader": 128,
+  "staged_epoch": {
+    "schedules": 12870,
+    "accepted_coherent": 2,
+    "rejected": 12868
+  },
+  "lifetime_cases": [
+    {
+      "draw_borrow": 0,
+      "scan_borrow": 0,
+      "requested": 0,
+      "destroy_allowed": false
+    },
+    {
+      "draw_borrow": 0,
+      "scan_borrow": 0,
+      "requested": 1,
+      "destroy_allowed": true
+    },
+    {
+      "draw_borrow": 0,
+      "scan_borrow": 1,
+      "requested": 0,
+      "destroy_allowed": false
+    },
+    {
+      "draw_borrow": 0,
+      "scan_borrow": 1,
+      "requested": 1,
+      "destroy_allowed": false
+    },
+    {
+      "draw_borrow": 1,
+      "scan_borrow": 0,
+      "requested": 0,
+      "destroy_allowed": false
+    },
+    {
+      "draw_borrow": 1,
+      "scan_borrow": 0,
+      "requested": 1,
+      "destroy_allowed": false
+    },
+    {
+      "draw_borrow": 1,
+      "scan_borrow": 1,
+      "requested": 0,
+      "destroy_allowed": false
+    },
+    {
+      "draw_borrow": 1,
+      "scan_borrow": 1,
+      "requested": 1,
+      "destroy_allowed": false
+    }
+  ],
+  "generation_handle": {
+    "address_reused": true,
+    "generation_rejects_stale_handle": true
+  },
+  "buffer_payload_bytes": {
+    "phase_over_fixed_native_source": 0,
+    "double_private_buffers": 2048,
+    "triple_private_buffers": 3072,
+    "epoch_staging": 1024
+  },
+  "cost_limits": "Excludes metadata, alignment, renderer storage, stack and native source/shadow. No free instrument RAM established."
+}

@@ -1,0 +1,12 @@
+{
+  "target": "arm-none-eabi ARM926 ARM mode, 32-bit pointers",
+  "sizes_bytes": {
+    "existing_md15_bridge": 4348,
+    "existing_lcd_source_mux": 1060,
+    "candidate_phase_metadata": 24,
+    "candidate_double_images_and_metadata": 2072,
+    "candidate_triple_images_and_metadata": 3096,
+    "candidate_epoch_snapshot": 1028
+  },
+  "scope": "layout cost only, not allocated instrument RAM or production interfaces"
+}
