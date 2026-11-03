@@ -1,0 +1,134 @@
+{
+  "vsb_sha256": [
+    "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+  ],
+  "ranges": [
+    {
+      "name": "full_cycle",
+      "start": "0xc006f178",
+      "end_exclusive": "0xc006f36c",
+      "sha256": "16df55b92dfce010b6c1086487941f128992925d20875d95e414aff27ff9d5e6",
+      "identical": true
+    },
+    {
+      "name": "tick_caller",
+      "start": "0xc00836e4",
+      "end_exclusive": "0xc0083714",
+      "sha256": "7fffd70a33191caa7f1a31ddc23f842969e50978ab7e4a6532c9280fcc985042",
+      "identical": true
+    },
+    {
+      "name": "auxiliary_draw",
+      "start": "0xc006ea10",
+      "end_exclusive": "0xc006ea54",
+      "sha256": "094f0ca1d953e315bb94e83e1ff453939997f178a83500a69a79609f3d757e33",
+      "identical": true
+    },
+    {
+      "name": "header_widget",
+      "start": "0xc00840ec",
+      "end_exclusive": "0xc008440c",
+      "sha256": "0c6048d11e66ab39698e1d6e806fc7e627691648613500492785e127444560de",
+      "identical": true
+    },
+    {
+      "name": "icon_widget",
+      "start": "0xc0084a98",
+      "end_exclusive": "0xc0084c10",
+      "sha256": "ccbf2c31e37ec4fc220da0ff277392465ed5497a3f0d61c08b32e8ed9999e490",
+      "identical": true
+    },
+    {
+      "name": "text_widget",
+      "start": "0xc008c8b4",
+      "end_exclusive": "0xc008c990",
+      "sha256": "952603aecf9ce408585296998d0212ba5186881f663c5e301eabf6cfd98fed00",
+      "identical": true
+    },
+    {
+      "name": "tail_service",
+      "start": "0xc0088284",
+      "end_exclusive": "0xc00885dc",
+      "sha256": "3b336d22460ff4cb6ea8322e9d060ef9f8340c50eddcaa60927276a38e57dbd1",
+      "identical": true
+    },
+    {
+      "name": "lcd_dispatch_worker",
+      "start": "0xc0015dd0",
+      "end_exclusive": "0xc0016478",
+      "sha256": "0c443b7378a2f93a95ba8ea2ae13655d166d58c359087f95aa4ded654d22fc6c",
+      "identical": true
+    },
+    {
+      "name": "redraw_rectangle",
+      "start": "0xc003f55c",
+      "end_exclusive": "0xc003f66c",
+      "sha256": "198ba26fd220e630867b206bb1c2f205fe9abacb8b995c32a8a78f61356f15f0",
+      "identical": true
+    },
+    {
+      "name": "mode_getter",
+      "start": "0xc0047340",
+      "end_exclusive": "0xc0047348",
+      "sha256": "c7c8bd4c9fce0b71adf2c03386332243f1b0d46b862eb6ab5175bc51ac365496",
+      "identical": true
+    }
+  ],
+  "aligned_branch_candidates": {
+    "0xc00824c8": [
+      "0xc0082600"
+    ],
+    "0xc00839f0": [
+      "0xc0028208",
+      "0xc0028cb4",
+      "0xc0042c14",
+      "0xc006547c",
+      "0xc00654d8"
+    ],
+    "0xc002814c": [
+      "0xc002a4dc"
+    ],
+    "0xc0170b80": [
+      "0xc006ead4"
+    ]
+  },
+  "caveat": "Data can decode as instructions; indirect calls, Thumb and calculated targets not exhaustive.",
+  "thresholds": [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
+  ]
+}
