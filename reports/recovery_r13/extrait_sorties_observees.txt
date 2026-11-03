@@ -1,0 +1,26 @@
+SAUVEGARDE INTERMEDIAIRE — extrait de sorties lues avant perte du terminal.
+Ce fichier n'est ni une trace ARM ni le journal complet. Les archives brutes
+et le results.json locaux ne sont pas accessibles au moment de la publication.
+
+Audit lu :
+PASS: 31 identical original ranges; 118 candidate edges;14 coverage domains, no installed native protection
+
+Modèle lu :
+states=168
+transitions=252
+complete_scan_edges_checked=6
+draw_states_with_deferred_request=27
+max_commits=2
+pages=8
+
+Fin du dernier journal ARM lue :
+1 14 0 [(0, '0x20'), (1, '0x0'), (20, '0x0')]
+1 15 0 [(0, '0x20'), (1, '0x3'), (20, '0x3')]
+1 16 88 [(0, '0x20'), (89, '0x1'), (90, '0x1e260bc')]
+1 17 88 [(0, '0x20'), (1, '0x1'), (2, '0x2'), (89, '0x2'), (90, '0x1e260bc')]
+1 18 0 [(0, '0x20'), (1, '0x0'), (20, '0x0')]
+1 19 88 [(0, '0x20'), (1, '0x4'), (89, '0x4'), (90, '0x1e260bc')]
+
+Le processus du runner final a terminé avec exit_code=0.
+Son assertion de comparaison croisée VSB a donc été franchie.
+Le vérificateur indépendant n'a pas été exécuté ensuite.

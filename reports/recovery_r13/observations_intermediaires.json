@@ -1,0 +1,53 @@
+{
+  "status": "INTERMEDIATE_CHECKPOINT_NOT_FINAL_R13",
+  "environment": {
+    "id": "ccarenv_b64_Y2NhcmVudl9kOWNhYWE0ODk5NTQ4MTkxYjNiNDkxYWMwOTg3YzRkZA",
+    "connectivity": "offline",
+    "terminal": "unavailable"
+  },
+  "base_commit": "9c4ba62541648ff057800c3b98619cdaa30092d8",
+  "source_backup": "Retranscribed from commands visible in the session after filesystem became inaccessible. Recompile and rerun before final R13. No byte-for-byte identity check against inaccessible files is possible.",
+  "observed_before_failure": {
+    "native_runner_exit": 0,
+    "native_cases": 40,
+    "normal_process_exits": 26,
+    "expected_sigsegv_exits": 14,
+    "expected_fault_address": "0x01e260bc",
+    "vsb_hashes_checked_before_and_after": true,
+    "cross_vsb_record_comparison_passed_in_runner": true,
+    "frames_checked_per_vsb": 32,
+    "static_ranges_equal": 31,
+    "direct_branch_candidate_edges": 118,
+    "coverage_domains_documented": 14,
+    "model": {
+      "states": 168,
+      "transitions": 252,
+      "complete_scan_edges_checked": 6,
+      "draw_states_with_deferred_request": 27,
+      "max_commits": 2,
+      "pages": 8
+    }
+  },
+  "unavailable_artifacts": [
+    "R13 raw .records.gz",
+    ".trace.gz",
+    "results.json",
+    "native_disassembly.txt.gz",
+    "original access_graph.json"
+  ],
+  "not_completed": [
+    "Independent verify.py execution",
+    "Final reread of raw archives",
+    "Final tree preservation validation in original workspace",
+    "Final mission report validation",
+    "Ordinary git commit/push from workspace"
+  ],
+  "confirmed_remote_scope": "Only new R13 paths added by API checkpoint; no main or old source edits.",
+  "decision": {
+    "software_research": "GO",
+    "global_safe_coordination_found": false,
+    "independent_recovery_proved": false,
+    "hardware": "NO GO",
+    "flash": "NOT AUTHORIZED"
+  }
+}
