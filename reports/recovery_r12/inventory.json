@@ -1,0 +1,25 @@
+{
+  "base_commit": "f565a58b198fe317dc84fd6ea2123c3e64412b0c",
+  "missing_exact_paths": [
+    "research/md53_frames.c",
+    "research/md54_scan.c",
+    "tests/run_md53.sh",
+    "tests/arm/md54_abi.S",
+    "MD53_RAPPORT_FR.md",
+    "MD54_RAPPORT_FR.md"
+  ],
+  "historical_commit_4c1ec01_local_object_present": false,
+  "matching_path_history_all_local_refs": [],
+  "archive_search_scope": "workspace to depth5, excluding .git/build/work; not old inaccessible environment",
+  "archives_found": [],
+  "available_sources_sha256": {
+    "documents/RECOVERY_DOSSIER_MD46_MD87_TRANSCRIPTION.md": "b5cf73973b6d6e1e573bc2328d680c3e08f994c04ac68c4b07499ff451398272",
+    "tools/recovery_r9/models.py": "b0890a65defe0159718f00305e84c9e2a32a902e09b674dc7e8126f8e4b4f811",
+    "tests/recovery_r9/layout.c": "916fa6fbab54e881a6750847cfdebe673b61ddb33e0d152bb9f2d653af212390",
+    "src/lcd_source_mux.c": "9661dcfa8986dc4ecc4514fec8603fb0271cb21d78f7303e31b87455e51863e3",
+    "src/md18_lcd_abi.c": "d8c8212b3a2f4d1f6bb6899a2c0baffe0c31e5b398ee88911ea6c871d93f65ae",
+    "src/md30_lcd_gate.c": "8b34e28724e2dd6a50b6daf57a86a30c63043e7013b49b819613087c42eca290",
+    "src/md31_lcd_comparator.c": "93555a92351487b699b8214b67b6e50def7f4786f886a6274600e49f9c7b010e"
+  },
+  "conclusion": "MD53/54 transcription available; original sources/tests/reports not recovered. R9 role model and older source adapters are actually present."
+}

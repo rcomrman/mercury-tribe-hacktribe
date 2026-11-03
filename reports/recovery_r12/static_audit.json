@@ -1,0 +1,395 @@
+{
+  "vsb_sha256": [
+    "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+  ],
+  "ranges": [
+    {
+      "name": "irq_save_restore",
+      "start": "0xc0000040",
+      "end_exclusive": "0xc0000068",
+      "sha256": "4a0bc3f31096a1b697e18cc05da2ce81fc4ee662eaf5e53d5de4fefba78d6745"
+    },
+    {
+      "name": "priority_change",
+      "start": "0xc00006a0",
+      "end_exclusive": "0xc00007ac",
+      "sha256": "606923ce5bfaf27ef957f2e448971174d03e4dee83b81a852cc24860f8a801cc"
+    },
+    {
+      "name": "semaphores",
+      "start": "0xc0000c4c",
+      "end_exclusive": "0xc0000e44",
+      "sha256": "dfe9090c042472b9c103dae4bcf5f48300573b03aed5b102346da3ab6b3efb15"
+    },
+    {
+      "name": "semaphore_wait",
+      "start": "0xc0001d14",
+      "end_exclusive": "0xc0001dd0",
+      "sha256": "aa195e70af4006069f102deb82575e147545556e04c0a8022c8bdb1653ae3b98"
+    },
+    {
+      "name": "existing_semaphore1_use",
+      "start": "0xc0012750",
+      "end_exclusive": "0xc00127b0",
+      "sha256": "e7e3ba2299ea8f115581ed44c6b86554287d2d9aec70f39a7990014bbdc7e00f"
+    },
+    {
+      "name": "existing_semaphore2_use",
+      "start": "0xc0029a74",
+      "end_exclusive": "0xc0029ab8",
+      "sha256": "c71c1bbd605870ac0c9b18640345705100458d9bd25f97847fb1602bac0d8be1"
+    },
+    {
+      "name": "queue_sem_irq_pattern",
+      "start": "0xc0024bf4",
+      "end_exclusive": "0xc0024c48",
+      "sha256": "39dd325c411f4d3b798da843514e3fa612a51d217a235b600d030d453b3c91be"
+    },
+    {
+      "name": "graphics_source",
+      "start": "0xc0015804",
+      "end_exclusive": "0xc0015b50",
+      "sha256": "7509ecb0ffa47692d97f7af813b25a9dbdd0f41e7f0e8afb1e9d1551db17e460"
+    },
+    {
+      "name": "lcd_descriptor_worker",
+      "start": "0xc0015d14",
+      "end_exclusive": "0xc001613c",
+      "sha256": "abb0239eb516e9d8320bce20093190303ea4bd080d2172bd10bb1ab91ae86b80"
+    },
+    {
+      "name": "graphics_stubs",
+      "start": "0xc003f0d4",
+      "end_exclusive": "0xc003f10c",
+      "sha256": "4b056dda09137ee8896f2a3fd7af103ae8db483520a4ab4800b6d51ed4f128ab"
+    },
+    {
+      "name": "rectangle",
+      "start": "0xc003f55c",
+      "end_exclusive": "0xc003f61c",
+      "sha256": "066bea61512028fc01d30dff437013f3217e872a0bd45e5025dbda9e4b2dd0d9"
+    },
+    {
+      "name": "progress_draw_send",
+      "start": "0xc006038c",
+      "end_exclusive": "0xc006040c",
+      "sha256": "24aaf312a4d658001240c792f0d588854eece1c7290857986ee3220f0248745f"
+    },
+    {
+      "name": "lcd_shutdown_candidate",
+      "start": "0xc0038b88",
+      "end_exclusive": "0xc0038c28",
+      "sha256": "732af769c50d011b044f3e970fb34e98cce532745cb4c843977559ebfffe56d6"
+    },
+    {
+      "name": "other_graphics_request",
+      "start": "0xc0083384",
+      "end_exclusive": "0xc00833f0",
+      "sha256": "345fcd3052d862d929d7cfc49a909d6064ea8989120e56e2989c2ca0c320a710"
+    },
+    {
+      "name": "task2_callback",
+      "start": "0xc002a71c",
+      "end_exclusive": "0xc002a730",
+      "sha256": "df1c2cc99b7b6612d5d7287708db262bf0233c811a8c115c179910e8866f98ce"
+    },
+    {
+      "name": "ui_tick",
+      "start": "0xc00836e4",
+      "end_exclusive": "0xc0083714",
+      "sha256": "7fffd70a33191caa7f1a31ddc23f842969e50978ab7e4a6532c9280fcc985042"
+    },
+    {
+      "name": "fatal",
+      "start": "0xc00298bc",
+      "end_exclusive": "0xc0029a00",
+      "sha256": "330105de3db7fd939765e00dfe294092367c4f7db2b3308af2f56d2aeb8d0c5d"
+    },
+    {
+      "name": "task_exit",
+      "start": "0xc0001a24",
+      "end_exclusive": "0xc0001a64",
+      "sha256": "f22fc7232d5626ca6081c5531c1d19972145e9499a7fb096ae8bee76443fa48b"
+    },
+    {
+      "name": "terminal_stop",
+      "start": "0xc0000144",
+      "end_exclusive": "0xc000022c",
+      "sha256": "9501b5bf06048a67c950ed8c167018bd8e55aec9729b13bcaf898b825f10de12"
+    },
+    {
+      "name": "semaphore_config",
+      "start": "0xc00a3728",
+      "end_exclusive": "0xc00a3780",
+      "sha256": "02d4cab0bd5d5a6395bd6c6fdb1f6f1f5f99b9b65f6de6da7550cd77a1a37570"
+    }
+  ],
+  "semaphores": {
+    "count": 7,
+    "config_records": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "runtime_base": "0xc06a2474",
+    "record_bytes": 16
+  },
+  "aligned_branch_candidates": {
+    "0xc0015804": [
+      "0xc0015f94",
+      "0xc003f0fc"
+    ],
+    "0xc0015824": [
+      "0xc003f154",
+      "0xc0071ee0",
+      "0xc0073034",
+      "0xc00730ec"
+    ],
+    "0xc0015900": [
+      "0xc0071ec8"
+    ],
+    "0xc0015988": [
+      "0xc003f5f0"
+    ],
+    "0xc0015ab4": [
+      "0xc0016084"
+    ],
+    "0xc0015dd0": [
+      "0xc00298e8",
+      "0xc00299b4",
+      "0xc00299c4",
+      "0xc002a728",
+      "0xc002ac4c",
+      "0xc002ac5c",
+      "0xc0038bc4",
+      "0xc00603f0",
+      "0xc0060404",
+      "0xc00833e8",
+      "0xc008370c",
+      "0xc009a8f0"
+    ],
+    "0xc0015fa0": [
+      "0xc0015e58",
+      "0xc0015f38"
+    ],
+    "0xc003f55c": [
+      "0xc0029628",
+      "0xc00603dc",
+      "0xc006819c",
+      "0xc0068218",
+      "0xc0068340",
+      "0xc00684f4",
+      "0xc006c294",
+      "0xc006de84",
+      "0xc006def0",
+      "0xc006e3f0",
+      "0xc006f1b0",
+      "0xc0071ae8",
+      "0xc0071b70",
+      "0xc0071bc8",
+      "0xc0071c84",
+      "0xc0071ce8",
+      "0xc0071d20",
+      "0xc0071d74",
+      "0xc0071d88",
+      "0xc0071dec",
+      "0xc0071e18",
+      "0xc0071f60",
+      "0xc0071fc0",
+      "0xc0072004",
+      "0xc0072590",
+      "0xc00725c4",
+      "0xc00726a8",
+      "0xc00727ac",
+      "0xc00727d4",
+      "0xc00727e8",
+      "0xc00727fc",
+      "0xc0072820",
+      "0xc0072838",
+      "0xc0072f7c",
+      "0xc0072fb8",
+      "0xc0073188",
+      "0xc0073590",
+      "0xc0084058",
+      "0xc0084424",
+      "0xc0084a34",
+      "0xc0084c50",
+      "0xc0084cc4",
+      "0xc008506c",
+      "0xc00850d8",
+      "0xc0085170",
+      "0xc00854f8",
+      "0xc0085594",
+      "0xc0085a4c",
+      "0xc0085b54",
+      "0xc0085c00",
+      "0xc008656c",
+      "0xc0086d80",
+      "0xc00871d0",
+      "0xc008724c",
+      "0xc008a1a0",
+      "0xc008a348",
+      "0xc008a4f0",
+      "0xc008a6cc",
+      "0xc008a8ec",
+      "0xc008ab94",
+      "0xc008b360",
+      "0xc008b3e0",
+      "0xc008b548",
+      "0xc008b60c",
+      "0xc008b680",
+      "0xc008ba8c",
+      "0xc008bc7c",
+      "0xc008c7c8",
+      "0xc008c9c0",
+      "0xc008cdec",
+      "0xc008ce6c",
+      "0xc008cf30",
+      "0xc008e96c",
+      "0xc0170044"
+    ],
+    "0xc0000d80": [
+      "0xc0012794",
+      "0xc0012800",
+      "0xc0012884",
+      "0xc0012908",
+      "0xc001298c",
+      "0xc0012a0c",
+      "0xc0012a94",
+      "0xc0012b14",
+      "0xc0012b98",
+      "0xc0012c10",
+      "0xc0012c90",
+      "0xc0012d18",
+      "0xc0012d9c",
+      "0xc0012e20",
+      "0xc0012ea4",
+      "0xc0012f28",
+      "0xc0012fac",
+      "0xc001302c",
+      "0xc001315c",
+      "0xc001328c",
+      "0xc0013310",
+      "0xc0013544",
+      "0xc0013778",
+      "0xc00137fc",
+      "0xc00139b8",
+      "0xc0013a38",
+      "0xc0013abc",
+      "0xc0013b44",
+      "0xc0013d50",
+      "0xc0013de8",
+      "0xc0014248",
+      "0xc00142d4",
+      "0xc0014348",
+      "0xc00143b0",
+      "0xc0014420",
+      "0xc0024c08",
+      "0xc0029a8c",
+      "0xc0029ae8",
+      "0xc0029b70",
+      "0xc0029bb8",
+      "0xc002cf80",
+      "0xc003ba90",
+      "0xc003bb54",
+      "0xc003bc08",
+      "0xc003bcf0",
+      "0xc003bd8c"
+    ],
+    "0xc0000ca8": [
+      "0xc00127a4",
+      "0xc0012820",
+      "0xc00128a8",
+      "0xc0012928",
+      "0xc00129ac",
+      "0xc0012a30",
+      "0xc0012ab4",
+      "0xc0012b38",
+      "0xc0012bb4",
+      "0xc0012c2c",
+      "0xc0012cb8",
+      "0xc0012d38",
+      "0xc0012dbc",
+      "0xc0012e40",
+      "0xc0012ec8",
+      "0xc0012f48",
+      "0xc0012fcc",
+      "0xc00130f0",
+      "0xc0013220",
+      "0xc00132ac",
+      "0xc00134d8",
+      "0xc001370c",
+      "0xc0013794",
+      "0xc0013948",
+      "0xc00139d8",
+      "0xc0013a58",
+      "0xc0013ae0",
+      "0xc0013c98",
+      "0xc0013d84",
+      "0xc0013ee8",
+      "0xc0014274",
+      "0xc00142f8",
+      "0xc0014358",
+      "0xc00143d4",
+      "0xc0014438",
+      "0xc0024cf0",
+      "0xc0029aac",
+      "0xc0029b50",
+      "0xc0029b90",
+      "0xc0029c04",
+      "0xc002cfb4",
+      "0xc003baf4",
+      "0xc003bbbc",
+      "0xc003bca4",
+      "0xc003bd40",
+      "0xc003bde0"
+    ]
+  },
+  "fixed_address_literals": {
+    "0xc031b310": [
+      "0xc0015820",
+      "0xc00158fc",
+      "0xc0015984",
+      "0xc0015a3c",
+      "0xc0015b4c"
+    ],
+    "0xc031b710": [
+      "0xc0015a5c",
+      "0xc0015a94"
+    ]
+  },
+  "limitations": "Not exhaustive: indirect calls, pointers and all execution contexts are not recovered. Data can decode as ARM branches. No unused semaphore ID or real exclusion inferred."
+}

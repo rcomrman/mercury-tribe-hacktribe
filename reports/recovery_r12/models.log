@@ -1,0 +1,22 @@
+{
+  "roles": {
+    "2": {
+      "states": 76,
+      "transitions": 161,
+      "blocked_writer_states": 3,
+      "closed_states": 9,
+      "max_publications": 4
+    },
+    "3": {
+      "states": 1148,
+      "transitions": 2696,
+      "blocked_writer_states": 0,
+      "closed_states": 102,
+      "max_publications": 4
+    }
+  },
+  "byte_copy_cuts": {
+    "coherent": 2,
+    "mixed": 1023
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "scope": "DETERMINISTIC SERIAL MODEL; atomic metadata actions assumed, not implemented synchronization; no IRQ, DMA, cache, RTOS or transport emulation",
+  "r9_helper_reused": "tools/recovery_r9/models.py:shared",
+  "bounded_roles": {
+    "2": {
+      "states": 76,
+      "transitions": 161,
+      "blocked_writer_states": 3,
+      "closed_states": 9,
+      "max_publications": 4
+    },
+    "3": {
+      "states": 1148,
+      "transitions": 2696,
+      "blocked_writer_states": 0,
+      "closed_states": 102,
+      "max_publications": 4
+    }
+  },
+  "byte_copy_cuts": {
+    "coherent": 2,
+    "mixed": 1023
+  },
+  "counterexamples": {
+    "private_pointer_swap": {
+      "native_fixed_source_changes": false
+    },
+    "unprotected_fixed_copy": {
+      "schedule": "WWWRRRRRRRRWWWWW",
+      "shadow_versions": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "split_acquire": [
+      "reader loads published=0, generation=1",
+      "writer publishes slot 1",
+      "writer reuses unpinned slot 0 and publishes generation 3",
+      "reader stores pin=0; stale generation 1 points to rewritten bytes"
+    ],
+    "copy_only_lock": [
+      "lock: full copy A to fixed source; unlock",
+      "reader copies pages 0..2 of A",
+      "lock: full copy B to fixed source; unlock",
+      "reader copies pages 3..7 of B"
+    ],
+    "nonparticipating_native_writer": [
+      "writer A holds proposed semaphore",
+      "native C0015988 never takes it",
+      "fixed source changes despite count=0"
+    ],
+    "cooperative_watchdog": [
+      "worker enters polling loop",
+      "same task watchdog callback never reached"
+    ],
+    "lock_across_worker": [
+      "hold source lock across scan/send",
+      "worker blocks before returning",
+      "reader borrow and lock cannot be released by cooperative caller"
+    ]
+  },
+  "conditional_invariants": [
+    "no write to published or pinned slot",
+    "publish only fully filled image",
+    "metadata actions serialized",
+    "fixed composition and full reader interval participate in exclusion",
+    "close rejects new work, drains reader/writer before storage release"
+  ],
+  "not_proved": [
+    "progress with stalled reader",
+    "multiple readers/writers",
+    "ARM atomicity and memory visibility",
+    "physical transfer acknowledgement"
+  ]
+}

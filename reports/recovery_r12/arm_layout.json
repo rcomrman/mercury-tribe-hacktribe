@@ -1,0 +1,19 @@
+{
+  "target": "ARM926 ARM32",
+  "sizes_bytes": {
+    "candidate_metadata": 40,
+    "handle": 8,
+    "double_layout": 2088,
+    "triple_pool": 3112,
+    "candidate_staging_copy": 1040,
+    "existing_md15_bridge": 4348,
+    "existing_mux": 1060
+  },
+  "r9_comparison": {
+    "metadata": 24,
+    "double": 2072,
+    "triple": 3096
+  },
+  "extra_r12_metadata_bytes": 16,
+  "limits": "Double is a separately measured two-image layout; native test pool always physically holds three images even in logical double mode. No free RAM, stack margin, IRQ latency or cache costs proved. Existing bridge already includes mux and two images; not additive."
+}
