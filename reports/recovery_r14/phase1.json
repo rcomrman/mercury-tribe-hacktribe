@@ -1,0 +1,7 @@
+{
+  "base": "cb0d8caf9cb70d182f6e64ea7e72d8c796cd4e96",
+  "r13_manifest_files_verified": 201,
+  "r13_experiments_reexecuted": false,
+  "status": "PASS",
+  "scope": "Read-only SHA validation of published archives; R13 contracts retained"
+}
