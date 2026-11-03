@@ -1,0 +1,13 @@
+tests/recovery_r8/../recovery_r2/lifecycle.c:91:r2_unused_main	104	static
+tests/recovery_r8/../recovery_r2/lifecycle.c:76:init	88	static
+tests/recovery_r8/../recovery_r2/lifecycle.c:14:event	88	static
+tests/recovery_r8/../recovery_r2/lifecycle.c:49:snap	96	static
+tests/recovery_r8/interleave.c:63:main	104	static
+tests/recovery_r8/interleave.c:31:during_draw	104	static
+tests/recovery_r8/interleave.c:18:guarded_cycle	16	static
+tests/recovery_r8/interleave.c:22:guarded_drain	16	static
+tests/recovery_r8/../recovery_r2/lifecycle.c:57:noop	0	static
+tests/recovery_r8/../recovery_r2/lifecycle.c:56:mercury_delete	104	static
+tests/recovery_r8/../recovery_r2/lifecycle.c:63:mercury_draw	112	static
+tests/recovery_r8/../recovery_r2/lifecycle.c:53:mercury_cleanup	96	static
+tests/recovery_r8/interleave.c:26:guarded_offer	0	static

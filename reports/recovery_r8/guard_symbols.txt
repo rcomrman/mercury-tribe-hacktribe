@@ -1,0 +1,6 @@
+00011f94 l     F .text	00000060 guarded_cycle
+00011ff4 l     F .text	00000058 guarded_offer
+0001204c l     F .text	00000060 guarded_drain
+0023247c l     O .bss	00000004 gate.1
+00232480 l     O .bss	00000004 gate.2
+00232478 l     O .bss	00000001 gate.0
