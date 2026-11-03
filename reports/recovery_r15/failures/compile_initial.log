@@ -1,0 +1,14 @@
+In file included from tests/recovery_r15/native.c:8:
+In file included from tests/recovery_r15/commands.h:6:
+In file included from tests/recovery_r15/../recovery_r14/admission.h:5:
+In file included from tests/recovery_r15/../recovery_r14/../recovery_r13/coordinator.h:5:
+tests/recovery_r15/../recovery_r14/../recovery_r13/../recovery_r12/pool.h:37:12: error: unused function 'r12_abort' [-Werror,-Wunused-function]
+   37 | static int r12_abort(struct r12_pool*p,struct r12_handle h){
+      |            ^~~~~~~~~
+In file included from tests/recovery_r15/native.c:8:
+In file included from tests/recovery_r15/commands.h:6:
+tests/recovery_r15/../recovery_r14/admission.h:40:13: error: unused function 'r14_request_critical' [-Werror,-Wunused-function]
+   40 | static void r14_request_critical(struct r14_admission*a){if(!a->closing)a->critical_pending=1;}
+      |             ^~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+

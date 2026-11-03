@@ -1,0 +1,1 @@
+PASS {"actual_return_edges": 152, "atomic_transitions_assumed": true, "capacity": 2, "max_commands": 3, "stalled_with_retained_command_states": 152, "states": 1360, "transitions": 4068}

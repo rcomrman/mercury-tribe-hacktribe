@@ -1,0 +1,30 @@
+{
+  "conservation": {
+    "states": 1360,
+    "transitions": 4068,
+    "actual_return_edges": 152,
+    "stalled_with_retained_command_states": 152,
+    "max_commands": 3,
+    "capacity": 2,
+    "atomic_transitions_assumed": true
+  },
+  "cancellation_demonstrated": false,
+  "native_sync_compatibility": false,
+  "counterexamples": {
+    "shallow_copy": "copy pointer word; pointee changes/dies before dispatch -> original argument not retained",
+    "ui_boundary": "queue callback wrapper; change wrapper.manager; native invocation resolves new manager",
+    "terminal_reply_loss": "recycle DONE slot before acknowledgement -> old result overwritten; final model retains until ACK",
+    "reentry": "outer depth1 -> inner depth2 -> inner returns depth1: cannot release outer resources",
+    "stop_flag": "request stop; current callback writes source after request",
+    "task_state": "wakeup/timeout changes metadata but selected task not executed; CPU access authority remains",
+    "hardware": "callback returns; peripheral may still own descriptor/buffer: callback return alone cannot free",
+    "sync_deferral": "caller expects result/output before returning; WAIT value cannot substitute native ABI result",
+    "ordered_transition": "transition command cannot overtake earlier accepted work without explicit stale-generation policy",
+    "deadlock": "synchronous caller waits while holding DRAW; queued CRITICAL needs IDLE -> cycle"
+  },
+  "limits": [
+    "Known scalar codec only; target registry and metadata serialization assumed",
+    "No native watchdog, cancellation, global CPU cessation or peripheral/DMA drain proven",
+    "No runtime command drop/reorder to hide native errors"
+  ]
+}

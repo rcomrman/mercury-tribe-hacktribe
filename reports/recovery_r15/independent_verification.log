@@ -1,0 +1,1 @@
+PASS:58 R15 ARM cases;54 normal exits;4 expected GPIO faults;exact cross-VSB records/native instruction lines;FIFO/argument/ACK/generation/lifetime oracles;155 R14 manifest entries and all R1-R14 paths unchanged

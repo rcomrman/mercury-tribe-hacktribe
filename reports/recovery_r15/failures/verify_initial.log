@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/mercury-tribe-hacktribe/tools/recovery_r15/verify.py", line 81, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/mercury-tribe-hacktribe/tools/recovery_r15/verify.py", line 31, in main
+    assert st[stage+200][0][4]==meta,(vi,case,'terminal metadata')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (0, 18, 'terminal metadata')
