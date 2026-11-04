@@ -43,3 +43,23 @@ Le constructeur C00852B0 fournit un exemple natif précis, sans supposer le nom 
 C00851B4, présent dans la vtable principale C00E4DA8, appelle C0041B74 avec objet+0x38. Son thunk C00851EC retranche0x38 au this secondaire. La variante C00851F4 appelle ensuite C0028DD4 sur l'objet extérieur. L'inverse de cette clé se trouve donc dans les champs objet+0x3C/+0x40/+0x44, tandis que la méthode utilise l'objet complet.
 
 Ces relations de contenance et de nettoyage sont PROUVÉES par le flux natif local ; elles ne prouvent ni le nombre total de propriétaires ni la cessation d'une méthode déjà chargée avant la libération extérieure. Les constructeurs/destructeurs complets de ce widget n'ont pas été exécutés : ils dépendent d'autres services. Le sujet partagé conserve une référence d'observateur vers cette allocation, sans compteur de propriété démontré.
+
+## Graphe borné des relations établies
+
+Les flèches nomment des références ou une contenance précise ; elles ne transmettent pas toutes la propriété. PROUVÉ concerne les instructions locales. L'autorité de dernière destruction reste INCONNUE.
+
+```mermaid
+flowchart TD
+ UI[Gestionnaire UI principal] -->|contient état à +0x10 · PROUVÉ| E[État]
+ GS[Racine C0691244] -->|pointeur · PROUVÉ| S[Sujet périodique 904]
+ E -->|alias +0x24 · PROUVÉ| S
+ GA[Racine C0348844] -->|pointeur · PROUVÉ| A[Objet associé 1064]
+ E -->|alias +0x2C · PROUVÉ| A
+ S -->|slot : référence de clé · PROUVÉ pour exemple| K[Clé inline +0x38]
+ S -->|slot : this distinct · PROUVÉ pour exemple| O[Abonné C00852B0]
+ O -->|contient · PROUVÉ| K
+ K -->|vecteur inverse de sujets · PROUVÉ| S
+ G[Durée de vie globale / dernier propriétaire] -.->|INCONNU| S
+ G -.->|INCONNU| A
+ G -.->|cadres sélectionnés : INCONNU| O
+```

@@ -27,7 +27,7 @@ static void crash(int sig,void*info,void*ctx){(void)ctx;snap(89);code_unchanged(
 static void purge(void){for(unsigned i=0;i<tx.used;i++)if(r19_removable(&tx,i+1)){struct r19_relation*r=&tx.rel[i];unsigned*k=(void*)(uintptr_t)r->key,*s=(void*)(uintptr_t)r->subject;FN(void(*)(void*,void*),0xc00705dc)(s,k);unsigned*b=(void*)(uintptr_t)k[1],*e=(void*)(uintptr_t)k[2],*w=b;for(unsigned*p=b;p<e;p++)if(*p!=r->subject)*w++=*p;k[2]=(uintptr_t)w;r->physical=1;r->state=R19_DETACHED;}}
 static void close_all(void){tx.closing=1;for(unsigned i=0;i<tx.used;i++)CHECK(r19_close(&tx,&q,i+1),202);purge();}
 static unsigned guarded_notify(unsigned periodic){if(!r19_walk_begin(&tx,S))return 0;if(periodic)FN(void(*)(void*),0xc0082728)(S);else FN(void(*)(void*,unsigned),0xc0070688)(S,37);CHECK(tx.walks,203);tx.walks--;purge();return 1;}
-static void raw_register(unsigned k,unsigned id,unsigned owner){closure[0]=(uintptr_t)&q.slot[id-1].core[owner==2];closure[1]=0;closure[2]=33;FN(void(*)(void*,void*,unsigned,void*),0xc0070778)(S,keys[k],1,closure);}
+static void raw_register(unsigned k,unsigned id,unsigned owner){unsigned descriptor[3]={(uintptr_t)&q.slot[id-1].core[owner==2],0,33};FN(void(*)(void*,void*,unsigned,void*),0xc0070778)(S,keys[k],1,descriptor);}
 static unsigned register_guarded(unsigned k,unsigned id,unsigned owner){unsigned ref=r19_claim(&tx,&q,S,keys[k],id,owner);if(!ref)return 0;selected_ref=ref;unsigned ticket=tx.rel[ref-1].ticket;raw_register(k,id,owner);CHECK(r19_complete(&tx,&q,ref,ticket),204);last_complete=ref;purge();return ref;}
 static void thunk(void*p,unsigned event){
  CHECK(event==0||event==37,205);invoked++;unsigned ref=0;
