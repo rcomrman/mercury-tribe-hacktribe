@@ -1,0 +1,39 @@
+{
+  "prior_route": "R11 task4 -> C002D030 -> main UI consumer; not all managers",
+  "conditions": [
+    "main manager vtable C00E4C50",
+    "message type0",
+    "state object+0x18 equals0 for periodic branch"
+  ],
+  "route": [
+    "task4",
+    "C002D030",
+    "virtual+C to C0083848",
+    "virtual+10 to C00834FC",
+    "type0 jump table C008357C",
+    "virtual+18 to C00836E4",
+    "C006EAE0",
+    "C006EB74",
+    "C0082728",
+    "C007061C"
+  ],
+  "subject": "state object+0x24; state object is ui+0x10 in this tick",
+  "owner": "UNKNOWN",
+  "exclusive_task": false,
+  "words": {
+    "0xc00e4c5c": "0xc0083848",
+    "0xc00e4c60": "0xc00834fc",
+    "0xc00e4c68": "0xc00836e4",
+    "0xc0083880": "0xe5933010",
+    "0xc0083888": "0xe12fff33",
+    "0xc0083508": "0x979ff103",
+    "0xc0083510": "0xc008357c",
+    "0xc0083580": "0xe5933018",
+    "0xc0083684": "0xe12fff33",
+    "0xc00836f0": "0xebffacfa",
+    "0xc006eae0": "0xe5d0304d",
+    "0xc006eb58": "0xe5d43018",
+    "0xc006eb6c": "0xe5940024",
+    "0xc006eb74": "0xea004eeb"
+  }
+}

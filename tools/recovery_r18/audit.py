@@ -27,7 +27,7 @@ def main():
  for t,x in targets.items():assert list(map(hex,refs[t]))==x['direct_branch_candidates']
  # Actual task records preserved from R11; reachability below is purely syntactic.
  seeds={f'task_{i+1}':struct.unpack_from('<8I',b,0xa37a8+32*i)[2] for i in range(10)}
- seeds.update(irq_15=0xc0025798,ui_virtual_consumer=0xc0083848,services_dispatch=0xc002d684,periodic_observer=0xc0082728)
+ seeds.update(irq_15=0xc0025798,ui_virtual_consumer=0xc0083848,services_dispatch=0xc002d684,periodic_observer=0xc0082728,ui_alternate_consumer=0xc0083428,ui_tick=0xc00836e4,inverse_destructor=0xc0041b74,page_replace=0xc006e9a0)
  allsites={p for sites in refs.values() for p in sites};reaches={};witnesses={};summaries={}
  for name,start in seeds.items():
   todo=deque([start]);parent={start:None};hits={};holes=[]
@@ -52,7 +52,8 @@ def main():
    for p in edges:
     if BASE<=p<BASE+len(b) and p%4==0 and p not in parent:parent[p]=pc;todo.append(p)
   reaches[name]=set(hits);witnesses[name]={hex(p):[hex(x) for x in path] for p,path in hits.items()}
-  summaries[name]={'root':hex(start),'visited':len(parent),'observer_candidate_sites':len(hits),'unresolved_pc_transfers':list(map(hex,holes)),'status':'SYNTACTIC_POSSIBILITY_ONLY'}
+  details=[{'pc':hex(pc),'word':hex(word(pc)),'kind':'BLX_REGISTER' if word(pc)&0x0ffffff0==0x012fff30 else 'BX_LR_RETURN' if word(pc)&0x0fffffff==0x012fff1e else 'PC_LOAD_OR_OTHER_TRANSFER'} for pc in holes]
+  summaries[name]={'indirect_transfer_details':details,'root':hex(start),'visited':len(parent),'observer_candidate_sites':len(hits),'unresolved_pc_transfers':list(map(hex,holes)),'status':'SYNTACTIC_POSSIBILITY_ONLY'}
  # One disassembly for all snippets, not heuristic semantic class labels.
  (BUILD/'image.bin').write_bytes(b);(BUILD/'image.S').write_text('.text\n.global image\nimage:\n.incbin "build/recovery_r18/image.bin"\n')
  def run(a):return subprocess.check_output(a,cwd=ROOT,text=True)
@@ -71,6 +72,9 @@ def main():
  ranges=[(0x40,0x68),(0xca8,0xe9c),(0x705dc,0x70818),(0x82728,0x827c0),(0x41b74,0x41bc4),(0x6e9a0,0x6ea10)]
  for lo,hi in ranges:assert imgs[0][lo:hi]==imgs[1][lo:hi]
  snippets+=['native synchronization / observer bodies\n'+'\n'.join(f'{BASE+p:08x}: {lines.get(BASE+p,"UNDECODED")}' for p in range(lo,hi,4)) for lo,hi in ranges]
+ bridge_words={0xc00e4c5c:0xc0083848,0xc00e4c60:0xc00834fc,0xc00e4c68:0xc00836e4,0xc0083880:0xe5933010,0xc0083888:0xe12fff33,0xc0083508:0x979ff103,0xc0083510:0xc008357c,0xc0083580:0xe5933018,0xc0083684:0xe12fff33,0xc00836f0:0xebffacfa,0xc006eae0:0xe5d0304d,0xc006eb58:0xe5d43018,0xc006eb6c:0xe5940024,0xc006eb74:0xea004eeb}
+ for pc,w in bridge_words.items():assert word(pc)==w and struct.unpack_from('<I',imgs[1],pc-BASE)[0]==w
+ (OUT/'typed-ui-bridge.json').write_text(json.dumps({'prior_route':'R11 task4 -> C002D030 -> main UI consumer; not all managers','conditions':['main manager vtable C00E4C50','message type0','state object+0x18 equals0 for periodic branch'],'route':['task4','C002D030','virtual+C to C0083848','virtual+10 to C00834FC','type0 jump table C008357C','virtual+18 to C00836E4','C006EAE0','C006EB74','C0082728','C007061C'],'subject':'state object+0x24; state object is ui+0x10 in this tick','owner':'UNKNOWN','exclusive_task':False,'words':{hex(pc):hex(w) for pc,w in bridge_words.items()}},indent=2)+'\n')
  (OUT/'coverage.json').write_text(json.dumps({'vsb_sha256':HASHES,'counts':{hex(t):len(s) for t,s in refs.items()},'rows':rows,'roots':summaries,'aligned_observer_pointers':{t:x['aligned_pointer_candidates'] for t,x in old['references'].items()},'limits':['CFG is context-insensitive and ignores condition feasibility and return matching','Indirect edges unresolved; BL assumes possible return','Nearest push is a hint, never a proven function boundary','No class owner, exclusive task, IRQ/FIQ/DMA absence or global coverage proof']},indent=2)+'\n')
  with (OUT/'coverage.csv').open('w',newline='') as f:
   writer=csv.writer(f,lineterminator='\n');writer.writerow(['target','site','branch','task_class','syntactic_roots','owner','coverage','local_window_sha256'])

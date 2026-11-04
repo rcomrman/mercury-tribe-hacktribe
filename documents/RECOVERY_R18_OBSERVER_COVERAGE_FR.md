@@ -35,3 +35,11 @@ Les tâches2 (mise à jour/compteurs),4 (UI) et5 (services) restent les domaines
 Le désassemblage inclut les corps observateurs, C0000040–0064 et les wrappers de sémaphore C0000CA8–0E98. Le masquage I conserve F ; sa portée est locale, pas une preuve contre IRQ/FIQ/DMA ensemble. Les sémaphores exigent un contexte noyau et des participants au même protocole ; les observateurs inchangés ne consultent pas les métadonnées Mercury.
 
 Aucun verrou commun dominant tous les candidats, appels virtuels et destructeurs n'est démontré. Ordre mémoire, barrière/cache, ordonnancement et contraintes d'interruption ne sont pas qualifiés par QEMU user-mode. Statut de la primitive commune : **NON PROUVÉ**. Aucun verrou ne doit être conservé pendant un callback ou une opération LCD pouvant bloquer.
+
+## Pont typé UI, au-delà du CFG direct
+
+Le fichier `typed-ui-bridge.json` conserve séparément une route conditionnelle déjà ancrée par R11 : tâche4 → wrapper UI → gestionnaire principal C00E4C50 → C0083848 → slot+0x10 C00834FC → message type0 → slot+0x18 C00836E4 → C006EAE0 → C006EB74 → C0082728. Les mots de vtable, jump table et branches de ce pont ont été vérifiés dans les deux VSB. Le sujet périodique est chargé à état+0x24 ; ce passage exige notamment état+0x18=0. L'état vient de ui+0x10 dans ce tick.
+
+Le cas périodique n'est donc pas réservé à la tâche2 : il possède une route UI conditionnelle en tâche4. Ce n'est pas une attribution exclusive de tous ses appels. Ce pont manuel n'est pas injecté comme une arête certaine dans le CFG générique ; les comptes35/21 restent ceux du scan syntaxique. La racine supplémentaire `ui_tick` montre13 sites candidats accessibles directement depuis le tick, toutes catégories confondues. Les gestionnaires alternatifs gardent leurs inconnus.
+
+C006EAE0 charge son premier octet avant le push LR situé à C006EAE4. C'est un exemple concret de la raison pour laquelle le hint de prologue ne doit pas être assimilé à une entrée de fonction. Les propriétaires des objets état+0x24 et état+0x2C restent inconnus. Les transferts indirects sont classés dans le JSON entre BLX-register, retour BX-LR et autres transferts PC ; aucune cible virtuelle générale n'est devinée.

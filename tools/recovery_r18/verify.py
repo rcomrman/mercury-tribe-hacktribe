@@ -79,6 +79,8 @@ def main():
      data_pc=(w&0x0c000000)==0 and ((w>>12)&15)==15 and ((w>>21)&15) not in (8,9,10,11)
      assert cond!=14 or blx or not (bx or ldm_pc or ldr_pc or data_pc)
    assert allwords[int(site,16)]==int(next(r['instruction'] for r in cov['rows'] if r['site']==site),16)
+ bridge=json.loads((OUT/'typed-ui-bridge.json').read_text());assert not bridge['exclusive_task'] and bridge['owner']=='UNKNOWN'
+ assert bridge['words']['0xc00e4c68']=='0xc00836e4' and bridge['words']['0xc006eb74']=='0xea004eeb'
  # Model-only counterexamples: independent interpreter checks reuse/destroy assumptions and stale selection.
  model=json.loads((OUT/'model.json').read_text());assert [r['states'] for r in model['results']]==[18118,99950,22556]
  for result in model['results']:
