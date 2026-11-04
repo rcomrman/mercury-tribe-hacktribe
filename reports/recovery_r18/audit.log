@@ -1,0 +1,2 @@
+PASS static candidates: {'0xc0070778': 119, '0xc0070688': 120, '0xc007061c': 2, '0xc00705dc': 12, '0xc0041b74': 51, '0xc0082728': 1, '0xc0082788': 11}
+Syntactic candidate root classes: {'POSSIBLE_NOT_EXCLUSIVE': 57, 'UNKNOWN': 259}

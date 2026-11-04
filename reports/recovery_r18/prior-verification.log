@@ -1,0 +1,6 @@
+PASS: 58 ARM scenarios, 54 normal returns, 4 expected faults (0 and 0x01E260BC).
+PASS: 58 full native-image byte comparisons; 29 exact cross-VSB records and native translated-block comparisons.
+PASS: 12 debugger interleavings, unchanged breakpoint bytes, exact register restoration; no memory-write packets.
+PASS: 1080 bounded model states and independently replayed negative witnesses.
+PASS: 167 R16 manifest entries and every base tracked path preserved.
+PASS: R17 published manifest: 142 SHA-256 entries.
