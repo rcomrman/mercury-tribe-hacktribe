@@ -1,0 +1,770 @@
+{
+  "vsb_sha256": [
+    "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+  ],
+  "contracts": {
+    "0xc0085078": "0xe5d03048",
+    "0xc0085088": "0x15c03049",
+    "0xc0085090": "0x15c03014",
+    "0xc00851cc": "0xe5a03038",
+    "0xc00851d0": "0xebfef267",
+    "0xc00851ec": "0xe2400038",
+    "0xc0085204": "0xebfe8ef2",
+    "0xc0085210": "0xe2400038",
+    "0xc0041ba0": "0xeb00ba8d",
+    "0xc0041bb4": "0xebff9c86",
+    "0xc007067c": "0xe12fff3c",
+    "0xc00e4da8": "0xc00851b4",
+    "0xc00e4dac": "0xc00851f4",
+    "0xc00e4dd0": "0xc00851ec",
+    "0xc00e4dd4": "0xc0085210"
+  },
+  "ranges": [
+    {
+      "name": "subscriber_ctor",
+      "start": "0xc00852b0",
+      "end_exclusive": "0xc0085408",
+      "sha256": "caa1dd600e3d63ea5996bc96f62425fc856cc73361e556ca38c35db136ce6760"
+    },
+    {
+      "name": "native_callback",
+      "start": "0xc0085078",
+      "end_exclusive": "0xc0085098",
+      "sha256": "d8a75ff20cafa5abcfc499762874d3e5cbf0dc42023805193e20649476f0d709"
+    },
+    {
+      "name": "subscriber_destructors",
+      "start": "0xc00851b4",
+      "end_exclusive": "0xc0085218",
+      "sha256": "66fb39cdb8dc030f3c06380b75f325526e88b901ed4b3a34701301040dea2323"
+    },
+    {
+      "name": "inverse_destructor",
+      "start": "0xc0041b74",
+      "end_exclusive": "0xc0041bc4",
+      "sha256": "2fba7ff87dd88560050fa1bbc4fb562ed9adc1706777b43858bec49503108c48"
+    },
+    {
+      "name": "invoke_remove_register",
+      "start": "0xc00705dc",
+      "end_exclusive": "0xc0070818",
+      "sha256": "7c9d14c27829dd7ebf6253e6a004f503c970b76fdcd2b7ccf4122183da59c244"
+    },
+    {
+      "name": "subscriber_vtable",
+      "start": "0xc00e4da0",
+      "end_exclusive": "0xc00e4dd8",
+      "sha256": "4a46bcd631d549357e4629e6aa97570b90a55ff5b33c7ded966d869fea466f7a"
+    },
+    {
+      "name": "shared_deleters",
+      "start": "0xc0082394",
+      "end_exclusive": "0xc00824a0",
+      "sha256": "b298bb813118ca73663a36e02a8499d152cf9baba5c024c969f910d6d86fe0de"
+    },
+    {
+      "name": "periodic_deleters",
+      "start": "0xc0082620",
+      "end_exclusive": "0xc0082728",
+      "sha256": "c038aa7746c823446f64412aeaa6db5461dd6d85240142809b9d44db8d4532e2"
+    },
+    {
+      "name": "shared_state_owner",
+      "start": "0xc006e6b0",
+      "end_exclusive": "0xc006e8bc",
+      "sha256": "b489db1395ac8e74f83cc22b8984234ca1a5c48d6cc8318c3988f04a9e472c4c"
+    },
+    {
+      "name": "page_transition",
+      "start": "0xc006e9a0",
+      "end_exclusive": "0xc006ea10",
+      "sha256": "b3a7de73c225f3a19c7f440089683c1786d3b26ad0d3b86504f45e475c8cb563"
+    },
+    {
+      "name": "page_delete",
+      "start": "0xc006efd0",
+      "end_exclusive": "0xc006f040",
+      "sha256": "5430dfcee9a47dfc2fc2666c29c201b84ed80404d61418cf9e0565e740f1f2f4"
+    },
+    {
+      "name": "allocator_gate",
+      "start": "0xc0028dcc",
+      "end_exclusive": "0xc0028ddc",
+      "sha256": "3840b0ae0fc2809de026dac41ec53900fbc18a715907646c353197bc1b8853ce"
+    },
+    {
+      "name": "model_getter",
+      "start": "0xc0030d28",
+      "end_exclusive": "0xc0030d5c",
+      "sha256": "db713e23564a6d8827dae45089e3c0daabc0bfbb093337f190d9d9e415568ccf"
+    },
+    {
+      "name": "irq_gate",
+      "start": "0xc0000040",
+      "end_exclusive": "0xc0000068",
+      "sha256": "4a0bc3f31096a1b697e18cc05da2ce81fc4ee662eaf5e53d5de4fefba78d6745"
+    },
+    {
+      "name": "semaphores",
+      "start": "0xc0000ca8",
+      "end_exclusive": "0xc0000e9c",
+      "sha256": "ec19431c9d775c10971727653535b705dea9b0afea54ee049bf07b54e502b92c"
+    },
+    {
+      "name": "root_effect_c0040f08",
+      "start": "0xc0040f08",
+      "end_exclusive": "0xc0040f34",
+      "sha256": "8d133773fdccb6ad0ec52fb1568709c5e9a503dbfec6fc490b052f0fbbc3e6ac"
+    },
+    {
+      "name": "root_effect_c0042990",
+      "start": "0xc0042990",
+      "end_exclusive": "0xc0042a0c",
+      "sha256": "2d5862b733e50c6b134f80a607b8d990f51af3157eda6492e4f998401d5dd68c"
+    },
+    {
+      "name": "root_effect_c0042c7c",
+      "start": "0xc0042c7c",
+      "end_exclusive": "0xc0042dfc",
+      "sha256": "7d29ab29a059d078d42dd0719d9959081e3b5b659af35c9d3d3355cd6529d133"
+    },
+    {
+      "name": "root_effect_c0060c78",
+      "start": "0xc0060c78",
+      "end_exclusive": "0xc0060dc8",
+      "sha256": "3a5ac62ca1915e75ffff43622a1e2e4f653991096ae0ccd33cfe160ed36e07a5"
+    },
+    {
+      "name": "root_effect_c0064b70",
+      "start": "0xc0064b70",
+      "end_exclusive": "0xc0064ba4",
+      "sha256": "24b3467ed6c058f709fc2d504a7f5c76ee9dee069ab323847fd6d07d6f08b119"
+    },
+    {
+      "name": "root_effect_c00652ac",
+      "start": "0xc00652ac",
+      "end_exclusive": "0xc006535c",
+      "sha256": "b33b71bf99e67f5915f9c8604f4c974631eedb53beaa3edaf302c4a0aedd2a45"
+    },
+    {
+      "name": "root_effect_c0065844",
+      "start": "0xc0065844",
+      "end_exclusive": "0xc0065878",
+      "sha256": "3c21e1ed69ddffbccba71bcd86eff7b7f344238f80632dba08af1f017576dc29"
+    },
+    {
+      "name": "root_effect_c006e6f4",
+      "start": "0xc006e6f4",
+      "end_exclusive": "0xc006e874",
+      "sha256": "b728385881956da2aadc066732a679a251eca36d3009678c8810abd9303dbe28"
+    },
+    {
+      "name": "root_effect_c006e758",
+      "start": "0xc006e758",
+      "end_exclusive": "0xc006e89c",
+      "sha256": "1bbf83d41fb0a24ac06eab182aa375329631afbe21c035ee29d3b81a6864da17"
+    },
+    {
+      "name": "root_effect_c0081b2c",
+      "start": "0xc0081b2c",
+      "end_exclusive": "0xc0081b58",
+      "sha256": "fe4f69431839ec9800f4b9fd85303f32aa45620a8eb8267d73e954048cea36c1"
+    },
+    {
+      "name": "root_effect_c0083064",
+      "start": "0xc0083064",
+      "end_exclusive": "0xc00830f4",
+      "sha256": "d045d35ce57bad71fcc1ee0a66e9918ed1a646562a7e0e1af802846678926112"
+    },
+    {
+      "name": "root_effect_c0084364",
+      "start": "0xc0084364",
+      "end_exclusive": "0xc00843f4",
+      "sha256": "a0da3db970193aeb9f839bdef49632971c4d84367fcb9f62d928558ed9953994"
+    },
+    {
+      "name": "root_effect_c00852b8",
+      "start": "0xc00852b8",
+      "end_exclusive": "0xc00853f8",
+      "sha256": "7949e00f89577afaf310f607c27b0e40762053cbf5e33f9cd4d05f40d557cb8f"
+    },
+    {
+      "name": "root_effect_c00874a4",
+      "start": "0xc00874a4",
+      "end_exclusive": "0xc008750c",
+      "sha256": "f62b3260100978346babebd34409d19165c0d9ae50c71a158e5f80640a18bfa2"
+    },
+    {
+      "name": "root_effect_c0089734",
+      "start": "0xc0089734",
+      "end_exclusive": "0xc00898b4",
+      "sha256": "17d240cdf16fd79fa0529a7cfd111a82f6f538b72b10c51cfbba045c6ac9f580"
+    },
+    {
+      "name": "root_effect_c008bea8",
+      "start": "0xc008bea8",
+      "end_exclusive": "0xc008beec",
+      "sha256": "effb7c5927e55b0d4330136bdc9f5a92d8b229022054f462db6900bf71855370"
+    }
+  ],
+  "references": {
+    "0xc00852b0": {
+      "branch_candidates": [
+        "0xc00652a4"
+      ],
+      "pointer_candidates": []
+    },
+    "0xc00851b4": {
+      "branch_candidates": [
+        "0xc00851f0",
+        "0xc00851fc"
+      ],
+      "pointer_candidates": [
+        "0xc00e4da8"
+      ]
+    },
+    "0xc00851f4": {
+      "branch_candidates": [
+        "0xc0085214"
+      ],
+      "pointer_candidates": [
+        "0xc00e4dac"
+      ]
+    },
+    "0xc00851ec": {
+      "branch_candidates": [],
+      "pointer_candidates": [
+        "0xc00e4dd0"
+      ]
+    },
+    "0xc0085210": {
+      "branch_candidates": [],
+      "pointer_candidates": [
+        "0xc00e4dd4"
+      ]
+    },
+    "0xc0041b74": {
+      "branch_candidates": [
+        "0xc0041bcc",
+        "0xc0041c04",
+        "0xc0043e5c",
+        "0xc0044a84",
+        "0xc0045f74",
+        "0xc004cdf0",
+        "0xc00510ec",
+        "0xc00543a8",
+        "0xc005472c",
+        "0xc0055218",
+        "0xc00565c0",
+        "0xc0056694",
+        "0xc0056aa8",
+        "0xc006058c",
+        "0xc0060b24",
+        "0xc0060fa0",
+        "0xc006e6c0",
+        "0xc00778dc",
+        "0xc0077d78",
+        "0xc00782b4",
+        "0xc007970c",
+        "0xc007becc",
+        "0xc007d1b8",
+        "0xc0081738",
+        "0xc00841d8",
+        "0xc00844f0",
+        "0xc0084af4",
+        "0xc0084d24",
+        "0xc00851d0",
+        "0xc0085620",
+        "0xc0085e58",
+        "0xc0085ebc",
+        "0xc0085f40",
+        "0xc0086490",
+        "0xc0086780",
+        "0xc0087418",
+        "0xc0089e3c",
+        "0xc0089ecc",
+        "0xc0089f30",
+        "0xc008a560",
+        "0xc008a97c",
+        "0xc008abbc",
+        "0xc008b6e4",
+        "0xc008bab4",
+        "0xc008bd4c",
+        "0xc008c420",
+        "0xc008c86c",
+        "0xc008cad0",
+        "0xc008cfe0",
+        "0xc008d06c",
+        "0xc008d0dc"
+      ],
+      "pointer_candidates": [
+        "0xc00c5b50"
+      ]
+    },
+    "0xc00705dc": {
+      "branch_candidates": [
+        "0xc0041ba0",
+        "0xc0055210",
+        "0xc00565a8",
+        "0xc0056668",
+        "0xc006b5d8",
+        "0xc00841c0",
+        "0xc00841d0",
+        "0xc0084aec",
+        "0xc0085618",
+        "0xc0089e08",
+        "0xc0089e1c",
+        "0xc008c864"
+      ],
+      "pointer_candidates": []
+    },
+    "0xc007061c": {
+      "branch_candidates": [
+        "0xc00706b4",
+        "0xc0082770"
+      ],
+      "pointer_candidates": []
+    },
+    "0xc0085078": {
+      "branch_candidates": [],
+      "pointer_candidates": [
+        "0xc0085400"
+      ]
+    },
+    "0xc0082654": {
+      "branch_candidates": [
+        "0xc0082684"
+      ],
+      "pointer_candidates": [
+        "0xc00e4b5c"
+      ]
+    },
+    "0xc00823c8": {
+      "branch_candidates": [
+        "0xc00823f8"
+      ],
+      "pointer_candidates": [
+        "0xc00e4ae4"
+      ]
+    }
+  },
+  "root_effect_candidates": [
+    {
+      "load": "0xc0040f08",
+      "root": "0xc0348844",
+      "steps": [
+        {
+          "pc": "0xc0040f0c",
+          "word": "0xe5943000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc0040f28",
+          "word": "0xe5845000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc0040f2c",
+          "word": "0xe5940000",
+          "effect": "READ_ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    },
+    {
+      "load": "0xc0042990",
+      "root": "0xc0348844",
+      "steps": [
+        {
+          "pc": "0xc00429d0",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc00429f0",
+          "word": "0xe5856000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc00429f4",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc00429fc",
+          "word": "0xe5843438",
+          "effect": "PUBLISH_ALIAS_CANDIDATE",
+          "offset": 1080,
+          "value": "ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    },
+    {
+      "load": "0xc0042c7c",
+      "root": "0xc0348844",
+      "steps": [
+        {
+          "pc": "0xc0042c80",
+          "word": "0xe5943000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc0042c9c",
+          "word": "0xe5845000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc0042ca0",
+          "word": "0xe5943000",
+          "effect": "READ_ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    },
+    {
+      "load": "0xc0060c78",
+      "root": "0xc0348844",
+      "steps": [
+        {
+          "pc": "0xc0060c80",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc0060ca4",
+          "word": "0xe5856000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc0060ca8",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    },
+    {
+      "load": "0xc0064b70",
+      "root": "0xc0348844",
+      "steps": [
+        {
+          "pc": "0xc0064b74",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc0064b90",
+          "word": "0xe5856000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc0064b94",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    },
+    {
+      "load": "0xc00652ac",
+      "root": "0xc0691244",
+      "steps": [
+        {
+          "pc": "0xc00652bc",
+          "word": "0xe5963000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc00652d8",
+          "word": "0xe5867000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc00652ec",
+          "word": "0xe5962000",
+          "effect": "READ_ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    },
+    {
+      "load": "0xc0065844",
+      "root": "0xc0691244",
+      "steps": [
+        {
+          "pc": "0xc0065848",
+          "word": "0xe5943000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc0065864",
+          "word": "0xe5845000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc0065868",
+          "word": "0xe5942000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc0065870",
+          "word": "0xe5832000",
+          "effect": "PUBLISH_ALIAS_CANDIDATE",
+          "offset": 0,
+          "value": "ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    },
+    {
+      "load": "0xc006e6f4",
+      "root": "0xc0691244",
+      "steps": [
+        {
+          "pc": "0xc006e71c",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc006e738",
+          "word": "0xe5856000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc006e73c",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc006e744",
+          "word": "0xe5843024",
+          "effect": "PUBLISH_ALIAS_CANDIDATE",
+          "offset": 36,
+          "value": "ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    },
+    {
+      "load": "0xc006e758",
+      "root": "0xc0348844",
+      "steps": [
+        {
+          "pc": "0xc006e75c",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc006e778",
+          "word": "0xe5856000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc006e77c",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc006e784",
+          "word": "0xe584302c",
+          "effect": "PUBLISH_ALIAS_CANDIDATE",
+          "offset": 44,
+          "value": "ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    },
+    {
+      "load": "0xc0081b2c",
+      "root": "0xc0691244",
+      "steps": [
+        {
+          "pc": "0xc0081b30",
+          "word": "0xe5943000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc0081b4c",
+          "word": "0xe5845000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc0081b50",
+          "word": "0xe5940000",
+          "effect": "READ_ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    },
+    {
+      "load": "0xc0083064",
+      "root": "0xc0348844",
+      "steps": [
+        {
+          "pc": "0xc0083068",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc0083084",
+          "word": "0xe5856000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc0083088",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    },
+    {
+      "load": "0xc0084364",
+      "root": "0xc0691244",
+      "steps": [
+        {
+          "pc": "0xc0084378",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc0084394",
+          "word": "0xe5857000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc008439c",
+          "word": "0xe5955000",
+          "effect": "READ_ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    },
+    {
+      "load": "0xc00852b8",
+      "root": "0xc0691244",
+      "steps": [
+        {
+          "pc": "0xc0085348",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc0085364",
+          "word": "0xe5856000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc0085378",
+          "word": "0xe5952000",
+          "effect": "READ_ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    },
+    {
+      "load": "0xc00874a4",
+      "root": "0xc0691244",
+      "steps": [
+        {
+          "pc": "0xc00874ac",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc00874c8",
+          "word": "0xe5856000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc00874d0",
+          "word": "0xe5952000",
+          "effect": "READ_ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    },
+    {
+      "load": "0xc0089734",
+      "root": "0xc0691244",
+      "steps": [
+        {
+          "pc": "0xc008973c",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc008975c",
+          "word": "0xe5856000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc0089760",
+          "word": "0xe5953000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc008976c",
+          "word": "0xe5893000",
+          "effect": "PUBLISH_ALIAS_CANDIDATE",
+          "offset": 0,
+          "value": "ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    },
+    {
+      "load": "0xc008bea8",
+      "root": "0xc0348844",
+      "steps": [
+        {
+          "pc": "0xc008beac",
+          "word": "0xe5973000",
+          "effect": "READ_ROOT_VALUE"
+        },
+        {
+          "pc": "0xc008bec8",
+          "word": "0xe5878000",
+          "effect": "WRITE_ROOT_CANDIDATE",
+          "value": "UNKNOWN"
+        },
+        {
+          "pc": "0xc008becc",
+          "word": "0xe5973000",
+          "effect": "READ_ROOT_VALUE"
+        }
+      ],
+      "status": "LOCAL_CANDIDATES_NOT_EXHAUSTIVE"
+    }
+  ],
+  "authority": {
+    "native_deleting_paths_exist": "PROUV\u00c9 statique",
+    "all_callers_mediated": "INCONNU",
+    "unique_shared_owner": "INCONNU",
+    "global_last_access": "INCONNU",
+    "root_lifetime": "PARTIEL"
+  },
+  "limitations": [
+    "ARM aligned/literal windows only",
+    "Linear effects assume callee-saved ABI and ignore branch feasibility",
+    "No exhaustive indirect/computed/Thumb/IRQ/FIQ/DMA roots",
+    "A free-capable path is not destruction authority"
+  ]
+}
