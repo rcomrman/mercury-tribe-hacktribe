@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """R18 conservative instruction-CFG reachability; candidates never prove execution or ownership."""
-import gzip,hashlib,json,struct,subprocess,sys
+import csv,gzip,hashlib,json,struct,subprocess,sys
 from collections import deque,Counter
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'reports/recovery_r18';BUILD=ROOT/'build/recovery_r18';BASE=0xc0000000
@@ -72,6 +72,12 @@ def main():
  for lo,hi in ranges:assert imgs[0][lo:hi]==imgs[1][lo:hi]
  snippets+=['native synchronization / observer bodies\n'+'\n'.join(f'{BASE+p:08x}: {lines.get(BASE+p,"UNDECODED")}' for p in range(lo,hi,4)) for lo,hi in ranges]
  (OUT/'coverage.json').write_text(json.dumps({'vsb_sha256':HASHES,'counts':{hex(t):len(s) for t,s in refs.items()},'rows':rows,'roots':summaries,'aligned_observer_pointers':{t:x['aligned_pointer_candidates'] for t,x in old['references'].items()},'limits':['CFG is context-insensitive and ignores condition feasibility and return matching','Indirect edges unresolved; BL assumes possible return','Nearest push is a hint, never a proven function boundary','No class owner, exclusive task, IRQ/FIQ/DMA absence or global coverage proof']},indent=2)+'\n')
+ with (OUT/'coverage.csv').open('w',newline='') as f:
+  writer=csv.writer(f,lineterminator='\n');writer.writerow(['target','site','branch','task_class','syntactic_roots','owner','coverage','local_window_sha256'])
+  for r in rows:writer.writerow([r['target'],r['site'],r['kind'],r['task_attribution'],';'.join(r['syntactic_roots']),r['owner'],r['coverage'],r['local_window_sha256']])
+ pcs={int(pc,16) for paths in witnesses.values() for path in paths.values() for pc in path}
+ for pc in pcs:assert imgs[0][pc-BASE:pc-BASE+4]==imgs[1][pc-BASE:pc-BASE+4]
+ (OUT/'coverage-code-words.json.gz').write_bytes(gzip.compress(json.dumps({hex(pc):hex(word(pc)) for pc in sorted(pcs)}).encode(),mtime=0))
  (OUT/'coverage-witnesses.json.gz').write_bytes(gzip.compress(json.dumps(witnesses).encode(),mtime=0));(OUT/'native-contexts.txt.gz').write_bytes(gzip.compress('\n\n'.join(snippets).encode(),mtime=0))
  print('PASS static candidates:',{hex(t):len(s) for t,s in refs.items()});print('Syntactic candidate root classes:',dict(Counter(r['task_attribution'] for r in rows)))
 if __name__=='__main__':main()

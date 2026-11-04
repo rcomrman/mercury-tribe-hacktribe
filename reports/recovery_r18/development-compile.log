@@ -1,0 +1,13 @@
+tests/recovery_r18/native.c:10:30: error: variable 'other' is not needed and will not be emitted [-Werror,-Wunneeded-internal-declaration]
+   10 | static unsigned subject[226],other[226],keys[4][2][4],inverse[4][2][2],closure[3],copied[6];
+      |                              ^~~~~
+1 error generated.
+
+Traceback (most recent call last):
+  File "/workspace/mercury-tribe-hacktribe/tools/recovery_r18/run.py", line 59, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/mercury-tribe-hacktribe/tools/recovery_r18/run.py", line 20, in main
+    if compiled.returncode:print(compiled.stderr,flush=True);raise RuntimeError('compile')
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: compile

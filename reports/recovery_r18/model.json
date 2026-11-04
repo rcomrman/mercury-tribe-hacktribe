@@ -1,0 +1,56 @@
+{
+  "bounds": {
+    "storage_slots": 2,
+    "owners_per_slot": 2,
+    "actors": 2,
+    "allocations": 3,
+    "clock_expirations": 1
+  },
+  "assumptions": [
+    "Atomic externally serialized transitions",
+    "Immutable anchors/payloads only for monotonic_keep",
+    "No native slot mutation during resolver",
+    "No peripheral cessation claim"
+  ],
+  "results": [
+    {
+      "policy": "monotonic_keep",
+      "states": 18118,
+      "max_storage_slots": 2,
+      "hazards": {}
+    },
+    {
+      "policy": "reuse_on_zero_active",
+      "states": 99950,
+      "max_storage_slots": 2,
+      "hazards": {
+        "ABA": [
+          "allocate_fresh",
+          "retire_0_owner_1",
+          "retire_0_owner_2",
+          "actor0:select_0_1",
+          "reuse_0_despite_possible_selection",
+          "actor0:resolve",
+          "actor0:ABA_generation_reroute"
+        ]
+      }
+    },
+    {
+      "policy": "timeout_destroy",
+      "states": 22556,
+      "max_storage_slots": 2,
+      "hazards": {
+        "UAF": [
+          "allocate_fresh",
+          "clock_expires",
+          "retire_0_owner_1",
+          "retire_0_owner_2",
+          "actor0:select_0_1",
+          "destroy_0_on_timeout",
+          "actor0:resolve",
+          "actor0:UAF_model_only"
+        ]
+      }
+    }
+  ]
+}
