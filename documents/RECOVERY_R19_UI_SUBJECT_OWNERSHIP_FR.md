@@ -35,3 +35,11 @@ Le pont tâche4/gestionnaire principal établi R18 est conservé. Les racines gl
 C0070778 cherche une clé existante ou un slot libre. Il écrit période, clé, méthode/ajustement et contexte, puis actif à C00707C8. Il ne met à jour l'inverse qu'ensuite ; le vrai retour se trouve à C0070814. Le chemin de croissance C00706C8 peut allouer/copier/libérer le vecteur. Un slot actif et un inverse vide peuvent donc coexister avec un constructeur encore actif.
 
 Les obligations du constructeur doivent être acquises avant son entrée et retenues jusqu'à son vrai retour. Une fermeture logique peut interdire de nouveaux travaux ; un retrait physique doit aussi attendre les parcours déjà admis et les inscriptions en cours. La primitive native commune reste NON PROUVÉE. Aucune destruction d'allocation native n'est autorisée par cet audit.
+
+## Propriétaire d'inscription concret, distinct du sujet global
+
+Le constructeur C00852B0 fournit un exemple natif précis, sans supposer le nom d'une classe. À C0085388, r8=objet+0x38. La fermeture mise sur pile contient this=objet, méthode directe C0085078 et ajustement0. C00853A8 inscrit sur *C0691244 avec clé=r8 et période10. La clé n'est donc pas le this du callback : c'est un sous-objet inline à +56 octets.
+
+C00851B4, présent dans la vtable principale C00E4DA8, appelle C0041B74 avec objet+0x38. Son thunk C00851EC retranche0x38 au this secondaire. La variante C00851F4 appelle ensuite C0028DD4 sur l'objet extérieur. L'inverse de cette clé se trouve donc dans les champs objet+0x3C/+0x40/+0x44, tandis que la méthode utilise l'objet complet.
+
+Ces relations de contenance et de nettoyage sont PROUVÉES par le flux natif local ; elles ne prouvent ni le nombre total de propriétaires ni la cessation d'une méthode déjà chargée avant la libération extérieure. Les constructeurs/destructeurs complets de ce widget n'ont pas été exécutés : ils dépendent d'autres services. Le sujet partagé conserve une référence d'observateur vers cette allocation, sans compteur de propriété démontré.

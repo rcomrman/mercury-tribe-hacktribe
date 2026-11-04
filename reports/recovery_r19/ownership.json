@@ -102,6 +102,30 @@
       "sha256": "10ad58dd53a3e207b6a1d02ef7881fba5b3949f6995fe5df3532176079181159"
     },
     {
+      "name": "sample_subscriber_ctor",
+      "start": "0xc00852b0",
+      "end_exclusive": "0xc0085408",
+      "sha256": "caa1dd600e3d63ea5996bc96f62425fc856cc73361e556ca38c35db136ce6760"
+    },
+    {
+      "name": "sample_subscriber_dtor",
+      "start": "0xc00851b4",
+      "end_exclusive": "0xc0085218",
+      "sha256": "66fb39cdb8dc030f3c06380b75f325526e88b901ed4b3a34701301040dea2323"
+    },
+    {
+      "name": "sample_subscriber_vtable",
+      "start": "0xc00e4da0",
+      "end_exclusive": "0xc00e4dd8",
+      "sha256": "4a46bcd631d549357e4629e6aa97570b90a55ff5b33c7ded966d869fea466f7a"
+    },
+    {
+      "name": "sample_page_registration",
+      "start": "0xc00652bc",
+      "end_exclusive": "0xc0065370",
+      "sha256": "428c31a239807e214ec852a9e1fae5d94ac034d6ca9002cecf69bc5581eda285"
+    },
+    {
       "name": "root_c0348844_c0040f08",
       "start": "0xc0040ec8",
       "end_exclusive": "0xc0040f68",
@@ -219,7 +243,15 @@
     "0xc00e4b58": "0xc0082620",
     "0xc00e4b5c": "0xc0082654",
     "0xc000a3c4": "0xe5843000",
-    "0xc000a3ec": "0xc06a293c"
+    "0xc000a3ec": "0xc06a293c",
+    "0xc0085388": "0xe2848038",
+    "0xc0085394": "0xe525400c",
+    "0xc0085398": "0xe1a01008",
+    "0xc00853a4": "0xe3a0200a",
+    "0xc0085400": "0xc0085078",
+    "0xc00851cc": "0xe5a03038",
+    "0xc00851d0": "0xebfef267",
+    "0xc00851ec": "0xe2400038"
   },
   "references": {
     "0xc00826a8": {
@@ -469,6 +501,30 @@
     ]
   },
   "ownership_graph": [
+    {
+      "from": "subscriber constructed C00852B0",
+      "to": "inline key at object+0x38, callback this=whole object, direct method C0085078, period10",
+      "status": "PROUV\u00c9 local native dataflow",
+      "evidence": [
+        "C0085388",
+        "C0085394",
+        "C0085398",
+        "C00853A4",
+        "C00853A8",
+        "C0085400"
+      ]
+    },
+    {
+      "from": "subscriber destructor C00851B4",
+      "to": "C0041B74(object+0x38), then deleting variant C00851F4 can free outer object",
+      "status": "PROUV\u00c9 static; no callback join",
+      "evidence": [
+        "C00851CC",
+        "C00851D0",
+        "C00851F4",
+        "C0085204"
+      ]
+    },
     {
       "from": "UI manager+0x10",
       "to": "state",
