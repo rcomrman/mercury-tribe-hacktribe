@@ -35,6 +35,10 @@ Les producteurs sont un masque de sources **connues** ; un bit retiré n'est ni 
 
 La source/shadow égale et un retour setter ne satisfont pas6. Les contrôles LCD7 et le worker accèdent eux-mêmes à GPIO/SPI ; aucune autorité d'annulation indépendante n'a été identifiée dans les chemins inspectés. Le registre classe les ressources natives LCD comme périphériques et interdit leur rebind de fixture ; cela ne constitue pas une annulation matérielle.
 
+## Fenêtre entre résolution native et emprunt
+
+Pour certifier une notification réelle, l'emprunt doit être acquis **avant** qu'un producteur charge/résolve le pointeur natif qu'il pourra appeler plus tard. Un comptage ajouté seulement à l'entrée du callback peut arriver trop tard : le retrait peut avoir effacé le slot et libéré sa référence d'inscription alors que le contexte/méthode est déjà chargé dans un cadre CPU. R16 instrumente des callbacks de fixture, mais n'installe pas cette acquisition dans le parcours natif. La sérialisation de cette fenêtre, son contexte IRQ et un éventuel join demeurent non prouvés. Le contrôle d'alias non participant conserve ce NO GO.
+
 ## Cas prouvés et limites
 
 Les tests ARM exercent double retrait, mauvais détenteur/propriétaire, fils restant après retrait du parent, profondeur réentrante, transition de cible, ancien token après nouvelle génération et saturation. Des alias bruts et des inscriptions natives volontairement omis du registre appellent encore la cible alors que `local_quiet` est vrai. Ce contre-exemple conserve explicitement NO GO global.

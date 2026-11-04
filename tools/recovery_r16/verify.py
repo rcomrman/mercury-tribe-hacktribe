@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Independent raw image/descriptor/registry lifetime oracles. No runner imports."""
-import gzip,hashlib,json,re,struct,subprocess
+import gzip,hashlib,json,re,struct,subprocess,tarfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2];BASE='65d776f53718a1dadbeea1998c01e3a9791475df'
 def sha(b):return hashlib.sha256(b).hexdigest()
@@ -71,6 +71,27 @@ def main():
   assert a['events']==b['events'] and a['exit']==b['exit']
   lines=lambda vi:re.findall(rb'^0xc0[01][0-9a-f]{5}:.*$',gzip.decompress((out/f'{vi}_{case}.trace.gz').read_bytes()),re.M)
   assert lines(0)==lines(1)
+ # Retained failures are evidence, not successful final runs.
+ with tarfile.open(out/'failures/observer_abi_initial.tar.gz','r:gz') as ar:
+  initial=json.loads(ar.extractfile('reports/recovery_r16/results.json').read());assert len(initial['cases'])==64
+  failed=[(x['vsb'],x['case']) for x in initial['cases'] if x['exit']==161]
+  assert failed==[(v,c) for v in range(2) for c in (10,13,21,22,29)]
+  assert sum(x['exit']==88 for x in initial['cases'])==6
+  for v,c in failed:
+   raw=gzip.decompress(ar.extractfile(f'reports/recovery_r16/{v}_{c}.records.gz').read());h=struct.unpack_from('<16I',raw,len(raw)-2112);assert h[:4]==(0x52394c43,500+c,99,161)
+  assert b'closure[0]=1;closure[1]' in ar.extractfile('tests/recovery_r16/native.c').read()
+ diagnostic=json.loads((out/'failures/observer_abi_diagnostic.json').read_text());raw=gzip.decompress((out/'failures/observer_abi_diagnostic.records.gz').read_bytes())
+ rows=[struct.unpack_from('<16I',raw,n) for n in range(0,len(raw),2112)];h=next(h for h in rows if h[2]==65)
+ assert (h[3]+int(diagnostic['objA_symbol_address'],16))&0xffffffff==1 and h[4]==37 and diagnostic['observed_this']==1
+ comparisons=[];previous='6356568fc4bc31e802a1b9af6fa1b173c6752a99'
+ for vi in range(2):
+  for case in range(34):
+   stem=f'reports/recovery_r16/{vi}_{case}'
+   oldraw=gzip.decompress(subprocess.check_output(['git','show',previous+':'+stem+'.records.gz'],cwd=ROOT));newraw=gzip.decompress((ROOT/(stem+'.records.gz')).read_bytes());assert oldraw==newraw
+   oldtrace=gzip.decompress(subprocess.check_output(['git','show',previous+':'+stem+'.trace.gz'],cwd=ROOT));newtrace=gzip.decompress((ROOT/(stem+'.trace.gz')).read_bytes())
+   native=lambda b:re.findall(rb'^0xc0[01][0-9a-f]{5}:.*$',b,re.M);assert native(oldtrace)==native(newtrace)
+   comparisons.append({'vsb':vi,'case':case,'raw_records_identical':True,'native_instruction_lines_identical':True})
+ (out/'replay_comparison.json').write_text(json.dumps({'previous_validated_evidence_commit':previous,'scope':'Final launcher replay versus previously published corrected R16 evidence; failed ABI archives kept separate','cases':comparisons},indent=2)+'\n')
  oldfiles=subprocess.check_output(['git','ls-tree','-r','--name-only',BASE],cwd=ROOT,text=True).splitlines();assert not subprocess.check_output(['git','diff',BASE,'--',*oldfiles],cwd=ROOT)
  prior=json.loads((ROOT/'reports/recovery_r15/provenance.json').read_text())
  for n,h in prior['sha256'].items():assert sha((ROOT/n).read_bytes())==h,n

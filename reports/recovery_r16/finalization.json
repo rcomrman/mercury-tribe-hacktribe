@@ -1,0 +1,38 @@
+{
+  "status": "R16 bounded software research complete",
+  "date": "2026-11-04",
+  "base_commit": "65d776f53718a1dadbeea1998c01e3a9791475df",
+  "native_cases": 68,
+  "normal_exits": 62,
+  "expected_gpio_faults": 6,
+  "exact_cross_vsb_records": true,
+  "exact_cross_vsb_native_instruction_lines": true,
+  "r15_manifest_entries_preserved": 145,
+  "all_r1_r15_tracked_paths_preserved": true,
+  "audit_identical_ranges": 20,
+  "model_states": 2448,
+  "model_transitions": 6890,
+  "registry_bytes": 256,
+  "codec_bytes": 24,
+  "reserved_structures_bytes": 3632,
+  "new_findings": [
+    "Native contrast reads one input byte, copied into descriptor",
+    "Observer registration key and callback this are distinct",
+    "Duplicate key registration preserves old context",
+    "Native slot removal leaves reverse-vector pointers and active frames"
+  ],
+  "initial_failures_preserved": "compile warnings and10 ABI assertion failures in archived initial run; fixed this pointer without relaxing assertions",
+  "native_cancellation_proven": false,
+  "global_cpu_quiescence_proven": false,
+  "peripheral_cessation_proven": false,
+  "forced_release_performed": false,
+  "hardware_actions": false,
+  "decision": "GO typed opt-in codecs and finite externally serialized registry research; NO GO transparent integration/global cessation/LCD destruction/independent recovery",
+  "r17_started": false,
+  "intermediate_commits": [
+    "b3fbfe0017da979d3d3809bcd0e263cbcb22e7d5",
+    "cedba688935a94b3f12047894e37e80acd024f42",
+    "15dfee09506e5eccd259a1dfa5c29bcd7079a28e",
+    "6356568fc4bc31e802a1b9af6fa1b173c6752a99"
+  ]
+}

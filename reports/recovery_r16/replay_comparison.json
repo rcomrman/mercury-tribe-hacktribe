@@ -1,0 +1,414 @@
+{
+  "previous_validated_evidence_commit": "6356568fc4bc31e802a1b9af6fa1b173c6752a99",
+  "scope": "Final launcher replay versus previously published corrected R16 evidence; failed ABI archives kept separate",
+  "cases": [
+    {
+      "vsb": 0,
+      "case": 0,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 1,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 2,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 3,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 4,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 5,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 6,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 7,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 8,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 9,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 10,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 11,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 12,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 13,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 14,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 15,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 16,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 17,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 18,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 19,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 20,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 21,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 22,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 23,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 24,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 25,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 26,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 27,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 28,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 29,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 30,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 31,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 32,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 33,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 0,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 1,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 2,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 3,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 4,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 5,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 6,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 7,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 8,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 9,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 10,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 11,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 12,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 13,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 14,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 15,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 16,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 17,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 18,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 19,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 20,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 21,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 22,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 23,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 24,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 25,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 26,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 27,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 28,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 29,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 30,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 31,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 32,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 33,
+      "raw_records_identical": true,
+      "native_instruction_lines_identical": true
+    }
+  ]
+}
