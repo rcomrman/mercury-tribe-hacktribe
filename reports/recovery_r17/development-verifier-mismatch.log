@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/mercury-tribe-hacktribe/tools/recovery_r17/verify.py", line 95, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/mercury-tribe-hacktribe/tools/recovery_r17/verify.py", line 23, in main
+    assert row['exit']==88 and len(faults)==1 and faults[0][3:5]==[0 if c==6 else 0xbc,11]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

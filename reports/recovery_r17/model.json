@@ -1,0 +1,113 @@
+{
+  "bounds": {
+    "walkers": 2,
+    "close_requests": 1,
+    "queued_borrows_max": 1,
+    "walks_per_walker": 1
+  },
+  "assumptions": [
+    "All selections admitted before native loads",
+    "Atomic model transitions require an external gate",
+    "No hidden alias, native bypass, IRQ or peripheral"
+  ],
+  "results": [
+    {
+      "policy": "guarded",
+      "queued": 0,
+      "states": 101,
+      "terminals": 7,
+      "hazards": {}
+    },
+    {
+      "policy": "guarded",
+      "queued": 1,
+      "states": 202,
+      "terminals": 7,
+      "hazards": {}
+    },
+    {
+      "policy": "raw",
+      "queued": 0,
+      "states": 113,
+      "terminals": 9,
+      "hazards": {
+        "torn_tuple": [
+          "w0:select_admitted",
+          "w0:load_key_context",
+          "request_close",
+          "w0:TORN_tuple"
+        ],
+        "cached_callback_after_withdraw": [
+          "w0:select_admitted",
+          "w0:load_key_context",
+          "w0:resolve",
+          "request_close",
+          "w0:invoke_cached_after_withdraw"
+        ]
+      }
+    },
+    {
+      "policy": "raw",
+      "queued": 1,
+      "states": 226,
+      "terminals": 9,
+      "hazards": {
+        "torn_tuple": [
+          "w0:select_admitted",
+          "w0:load_key_context",
+          "request_close",
+          "w0:TORN_tuple"
+        ],
+        "cached_callback_after_withdraw": [
+          "w0:select_admitted",
+          "w0:load_key_context",
+          "w0:resolve",
+          "request_close",
+          "w0:invoke_cached_after_withdraw"
+        ]
+      }
+    },
+    {
+      "policy": "active_only",
+      "queued": 0,
+      "states": 146,
+      "terminals": 12,
+      "hazards": {
+        "torn_tuple": [
+          "w0:select_admitted",
+          "w0:load_key_context",
+          "request_close",
+          "w0:TORN_tuple"
+        ],
+        "cached_callback_after_withdraw": [
+          "w0:select_admitted",
+          "w0:load_key_context",
+          "w0:resolve",
+          "request_close",
+          "w0:invoke_cached_after_withdraw"
+        ]
+      }
+    },
+    {
+      "policy": "active_only",
+      "queued": 1,
+      "states": 292,
+      "terminals": 12,
+      "hazards": {
+        "torn_tuple": [
+          "w0:select_admitted",
+          "w0:load_key_context",
+          "request_close",
+          "w0:TORN_tuple"
+        ],
+        "cached_callback_after_withdraw": [
+          "w0:select_admitted",
+          "w0:load_key_context",
+          "w0:resolve",
+          "request_close",
+          "w0:invoke_cached_after_withdraw"
+        ]
+      }
+    }
+  ]
+}

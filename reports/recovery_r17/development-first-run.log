@@ -1,0 +1,13 @@
+0 0 0 [(0, 768, '0x108'), (50, 160, '0x3a8'), (1, 0, '0x5'), (101, 2293796, '0x230044'), (201, 1, '0x0'), (10, 4353, '0xa'), (110, 2293796, '0x230044'), (210, 1, '0x0'), (11, 4097, '0xa'), (111, 2293796, '0x230044'), (211, 1, '0x0'), (70, 2097152, '0x1'), (20, 17825793, '0x0'), (120, 0, '0x0'), (220, 0, '0x10000')]
+0 1 0 [(0, 768, '0x108'), (50, 160, '0x3a8'), (1, 0, '0x5'), (101, 2293796, '0x230044'), (201, 1, '0x0'), (10, 4353, '0xa'), (110, 2293796, '0x230044'), (210, 1, '0x0'), (11, 16781313, '0xa'), (111, 2293796, '0x230044'), (211, 1, '0x0'), (70, 2097152, '0x1'), (20, 17825793, '0x0'), (120, 0, '0x0'), (220, 0, '0x10000')]
+0 2 0 [(0, 768, '0x108'), (50, 160, '0x3a8'), (1, 0, '0x5'), (101, 2293796, '0x230044'), (201, 1, '0x0'), (10, 257, '0x5'), (110, 2293796, '0x230044'), (210, 1, '0x0'), (11, 1, '0x5'), (111, 0, '0x0'), (211, 1, '0x0'), (70, 2097152, '0x1'), (20, 17825793, '0x0'), (120, 0, '0x0'), (220, 0, '0x10000')]
+Traceback (most recent call last):
+  File "/workspace/mercury-tribe-hacktribe/tools/recovery_r17/run.py", line 57, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/mercury-tribe-hacktribe/tools/recovery_r17/run.py", line 26, in main
+    with socket.socket() as sock:sock.bind(('127.0.0.1',0));port=sock.getsockname()[1]
+         ^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/socket.py", line 233, in __init__
+    _socket.socket.__init__(self, family, type, proto, fileno)
+PermissionError: [Errno 1] Operation not permitted
