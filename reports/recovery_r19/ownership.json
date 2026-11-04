@@ -1,0 +1,546 @@
+{
+  "base": "6808871b54c10e130e085ab4e658bc8bf3cbf1bb",
+  "vsb_sha256": [
+    "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+  ],
+  "ranges": [
+    {
+      "name": "state_ctor",
+      "start": "0xc006e6ec",
+      "end_exclusive": "0xc006e8bc",
+      "sha256": "63ba42209f7e7da4c7b8ef93affeeda883ba7fdc0c3babf21ba104a89030b2ec"
+    },
+    {
+      "name": "state_base_dtor",
+      "start": "0xc006e6b0",
+      "end_exclusive": "0xc006e6ec",
+      "sha256": "02143d6223ce61147e2f2587bcfafb51d7aa15f8f160b965f1bbb5f535fe6ebf"
+    },
+    {
+      "name": "ui_ctor_dtor",
+      "start": "0xc0083898",
+      "end_exclusive": "0xc0083920",
+      "sha256": "0e03e6cac9b932d81659aa3a0be0ea0bc07b544484016665279fad54ba45cbae"
+    },
+    {
+      "name": "state_transition",
+      "start": "0xc006e8bc",
+      "end_exclusive": "0xc006ea10",
+      "sha256": "6b7686a844742d272bee372b1c396879cc279a8b73c9982b943337a91d0e3df9"
+    },
+    {
+      "name": "state_tick",
+      "start": "0xc006eae0",
+      "end_exclusive": "0xc006eb78",
+      "sha256": "85f8c6722a077c307fc7dde1dc4f24cfbdf3da9d520612373b046cb65510c24e"
+    },
+    {
+      "name": "page_delete",
+      "start": "0xc006efd0",
+      "end_exclusive": "0xc006f040",
+      "sha256": "5430dfcee9a47dfc2fc2666c29c201b84ed80404d61418cf9e0565e740f1f2f4"
+    },
+    {
+      "name": "periodic_ctor_dtor",
+      "start": "0xc0082620",
+      "end_exclusive": "0xc0082728",
+      "sha256": "c038aa7746c823446f64412aeaa6db5461dd6d85240142809b9d44db8d4532e2"
+    },
+    {
+      "name": "periodic_notify",
+      "start": "0xc0082728",
+      "end_exclusive": "0xc00827c0",
+      "sha256": "02f9a0dbc13d460db1cdb983d43367a62d19485113580462ebce146f1d97507b"
+    },
+    {
+      "name": "associated_ctor_dtor",
+      "start": "0xc0082394",
+      "end_exclusive": "0xc00824a0",
+      "sha256": "b298bb813118ca73663a36e02a8499d152cf9baba5c024c969f910d6d86fe0de"
+    },
+    {
+      "name": "associated_update",
+      "start": "0xc00824a0",
+      "end_exclusive": "0xc0082620",
+      "sha256": "ed9681fcd0f95ce3f4a69b05f8e2b25b2e852f9839266310ceb074eb5fdad338"
+    },
+    {
+      "name": "subject_vtables",
+      "start": "0xc00e4ad0",
+      "end_exclusive": "0xc00e4b78",
+      "sha256": "16b8842fe97b046f729b2a2fb61666e4741e65c71594b9280b489ed4ff07b9ff"
+    },
+    {
+      "name": "observer_protocol",
+      "start": "0xc00705dc",
+      "end_exclusive": "0xc0070818",
+      "sha256": "7c9d14c27829dd7ebf6253e6a004f503c970b76fdcd2b7ccf4122183da59c244"
+    },
+    {
+      "name": "inverse_dtor",
+      "start": "0xc0041b74",
+      "end_exclusive": "0xc0041bc4",
+      "sha256": "2fba7ff87dd88560050fa1bbc4fb562ed9adc1706777b43858bec49503108c48"
+    },
+    {
+      "name": "irq_helpers",
+      "start": "0xc0000040",
+      "end_exclusive": "0xc0000068",
+      "sha256": "4a0bc3f31096a1b697e18cc05da2ce81fc4ee662eaf5e53d5de4fefba78d6745"
+    },
+    {
+      "name": "semaphores",
+      "start": "0xc0000ca8",
+      "end_exclusive": "0xc0000e9c",
+      "sha256": "ec19431c9d775c10971727653535b705dea9b0afea54ee049bf07b54e502b92c"
+    },
+    {
+      "name": "root_c0348844_c0040f08",
+      "start": "0xc0040ec8",
+      "end_exclusive": "0xc0040f68",
+      "sha256": "29035f9046b6f15720cc2f01776f7e3a91b70d65a80551b2cb95209925fd2519"
+    },
+    {
+      "name": "root_c0348844_c0042990",
+      "start": "0xc0042950",
+      "end_exclusive": "0xc00429f0",
+      "sha256": "1ef6a240a2486dcb883c3ae53f28fc51846b547a7ca04c275cc37b65beed1319"
+    },
+    {
+      "name": "root_c0348844_c0042c7c",
+      "start": "0xc0042c3c",
+      "end_exclusive": "0xc0042cdc",
+      "sha256": "ee5c25f89b0c62eb98c8c7f5cff3c0d068fd9fc0b2afc9eb9ca9f48922c10b0e"
+    },
+    {
+      "name": "root_c0348844_c0060c78",
+      "start": "0xc0060c38",
+      "end_exclusive": "0xc0060cd8",
+      "sha256": "8e750999c83bee6eeae0adfe08cdad35869d55798c3058158f3533825148619d"
+    },
+    {
+      "name": "root_c0348844_c0064b70",
+      "start": "0xc0064b30",
+      "end_exclusive": "0xc0064bd0",
+      "sha256": "b46970323566dc5e7a9161b3d890a3f11fa0c053962bffc6625500e1f36a3b35"
+    },
+    {
+      "name": "root_c0691244_c00652ac",
+      "start": "0xc006526c",
+      "end_exclusive": "0xc006530c",
+      "sha256": "1f0f227c2301031e721639d2eeaaf238f101bb66818a0a7086d98a179b91b5e9"
+    },
+    {
+      "name": "root_c0691244_c0065844",
+      "start": "0xc0065804",
+      "end_exclusive": "0xc00658a4",
+      "sha256": "ebf9ea77f462ca20f8d5d5b5cb2b44d0d6152d8777489e1b6bbffd932bdb23a8"
+    },
+    {
+      "name": "root_c0691244_c006e6f4",
+      "start": "0xc006e6b4",
+      "end_exclusive": "0xc006e754",
+      "sha256": "74749dc974044521e96484891fb97570430472900c943e62017b9756c63fa82f"
+    },
+    {
+      "name": "root_c0348844_c006e758",
+      "start": "0xc006e718",
+      "end_exclusive": "0xc006e7b8",
+      "sha256": "2ae3a0c7b0f32251153fa4e7332be9e11aa51545c98b527cdfa6d9bcc53e7a0c"
+    },
+    {
+      "name": "root_c0691244_c0081b2c",
+      "start": "0xc0081aec",
+      "end_exclusive": "0xc0081b8c",
+      "sha256": "4809a95c4c07d99df1b35e9639c142d19c85737f84e41d106c64eedaee59eb65"
+    },
+    {
+      "name": "root_c0348844_c0083064",
+      "start": "0xc0083024",
+      "end_exclusive": "0xc00830c4",
+      "sha256": "7a8079e6f7ce6abf0f808aa43f890d33048bb626b1582d10948e4358168ede6d"
+    },
+    {
+      "name": "root_c0691244_c0084364",
+      "start": "0xc0084324",
+      "end_exclusive": "0xc00843c4",
+      "sha256": "4a89c28e9ceca59c5f629b976982ce7bd6f63e8f6230ddb4c96dac59bc8461fe"
+    },
+    {
+      "name": "root_c0691244_c00852b8",
+      "start": "0xc0085278",
+      "end_exclusive": "0xc0085318",
+      "sha256": "9226fdf595b787aceceecb27f21f05c6866b95bee3cf5830b488ae728274bc89"
+    },
+    {
+      "name": "root_c0691244_c00874a4",
+      "start": "0xc0087464",
+      "end_exclusive": "0xc0087504",
+      "sha256": "b0d331f8815bbab6c03b0d7744c80c6d115cc6e38b50eb821a280823fa6fc96c"
+    },
+    {
+      "name": "root_c0691244_c0089734",
+      "start": "0xc00896f4",
+      "end_exclusive": "0xc0089794",
+      "sha256": "260591c28b050722789c51b0aea7779a01d836ab58e185375b4b55f28f5b9b03"
+    },
+    {
+      "name": "root_c0348844_c008bea8",
+      "start": "0xc008be68",
+      "end_exclusive": "0xc008bf08",
+      "sha256": "56e34d7cf5b2ef2048e0cb28cc1412b948fdccd5f4314d0272bea7d3cb5350be"
+    }
+  ],
+  "contracts": {
+    "0xc006e728": "0xe3a00fe2",
+    "0xc006e734": "0xeb004fdb",
+    "0xc006e738": "0xe5856000",
+    "0xc006e744": "0xe5843024",
+    "0xc006e768": "0xe59f0138",
+    "0xc006e774": "0xeb004f28",
+    "0xc006e778": "0xe5856000",
+    "0xc006e784": "0xe584302c",
+    "0xc006e89c": "0xc0691244",
+    "0xc006e8a4": "0xc0348844",
+    "0xc006e8a8": "0x428",
+    "0xc006eb6c": "0xe5940024",
+    "0xc00707a8": "0xe58c4000",
+    "0xc00707c8": "0xe5cc3014",
+    "0xc00707cc": "0xe5943008",
+    "0xc00707ec": "0xe5843008",
+    "0xc0070814": "0xe8bd8030",
+    "0xc00e4b58": "0xc0082620",
+    "0xc00e4b5c": "0xc0082654"
+  },
+  "references": {
+    "0xc00826a8": {
+      "branches": [
+        "0xc00652d4",
+        "0xc0065860",
+        "0xc006e734",
+        "0xc0081b48",
+        "0xc0084390",
+        "0xc0085360",
+        "0xc00874c4",
+        "0xc0089758"
+      ],
+      "aligned_pointers": []
+    },
+    "0xc008241c": {
+      "branches": [
+        "0xc0040f24",
+        "0xc00429ec",
+        "0xc0042c98",
+        "0xc0060ca0",
+        "0xc0064b8c",
+        "0xc006e774",
+        "0xc0083080",
+        "0xc008bec4"
+      ],
+      "aligned_pointers": []
+    },
+    "0xc006e6ec": {
+      "branches": [
+        "0xc0083904"
+      ],
+      "aligned_pointers": []
+    },
+    "0xc0083898": {
+      "branches": [
+        "0xc0070f8c",
+        "0xc0083334",
+        "0xc00838cc",
+        "0xc008eb44"
+      ],
+      "aligned_pointers": [
+        "0xc00e4c50"
+      ]
+    },
+    "0xc0082620": {
+      "branches": [
+        "0xc0082640"
+      ],
+      "aligned_pointers": [
+        "0xc00e4b58"
+      ]
+    },
+    "0xc0082654": {
+      "branches": [
+        "0xc0082684"
+      ],
+      "aligned_pointers": [
+        "0xc00e4b5c"
+      ]
+    },
+    "0xc0082394": {
+      "branches": [
+        "0xc00823b4"
+      ],
+      "aligned_pointers": [
+        "0xc00e4ae0"
+      ]
+    },
+    "0xc00823c8": {
+      "branches": [
+        "0xc00823f8"
+      ],
+      "aligned_pointers": [
+        "0xc00e4ae4"
+      ]
+    },
+    "0xc0041b74": {
+      "branches": [
+        "0xc0041bcc",
+        "0xc0041c04",
+        "0xc0043e5c",
+        "0xc0044a84",
+        "0xc0045f74",
+        "0xc004cdf0",
+        "0xc00510ec",
+        "0xc00543a8",
+        "0xc005472c",
+        "0xc0055218",
+        "0xc00565c0",
+        "0xc0056694",
+        "0xc0056aa8",
+        "0xc006058c",
+        "0xc0060b24",
+        "0xc0060fa0",
+        "0xc006e6c0",
+        "0xc00778dc",
+        "0xc0077d78",
+        "0xc00782b4",
+        "0xc007970c",
+        "0xc007becc",
+        "0xc007d1b8",
+        "0xc0081738",
+        "0xc00841d8",
+        "0xc00844f0",
+        "0xc0084af4",
+        "0xc0084d24",
+        "0xc00851d0",
+        "0xc0085620",
+        "0xc0085e58",
+        "0xc0085ebc",
+        "0xc0085f40",
+        "0xc0086490",
+        "0xc0086780",
+        "0xc0087418",
+        "0xc0089e3c",
+        "0xc0089ecc",
+        "0xc0089f30",
+        "0xc008a560",
+        "0xc008a97c",
+        "0xc008abbc",
+        "0xc008b6e4",
+        "0xc008bab4",
+        "0xc008bd4c",
+        "0xc008c420",
+        "0xc008c86c",
+        "0xc008cad0",
+        "0xc008cfe0",
+        "0xc008d06c",
+        "0xc008d0dc"
+      ],
+      "aligned_pointers": [
+        "0xc00c5b50"
+      ]
+    },
+    "0xc0691244": {
+      "branches": [],
+      "aligned_pointers": [
+        "0xc0065364",
+        "0xc0065878",
+        "0xc006e89c",
+        "0xc0081b58",
+        "0xc0084400",
+        "0xc00853f8",
+        "0xc0087518",
+        "0xc0089d44"
+      ]
+    },
+    "0xc0348844": {
+      "branches": [],
+      "aligned_pointers": [
+        "0xc0040f34",
+        "0xc0042a10",
+        "0xc0042e2c",
+        "0xc0060dc8",
+        "0xc0064bc8",
+        "0xc006e8a4",
+        "0xc008322c",
+        "0xc008bf10"
+      ]
+    }
+  },
+  "root_load_candidates": {
+    "0xc0691244": [
+      {
+        "pc": "0xc00652ac",
+        "literal": "0xc0065364",
+        "destination_register": 6
+      },
+      {
+        "pc": "0xc0065844",
+        "literal": "0xc0065878",
+        "destination_register": 4
+      },
+      {
+        "pc": "0xc006e6f4",
+        "literal": "0xc006e89c",
+        "destination_register": 5
+      },
+      {
+        "pc": "0xc0081b2c",
+        "literal": "0xc0081b58",
+        "destination_register": 4
+      },
+      {
+        "pc": "0xc0084364",
+        "literal": "0xc0084400",
+        "destination_register": 5
+      },
+      {
+        "pc": "0xc00852b8",
+        "literal": "0xc00853f8",
+        "destination_register": 5
+      },
+      {
+        "pc": "0xc00874a4",
+        "literal": "0xc0087518",
+        "destination_register": 5
+      },
+      {
+        "pc": "0xc0089734",
+        "literal": "0xc0089d44",
+        "destination_register": 5
+      }
+    ],
+    "0xc0348844": [
+      {
+        "pc": "0xc0040f08",
+        "literal": "0xc0040f34",
+        "destination_register": 4
+      },
+      {
+        "pc": "0xc0042990",
+        "literal": "0xc0042a10",
+        "destination_register": 5
+      },
+      {
+        "pc": "0xc0042c7c",
+        "literal": "0xc0042e2c",
+        "destination_register": 4
+      },
+      {
+        "pc": "0xc0060c78",
+        "literal": "0xc0060dc8",
+        "destination_register": 5
+      },
+      {
+        "pc": "0xc0064b70",
+        "literal": "0xc0064bc8",
+        "destination_register": 5
+      },
+      {
+        "pc": "0xc006e758",
+        "literal": "0xc006e8a4",
+        "destination_register": 5
+      },
+      {
+        "pc": "0xc0083064",
+        "literal": "0xc008322c",
+        "destination_register": 5
+      },
+      {
+        "pc": "0xc008bea8",
+        "literal": "0xc008bf10",
+        "destination_register": 7
+      }
+    ]
+  },
+  "ownership_graph": [
+    {
+      "from": "UI manager+0x10",
+      "to": "state",
+      "status": "PROUV\u00c9",
+      "evidence": [
+        "C0083900",
+        "C0083904"
+      ]
+    },
+    {
+      "from": "state+0x24",
+      "to": "*C0691244",
+      "status": "PROUV\u00c9",
+      "evidence": [
+        "C006E73C",
+        "C006E744"
+      ]
+    },
+    {
+      "from": "lazy creator",
+      "to": "periodic allocation904/ctor C00826A8/global root",
+      "status": "PROUV\u00c9",
+      "evidence": [
+        "C006E71C",
+        "C006E728",
+        "C006E72C",
+        "C006E734",
+        "C006E738"
+      ]
+    },
+    {
+      "from": "state+0x2C",
+      "to": "*C0348844",
+      "status": "PROUV\u00c9",
+      "evidence": [
+        "C006E758",
+        "C006E774",
+        "C006E778",
+        "C006E784"
+      ]
+    },
+    {
+      "from": "associated allocation1064",
+      "to": "C008241C ctor",
+      "status": "PROUV\u00c9",
+      "evidence": [
+        "C006E768",
+        "C006E76C",
+        "C006E774",
+        "C006E8A8"
+      ]
+    },
+    {
+      "from": "state destructor",
+      "to": "C0041B74(state key), not a direct free of state+24/+2C",
+      "status": "PROUV\u00c9 local body",
+      "evidence": [
+        "C006E6B0",
+        "C006E6C0"
+      ]
+    },
+    {
+      "from": "all global/alias roots",
+      "to": "exclusive owner and last destruction authority",
+      "status": "INCONNU",
+      "evidence": []
+    },
+    {
+      "from": "lazy shared root",
+      "to": "process-lifetime singleton hypothesis",
+      "status": "PARTIEL",
+      "evidence": [
+        "eight constructor call candidates",
+        "no synchronization in inspected lazy branches"
+      ]
+    }
+  ],
+  "limits": [
+    "Aligned ARM/literal candidates only, not exhaustive indirect/Thumb/IRQ/FIQ/DMA",
+    "Global storage and borrowing proven locally; unique owner and no future free not proven",
+    "Allocator, whole UI constructor/destructor not dynamically qualified"
+  ]
+}

@@ -1,0 +1,7 @@
+PASS 62 ARM cases: 54 normal returns, 6 expected faults, 2 host timeouts with borrows held.
+PASS 31 exact cross-VSB record/native translated-block comparisons; 62 native-image integrity checks.
+PASS 18 debugger interleavings; unchanged native code; exact register restore; 1616-byte pool, 400-byte slots.
+PASS 316 static candidate rows, including all 119 registrations and 120 notifications; owners remain UNKNOWN.
+PASS 140624 finite model states; negative ABA/timeout-destruction witnesses replayed independently.
+PASS all base paths and 142 R17 manifest entries preserved.
+PASS R18 manifest: 154 SHA-256 entries.
