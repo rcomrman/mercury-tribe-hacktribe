@@ -1,1 +1,1 @@
-PASS 31 identical ownership/transaction ranges; 8 lazy ctor branches each; global roots and aliases recorded
+PASS 32 identical ownership/transaction ranges; 8 lazy ctor branches each; global roots and aliases recorded

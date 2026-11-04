@@ -96,6 +96,12 @@
       "sha256": "ec19431c9d775c10971727653535b705dea9b0afea54ee049bf07b54e502b92c"
     },
     {
+      "name": "allocator_extension_boundary",
+      "start": "0xc000a3b0",
+      "end_exclusive": "0xc000a3f0",
+      "sha256": "10ad58dd53a3e207b6a1d02ef7881fba5b3949f6995fe5df3532176079181159"
+    },
+    {
       "name": "root_c0348844_c0040f08",
       "start": "0xc0040ec8",
       "end_exclusive": "0xc0040f68",
@@ -211,7 +217,9 @@
     "0xc00707ec": "0xe5843008",
     "0xc0070814": "0xe8bd8030",
     "0xc00e4b58": "0xc0082620",
-    "0xc00e4b5c": "0xc0082654"
+    "0xc00e4b5c": "0xc0082654",
+    "0xc000a3c4": "0xe5843000",
+    "0xc000a3ec": "0xc06a293c"
   },
   "references": {
     "0xc00826a8": {

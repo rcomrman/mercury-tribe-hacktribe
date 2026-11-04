@@ -1,0 +1,1 @@
+PASS transaction model: [('guard_before_constructor', 1397, []), ('permanent_quarantine', 3934, []), ('inverse_empty_only', 11793, ['RETIRE_BEFORE_RETURN', 'LATE_PUBLISH', 'RETIRE_WITH_FRAME', 'LATE_INVERSE', 'TORN_TUPLE']), ('commit_at_inverse', 4795, ['RETIRE_BEFORE_RETURN'])]

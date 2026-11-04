@@ -1,0 +1,17 @@
+In file included from tests/recovery_r19/native.c:8:
+tests/recovery_r19/transaction.h:42:3: error: misleading indentation; statement is not part of the previous 'for' [-Werror,-Wmisleading-indentation]
+   42 |  }return 1;
+      |   ^
+tests/recovery_r19/transaction.h:39:2: note: previous statement is here
+   39 |  for(unsigned i=0;i<32;i++)if(((unsigned char*)s)[4+24*i+20]){
+      |  ^
+1 error generated.
+
+Traceback (most recent call last):
+  File "/workspace/mercury-tribe-hacktribe/tools/recovery_r19/run.py", line 65, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/mercury-tribe-hacktribe/tools/recovery_r19/run.py", line 20, in main
+    if compiled.returncode:print(compiled.stderr,flush=True);raise RuntimeError('compile')
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: compile
