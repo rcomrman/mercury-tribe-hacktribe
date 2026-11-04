@@ -1,0 +1,1 @@
+PASS {"closed_world_and_atomic_transitions_assumed": true, "lease_capacity": 2, "locally_quiet_states": 76, "max_generations": 2, "max_serial": 4, "stalled_with_callback_retained_states": 288, "states": 2448, "transitions": 6890}

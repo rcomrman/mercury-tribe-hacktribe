@@ -1,0 +1,68 @@
+0 0 0 [(0, 256, '0x18'), (50, 128, '0xc68'), (60, 0, '0x2a'), (20, 1, '0x10000'), (120, 1, '0x1'), (220, 1, '0x0'), (320, 0, '0x0'), (420, 0, '0x10000')]
+0 1 0 [(0, 256, '0x18'), (50, 128, '0xc68'), (60, 0, '0x7'), (20, 1, '0x10000'), (120, 1, '0x1'), (220, 0, '0x0'), (320, 0, '0x0'), (420, 0, '0x10000')]
+0 2 0 [(0, 256, '0x18'), (50, 128, '0xc68'), (60, 0, '0x0'), (20, 1, '0x10000'), (120, 1, '0x1'), (220, 1, '0x0'), (320, 0, '0x0'), (420, 0, '0x10000')]
+0 3 0 [(0, 256, '0x18'), (50, 128, '0xc68'), (60, 0, '0x2a'), (20, 1, '0x10000'), (120, 1, '0x1'), (220, 1, '0x0'), (320, 0, '0x0'), (420, 0, '0x10000')]
+0 4 0 [(0, 256, '0x18'), (50, 128, '0xc68'), (60, 0, '0xff'), (20, 1, '0x10000'), (120, 1, '0x1'), (220, 1, '0x0'), (320, 0, '0x0'), (420, 0, '0x10000')]
+0 5 0 [(0, 256, '0x18'), (50, 128, '0xc68'), (60, 1, '0x0'), (20, 1, '0x10000'), (120, 1, '0x1'), (220, 0, '0x0'), (320, 0, '0x0'), (420, 0, '0x10000')]
+0 6 0 [(0, 256, '0x18'), (50, 128, '0xc68'), (60, 0, '0x2a'), (1, 1, '0x10001'), (101, 1, '0x1'), (201, 1, '0x1001001'), (301, 0, '0x0'), (401, 0, '0x10000'), (20, 1, '0x10000'), (120, 1, '0x1'), (220, 1, '0x1001'), (320, 0, '0x0'), (420, 0, '0x10000')]
+0 7 0 [(0, 256, '0x18'), (50, 128, '0xc68'), (20, 2, '0x0'), (120, 1, '0x1'), (220, 1, '0x0'), (320, 1, '0x0'), (420, 1, '0x10000')]
+0 8 0 [(0, 256, '0x18'), (50, 128, '0xc68'), (20, 2, '0x0'), (120, 1, '0x1'), (220, 1, '0x0'), (320, 3, '0x0'), (420, 1, '0x10000')]
+tests/recovery_r16/native.c:75:59: error: variable 'child' is used uninitialized whenever '&&' condition is false [-Werror,-Wsometimes-uninitialized]
+   75 |  else if(R16_CASE==9){struct r16_token parent,child;CHECK(r16_acquire(&reg,0,1,10,R16_QUEUE,&parent)&&r16_retire(&reg,0,1,1)&&r16_detach(&reg,0,1,1,1)&&r16_derive(&reg,parent,20,R16_CONTINUATION,&child)&&r16_release(&reg,parent)&&!r16_local_quiet(&reg,0),194);snap(1);CHECK(r16_release(&reg,child)&&r16_local_quiet(&reg,0),195);}
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/recovery_r16/../recovery_r9/lcd.c:21:28: note: expanded from macro 'CHECK'
+   21 | #define CHECK(c,n) do{if(!(c)){emit(99,n,__LINE__);finish(n);}}while(0)
+      |                            ^
+tests/recovery_r16/native.c:75:292: note: uninitialized use occurs here
+   75 |  else if(R16_CASE==9){struct r16_token parent,child;CHECK(r16_acquire(&reg,0,1,10,R16_QUEUE,&parent)&&r16_retire(&reg,0,1,1)&&r16_detach(&reg,0,1,1,1)&&r16_derive(&reg,parent,20,R16_CONTINUATION,&child)&&r16_release(&reg,parent)&&!r16_local_quiet(&reg,0),194);snap(1);CHECK(r16_release(&reg,child)&&r16_local_quiet(&reg,0),195);}
+      |                                                                                                                                                                                                                                                                                                    ^~~~~
+tests/recovery_r16/../recovery_r9/lcd.c:21:28: note: expanded from macro 'CHECK'
+   21 | #define CHECK(c,n) do{if(!(c)){emit(99,n,__LINE__);finish(n);}}while(0)
+      |                            ^
+tests/recovery_r16/native.c:75:59: note: remove the '&&' if its condition is always true
+   75 |  else if(R16_CASE==9){struct r16_token parent,child;CHECK(r16_acquire(&reg,0,1,10,R16_QUEUE,&parent)&&r16_retire(&reg,0,1,1)&&r16_detach(&reg,0,1,1,1)&&r16_derive(&reg,parent,20,R16_CONTINUATION,&child)&&r16_release(&reg,parent)&&!r16_local_quiet(&reg,0),194);snap(1);CHECK(r16_release(&reg,child)&&r16_local_quiet(&reg,0),195);}
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/recovery_r16/../recovery_r9/lcd.c:21:28: note: expanded from macro 'CHECK'
+   21 | #define CHECK(c,n) do{if(!(c)){emit(99,n,__LINE__);finish(n);}}while(0)
+      |                            ^
+tests/recovery_r16/native.c:75:59: error: variable 'child' is used uninitialized whenever '&&' condition is false [-Werror,-Wsometimes-uninitialized]
+   75 |  else if(R16_CASE==9){struct r16_token parent,child;CHECK(r16_acquire(&reg,0,1,10,R16_QUEUE,&parent)&&r16_retire(&reg,0,1,1)&&r16_detach(&reg,0,1,1,1)&&r16_derive(&reg,parent,20,R16_CONTINUATION,&child)&&r16_release(&reg,parent)&&!r16_local_quiet(&reg,0),194);snap(1);CHECK(r16_release(&reg,child)&&r16_local_quiet(&reg,0),195);}
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/recovery_r16/../recovery_r9/lcd.c:21:28: note: expanded from macro 'CHECK'
+   21 | #define CHECK(c,n) do{if(!(c)){emit(99,n,__LINE__);finish(n);}}while(0)
+      |                            ^
+tests/recovery_r16/native.c:75:292: note: uninitialized use occurs here
+   75 |  else if(R16_CASE==9){struct r16_token parent,child;CHECK(r16_acquire(&reg,0,1,10,R16_QUEUE,&parent)&&r16_retire(&reg,0,1,1)&&r16_detach(&reg,0,1,1,1)&&r16_derive(&reg,parent,20,R16_CONTINUATION,&child)&&r16_release(&reg,parent)&&!r16_local_quiet(&reg,0),194);snap(1);CHECK(r16_release(&reg,child)&&r16_local_quiet(&reg,0),195);}
+      |                                                                                                                                                                                                                                                                                                    ^~~~~
+tests/recovery_r16/../recovery_r9/lcd.c:21:28: note: expanded from macro 'CHECK'
+   21 | #define CHECK(c,n) do{if(!(c)){emit(99,n,__LINE__);finish(n);}}while(0)
+      |                            ^
+tests/recovery_r16/native.c:75:59: note: remove the '&&' if its condition is always true
+   75 |  else if(R16_CASE==9){struct r16_token parent,child;CHECK(r16_acquire(&reg,0,1,10,R16_QUEUE,&parent)&&r16_retire(&reg,0,1,1)&&r16_detach(&reg,0,1,1,1)&&r16_derive(&reg,parent,20,R16_CONTINUATION,&child)&&r16_release(&reg,parent)&&!r16_local_quiet(&reg,0),194);snap(1);CHECK(r16_release(&reg,child)&&r16_local_quiet(&reg,0),195);}
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/recovery_r16/../recovery_r9/lcd.c:21:28: note: expanded from macro 'CHECK'
+   21 | #define CHECK(c,n) do{if(!(c)){emit(99,n,__LINE__);finish(n);}}while(0)
+      |                            ^
+tests/recovery_r16/native.c:75:59: error: variable 'child' is used uninitialized whenever '&&' condition is false [-Werror,-Wsometimes-uninitialized]
+   75 |  else if(R16_CASE==9){struct r16_token parent,child;CHECK(r16_acquire(&reg,0,1,10,R16_QUEUE,&parent)&&r16_retire(&reg,0,1,1)&&r16_detach(&reg,0,1,1,1)&&r16_derive(&reg,parent,20,R16_CONTINUATION,&child)&&r16_release(&reg,parent)&&!r16_local_quiet(&reg,0),194);snap(1);CHECK(r16_release(&reg,child)&&r16_local_quiet(&reg,0),195);}
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/recovery_r16/../recovery_r9/lcd.c:21:28: note: expanded from macro 'CHECK'
+   21 | #define CHECK(c,n) do{if(!(c)){emit(99,n,__LINE__);finish(n);}}while(0)
+      |                            ^
+tests/recovery_r16/native.c:75:292: note: uninitialized use occurs here
+   75 |  else if(R16_CASE==9){struct r16_token parent,child;CHECK(r16_acquire(&reg,0,1,10,R16_QUEUE,&parent)&&r16_retire(&reg,0,1,1)&&r16_detach(&reg,0,1,1,1)&&r16_derive(&reg,parent,20,R16_CONTINUATION,&child)&&r16_release(&reg,parent)&&!r16_local_quiet(&reg,0),194);snap(1);CHECK(r16_release(&reg,child)&&r16_local_quiet(&reg,0),195);}
+      |                                                                                                                                                                                                                                                                                                    ^~~~~
+tests/recovery_r16/../recovery_r9/lcd.c:21:28: note: expanded from macro 'CHECK'
+   21 | #define CHECK(c,n) do{if(!(c)){emit(99,n,__LINE__);finish(n);}}while(0)
+      |                            ^
+tests/recovery_r16/native.c:75:59: note: remove the '&&' if its condition is always true
+   75 |  else if(R16_CASE==9){struct r16_token parent,child;CHECK(r16_acquire(&reg,0,1,10,R16_QUEUE,&parent)&&r16_retire(&reg,0,1,1)&&r16_detach(&reg,0,1,1,1)&&r16_derive(&reg,parent,20,R16_CONTINUATION,&child)&&r16_release(&reg,parent)&&!r16_local_quiet(&reg,0),194);snap(1);CHECK(r16_release(&reg,child)&&r16_local_quiet(&reg,0),195);}
+      |                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/recovery_r16/../recovery_r9/lcd.c:21:28: note: expanded from macro 'CHECK'
+   21 | #define CHECK(c,n) do{if(!(c)){emit(99,n,__LINE__);finish(n);}}while(0)
+      |                            ^
+tests/recovery_r16/native.c:75:23: note: variable 'child' is declared here
+   75 |  else if(R16_CASE==9){struct r16_token parent,child;CHECK(r16_acquire(&reg,0,1,10,R16_QUEUE,&parent)&&r16_retire(&reg,0,1,1)&&r16_detach(&reg,0,1,1,1)&&r16_derive(&reg,parent,20,R16_CONTINUATION,&child)&&r16_release(&reg,parent)&&!r16_local_quiet(&reg,0),194);snap(1);CHECK(r16_release(&reg,child)&&r16_local_quiet(&reg,0),195);}
+      |                       ^
+3 errors generated.
+

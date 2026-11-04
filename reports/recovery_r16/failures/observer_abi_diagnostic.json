@@ -1,0 +1,10 @@
+{
+  "case": 21,
+  "observed_event": 37,
+  "observed_this": 1,
+  "objA_symbol_address": "0x00230010",
+  "observed_this_minus_objA": "0xffdcfff1",
+  "source_sha256": "e8d89805c7f9fa157cbd858ad5fbbc6f36237d0f91c412421cc54f61f0dd358e",
+  "linux_test_elf_sha256": "f3d76f9c7bd111e106269bfdb75cd685247386de4efc60cc367f27275bcbbc35",
+  "explanation": "C007062C overwrites r3 with entry+4 (callback this), distinct from entry0 registration key. Closure word0=1 was a fixture ABI error, not a native service failure."
+}

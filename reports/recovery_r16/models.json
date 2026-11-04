@@ -1,0 +1,25 @@
+{
+  "registry_commands": {
+    "states": 2448,
+    "transitions": 6890,
+    "locally_quiet_states": 76,
+    "stalled_with_callback_retained_states": 288,
+    "max_generations": 2,
+    "max_serial": 4,
+    "lease_capacity": 2,
+    "closed_world_and_atomic_transitions_assumed": true
+  },
+  "scope": "Finite known producers/leases, exact owner tokens, truthful release and serialized operations assumed. Not global/native CPU or device cessation.",
+  "counterexamples": {
+    "hidden_alias": "retire+detach+release all known leases -> local quiet; omitted raw wrapper/native subject still calls target",
+    "premature_release": "caller releases callback lease before CPU return -> ledger can lie; legal release order is a precondition",
+    "native_reverse_edge": "subject removal clears its slot but observer vector can still contain subject pointers",
+    "reentry": "inner callback release leaves outer callback token live",
+    "aba": "same address reused with new generation/serial; old token rejected, raw pointer can still alias new object",
+    "native_sync_deferral": "owned byte preserves value, but delayed descriptor update changes synchronous observations",
+    "device": "all known CPU refs released does not provide SPI/DMA drain or safe LCD destruction"
+  },
+  "global_cpu_cessation_proven": false,
+  "peripheral_cessation_authority_proven": false,
+  "native_cancellation_proven": false
+}

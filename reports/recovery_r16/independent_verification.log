@@ -1,0 +1,1 @@
+PASS:68 R16 ARM cases;62 normal exits;6 expected GPIO faults;exact cross-VSB records/native lines;typed byte/observer ABI/lease generation/owner/ACK oracles;145 R15 manifest entries and all R1-R15 paths unchanged

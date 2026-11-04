@@ -1,0 +1,14 @@
+{
+  "compile_initial": "Initial partial run0..8 then build9 stopped by -Werror sometimes-uninitialized after short-circuit CHECK. New tokens explicitly zero initialized; prior headers unchanged.",
+  "observer_abi_error": "Ten assertion161 failures in first complete64-case run (cases10,13,21,22,29 on each VSB). Key was objA but callback this was incorrectly1. Exact native C007062C and diagnostic show entry+4 is this, separate from entry0 key.",
+  "correction": "closure word0 corrected to objA; CHECK(this==objA && event==37) retained, not relaxed. Cases32/33 test distinct this and unchanged context on duplicate key.",
+  "expected_gpio_faults_unchanged": "cases24,26,31;01E260BC signal11; no peripheral reply fabricated",
+  "archives": {
+    "observer_abi_diagnostic.records.gz": "28586571b164f867fe894cc85b4d90952eae8df6e4b429f9de2928176678d3d0",
+    "compile_initial.log": "fb43829a305a5b66b929f7568b98dc13ec18e27abb846201cabfc81790779021",
+    "observer_abi_diagnostic.json": "1c2cce86cd9bfd78d80697484d0d13acc2c9f2958f2603c423522b2b1075f93b",
+    "observer_abi_diagnostic_native.c": "e8d89805c7f9fa157cbd858ad5fbbc6f36237d0f91c412421cc54f61f0dd358e",
+    "observer_abi_initial.tar.gz": "960ef97d727ff8a852025a6c403e4f46ca2c2436a043d66d92afff777f6d2a0f"
+  },
+  "scope": "Initial failures and diagnostic are new R16 exploratory evidence, not historical archives recovered from a lost session."
+}
