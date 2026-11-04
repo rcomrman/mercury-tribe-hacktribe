@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Independent record/trace/provenance verifier; does not trust runner PASS text."""
-import gzip,hashlib,json,re,struct,subprocess
+import gzip,hashlib,json,re,struct,subprocess,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'reports/recovery_r17'
 BASE='60eddcdd2cc06dff43b71d5459b147d8c835457f'
@@ -74,6 +74,7 @@ def main():
       elif event=='skip_removed':assert old==1 and not entry;p[i]=6
       else:raise AssertionError(step)
  audit=json.loads((OUT/'audit.json').read_text());assert len(audit['ranges'])==15
+ assert audit['instruction_contracts']['0xc0016594']=='0x1e26000' and audit['instruction_contracts']['0xc0016b54']=='0xe5832004'
  assert audit['references']['0xc007061c']['direct_branch_candidates']==['0xc00706b4','0xc0082770']
  # Historical preservation is checked against the entire base tree, not selected files.
  paths=subprocess.check_output(['git','ls-tree','-r','--name-only',BASE],cwd=ROOT,text=True).splitlines()
@@ -88,8 +89,12 @@ def main():
   assert sha((ROOT/path).read_bytes())==expected,path;n+=1
  assert n==167
  print('PASS: 58 ARM scenarios, 54 normal returns, 4 expected faults (0 and 0x01E260BC).')
- print('PASS: 58 full native-image byte comparisons; 29 exact cross-VSB records and native trace comparisons.')
+ print('PASS: 58 full native-image byte comparisons; 29 exact cross-VSB records and native translated-block comparisons.')
  print('PASS: 12 debugger interleavings, unchanged breakpoint bytes, exact register restoration; no memory-write packets.')
  print('PASS: 1080 bounded model states and independently replayed negative witnesses.')
  print('PASS: 167 R16 manifest entries and every base tracked path preserved.')
+ if '--manifest' in sys.argv:
+  manifest=json.loads((OUT/'provenance.json').read_text())['sha256']
+  for path,expected in manifest.items():assert sha((ROOT/path).read_bytes())==expected,path
+  print('PASS: R17 published manifest:',len(manifest),'SHA-256 entries.')
 if __name__=='__main__':main()

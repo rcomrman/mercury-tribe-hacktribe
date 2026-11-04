@@ -57,6 +57,7 @@ static void cb(void*p,unsigned event){
 }
 static void cb2(void*p,unsigned event){(void)p;(void)event;callbacks++;source[0]=0xb2;}
 static void register_native(void){FN(void(*)(void*,void*,unsigned,void*),0xc0070778)(subject,key,1,closure);}
+static unsigned register_guarded(void){if(closing||walks)return 0;register_native();return 1;}
 __attribute__((noinline)) void r17_injected_action(unsigned action){snap(30);if(action==1)remove_native();else {close_graph();if(action==3)page=2;}snap(31);}
 static void code_unchanged(void){for(unsigned i=0;i<0x200000;i++)CHECK(((volatile unsigned char*)0xc0000000)[i]==original[i],212);emit(70,0x200000,1);}
 int main(void){
@@ -81,7 +82,7 @@ int main(void){
  else if(R17_CASE==14){unsigned f=begin(),t=frames[f-1].ticket;CHECK(end(f,t)&&!end(f,t),228);close_graph();CHECK(quiet(),229);}
  else if(R17_CASE==15){struct r16_token old=roots[2];close_graph();CHECK(quiet()&&r16_fixture_rebind(&banks[1],0,3,(uintptr_t)ctx,1)&&!r16_valid(&banks[1],old),230);FN(void(*)(void*,void*,unsigned),0xc007061c)(subject,copy,37);CHECK(callbacks==1,231);}
  else if(R17_CASE==16){for(unsigned i=0;i<5;i++)CHECK(r16_derive(&banks[i/2],roots[i],60,R16_QUEUE,&pending[i]),232);pending_live=1;unsigned w[4]={4,42,0,1};CHECK(r15_submit(&queue,1,1,w,0,0)==R15_ACCEPTED,233);close_graph();CHECK(!quiet()&&r15_start(&queue,&admission,&pool,0)==R15_REFUSED&&r15_ack(&queue,1),234);for(unsigned i=0;i<5;i++)CHECK(r16_release(&banks[i/2],pending[i]),235);pending_live=0;CHECK(quiet(),236);}
- else if(R17_CASE==18){close_graph();CHECK(!begin()&&quiet(),237);register_native();CHECK(!quiet(),238);native_notify();CHECK(callbacks==1,239);}
+ else if(R17_CASE==18){close_graph();CHECK(!begin()&&!register_guarded()&&quiet(),237);register_native();CHECK(!quiet(),238);native_notify();CHECK(callbacks==1,239);}
  else if(R17_CASE==19){FN(void(*)(void*,void*,unsigned,void*),0xc0070778)(other,key,1,closure);close_graph();CHECK(!quiet(),240);/* inverse root blocks closure */FN(void(*)(void*,unsigned),0xc0070688)(other,37);CHECK(callbacks==1,241);}
  else if(R17_CASE==22){close_graph();FN(void(*)(void*,void*,unsigned,void*),0xc0070778)(subject,key,1,closure);FN(void(*)(void*),0xc0082728)(subject);CHECK(callbacks==1&&!quiet(),242);}
  else if(R17_CASE==23){unsigned f[3],t[3];for(unsigned i=0;i<3;i++){f[i]=begin();CHECK(f[i],243);t[i]=frames[f[i]-1].ticket;}CHECK(!begin()&&refs()==20,244);close_graph();for(unsigned i=3;i;i--)CHECK(end(f[i-1],t[i-1]),245);CHECK(quiet(),246);}
