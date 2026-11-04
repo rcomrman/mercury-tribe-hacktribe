@@ -1,0 +1,1 @@
+PASS 15 identical ranges; observer ABI; exact pre-load/partial-tuple/BLX boundaries; two native invocation routes
