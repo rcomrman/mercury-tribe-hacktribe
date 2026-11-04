@@ -5,10 +5,10 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'reports/recovery_r18';BASE='c4fe851f64d325bc6311e4aa7cbee85ce2707cab'
 def sha(b):return hashlib.sha256(b).hexdigest()
 def main():
- rows=json.loads((OUT/'results.json').read_text())['cases'];assert len(rows)==60
+ rows=json.loads((OUT/'results.json').read_text())['cases'];assert len(rows)==62
  rawrows={};hsrows={};traces={}
  for row in rows:
-  v,c=row['vsb'],row['case'];assert v in (0,1) and c in range(30) and (v,c) not in rawrows
+  v,c=row['vsb'],row['case'];assert v in (0,1) and c in range(31) and (v,c) not in rawrows
   raw=gzip.decompress((OUT/f'{v}_{c}.records.gz').read_bytes());assert raw and len(raw)%2112==0
   hs=[];events=[]
   for p in range(0,len(raw),2112):
@@ -27,18 +27,19 @@ def main():
   if c in (17,18):
    stage=89 if c==17 else 15
    assert at(stage)[3]&255==1 and at(stage+100)[3]==0 and at(stage+100)[4]==0x10001 and at(stage+200)[3]==0
-  if c in (2,3,4,6,7,8,21,24):
+  if c in (2,3,4,6,7,8,21,24,30):
    d=row['debugger'];assert d['register_restore_exact'] and d['code_before']==d['code_breakpoint']==d['code_after']
-   expected={2:0xc0070650,3:0xc007067c,4:0xc0070650,6:0xc007066c,7:0xc007067c,8:0xc007066c,21:0xc007067c,24:0xc007067c}[c]
+   expected={2:0xc0070650,3:0xc007067c,4:0xc0070650,6:0xc007066c,7:0xc007067c,8:0xc007066c,21:0xc007067c,24:0xc007067c,30:0xc00707cc}[c]
    assert int(d['stop_pc'],16)==expected and d['saved_core'][15]==expected
    assert not any(x.startswith(('M','X')) for x in d['commands'])
   else:assert row['debugger'] is None
   rawrows[v,c]=raw;hsrows[v,c]=hs
   t=gzip.decompress((OUT/f'{v}_{c}.trace.gz').read_bytes()).decode();traces[v,c]=re.findall(r'^0xc0[01][0-9a-f]{5}:.*$',t,re.M);assert traces[v,c]
- for c in range(30):assert rawrows[0,c]==rawrows[1,c] and traces[0,c]==traces[1,c],('cross-VSB',c)
+ for c in range(31):assert rawrows[0,c]==rawrows[1,c] and traces[0,c]==traces[1,c],('cross-VSB',c)
  def at(c,stage):return next(h for h in hsrows[0,c] if h[2]==stage)
  for c in (1,2,3,14,21,22,23):assert at(c,20)[3]>>16&255==0 and at(c,20)[3]>>8&255==1
  assert at(6,60)[3:5]==[0,1] and at(7,60)[3:5]==[1,0] # vtable before versus after resolution
+ assert at(30,65)[3:5]==[1,0] and at(30,66)[3:5]==[1,0] and at(30,67)[3:5]==[4,1]
  assert at(24,61)[4]==0xb1 # stable context, mutable payload pointer
  assert at(12,20)[3]>>16&255==1 and at(12,20)[3]>>8&255==1
  assert at(13,20)[3]>>16&255==1 and at(20,20)[3]>>16&255==1
@@ -110,9 +111,9 @@ def main():
  paths=subprocess.check_output(['git','ls-tree','-r','--name-only',BASE],cwd=ROOT,text=True).splitlines();assert not subprocess.check_output(['git','diff',BASE,'--',*paths],cwd=ROOT)
  prior=json.loads((ROOT/'reports/recovery_r17/provenance.json').read_text())['sha256']
  for path,h in prior.items():assert sha((ROOT/path).read_bytes())==h,path
- print('PASS 60 ARM cases: 52 normal returns, 6 expected faults, 2 host timeouts with borrows held.')
- print('PASS 30 exact cross-VSB record/native translated-block comparisons; 60 native-image integrity checks.')
- print('PASS 16 debugger interleavings; unchanged native code; exact register restore; 1616-byte pool, 400-byte slots.')
+ print('PASS 62 ARM cases: 54 normal returns, 6 expected faults, 2 host timeouts with borrows held.')
+ print('PASS 31 exact cross-VSB record/native translated-block comparisons; 62 native-image integrity checks.')
+ print('PASS 18 debugger interleavings; unchanged native code; exact register restore; 1616-byte pool, 400-byte slots.')
  print('PASS 316 static candidate rows, including all 119 registrations and 120 notifications; owners remain UNKNOWN.')
  print('PASS 140624 finite model states; negative ABA/timeout-destruction witnesses replayed independently.')
  print('PASS all base paths and 142 R17 manifest entries preserved.')

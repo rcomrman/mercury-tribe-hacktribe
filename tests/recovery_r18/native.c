@@ -39,7 +39,7 @@ static void add_registration(unsigned id,unsigned owner,unsigned direct){
  FN(void(*)(void*,void*,unsigned,void*),0xc0070778)(subject,k,1,closure);
 }
 static unsigned new_page(unsigned owners){unsigned id=r18_allocate(&q,owners,(uintptr_t)vt);if(!id)return 0;for(unsigned b=1;b<=2;b*=2)if(owners&b)add_registration(id,b,0);return id;}
-__attribute__((noinline)) void r18_injected_action(unsigned action){snap(30);if(action==1)close_id(1);else if(action==2)FN(void(*)(void*,void*),0xc00705dc)(subject,keys[0][0]);else if(action==3)unsafe[4]=(uintptr_t)vtB;else if(action==4)unsafe[4]=0;else if(action==5)unsafe[8]=(uintptr_t)rawpayload[1];snap(31);}
+__attribute__((noinline)) void r18_injected_action(unsigned action){snap(30);if(action==1)close_id(1);else if(action==2)FN(void(*)(void*,void*),0xc00705dc)(subject,keys[0][0]);else if(action==3)unsafe[4]=(uintptr_t)vtB;else if(action==4)unsafe[4]=0;else if(action==5)unsafe[8]=(uintptr_t)rawpayload[1];else if(action==6){emit(65,subject[7]==(uintptr_t)keys[1][0],keys[1][0][2]-keys[1][0][1]);notify();close_id(2);emit(66,r18_local_quiet(&q,2),keys[1][0][2]-keys[1][0][1]);}snap(31);}
 int main(void){
  init();for(unsigned i=0;i<1024;i++)source[i]=shadow[i]=0x11;desc[4]=1;
  ((volatile unsigned*)desc)[5]=(uintptr_t)FN(void*(*)(void),0xc001198c)();((volatile unsigned*)desc)[6]=(uintptr_t)FN(void*(*)(void*),0xc0016568)((void*)0xc031bb20);((volatile unsigned*)desc)[7]=(uintptr_t)FN(void*(*)(void*),0xc0016654)((void*)0xc031bb20);
@@ -76,6 +76,7 @@ int main(void){
  else if(R18_CASE==26){close_id(1);for(unsigned i=0;i<8;i++)r18_tick(&q,0xffffffffu);CHECK(r18_local_quiet(&q,1)&&!r18_destroy(&q,1)&&new_page(1)==2,246);CHECK(q.slot[0].core[0].generation==1&&q.slot[1].core[0].generation==2,247);}
  else if(R18_CASE==28){struct r18_borrow b={0},bad={0};CHECK(r18_enter(&q,&q.slot[0].core[0].vtable,&b),248);bad=b;bad.ticket++;CHECK(!r18_leave(&q,bad)&&r18_leave(&q,b)&&!r18_leave(&q,b),249);}
  else if(R18_CASE==29){struct r18_borrow b[3],bad={0};for(unsigned i=0;i<3;i++)CHECK(r18_enter(&q,&q.slot[0].core[0].vtable,&b[i]),250);CHECK(!r18_enter(&q,&q.slot[0].core[0].vtable,&bad)&&r16_count(&q.slot[0].reg,0)==4,251);close_id(1);for(unsigned i=0;i<3;i++)CHECK(r18_leave(&q,b[i]),252);CHECK(r18_local_quiet(&q,1),253);}
+ else if(R18_CASE==30){CHECK(new_page(1)==2&&work==2&&r18_local_quiet(&q,2),256);CHECK(keys[1][0][2]-keys[1][0][1]==4,257);emit(67,keys[1][0][2]-keys[1][0][1],((unsigned char*)subject)[4+24+20]);}
  else finish(254);
  for(unsigned i=0;i<q.used;i++)CHECK(q.slot[i].sealed==r18_hash(&q.slot[i]),255);
  complete=1;code_unchanged();snap(20);emit(60,rawA,rawB);emit(64,complete,last_payload);return 0;
