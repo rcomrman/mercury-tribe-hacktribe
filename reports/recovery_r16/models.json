@@ -11,6 +11,7 @@
   },
   "scope": "Finite known producers/leases, exact owner tokens, truthful release and serialized operations assumed. Not global/native CPU or device cessation.",
   "counterexamples": {
+    "distinct_key_and_this": "registered key and callback this are independent pointers; retaining the key alone omits callback context",
     "hidden_alias": "retire+detach+release all known leases -> local quiet; omitted raw wrapper/native subject still calls target",
     "premature_release": "caller releases callback lease before CPU return -> ledger can lie; legal release order is a precondition",
     "native_reverse_edge": "subject removal clears its slot but observer vector can still contain subject pointers",

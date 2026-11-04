@@ -12,7 +12,7 @@
     "tests/recovery_r16/native.c": "80f7d4d061aab5affae086c1545aee97b95188a32eafc09d5271c1b4abe100b2",
     "tests/recovery_r16/registry.h": "81b85167e0d910731cff8b186c42444c6cb5d873a97d94953b75e9b3d218bc10",
     "tools/recovery_r16/audit.py": "5f1e6a978a6d586c9f4d3ad408843c7bfe78851ad312f4507e90534105d322de",
-    "tools/recovery_r16/models.py": "3efcc3daacfc2b458e883342bb804dbb5b84c34f3ebdfbe8113da6f1f31042d2",
+    "tools/recovery_r16/models.py": "d3cf4cf0a74d0d48219244152b5e791a5781b3f40e922a6c295af57c52acea69",
     "tools/recovery_r16/run.py": "788950a271ed75b8b901b5558f3b079d56a531a2e45e67871104e8ba6f290abf",
     "tools/recovery_r16/verify.py": "52ac6ce66c0e25aff40917878b3020a1acaaebd85ff6d1fc15a9c9f10ee5bc70",
     "reports/recovery_r16/0_0.records.gz": "247af9178c1c583308a7dac3856a2f0a7700cc51fe6742a569fb313b80cdda3d",
@@ -153,13 +153,14 @@
     "reports/recovery_r16/1_9.trace.gz": "a2092b4c1a6fb6e1053493b34a53bd7fd00177468fe7a5fec2702c81ed92ba31",
     "reports/recovery_r16/audit.json": "c880424f028e9ae2c50962d6cae44839c0c48105040bee55ebc2ac4ab715942d",
     "reports/recovery_r16/audit.log": "9cb644e058bd19754962683bb3f66e78cbd04134c54adea184080b768c46c92c",
+    "reports/recovery_r16/closure_certificates.json": "b72f032d51d39e86bb778a78e12f4f48e1c7c85df469d8f6676122c976739fc1",
     "reports/recovery_r16/failures/compile_initial.log": "fb43829a305a5b66b929f7568b98dc13ec18e27abb846201cabfc81790779021",
     "reports/recovery_r16/failures/observer_abi_diagnostic.json": "1c2cce86cd9bfd78d80697484d0d13acc2c9f2958f2603c423522b2b1075f93b",
     "reports/recovery_r16/failures/observer_abi_diagnostic.records.gz": "28586571b164f867fe894cc85b4d90952eae8df6e4b429f9de2928176678d3d0",
     "reports/recovery_r16/failures/observer_abi_diagnostic_native.c": "e8d89805c7f9fa157cbd858ad5fbbc6f36237d0f91c412421cc54f61f0dd358e",
     "reports/recovery_r16/failures/observer_abi_initial.tar.gz": "960ef97d727ff8a852025a6c403e4f46ca2c2436a043d66d92afff777f6d2a0f",
     "reports/recovery_r16/independent_verification.log": "0944a51e390b6da71814a01f6bc3092f784e2d2bb714c578fc4fb9238aba3530",
-    "reports/recovery_r16/models.json": "11b5348763f68b16d107511aa35a822bffdaf118f2a07e9313aebc3d04d412e8",
+    "reports/recovery_r16/models.json": "0932165b762a849c7730125d0b4e3c318070783367c7ed678f847ac49b2c33c8",
     "reports/recovery_r16/models.log": "01c34ba7dfcff3d84a9a43e990d786273cbb51257e0add82a5c2fcab25a6912d",
     "reports/recovery_r16/native_disassembly.txt.gz": "241885271e2a96ced0fbbf9e8ceea424e7a3d8fef8fcf918fc2eb2fdbf5f24e1",
     "reports/recovery_r16/phase1.json": "cd347e39699f8f842d656f1c1c0fed45567ad96c0494d0f5b39f6131b7cb034a",
@@ -168,7 +169,7 @@
     "reports/recovery_r16/validation_notes.json": "45d2fddadcc98849cd4747aa8f4fdfdd4ec2b7099bb46bb9be7328ac99685e06",
     "tests/run_recovery_r16.sh": "6efbefe945b21e266d9d5913d420661b5333a3774be6146f101f736e2a001ff4",
     "documents/RECOVERY_R16_CPU_REFERENCE_MAP_FR.md": "5ae4cb96f2a4bd096f4c9477a7488898b67708e396d1a17ece2b618f4b4be5cc",
-    "documents/RECOVERY_R16_NATIVE_CODECS_FR.md": "46c520fc52ec04a9d82f67cab9666291f31ea9a5b8c5b7b428e7ec515091b104",
+    "documents/RECOVERY_R16_NATIVE_CODECS_FR.md": "44cb705fc1c4cfc9b4360befff7b772385ac21c06f1cc9b79d0eb11f207945e7",
     "documents/RECOVERY_R16_RETIREMENT_ARCHITECTURE_FR.md": "32d7e8b671cdffcdd0a982f956440e1a5dd613e880078a31c0129708a6186c6e"
   }
 }

@@ -1,0 +1,48 @@
+{
+  "scope": "Known finite CPU graph only; no destruction authorization for real Korg resources",
+  "stages": [
+    {
+      "stage": "stop_new_admission",
+      "evidence": "R16 LIVE\u2192RETIRING refuses external Acquire",
+      "native_installed": false
+    },
+    {
+      "stage": "detach_producers",
+      "evidence": "Owner/generation checked for enumerated sources; native observer remove proven one-sided",
+      "unknown": "All UI roots, subject reverse edges, timers and aliases not exhaustively detached"
+    },
+    {
+      "stage": "drain_owned_commands",
+      "evidence": "One captured contrast retained through R15 DONE/ACK; stale UI command refused before execution",
+      "global_native_sync_equivalence": false
+    },
+    {
+      "stage": "finish_callbacks",
+      "evidence": "Native notification/reentry and retirement inside callback; distinct child lease retained until actual return",
+      "native_all_callbacks_joined": false
+    },
+    {
+      "stage": "exclude_hidden_cpu_aliases",
+      "counterexamples": [
+        15,
+        16,
+        29,
+        32,
+        33
+      ],
+      "established": false
+    },
+    {
+      "stage": "peripheral_cessation",
+      "evidence": "Contrast pending worker and opcode7 reach inaccessible GPIO; no independent cancellation authority identified",
+      "established": false
+    },
+    {
+      "stage": "authorize_destruction",
+      "established": false,
+      "forced_free": false
+    }
+  ],
+  "cpu_only_metadata_rebind": "Only fixture storage still allocated, new generation; not a native free/reuse certificate",
+  "decision": "NO GO global CPU cessation, peripheral cessation, independent recovery or hardware integration"
+}
