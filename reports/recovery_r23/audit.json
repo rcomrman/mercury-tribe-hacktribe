@@ -1,0 +1,34 @@
+{
+  "vsb_sha256": [
+    "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+  ],
+  "direct_callers": {
+    "0xc0015ab4": [
+      "0xc0016084"
+    ],
+    "0xc0015dd0": [
+      "0xc00298e8",
+      "0xc00299b4",
+      "0xc00299c4",
+      "0xc002ac4c",
+      "0xc002ac5c",
+      "0xc0038bc4",
+      "0xc00603f0",
+      "0xc009a8f0"
+    ],
+    "0xc0015fa0": [
+      "0xc0015e58",
+      "0xc0015f38"
+    ]
+  },
+  "contracts": {
+    "C0015AB4": "compares one 128-byte page and copies changed source bytes to shadow before returning changed",
+    "C0015DD0": "command dispatcher; opcode 2 marks request, opcode 3 calls worker synchronously",
+    "C0015FA0": "worker consumes descriptor/handles and reaches lower driver; completion/physical ACK not established"
+  },
+  "limitations": [
+    "indirect calls are not excluded",
+    "IRQ/FIQ/DMA and computed aliases are not dominated by this scan"
+  ]
+}
