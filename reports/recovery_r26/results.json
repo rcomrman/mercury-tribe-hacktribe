@@ -1,0 +1,144 @@
+{
+  "frames": 32,
+  "presets": 8,
+  "sha256": "eb5cfe3472ddd8114e4138b2d4e6f67bd904188e6bb5b343193abe7904b8fd7b",
+  "qemu_process_ns": 23820399,
+  "elf_sections": "\n/workspace/mercury-tribe-hacktribe/build/recovery_r26/LINUX_TEST_ONLY.elf:\tfile format elf32-littlearm\n\nSections:\nIdx Name            Size     VMA      Type\n  0                 00000000 00000000 \n  1 .text           000030e0 00010000 TEXT\n  2 .rodata         000002dc 00020000 DATA\n  3 .bss            000014fc 00030000 BSS\n  4 .ARM.attributes 00000024 00000000 \n  5 .symtab         00000590 00000000 \n  6 .shstrtab       0000003e 00000000 \n  7 .strtab         00000334 00000000 \n",
+  "stack_usage": [
+    "src/md21_v14_profiles.c:16:md21_apply_v14\t16\tstatic",
+    "src/md15_bridge.c:11:md15_preset\t0\tstatic",
+    "src/md15_bridge.c:12:md15_init\t16\tstatic",
+    "src/md15_bridge.c:21:md15_transport\t0\tstatic",
+    "src/md15_bridge.c:26:md15_clock\t16\tstatic",
+    "src/md15_bridge.c:34:md15_note\t24\tstatic",
+    "src/md15_bridge.c:41:md15_step\t40\tstatic",
+    "src/md15_bridge.c:51:md15_mutes\t24\tstatic",
+    "src/md15_bridge.c:55:md15_route\t0\tstatic",
+    "src/md15_bridge.c:58:md15_rate\t0\tstatic",
+    "src/md15_bridge.c:59:md15_intensity\t0\tstatic",
+    "src/md15_bridge.c:60:md15_frame\t40\tstatic",
+    "src/md15_bridge.c:78:md15_show_visual\t0\tstatic",
+    "src/md15_bridge.c:79:md15_transfer\t0\tstatic",
+    "src/md15_bridge.c:80:md15_visual_frame\t0\tstatic",
+    "src/mercury_glitch.c:16:md_glitch_init\t0\tstatic",
+    "src/mercury_glitch.c:22:md_glitch_set\t8\tstatic",
+    "src/mercury_glitch.c:29:md_glitch_note\t0\tstatic",
+    "src/mercury_glitch.c:35:md_glitch_tick\t0\tstatic",
+    "src/mercury_glitch.c:40:md_glitch_apply\t68\tstatic",
+    "src/mercury_events.c:24:md_music_init\t0\tstatic",
+    "src/mercury_events.c:34:md_music_set_part_cord\t0\tstatic",
+    "src/mercury_events.c:37:md_music_route\t0\tstatic",
+    "src/mercury_events.c:40:md_music_mute\t0\tstatic",
+    "src/mercury_events.c:43:md_music_note_on\t24\tstatic",
+    "src/mercury_events.c:52:md_music_note_pitch\t16\tstatic",
+    "src/mercury_events.c:62:md_music_note_off\t0\tstatic",
+    "src/mercury_events.c:66:md_music_frame\t32\tstatic",
+    "src/mercury_events.c:93:md_music_clock\t76\tstatic",
+    "src/mercury_events.c:116:md_music_clock_timed\t32\tstatic",
+    "tests/recovery_r26/frames_arm.c:6:main\t40\tstatic",
+    "src/lcd_source_mux.c:2:mux_init\t16\tstatic",
+    "src/lcd_source_mux.c:11:mux_select\t0\tstatic",
+    "src/lcd_source_mux.c:14:mux_service_bounded\t72\tstatic",
+    "src/lcd_source_mux.c:40:mux_service\t16\tstatic",
+    "src/mercury_live.c:43:md_live_render\t328\tstatic"
+  ],
+  "limits": "whole QEMU process wall time; stack per function only; no instrument cycles",
+  "native_integration": [
+    {
+      "vsb": 0,
+      "preset": 0,
+      "records": 13,
+      "sha256": "cbc39c7c6f4ff822af697256d1ceb4651dd57e30b29be741a78d8d89653e5221"
+    },
+    {
+      "vsb": 0,
+      "preset": 1,
+      "records": 13,
+      "sha256": "775a6cccf42473517b814b3759016c1459fc35ed9ca3ee46c2795e4ed0993982"
+    },
+    {
+      "vsb": 0,
+      "preset": 2,
+      "records": 13,
+      "sha256": "06a33d03da44cc4c8a67db9decd6f482e4a1b8041efcb823f7781778a2464b1e"
+    },
+    {
+      "vsb": 0,
+      "preset": 3,
+      "records": 13,
+      "sha256": "6721bc1be5d61aea417a4259d4f02139902d5649dff6e8258506508c3dc8adf5"
+    },
+    {
+      "vsb": 0,
+      "preset": 4,
+      "records": 13,
+      "sha256": "c750ac71da3af7dee74e062ed9ff0c63617308d0045cf8bd0885c85495104220"
+    },
+    {
+      "vsb": 0,
+      "preset": 5,
+      "records": 13,
+      "sha256": "7caeae74c5b4ccb637e575b95e89a8aaf714a4e82562508510b351e0b0de0225"
+    },
+    {
+      "vsb": 0,
+      "preset": 6,
+      "records": 13,
+      "sha256": "bfea6682175436799b38bfbeb6419ce20503d106a82ea6a92e16bd816d78f0a3"
+    },
+    {
+      "vsb": 0,
+      "preset": 7,
+      "records": 13,
+      "sha256": "007633c078c14300473f5ba6334dcc7eecb59991647428508f59cf5a1191c23a"
+    },
+    {
+      "vsb": 1,
+      "preset": 0,
+      "records": 13,
+      "sha256": "cbc39c7c6f4ff822af697256d1ceb4651dd57e30b29be741a78d8d89653e5221"
+    },
+    {
+      "vsb": 1,
+      "preset": 1,
+      "records": 13,
+      "sha256": "775a6cccf42473517b814b3759016c1459fc35ed9ca3ee46c2795e4ed0993982"
+    },
+    {
+      "vsb": 1,
+      "preset": 2,
+      "records": 13,
+      "sha256": "06a33d03da44cc4c8a67db9decd6f482e4a1b8041efcb823f7781778a2464b1e"
+    },
+    {
+      "vsb": 1,
+      "preset": 3,
+      "records": 13,
+      "sha256": "6721bc1be5d61aea417a4259d4f02139902d5649dff6e8258506508c3dc8adf5"
+    },
+    {
+      "vsb": 1,
+      "preset": 4,
+      "records": 13,
+      "sha256": "c750ac71da3af7dee74e062ed9ff0c63617308d0045cf8bd0885c85495104220"
+    },
+    {
+      "vsb": 1,
+      "preset": 5,
+      "records": 13,
+      "sha256": "7caeae74c5b4ccb637e575b95e89a8aaf714a4e82562508510b351e0b0de0225"
+    },
+    {
+      "vsb": 1,
+      "preset": 6,
+      "records": 13,
+      "sha256": "bfea6682175436799b38bfbeb6419ce20503d106a82ea6a92e16bd816d78f0a3"
+    },
+    {
+      "vsb": 1,
+      "preset": 7,
+      "records": 13,
+      "sha256": "007633c078c14300473f5ba6334dcc7eecb59991647428508f59cf5a1191c23a"
+    }
+  ]
+}
