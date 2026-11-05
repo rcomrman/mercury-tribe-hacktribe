@@ -1,0 +1,207 @@
+{
+  "vsb_sha256": [
+    "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+  ],
+  "ranges": [
+    {
+      "name": "annex_graphics",
+      "start": "0xc006ea10",
+      "end_exclusive": "0xc006ea4c",
+      "sha256": "057ed17b52b5f156adbaa5143d9dc60765c4b0168ca013bec184b621098938a2"
+    },
+    {
+      "name": "annex_caller",
+      "start": "0xc006f1e4",
+      "end_exclusive": "0xc006f204",
+      "sha256": "20e2ae201424b42659f6c0028775e8b2cc5ca986efa1c2887acd615aeb4f2e27"
+    },
+    {
+      "name": "native_pixel",
+      "start": "0xc0015824",
+      "end_exclusive": "0xc0015900",
+      "sha256": "72d66008eda27f20de2999eebb0886bbf48a1dcc9a2babda6e80d2e47592830b"
+    },
+    {
+      "name": "fixed_comparator",
+      "start": "0xc0015ab4",
+      "end_exclusive": "0xc0015b54",
+      "sha256": "c941a505b50281669768cde07b7a1f4886ba32b627645c887375aa9a5d6effbb"
+    },
+    {
+      "name": "lcd_worker",
+      "start": "0xc0015fa0",
+      "end_exclusive": "0xc00160c4",
+      "sha256": "87a54db806eb6fb6d6c99044900e87db4c93a49f0e65f27ba303933346e184c3"
+    },
+    {
+      "name": "lcd_descriptor",
+      "start": "0xc0015d14",
+      "end_exclusive": "0xc0015eb8",
+      "sha256": "5c8dd7a494df303b98f085b11a32b1af4655e4660afb2d3f5babe8c1a0b19ad1"
+    },
+    {
+      "name": "graphics_reset",
+      "start": "0xc003f0d4",
+      "end_exclusive": "0xc003f154",
+      "sha256": "9d9a2eb7a0d058ca33df9a088059151921644306336c9006889518ae8d295e43"
+    }
+  ],
+  "contracts": {
+    "0xc006ea18": "0xe5900034",
+    "0xc006ea20": "0xe5933008",
+    "0xc006ea24": "0xe12fff33",
+    "0xc006ea28": "0xe5940038",
+    "0xc006ea34": "0xe12fff33",
+    "0xc006ea38": "0xe594003c",
+    "0xc006ea44": "0xe12fff33",
+    "0xc006ea48": "0xe8bd8010"
+  },
+  "removed_from_new_route_candidates": {
+    "subscriber_constructor": "0xc00852b0",
+    "subscriber_destructor": "0xc00851b4",
+    "deleting_destructor": "0xc00851f4",
+    "inverse_destructor": "0xc0041b74",
+    "registration": "0xc0070778",
+    "removal": "0xc00705dc",
+    "observer_invocation": "0xc007061c",
+    "periodic_dispatch": "0xc0082728",
+    "periodic_subscriber_method": "0xc0085078",
+    "model_subscriber_method": "0xc0085278"
+  },
+  "subscriber_roots_not_required": [
+    "0xc0691244",
+    "0xc0348844",
+    "0xc03405bc"
+  ],
+  "remaining_access_domains": [
+    {
+      "id": "ui_main",
+      "context": "task4 / verified reference UI mode",
+      "chain": "C002B144\u2192C002D030\u2192C0083848\u2192C00834FC\u2192C00836E4\u2192C006F178",
+      "candidate_outer_point": "C002D030 outer invocation",
+      "lab_coverage": "conditional",
+      "evidence": "R7/R11 archives; R13 does not repeat full main cycle",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "ui_alternate",
+      "context": "task4 when selected UI mode2 (service mode7)",
+      "chain": "C002D030\u2192C0083428\u2192C00833F0\u2192C0083374",
+      "candidate_outer_point": "same wrapper plus alternate draw coverage",
+      "lab_coverage": "protected_in_fixture",
+      "evidence": "cases5/6: native queue/dispatch/loop, fixture widget",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "secondary_pages",
+      "context": "task4 along tick, other callers not exhausted",
+      "chain": "C00836E4\u2192C006EAE0\u2192C006E9A0 and C006F178 two slots",
+      "candidate_outer_point": "whole UI transaction before update, not Mercury callback only",
+      "lab_coverage": "conditional",
+      "evidence": "static calls and R7/R8 evidence; no global lock installed",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "periodic_worker",
+      "context": "task2 timer callback",
+      "chain": "C002A7EC\u2192callback+C\u2192C002A71C\u2192C0015DD0(3)\u2192C0015FA0",
+      "candidate_outer_point": "timer callback+C outer adapter",
+      "lab_coverage": "protected_in_fixture",
+      "evidence": "case17: callback fixture defers; later worker hits GPIO fault",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "progress",
+      "context": "task1 startup proven route; service callers also exist",
+      "chain": "C002AE90\u2192C004D860\u2192C006040C/C006038C\u2192draw+op2+op3",
+      "candidate_outer_point": "top-level progress operation domain, not timer",
+      "lab_coverage": "unprotected",
+      "evidence": "cases3/4/16; callers C0031250,C0038E40 also traced, contexts incomplete",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "startup",
+      "context": "task1",
+      "chain": "C002AB7C\u2192C0015DA8\u2192C0015EB8\u2192clear source/shadow\u2192forced worker",
+      "candidate_outer_point": "exclusive startup lifecycle before any Mercury ownership",
+      "lab_coverage": "unprotected",
+      "evidence": "direct initializer bypasses dispatcher for forced worker",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "fatal",
+      "context": "many callers, arbitrary failure phase",
+      "chain": "C00298BC\u2192clear/draw\u2192op2/op3\u2192GPIO\u2192C00299F4",
+      "candidate_outer_point": "fault domain; no safe suppression/recovery proven",
+      "lab_coverage": "unprotected",
+      "evidence": "R10 fault archive; nested error/transport dependence remains",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "direct_compare",
+      "context": "worker known caller; arbitrary probe/adapter aliases unknown",
+      "chain": "C0015AB4 reads fixed source without descriptor or private gate",
+      "candidate_outer_point": "full reader interval mediation",
+      "lab_coverage": "unprotected",
+      "evidence": "cases2/9/14",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "lcd_controls",
+      "context": "service shutdown and parameter calls, full task contexts unknown",
+      "chain": "C0015DD0(7)\u2192C00162C4\u2192GPIO/SPI; op4 sets pending",
+      "candidate_outer_point": "transport/control domain separate from worker request",
+      "lab_coverage": "unprotected",
+      "evidence": "case10; op5 is no-op, op1 clears source",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "pixel_writer",
+      "context": "UI and service widget chains, all contexts not assigned",
+      "chain": "C003F154/C0071EE0/C0073034/C00730EC\u2192C0015824",
+      "candidate_outer_point": "all composition domains",
+      "lab_coverage": "unknown",
+      "evidence": "four direct call sites; indirect widget entry/context not exhaustive",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "range_writer",
+      "context": "many widgets and service paths",
+      "chain": "C003F55C\u2192C0015988, plus pixel line paths",
+      "candidate_outer_point": "all composition domains",
+      "lab_coverage": "unknown",
+      "evidence": "all aligned rectangle call candidates retained",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "pixel_reader",
+      "context": "widget function context not fully assigned",
+      "chain": "C0071EC8\u2192C0015900",
+      "candidate_outer_point": "reader coverage when source consistency required",
+      "lab_coverage": "unknown",
+      "evidence": "R12 pixel observations preserved",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "calculated_aliases",
+      "context": "unknown / IRQ / FIQ / DMA not proven absent",
+      "chain": "computed addresses, indirect/native observer aliases",
+      "candidate_outer_point": "must identify or explicitly exclude",
+      "lab_coverage": "unknown",
+      "evidence": "literal/branch scan cannot establish absence",
+      "installed_in_native_firmware": false
+    },
+    {
+      "id": "queue_drain_liveness",
+      "context": "task4 consumer and producers",
+      "chain": "C002D030\u2192drain until empty",
+      "candidate_outer_point": "bound complete domain duration",
+      "lab_coverage": "unprotected",
+      "evidence": "case18:32 messages consumed in one call; unbounded producer model",
+      "installed_in_native_firmware": false
+    }
+  ],
+  "selected_native_path": "C006F178 calls C006EA10; R21 invokes only C006EA10 unchanged on a static fixture graph",
+  "scope": "Complete UI cycle/task scheduling/page factory/physical LCD not requalified; no native synchronization or framebuffer ownership inferred"
+}
