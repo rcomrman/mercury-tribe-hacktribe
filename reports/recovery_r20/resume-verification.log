@@ -1,0 +1,7 @@
+PASS 62 ARM scenarios: 50 normal, 8 expected faults, 2 controlled incomplete-constructor exits, 2 host timeouts.
+PASS 31 exact cross-VSB records/native translated-block comparisons and 62 native-image byte checks.
+PASS 26 debugger interleavings: 24 exact register restores; 2 explicit stops before native constructor return.
+PASS constructor-live/inverse/tuple/return distinctions, native empty-inverse destructor paths without free.
+PASS 21919 bounded model states and independently replayed negative transaction witnesses.
+PASS shared UI root contracts; all base files and 154 R18 manifest entries preserved.
+PASS R19 manifest: 150 SHA-256 entries.

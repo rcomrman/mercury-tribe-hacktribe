@@ -1,0 +1,99 @@
+{
+  "vsb_sha256": [
+    "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+  ],
+  "contracts": {
+    "0xc0065298": "0xe3a0004c",
+    "0xc00652a4": "0xeb008001",
+    "0xc00853a4": "0xe3a0200a",
+    "0xc00853a8": "0xebffacf2",
+    "0xc00853d0": "0xe2820004",
+    "0xc00853d4": "0xe1a01008",
+    "0xc00853e0": "0xebfface4",
+    "0xc0085400": "0xc0085078",
+    "0xc0085404": "0xc0085278",
+    "0xc0030d58": "0xc03405bc",
+    "0xc0085280": "0xebfeaea8",
+    "0xc00852a0": "0x15c43048"
+  },
+  "ranges": [
+    {
+      "name": "native_allocation_site",
+      "start": "0xc0065298",
+      "end_exclusive": "0xc00652bc",
+      "sha256": "07165f7c73a741a11a6d4be613bec2974d06b2f4e91344b3b69bed73a8a1a71d"
+    },
+    {
+      "name": "subscriber_full_constructor",
+      "start": "0xc00852b0",
+      "end_exclusive": "0xc0085408",
+      "sha256": "caa1dd600e3d63ea5996bc96f62425fc856cc73361e556ca38c35db136ce6760"
+    },
+    {
+      "name": "model_callback",
+      "start": "0xc0085278",
+      "end_exclusive": "0xc00852b0",
+      "sha256": "4949b417c01538ac0d956a18da04e969825b42d85845525b3a50e0f6bb5e2512"
+    },
+    {
+      "name": "model_constructor",
+      "start": "0xc0082848",
+      "end_exclusive": "0xc00828e0",
+      "sha256": "29caa5c8bc8e390bd61121e2b90b28cbc36e370778fe43a896ebfcd3d2d5c71a"
+    },
+    {
+      "name": "model_root_getter",
+      "start": "0xc0030d28",
+      "end_exclusive": "0xc0030d5c",
+      "sha256": "db713e23564a6d8827dae45089e3c0daabc0bfbb093337f190d9d9e415568ccf"
+    },
+    {
+      "name": "destructors",
+      "start": "0xc00851b4",
+      "end_exclusive": "0xc0085218",
+      "sha256": "66fb39cdb8dc030f3c06380b75f325526e88b901ed4b3a34701301040dea2323"
+    },
+    {
+      "name": "inverse",
+      "start": "0xc0041b74",
+      "end_exclusive": "0xc0041bc4",
+      "sha256": "2fba7ff87dd88560050fa1bbc4fb562ed9adc1706777b43858bec49503108c48"
+    },
+    {
+      "name": "retained_callback",
+      "start": "0xc0085078",
+      "end_exclusive": "0xc0085098",
+      "sha256": "d8a75ff20cafa5abcfc499762874d3e5cbf0dc42023805193e20649476f0d709"
+    },
+    {
+      "name": "invocation",
+      "start": "0xc00705dc",
+      "end_exclusive": "0xc0070818",
+      "sha256": "7c9d14c27829dd7ebf6253e6a004f503c970b76fdcd2b7ccf4122183da59c244"
+    }
+  ],
+  "native_owner_allocation_bytes": 76,
+  "relations": [
+    {
+      "subject": "*C0691244",
+      "key": "owner+0x38",
+      "context": "owner",
+      "method": "C0085078",
+      "period": 10
+    },
+    {
+      "subject": "(*C03405BC)+4",
+      "key": "owner+0x38",
+      "context": "owner",
+      "method": "C0085278",
+      "period": 0
+    }
+  ],
+  "authority": "Unknown last-owner authority on all three globals; no free certificate",
+  "limits": [
+    "Local instruction contracts only",
+    "Runtime model fixture is seeded explicitly, not a native heap allocation",
+    "No exhaustive computed aliases/callers/context coverage"
+  ]
+}
