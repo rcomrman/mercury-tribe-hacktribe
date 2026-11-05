@@ -1,0 +1,330 @@
+{
+  "host_runs": [
+    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 prolonged_frames=512 prolonged_ns=11798116 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
+    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 prolonged_frames=512 prolonged_ns=9757267 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
+    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 prolonged_frames=512 prolonged_ns=10313396 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
+    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 prolonged_frames=512 prolonged_ns=9409663 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
+    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 prolonged_frames=512 prolonged_ns=9953924 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
+    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 prolonged_frames=512 prolonged_ns=9828145 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
+    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 prolonged_frames=512 prolonged_ns=9793492 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad"
+  ],
+  "host_process_ns": [
+    14396084,
+    12388832,
+    12519264,
+    11274396,
+    12042213,
+    11931327,
+    11977107
+  ],
+  "native": [
+    {
+      "vsb": 0,
+      "sha256": "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+      "record": [
+        1379021134,
+        33,
+        1,
+        1,
+        1,
+        64,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "elf_sha256": "1ebc555be6b01cdb38741e6dc96245d1cbc09739b4c2dbc5c5c88915752f993c"
+    },
+    {
+      "vsb": 1,
+      "sha256": "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052",
+      "record": [
+        1379021134,
+        33,
+        1,
+        1,
+        1,
+        64,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "elf_sha256": "f42a1ebe0c53dc09e83e0bb3bd3d438d6a136152179a7872d2f0cb18c70c3359"
+    }
+  ],
+  "stack_usage": [
+    {
+      "symbol": "main",
+      "bytes": 1200,
+      "kind": "dynamic,bounded"
+    },
+    {
+      "symbol": "md_live_render",
+      "bytes": 304,
+      "kind": "dynamic,bounded"
+    },
+    {
+      "symbol": "mux_service_bounded",
+      "bytes": 112,
+      "kind": "static"
+    },
+    {
+      "symbol": "mini_lfo4_evaluate",
+      "bytes": 56,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_glitch_apply",
+      "bytes": 56,
+      "kind": "static"
+    },
+    {
+      "symbol": "r21_commit.constprop",
+      "bytes": 48,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_music_frame",
+      "bytes": 48,
+      "kind": "static"
+    },
+    {
+      "symbol": "md15_note",
+      "bytes": 48,
+      "kind": "static"
+    },
+    {
+      "symbol": "md15_step",
+      "bytes": 48,
+      "kind": "static"
+    },
+    {
+      "symbol": "span.part.0",
+      "bytes": 32,
+      "kind": "static"
+    },
+    {
+      "symbol": "r21_compute.constprop",
+      "bytes": 32,
+      "kind": "static"
+    },
+    {
+      "symbol": "r21_init.constprop",
+      "bytes": 32,
+      "kind": "static"
+    },
+    {
+      "symbol": "md21_apply_v14",
+      "bytes": 32,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_music_clock_timed",
+      "bytes": 32,
+      "kind": "static"
+    },
+    {
+      "symbol": "md15_init",
+      "bytes": 32,
+      "kind": "static"
+    },
+    {
+      "symbol": "md15_mutes",
+      "bytes": 32,
+      "kind": "static"
+    },
+    {
+      "symbol": "md15_frame",
+      "bytes": 32,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_button",
+      "bytes": 32,
+      "kind": "static"
+    },
+    {
+      "symbol": "r21_frame.constprop",
+      "bytes": 16,
+      "kind": "static"
+    },
+    {
+      "symbol": "md15_clock",
+      "bytes": 16,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_init",
+      "bytes": 16,
+      "kind": "static"
+    },
+    {
+      "symbol": "put",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "drift",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "mini_lfo4_init",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_glitch_init",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_glitch_set",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_glitch_note",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_glitch_tick",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_music_clock.part.0",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_music_init",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_music_set_part_cord",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_music_route",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_music_mute",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_music_note_on",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_music_note_pitch",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_music_note_off",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_music_clock",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "mux_init",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "mux_select",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "mux_service",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md15_preset",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md15_transport",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md15_route",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md15_rate",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md15_intensity",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md15_show_visual",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md15_transfer",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md15_visual_frame",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_set_global_only",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_set_active_part",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_current_value",
+      "bytes": 8,
+      "kind": "static"
+    },
+    {
+      "symbol": "md_exit",
+      "bytes": 8,
+      "kind": "static"
+    }
+  ]
+}
