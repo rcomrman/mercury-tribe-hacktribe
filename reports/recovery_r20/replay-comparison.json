@@ -1,0 +1,342 @@
+{
+  "baseline_commit": "7ef1a1bd3b31f93c9c4b92440faada984a4857cf",
+  "scope": "Complete final launcher replay; native translated blocks are not instruction execution logs; host IDs excluded",
+  "cases": [
+    {
+      "vsb": 0,
+      "case": 0,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 1,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 2,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 3,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 4,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 5,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 6,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 7,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 8,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 9,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 10,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 11,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 12,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 13,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 14,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 15,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 16,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 17,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 18,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 19,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 20,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 21,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 22,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 0,
+      "case": 23,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 0,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 1,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 2,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 3,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 4,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 5,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 6,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 7,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 8,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 9,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 10,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 11,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 12,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 13,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 14,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 15,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 16,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 17,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 18,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 19,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 20,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 21,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 22,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    },
+    {
+      "vsb": 1,
+      "case": 23,
+      "records_identical": true,
+      "native_translated_blocks_identical": true,
+      "fixture_elf_sha256_identical": true
+    }
+  ]
+}
