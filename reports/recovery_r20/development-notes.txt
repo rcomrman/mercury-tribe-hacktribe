@@ -1,0 +1,5 @@
+La tête distante a220be8 prolonge directement dce3fdc. Phase1 conservée sans modification.
+Vérification R19 et ses150 SHA: PASS, sans rejeu ARM.
+Découverte: allocation native de76 octets, seconde relation constructeur sur modèle+4 depuis racine C03405BC; callback C0085278, période0.
+Les premiers essais ont été archivés avant renforcement du préflight (méthode exacte et sujets des inverses). Les exécutions pendant les modifications ne servent pas de preuves finales. Rejeu final intégral requis.
+Le vérificateur a détecté un contexte LCD incomplet dans le cas14 (faute0xBC). Les getters natifs GPIO/SPI ont été rétablis dans la fixture ; rejeu intégral des48 scénarios ensuite, faute attendue0x01E260BC. Aucun code natif n'a changé. Le journal RSP complet a été ajouté pour rendre vérifiable le breakpoint permanent avant free. Les premières assertions du vérificateur supposaient à tort que le journal historique conservait les adresses des breakpoints et que stderr contenait toujours strace ; elles ont été corrigées, puis les preuves ont été revérifiées.

@@ -1,0 +1,140 @@
+{
+  "bounds": {
+    "owners": 2,
+    "walkers": 2,
+    "one_construction_per_subject": true,
+    "no_reuse": true
+  },
+  "assumptions": [
+    "Externally atomic transitions",
+    "Complete coverage only for mediated/quarantine",
+    "Native callback ignores logical closure",
+    "CLAIM_FREE is symbolic only; no physical reclamation"
+  ],
+  "results": [
+    {
+      "policy": "mediated",
+      "states": 1361,
+      "edges": 3064,
+      "hazards": {}
+    },
+    {
+      "policy": "quarantine",
+      "states": 1082,
+      "edges": 2668,
+      "hazards": {}
+    },
+    {
+      "policy": "active_only",
+      "states": 4175,
+      "edges": 10630,
+      "hazards": {
+        "torn_tuple": [
+          "begin:0",
+          "tuple:0",
+          "publish:0",
+          "inverse:0",
+          "actual_return:0",
+          "w0:select:0",
+          "close:0",
+          "admit_destructor:0",
+          "detach:0",
+          "w0:TORN"
+        ],
+        "native_access_after_destructor_return": [
+          "begin:0",
+          "tuple:0",
+          "publish:0",
+          "inverse:0",
+          "actual_return:0",
+          "w0:select:0",
+          "close:0",
+          "admit_destructor:0",
+          "w0:resolve",
+          "detach:0",
+          "body_return:0",
+          "w0:invoke_native"
+        ]
+      }
+    },
+    {
+      "policy": "partial_domain",
+      "states": 2569,
+      "edges": 6410,
+      "hazards": {
+        "torn_tuple": [
+          "begin:0",
+          "close:0",
+          "tuple:0",
+          "publish:0",
+          "inverse:0",
+          "actual_return:0",
+          "admit_destructor:0",
+          "w1:select:0",
+          "detach:0",
+          "w1:TORN"
+        ],
+        "native_access_after_destructor_return": [
+          "begin:0",
+          "close:0",
+          "tuple:0",
+          "publish:0",
+          "inverse:0",
+          "actual_return:0",
+          "admit_destructor:0",
+          "w1:select:0",
+          "w1:resolve",
+          "detach:0",
+          "body_return:0",
+          "w1:invoke_native"
+        ]
+      }
+    },
+    {
+      "policy": "return_certificate",
+      "states": 6224,
+      "edges": 16758,
+      "hazards": {
+        "torn_tuple": [
+          "begin:0",
+          "tuple:0",
+          "publish:0",
+          "inverse:0",
+          "actual_return:0",
+          "w0:select:0",
+          "close:0",
+          "admit_destructor:0",
+          "detach:0",
+          "w0:TORN"
+        ],
+        "free_claim_with_reference": [
+          "begin:0",
+          "tuple:0",
+          "publish:0",
+          "inverse:0",
+          "actual_return:0",
+          "w0:select:0",
+          "close:0",
+          "admit_destructor:0",
+          "detach:0",
+          "body_return:0",
+          "CLAIM_FREE:0"
+        ],
+        "native_access_after_destructor_return": [
+          "begin:0",
+          "tuple:0",
+          "publish:0",
+          "inverse:0",
+          "actual_return:0",
+          "w0:select:0",
+          "close:0",
+          "admit_destructor:0",
+          "w0:resolve",
+          "detach:0",
+          "body_return:0",
+          "w0:invoke_native"
+        ]
+      }
+    }
+  ]
+}

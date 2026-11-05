@@ -1,0 +1,5 @@
+mediated 1361 3064 []
+quarantine 1082 2668 []
+active_only 4175 10630 ['torn_tuple', 'native_access_after_destructor_return']
+partial_domain 2569 6410 ['torn_tuple', 'native_access_after_destructor_return']
+return_certificate 6224 16758 ['torn_tuple', 'free_claim_with_reference', 'native_access_after_destructor_return']

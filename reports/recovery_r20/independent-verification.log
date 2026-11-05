@@ -1,0 +1,5 @@
+PASS 48 ARM runs: 32 normal, 8 stops before native free, 6 expected faults, 2 host timeouts.
+PASS 24 exact cross-VSB raw/native-block pairs; 48 native-byte checks; 18 exact register restores, 8 deliberately unresumed free boundaries.
+PASS constructor/destructor overlap, selected references, reentry, owners, page deferral, saturation, unknown aliases, model+4 second subscription.
+PASS 15411 model states independently re-explored, every negative witness independently interpreted.
+PASS all 2420 files at phase1 and all 150 R19 manifest checksums unchanged; no allocation free authority.
