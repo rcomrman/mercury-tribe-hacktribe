@@ -1,0 +1,836 @@
+{
+  "states": [
+    {
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "safe_exit": true,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "safe_exit": true,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "safe_exit": true,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "safe_exit": true,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "safe_exit": true,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "safe_exit": true,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "safe_exit": true,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "safe_exit": true,
+      "stale_ack": false,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": false
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "safe_exit": false,
+      "stale_ack": false,
+      "needs_global_drain": true
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "safe_exit": false,
+      "stale_ack": true,
+      "needs_global_drain": true
+    }
+  ]
+}
