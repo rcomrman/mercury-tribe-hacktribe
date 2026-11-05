@@ -1,0 +1,262 @@
+{
+  "images": [
+    {
+      "branch_candidates": {
+        "0xc0015ab4": [
+          {
+            "pc": "0xc0016084",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebfffe8a"
+          }
+        ],
+        "0xc0015dd0": [
+          {
+            "pc": "0xc00298e8",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebffb138"
+          },
+          {
+            "pc": "0xc00299b4",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebffb105"
+          },
+          {
+            "pc": "0xc00299c4",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebffb101"
+          },
+          {
+            "pc": "0xc002a728",
+            "kind": "B",
+            "condition": 14,
+            "word": "0xeaffada8"
+          },
+          {
+            "pc": "0xc002ac4c",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebffac5f"
+          },
+          {
+            "pc": "0xc002ac5c",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebffac5b"
+          },
+          {
+            "pc": "0xc0038bc4",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebff7481"
+          },
+          {
+            "pc": "0xc00603f0",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebfed676"
+          },
+          {
+            "pc": "0xc0060404",
+            "kind": "B",
+            "condition": 14,
+            "word": "0xeafed671"
+          },
+          {
+            "pc": "0xc00833e8",
+            "kind": "B",
+            "condition": 14,
+            "word": "0xeafe4a78"
+          },
+          {
+            "pc": "0xc008370c",
+            "kind": "B",
+            "condition": 14,
+            "word": "0xeafe49af"
+          },
+          {
+            "pc": "0xc009a8f0",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebfded36"
+          }
+        ],
+        "0xc0015fa0": [
+          {
+            "pc": "0xc0015e58",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xeb000050"
+          },
+          {
+            "pc": "0xc0015f38",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xeb000018"
+          }
+        ]
+      },
+      "literal_candidates": {
+        "0xc0015ab4": [],
+        "0xc0015dd0": [],
+        "0xc0015fa0": [],
+        "0xc031b310": [
+          "0xc0015820",
+          "0xc00158fc",
+          "0xc0015984",
+          "0xc0015a3c",
+          "0xc0015b4c"
+        ],
+        "0xc031b710": [
+          "0xc0015a5c",
+          "0xc0015a94"
+        ],
+        "0xc031bb2c": [
+          "0xc001577c",
+          "0xc00299f8",
+          "0xc002a72c",
+          "0xc002b0b4",
+          "0xc0038c24",
+          "0xc0060408",
+          "0xc00833ec",
+          "0xc0083710",
+          "0xc009a8fc"
+        ]
+      },
+      "indirect_bx_blx_candidates": 2348
+    },
+    {
+      "branch_candidates": {
+        "0xc0015ab4": [
+          {
+            "pc": "0xc0016084",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebfffe8a"
+          }
+        ],
+        "0xc0015dd0": [
+          {
+            "pc": "0xc00298e8",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebffb138"
+          },
+          {
+            "pc": "0xc00299b4",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebffb105"
+          },
+          {
+            "pc": "0xc00299c4",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebffb101"
+          },
+          {
+            "pc": "0xc002a728",
+            "kind": "B",
+            "condition": 14,
+            "word": "0xeaffada8"
+          },
+          {
+            "pc": "0xc002ac4c",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebffac5f"
+          },
+          {
+            "pc": "0xc002ac5c",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebffac5b"
+          },
+          {
+            "pc": "0xc0038bc4",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebff7481"
+          },
+          {
+            "pc": "0xc00603f0",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebfed676"
+          },
+          {
+            "pc": "0xc0060404",
+            "kind": "B",
+            "condition": 14,
+            "word": "0xeafed671"
+          },
+          {
+            "pc": "0xc00833e8",
+            "kind": "B",
+            "condition": 14,
+            "word": "0xeafe4a78"
+          },
+          {
+            "pc": "0xc008370c",
+            "kind": "B",
+            "condition": 14,
+            "word": "0xeafe49af"
+          },
+          {
+            "pc": "0xc009a8f0",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xebfded36"
+          }
+        ],
+        "0xc0015fa0": [
+          {
+            "pc": "0xc0015e58",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xeb000050"
+          },
+          {
+            "pc": "0xc0015f38",
+            "kind": "BL",
+            "condition": 14,
+            "word": "0xeb000018"
+          }
+        ]
+      },
+      "literal_candidates": {
+        "0xc0015ab4": [],
+        "0xc0015dd0": [],
+        "0xc0015fa0": [],
+        "0xc031b310": [
+          "0xc0015820",
+          "0xc00158fc",
+          "0xc0015984",
+          "0xc0015a3c",
+          "0xc0015b4c"
+        ],
+        "0xc031b710": [
+          "0xc0015a5c",
+          "0xc0015a94"
+        ],
+        "0xc031bb2c": [
+          "0xc001577c",
+          "0xc00299f8",
+          "0xc002a72c",
+          "0xc002b0b4",
+          "0xc0038c24",
+          "0xc0060408",
+          "0xc00833ec",
+          "0xc0083710",
+          "0xc009a8fc"
+        ]
+      },
+      "indirect_bx_blx_candidates": 2348
+    }
+  ],
+  "same_scan": true,
+  "limitations": "Candidates include data, unknown Thumb and indirect destinations; no exhaustive CFG."
+}

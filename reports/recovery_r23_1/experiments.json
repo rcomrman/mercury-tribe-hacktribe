@@ -1,0 +1,1281 @@
+{
+  "r22_replayed": [
+    {
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "trace": [
+        "compare_copy"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "trace": [
+        "compare_copy"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "trace": [
+        "compare_copy"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "trace": [
+        "compare_copy",
+        "mercury_changes_lcd"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "trace": [
+        "compare_copy",
+        "mercury_changes_lcd"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace": [
+        "compare_copy",
+        "mercury_changes_lcd"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "trace": [
+        "inflight_may_complete_old",
+        "compare_copy"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "trace": [
+        "inflight_may_complete_old",
+        "compare_copy"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "trace": [
+        "inflight_may_complete_old",
+        "compare_copy"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "trace": [
+        "inflight_may_complete_old",
+        "compare_copy",
+        "mercury_changes_lcd"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "trace": [
+        "inflight_may_complete_old",
+        "compare_copy",
+        "mercury_changes_lcd"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace": [
+        "inflight_may_complete_old",
+        "compare_copy",
+        "mercury_changes_lcd"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "trace": [
+        "compare_copy",
+        "mercury_changes_lcd"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "trace": [
+        "compare_copy",
+        "mercury_changes_lcd"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace": [
+        "compare_copy",
+        "mercury_changes_lcd"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "trace": [
+        "inflight_may_complete_old",
+        "compare_copy"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "trace": [
+        "inflight_may_complete_old",
+        "compare_copy"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "trace": [
+        "inflight_may_complete_old",
+        "compare_copy"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "trace": [
+        "inflight_may_complete_old",
+        "compare_copy",
+        "mercury_changes_lcd"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "trace": [
+        "inflight_may_complete_old",
+        "compare_copy",
+        "mercury_changes_lcd"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    },
+    {
+      "inputs": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "trace": [
+        "inflight_may_complete_old",
+        "compare_copy",
+        "mercury_changes_lcd"
+      ],
+      "shadow": 1,
+      "lcd": 0
+    }
+  ],
+  "brutal": [
+    {
+      "kind": "priority",
+      "korg_period_ticks": 5,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 1,
+      "collisions": 10,
+      "ignored": 0,
+      "violations": 50,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 5,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 2,
+      "collisions": 10,
+      "ignored": 0,
+      "violations": 50,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 5,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 11,
+      "collisions": 29,
+      "ignored": 0,
+      "violations": 68,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 5,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 1,
+      "collisions": 10,
+      "ignored": 0,
+      "violations": 50,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 5,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 2,
+      "collisions": 10,
+      "ignored": 0,
+      "violations": 50,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 5,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 11,
+      "collisions": 29,
+      "ignored": 0,
+      "violations": 68,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 5,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 1,
+      "collisions": 100,
+      "ignored": 0,
+      "violations": 500,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 5,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 2,
+      "collisions": 100,
+      "ignored": 0,
+      "violations": 500,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 5,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 11,
+      "collisions": 299,
+      "ignored": 0,
+      "violations": 698,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 5,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 1,
+      "collisions": 100,
+      "ignored": 0,
+      "violations": 500,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 5,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 2,
+      "collisions": 100,
+      "ignored": 0,
+      "violations": 500,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 5,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 11,
+      "collisions": 299,
+      "ignored": 0,
+      "violations": 698,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 10,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 1,
+      "collisions": 10,
+      "ignored": 0,
+      "violations": 30,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 10,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 2,
+      "collisions": 10,
+      "ignored": 0,
+      "violations": 30,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 10,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 11,
+      "collisions": 19,
+      "ignored": 0,
+      "violations": 39,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 10,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 1,
+      "collisions": 10,
+      "ignored": 0,
+      "violations": 30,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 10,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 2,
+      "collisions": 10,
+      "ignored": 0,
+      "violations": 30,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 10,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 11,
+      "collisions": 19,
+      "ignored": 0,
+      "violations": 39,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 10,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 1,
+      "collisions": 100,
+      "ignored": 0,
+      "violations": 300,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 10,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 2,
+      "collisions": 100,
+      "ignored": 0,
+      "violations": 300,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 10,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 11,
+      "collisions": 199,
+      "ignored": 0,
+      "violations": 399,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 10,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 1,
+      "collisions": 100,
+      "ignored": 0,
+      "violations": 300,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 10,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 2,
+      "collisions": 100,
+      "ignored": 0,
+      "violations": 300,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 10,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 11,
+      "collisions": 199,
+      "ignored": 0,
+      "violations": 399,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": true,
+      "exit_frozen": false
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 17,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 1,
+      "collisions": 1,
+      "ignored": 0,
+      "violations": 13,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 17,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 2,
+      "collisions": 2,
+      "ignored": 0,
+      "violations": 14,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 17,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 11,
+      "collisions": 15,
+      "ignored": 0,
+      "violations": 28,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 17,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 1,
+      "collisions": 1,
+      "ignored": 0,
+      "violations": 13,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 17,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 2,
+      "collisions": 2,
+      "ignored": 0,
+      "violations": 14,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 17,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 11,
+      "collisions": 15,
+      "ignored": 0,
+      "violations": 28,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 17,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 1,
+      "collisions": 6,
+      "ignored": 0,
+      "violations": 124,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 17,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 2,
+      "collisions": 18,
+      "ignored": 0,
+      "violations": 136,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 17,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 11,
+      "collisions": 158,
+      "ignored": 0,
+      "violations": 277,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 17,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 1,
+      "collisions": 6,
+      "ignored": 0,
+      "violations": 124,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 17,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 2,
+      "collisions": 18,
+      "ignored": 0,
+      "violations": 136,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "priority",
+      "korg_period_ticks": 17,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 11,
+      "collisions": 158,
+      "ignored": 0,
+      "violations": 277,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 5,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 1,
+      "collisions": 0,
+      "ignored": 20,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 5,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 2,
+      "collisions": 0,
+      "ignored": 20,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 5,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 11,
+      "collisions": 9,
+      "ignored": 20,
+      "violations": 10,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 5,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 1,
+      "collisions": 0,
+      "ignored": 20,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 5,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 2,
+      "collisions": 0,
+      "ignored": 20,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 5,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 11,
+      "collisions": 9,
+      "ignored": 20,
+      "violations": 10,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 5,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 1,
+      "collisions": 0,
+      "ignored": 200,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 5,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 2,
+      "collisions": 0,
+      "ignored": 200,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 5,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 11,
+      "collisions": 99,
+      "ignored": 200,
+      "violations": 100,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 5,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 1,
+      "collisions": 0,
+      "ignored": 200,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 5,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 2,
+      "collisions": 0,
+      "ignored": 200,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 5,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 11,
+      "collisions": 99,
+      "ignored": 200,
+      "violations": 100,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 10,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 1,
+      "collisions": 0,
+      "ignored": 10,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 10,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 2,
+      "collisions": 0,
+      "ignored": 10,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 10,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 11,
+      "collisions": 9,
+      "ignored": 10,
+      "violations": 10,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 10,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 1,
+      "collisions": 0,
+      "ignored": 10,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 10,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 2,
+      "collisions": 0,
+      "ignored": 10,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 10,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 11,
+      "collisions": 9,
+      "ignored": 10,
+      "violations": 10,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 10,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 1,
+      "collisions": 0,
+      "ignored": 100,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 10,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 2,
+      "collisions": 0,
+      "ignored": 100,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 10,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 11,
+      "collisions": 99,
+      "ignored": 100,
+      "violations": 100,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 10,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 1,
+      "collisions": 0,
+      "ignored": 100,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 10,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 2,
+      "collisions": 0,
+      "ignored": 100,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 10,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 11,
+      "collisions": 99,
+      "ignored": 100,
+      "violations": 100,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 17,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 1,
+      "collisions": 0,
+      "ignored": 6,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 17,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 2,
+      "collisions": 0,
+      "ignored": 6,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 17,
+      "duration_ticks": 100,
+      "order": "early",
+      "transfer_delay_ticks": 11,
+      "collisions": 9,
+      "ignored": 6,
+      "violations": 10,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 17,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 1,
+      "collisions": 0,
+      "ignored": 6,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 17,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 2,
+      "collisions": 0,
+      "ignored": 6,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 17,
+      "duration_ticks": 100,
+      "order": "late",
+      "transfer_delay_ticks": 11,
+      "collisions": 9,
+      "ignored": 6,
+      "violations": 10,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 17,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 1,
+      "collisions": 0,
+      "ignored": 59,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 17,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 2,
+      "collisions": 0,
+      "ignored": 59,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 17,
+      "duration_ticks": 1000,
+      "order": "early",
+      "transfer_delay_ticks": 11,
+      "collisions": 99,
+      "ignored": 59,
+      "violations": 100,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 17,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 1,
+      "collisions": 0,
+      "ignored": 59,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 17,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 2,
+      "collisions": 0,
+      "ignored": 59,
+      "violations": 0,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    },
+    {
+      "kind": "ignore",
+      "korg_period_ticks": 17,
+      "duration_ticks": 1000,
+      "order": "late",
+      "transfer_delay_ticks": 11,
+      "collisions": 99,
+      "ignored": 59,
+      "violations": 100,
+      "shadow_equals_framebuffer": true,
+      "lcd_equals_framebuffer": false,
+      "exit_frozen": true
+    }
+  ]
+}

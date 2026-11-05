@@ -1,0 +1,577 @@
+{
+  "A_collision": [
+    {
+      "event": "request_mercury",
+      "owner": "K",
+      "mode": "TRANSITION_TO_MERCURY",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "grant_mercury",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "begin_mercury",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [
+        1
+      ],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "begin_korg",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [
+        1,
+        2
+      ],
+      "violations": [
+        "overlap",
+        "unauthorized_transfer"
+      ],
+      "fault": false
+    },
+    {
+      "event": "complete",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 4,
+      "pending": [
+        1
+      ],
+      "violations": [
+        "overlap",
+        "unauthorized_transfer",
+        "late_completion"
+      ],
+      "fault": false
+    },
+    {
+      "event": "complete",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 7,
+      "pending": [],
+      "violations": [
+        "overlap",
+        "unauthorized_transfer",
+        "late_completion"
+      ],
+      "fault": false
+    }
+  ],
+  "A_reverse_completion": [
+    {
+      "event": "request_mercury",
+      "owner": "K",
+      "mode": "TRANSITION_TO_MERCURY",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "grant_mercury",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "begin_mercury",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [
+        1
+      ],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "begin_korg",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [
+        1,
+        2
+      ],
+      "violations": [
+        "overlap",
+        "unauthorized_transfer"
+      ],
+      "fault": false
+    },
+    {
+      "event": "complete",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 7,
+      "pending": [
+        2
+      ],
+      "violations": [
+        "overlap",
+        "unauthorized_transfer"
+      ],
+      "fault": false
+    },
+    {
+      "event": "complete",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 4,
+      "pending": [],
+      "violations": [
+        "overlap",
+        "unauthorized_transfer",
+        "late_completion"
+      ],
+      "fault": false
+    }
+  ],
+  "B_suppressed_shadow": [
+    {
+      "event": "korg_frame",
+      "owner": "K",
+      "mode": "KORG_ACTIVE",
+      "framebuffer": 4,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "compare",
+      "owner": "K",
+      "mode": "KORG_ACTIVE",
+      "framebuffer": 4,
+      "shadow": 4,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "request_mercury",
+      "owner": "K",
+      "mode": "TRANSITION_TO_MERCURY",
+      "framebuffer": 4,
+      "shadow": 4,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "grant_mercury",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 4,
+      "shadow": 4,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "begin_mercury",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 4,
+      "shadow": 4,
+      "lcd": 0,
+      "pending": [
+        1
+      ],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "complete",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 4,
+      "shadow": 4,
+      "lcd": 7,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "exit",
+      "owner": "M",
+      "mode": "TRANSITION_TO_KORG",
+      "framebuffer": 4,
+      "shadow": 4,
+      "lcd": 7,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "grant_korg",
+      "owner": "M",
+      "mode": "TRANSITION_TO_KORG",
+      "framebuffer": 4,
+      "shadow": 4,
+      "lcd": 7,
+      "pending": [],
+      "violations": [
+        "unrestored_display"
+      ],
+      "fault": false
+    }
+  ],
+  "C_exit_inflight": [
+    {
+      "event": "request_mercury",
+      "owner": "K",
+      "mode": "TRANSITION_TO_MERCURY",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "grant_mercury",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "begin_mercury",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [
+        1
+      ],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "exit",
+      "owner": "M",
+      "mode": "TRANSITION_TO_KORG",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [
+        1
+      ],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "grant_korg",
+      "owner": "M",
+      "mode": "TRANSITION_TO_KORG",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [
+        1
+      ],
+      "violations": [
+        "unjustified_grant"
+      ],
+      "fault": false
+    },
+    {
+      "event": "complete",
+      "owner": "M",
+      "mode": "TRANSITION_TO_KORG",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 7,
+      "pending": [],
+      "violations": [
+        "unjustified_grant"
+      ],
+      "fault": false
+    }
+  ],
+  "C_fault_late": [
+    {
+      "event": "request_mercury",
+      "owner": "K",
+      "mode": "TRANSITION_TO_MERCURY",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "grant_mercury",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "begin_mercury",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [
+        1
+      ],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "fault",
+      "owner": "M",
+      "mode": "FAULT",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [
+        1
+      ],
+      "violations": [],
+      "fault": true
+    },
+    {
+      "event": "complete",
+      "owner": "M",
+      "mode": "FAULT",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 7,
+      "pending": [],
+      "violations": [
+        "late_completion"
+      ],
+      "fault": true
+    }
+  ],
+  "reentry": [
+    {
+      "event": "request_mercury",
+      "owner": "K",
+      "mode": "TRANSITION_TO_MERCURY",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "request_mercury",
+      "owner": "K",
+      "mode": "TRANSITION_TO_MERCURY",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [],
+      "violations": [
+        "reentry"
+      ],
+      "fault": false
+    }
+  ],
+  "uncontrolled": [
+    {
+      "event": "request_mercury",
+      "owner": "K",
+      "mode": "TRANSITION_TO_MERCURY",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "grant_mercury",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "begin_uncontrolled",
+      "owner": "M",
+      "mode": "MERCURY_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [
+        1
+      ],
+      "violations": [
+        "unauthorized_transfer"
+      ],
+      "fault": false
+    }
+  ],
+  "logical_without_ack": [
+    {
+      "event": "begin_korg",
+      "owner": "K",
+      "mode": "KORG_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [
+        1
+      ],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "logical_complete",
+      "owner": "K",
+      "mode": "KORG_ACTIVE",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [
+        1
+      ],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "request_mercury",
+      "owner": "K",
+      "mode": "TRANSITION_TO_MERCURY",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [
+        1
+      ],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "grant_mercury",
+      "owner": "K",
+      "mode": "TRANSITION_TO_MERCURY",
+      "framebuffer": 0,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [
+        1
+      ],
+      "violations": [
+        "unjustified_grant"
+      ],
+      "fault": false
+    }
+  ],
+  "spontaneous_recovery": [
+    {
+      "event": "korg_frame",
+      "owner": "K",
+      "mode": "KORG_ACTIVE",
+      "framebuffer": 4,
+      "shadow": 0,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "compare",
+      "owner": "K",
+      "mode": "KORG_ACTIVE",
+      "framebuffer": 4,
+      "shadow": 4,
+      "lcd": 0,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "begin_korg",
+      "owner": "K",
+      "mode": "KORG_ACTIVE",
+      "framebuffer": 4,
+      "shadow": 4,
+      "lcd": 0,
+      "pending": [
+        1
+      ],
+      "violations": [],
+      "fault": false
+    },
+    {
+      "event": "complete",
+      "owner": "K",
+      "mode": "KORG_ACTIVE",
+      "framebuffer": 4,
+      "shadow": 4,
+      "lcd": 4,
+      "pending": [],
+      "violations": [],
+      "fault": false
+    }
+  ]
+}
