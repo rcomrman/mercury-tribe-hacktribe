@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "vsb": 0,
+      "force": 0,
+      "records": 10,
+      "sha256": "f7fb3547dfa270ebb5c2030210f8fdee3421596fd2f139a8bb8d72bd3da1fe7a"
+    },
+    {
+      "vsb": 0,
+      "force": 1,
+      "records": 10,
+      "sha256": "fce1f343cb51e62545e69f1931550821049358a507859e0b8547873be3738bb8"
+    },
+    {
+      "vsb": 1,
+      "force": 0,
+      "records": 10,
+      "sha256": "f7fb3547dfa270ebb5c2030210f8fdee3421596fd2f139a8bb8d72bd3da1fe7a"
+    },
+    {
+      "vsb": 1,
+      "force": 1,
+      "records": 10,
+      "sha256": "fce1f343cb51e62545e69f1931550821049358a507859e0b8547873be3738bb8"
+    }
+  ]
+}
