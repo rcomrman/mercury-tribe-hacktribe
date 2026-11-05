@@ -1,0 +1,4 @@
+PASS independent: fixed 7664-byte engine, 3112-byte R12 pool, four states, 7 prolonged runs.
+PASS independent: 2 native VSB executions, three slot+8 calls each, no subscription/removal blocks.
+PASS independent: 10 route dependencies removed, 14 access domains retained, partial publication counterexample retained.
+PASS historical preservation: 2591 files at R20 head unchanged; VSB hashes unchanged.

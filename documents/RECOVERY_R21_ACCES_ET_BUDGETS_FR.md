@@ -17,7 +17,7 @@ exécutent chacun le scénario complet, dont 512 frames prolongées ; leurs temp
 sont conservés dans `results.json`. Ces durées incluent l'ordonnanceur hôte et
 ne donnent ni marge CPU/audio ni budget RAM de l'Electribe.
 
-Les tests couvrent l'initialisation unique, 32 publications successives,
+Les tests couvrent les huit presets distincts, l'initialisation unique, 32 publications successives,
 changements de page sans réallocation, arrêt entre calcul et commit,
 réactivation, lecteur retenu, double calcul/réentrée refusée, copie interdite,
 copie partielle, copie complète, faute terminale et 512 frames. Le test ARM

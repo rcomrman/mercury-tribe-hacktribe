@@ -5,8 +5,13 @@
 #define T(x) do{if(!(x)){fprintf(stderr,"FAIL line %u\n",__LINE__);return 1;}}while(0)
 static unsigned hash(const uint8_t*p){unsigned h=2166136261u;for(unsigned i=0;i<1024;i++)h=(h^p[i])*16777619u;return h;}
 int main(void){
- static struct r21_engine e;static uint8_t snapshot[1024],native[1024];struct r21_gate g={0};
+ static struct r21_engine e,preset_probe;static uint8_t snapshot[1024],native[1024];static unsigned preset_hash[8];struct r21_gate g={0};
  for(unsigned i=0;i<1024;i++)snapshot[i]=(uint8_t)(i*37+13);
+ for(unsigned scene=0;scene<8;scene++){
+  memset(&preset_probe,0,sizeof(preset_probe));T(r21_init(&preset_probe,snapshot,scene));T(r21_activate(&preset_probe));
+  for(unsigned f=0;f<4;f++)T(r21_frame(&preset_probe,f*24));preset_hash[scene]=hash(preset_probe.pool.image[preset_probe.pool.m.published]);
+  for(unsigned prior=0;prior<scene;prior++)T(preset_hash[prior]!=preset_hash[scene]);
+ }
  T(r21_init(&e,snapshot,0));T(e.init_count==1&&e.state==R21_INIT);T(!r21_init(&e,snapshot,1)&&e.init_count==1);
  T(r21_activate(&e));for(unsigned f=0;f<32;f++)T(r21_frame(&e,f*24));
  T(e.published==32&&e.pool.m.epoch==33);unsigned stable=hash(e.pool.image[e.pool.m.published]);
@@ -25,7 +30,7 @@ int main(void){
  unsigned before=e.published;r21_fault(&e,0x1e260bc);T(e.state==R21_FAULT&&e.fault_code==0x1e260bc);
  T(!r21_activate(&e)&&!r21_frame(&e,999*24)&&e.published==before);
  unsigned long long ns=(unsigned long long)(b.tv_sec-a.tv_sec)*1000000000ull+b.tv_nsec-a.tv_nsec;
- printf("PASS state=%u init=%u rendered=%u published=%u rejected=%u epoch=%u static=%zu bridge=%zu ui=%zu pool=%zu gate=%zu prolonged_frames=512 prolonged_ns=%llu final_hash=%08x pre_hash=%08x mixed_hash=%08x\n",
+ printf("PASS state=%u init=%u rendered=%u published=%u rejected=%u epoch=%u static=%zu bridge=%zu ui=%zu pool=%zu gate=%zu presets=8 prolonged_frames=512 prolonged_ns=%llu final_hash=%08x pre_hash=%08x mixed_hash=%08x\n",
   e.state,e.init_count,e.rendered,e.published,e.rejected,e.pool.m.epoch,sizeof(e),sizeof(e.v30),sizeof(e.ui),sizeof(e.pool),sizeof(g),ns,hash(e.pool.image[e.pool.m.published]),stable,mixed);
  return 0;
 }

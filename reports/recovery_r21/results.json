@@ -1,21 +1,21 @@
 {
   "host_runs": [
-    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 prolonged_frames=512 prolonged_ns=11798116 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
-    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 prolonged_frames=512 prolonged_ns=9757267 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
-    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 prolonged_frames=512 prolonged_ns=10313396 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
-    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 prolonged_frames=512 prolonged_ns=9409663 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
-    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 prolonged_frames=512 prolonged_ns=9953924 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
-    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 prolonged_frames=512 prolonged_ns=9828145 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
-    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 prolonged_frames=512 prolonged_ns=9793492 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad"
+    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 presets=8 prolonged_frames=512 prolonged_ns=9232785 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
+    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 presets=8 prolonged_frames=512 prolonged_ns=10089758 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
+    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 presets=8 prolonged_frames=512 prolonged_ns=10133454 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
+    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 presets=8 prolonged_frames=512 prolonged_ns=10166224 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
+    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 presets=8 prolonged_frames=512 prolonged_ns=9555784 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
+    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 presets=8 prolonged_frames=512 prolonged_ns=9957398 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad",
+    "PASS state=4 init=1 rendered=563 published=562 rejected=6 epoch=563 static=7664 bridge=4360 ui=136 pool=3112 gate=24 presets=8 prolonged_frames=512 prolonged_ns=11063517 final_hash=63a28ce1 pre_hash=1ab2e7f8 mixed_hash=84a409ad"
   ],
   "host_process_ns": [
-    14396084,
-    12388832,
-    12519264,
-    11274396,
-    12042213,
-    11931327,
-    11977107
+    12154362,
+    13340913,
+    13979565,
+    13027405,
+    12433684,
+    12689840,
+    14462133
   ],
   "native": [
     {
@@ -82,6 +82,11 @@
       "kind": "static"
     },
     {
+      "symbol": "r21_commit",
+      "bytes": 64,
+      "kind": "static"
+    },
+    {
       "symbol": "mini_lfo4_evaluate",
       "bytes": 56,
       "kind": "static"
@@ -89,11 +94,6 @@
     {
       "symbol": "md_glitch_apply",
       "bytes": 56,
-      "kind": "static"
-    },
-    {
-      "symbol": "r21_commit.constprop",
-      "bytes": 48,
       "kind": "static"
     },
     {
@@ -117,7 +117,7 @@
       "kind": "static"
     },
     {
-      "symbol": "r21_compute.constprop",
+      "symbol": "r21_compute",
       "bytes": 32,
       "kind": "static"
     },
@@ -157,7 +157,7 @@
       "kind": "static"
     },
     {
-      "symbol": "r21_frame.constprop",
+      "symbol": "r21_frame",
       "bytes": 16,
       "kind": "static"
     },

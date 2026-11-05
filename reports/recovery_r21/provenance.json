@@ -1,0 +1,27 @@
+{
+  "sha256": {
+    "RECOVERY_R21_RAPPORT_FR.md": "3adeeed8e300d3d1fe98f93a74e183db3770c08f3ea892f6743d4935aefd09c4",
+    "documents/RECOVERY_R21_ACCES_ET_BUDGETS_FR.md": "15305d043ec675c9a60701061e58789f735a508c6a97a8e989fd94adee3a095c",
+    "documents/RECOVERY_R21_ARCHITECTURE_FR.md": "b0eb4e9a3f580abc5c8dd9d712e6506936ec519e00186500a0c4d4e2104771d2",
+    "documents/RECOVERY_R21_DEPENDANCES_FR.md": "ab7e4be2330a054eafac6956d07971367ed318ff219692bb751aabe2a7c4b2ca",
+    "documents/RECOVERY_R21_STRATEGIES_FR.md": "f19b44343f9f93fadec0c19f341b00641df17c2172bc9d5bcfbe9c95b637ead2",
+    "reports/recovery_r21/audit.log": "4019d41c6286324f4da25415ce4d8970dc927700789810f813f97faaebef7557",
+    "reports/recovery_r21/final-verification.log": "4ed70f5b44d06ef726f6cbcbc3060e498f192a9e4ffd63c0950b4dab06abe758",
+    "reports/recovery_r21/native-0.trace.gz": "b90ee5cd97d085cbbe7cf5f3879786dfd243360288779afc1f488f1db88a4d37",
+    "reports/recovery_r21/native-1.trace.gz": "b90ee5cd97d085cbbe7cf5f3879786dfd243360288779afc1f488f1db88a4d37",
+    "reports/recovery_r21/native-map.json": "42ad0e847d6ddac15e51ed176db26402d20fdc0d18867c002c2846a8ffd0e461",
+    "reports/recovery_r21/native-map.txt.gz": "48e444b9c69c585aafe1a1192724595a250cafb72737597e1dde81c117b2d3ad",
+    "reports/recovery_r21/prior-verification.log": "6e8ae2b5a2832121afc8364df028fd5443844c88c61b474d65938c1677b47118",
+    "reports/recovery_r21/results.json": "c8be785b95faa6c0e2c27933f20012b482b4a08a9d9c29f52b69fdaa8cdfc6b5",
+    "reports/recovery_r21/run.log": "c831188186e5018a80b1fd19ff1a79a8d56b71e3670fe75f8a3995485e17cbbf",
+    "reports/recovery_r21/verification.log": "4ed70f5b44d06ef726f6cbcbc3060e498f192a9e4ffd63c0950b4dab06abe758",
+    "tests/recovery_r21/host.c": "064d29d7338df1145e9ccb9e0d4d4cc2764f2fb6d7caf920c5c3617e09e3ba06",
+    "tests/recovery_r21/native.c": "c5113ab423ac26f403d3ee2b9bd66e57892bea264a03262b8d87e197a4810b34",
+    "tests/recovery_r21/persistent.h": "7900f337d71d3e919296953d02086d5c8823dcf21b0efdac41b961013e84be65",
+    "tests/run_recovery_r21.sh": "501227ca518ddeb7e6394b8f2d828ec263ae755fc9068e14fce5280cc665ea7d",
+    "tools/recovery_r21/audit.py": "9a827ef92edfd2e0548e62fa446529d0ba1d5104d716ec4387d016f1cc426a64",
+    "tools/recovery_r21/run.py": "d40f9cebb0b35c3d1f8656d22dfd64ed140103c0d16077b830c487fdfd754da8",
+    "tools/recovery_r21/seal.py": "5cffbc277d38e1f29a102f9a544339cf6cf4651db419e7f6fe27e42443fcf833",
+    "tools/recovery_r21/verify.py": "117c9f8518ac2970fa641ed427a171f665025a4df06542c916c651bfc57f1477"
+  }
+}
