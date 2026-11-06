@@ -1,0 +1,195 @@
+{
+  "vsb_sha256": [
+    "81b62467490fd25fd154ffe02298886bfdd6e9cf9bda897cde41ee65201ffd03",
+    "06becf76750f0dce7d3e40d476e4a78524a53730ba61b9b9752dfb170745b052"
+  ],
+  "entry_bytes": {
+    "0xc002814c": {
+      "first_32_sha256": "c19b68a50245187740fb035f624379d3d6ea13e4f1dd42a4c1fd23194f64a8bb",
+      "first_instruction": "0xe92d4038"
+    },
+    "0xc00839f0": {
+      "first_32_sha256": "fc8c5af327004dc29e0f7e07a0b803317547c88ac9ab0c63b16e6e0a366df234",
+      "first_instruction": "0xe92d401f"
+    },
+    "0xc002a71c": {
+      "first_32_sha256": "57aaa4716cb2952fa6324b51d8f1229fa82f02b7eaa5b16fd8fb46e51cb6e4aa",
+      "first_instruction": "0xe59f0008"
+    },
+    "0xc00836e4": {
+      "first_32_sha256": "b2b61f1ca7139520143436adb3f0ec46e0bb10074254ed42336271a112efbebf",
+      "first_instruction": "0xe92d4010"
+    },
+    "0xc0015dd0": {
+      "first_32_sha256": "0ad1fef6b256ee499dfeae72c74c1bf2ce0eb1bb84c398f940a9cb7684e0060f",
+      "first_instruction": "0xe92d4800"
+    },
+    "0xc0015fa0": {
+      "first_32_sha256": "ae2ddd41a12d3c56eb307da320b83848ce718bae14f36be0ad016b7ac2d8b99c",
+      "first_instruction": "0xe92d4800"
+    },
+    "0xc006e8bc": {
+      "first_32_sha256": "5eec4a1c760ea2a20eaf13e7b923c190972477fce3846f7024c341f4234b7283",
+      "first_instruction": "0xe5d0305d"
+    },
+    "0xc006ea10": {
+      "first_32_sha256": "5dd74c72e99537a78a18bcc92dbff7615401e0f885feac4141e8091bacb64e23",
+      "first_instruction": "0xe92d4010"
+    }
+  },
+  "direct_branch_candidates": {
+    "0xc002814c": [
+      {
+        "pc": "0xc002a4dc",
+        "word": "0xebfff71a",
+        "conditional": false,
+        "link": true
+      }
+    ],
+    "0xc00839f0": [
+      {
+        "pc": "0xc0028208",
+        "word": "0xea016df8",
+        "conditional": false,
+        "link": false
+      },
+      {
+        "pc": "0xc0028cb4",
+        "word": "0xeb016b4d",
+        "conditional": false,
+        "link": true
+      },
+      {
+        "pc": "0xc0042c14",
+        "word": "0xeb010375",
+        "conditional": false,
+        "link": true
+      },
+      {
+        "pc": "0xc006547c",
+        "word": "0xea00795b",
+        "conditional": false,
+        "link": false
+      },
+      {
+        "pc": "0xc00654d8",
+        "word": "0xea007944",
+        "conditional": false,
+        "link": false
+      }
+    ],
+    "0xc002a71c": [],
+    "0xc00836e4": [],
+    "0xc0015dd0": [
+      {
+        "pc": "0xc00298e8",
+        "word": "0xebffb138",
+        "conditional": false,
+        "link": true
+      },
+      {
+        "pc": "0xc00299b4",
+        "word": "0xebffb105",
+        "conditional": false,
+        "link": true
+      },
+      {
+        "pc": "0xc00299c4",
+        "word": "0xebffb101",
+        "conditional": false,
+        "link": true
+      },
+      {
+        "pc": "0xc002a728",
+        "word": "0xeaffada8",
+        "conditional": false,
+        "link": false
+      },
+      {
+        "pc": "0xc002ac4c",
+        "word": "0xebffac5f",
+        "conditional": false,
+        "link": true
+      },
+      {
+        "pc": "0xc002ac5c",
+        "word": "0xebffac5b",
+        "conditional": false,
+        "link": true
+      },
+      {
+        "pc": "0xc0038bc4",
+        "word": "0xebff7481",
+        "conditional": false,
+        "link": true
+      },
+      {
+        "pc": "0xc00603f0",
+        "word": "0xebfed676",
+        "conditional": false,
+        "link": true
+      },
+      {
+        "pc": "0xc0060404",
+        "word": "0xeafed671",
+        "conditional": false,
+        "link": false
+      },
+      {
+        "pc": "0xc00833e8",
+        "word": "0xeafe4a78",
+        "conditional": false,
+        "link": false
+      },
+      {
+        "pc": "0xc008370c",
+        "word": "0xeafe49af",
+        "conditional": false,
+        "link": false
+      },
+      {
+        "pc": "0xc009a8f0",
+        "word": "0xebfded36",
+        "conditional": false,
+        "link": true
+      }
+    ],
+    "0xc0015fa0": [
+      {
+        "pc": "0xc0015e58",
+        "word": "0xeb000050",
+        "conditional": false,
+        "link": true
+      },
+      {
+        "pc": "0xc0015f38",
+        "word": "0xeb000018",
+        "conditional": false,
+        "link": true
+      }
+    ],
+    "0xc006e8bc": [
+      {
+        "pc": "0xc006ef38",
+        "word": "0xebfffe5f",
+        "conditional": false,
+        "link": true
+      },
+      {
+        "pc": "0xc0083724",
+        "word": "0xeaffac64",
+        "conditional": false,
+        "link": false
+      }
+    ],
+    "0xc006ea10": [
+      {
+        "pc": "0xc006f1f8",
+        "word": "0xebfffe04",
+        "conditional": false,
+        "link": true
+      }
+    ]
+  },
+  "limits": "aligned ARM scan includes data and excludes indirect branches and Thumb"
+}
