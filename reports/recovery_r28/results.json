@@ -1,0 +1,101 @@
+{
+  "cases": [
+    {
+      "vsb": 0,
+      "scene": 0,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    },
+    {
+      "vsb": 0,
+      "scene": 1,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    },
+    {
+      "vsb": 0,
+      "scene": 2,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    },
+    {
+      "vsb": 0,
+      "scene": 3,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    },
+    {
+      "vsb": 0,
+      "scene": 4,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    },
+    {
+      "vsb": 0,
+      "scene": 5,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    },
+    {
+      "vsb": 0,
+      "scene": 6,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    },
+    {
+      "vsb": 0,
+      "scene": 7,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    },
+    {
+      "vsb": 1,
+      "scene": 0,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    },
+    {
+      "vsb": 1,
+      "scene": 1,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    },
+    {
+      "vsb": 1,
+      "scene": 2,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    },
+    {
+      "vsb": 1,
+      "scene": 3,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    },
+    {
+      "vsb": 1,
+      "scene": 4,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    },
+    {
+      "vsb": 1,
+      "scene": 5,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    },
+    {
+      "vsb": 1,
+      "scene": 6,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    },
+    {
+      "vsb": 1,
+      "scene": 7,
+      "writes": 3168,
+      "timer_reads_simulated": 96
+    }
+  ],
+  "timer": "GDB supplies synthetic r3 after timer register read; no VSB instruction changed"
+}
