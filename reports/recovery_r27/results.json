@@ -1,0 +1,117 @@
+{
+  "cases": [
+    {
+      "vsb": 0,
+      "scene": 0,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "4b7e8fc58c5b726143b69e4ca477657f2828f5b3f524591d96b66486c441f12b"
+    },
+    {
+      "vsb": 0,
+      "scene": 1,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "ed0c8bfb26b46c881a9cd6937e86c6ca940d41db5061c13f5fce7f4e9715a7b5"
+    },
+    {
+      "vsb": 0,
+      "scene": 2,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "efdf2dfadce4721881e5040d108a278d0c97c640498d4026202e697c20aa8c76"
+    },
+    {
+      "vsb": 0,
+      "scene": 3,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "aa3b642c970506198f04be3557f209edd66f05134311dd178a2b41e90de26070"
+    },
+    {
+      "vsb": 0,
+      "scene": 4,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "09b001006a015ee0873d801971ff7f7689756e9d60f60691e933da51f2f09e25"
+    },
+    {
+      "vsb": 0,
+      "scene": 5,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "f742091934ebbf279dd4a24df8929a5f154864181318add1b70ae199100d7357"
+    },
+    {
+      "vsb": 0,
+      "scene": 6,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "77359e54b09f89e3053a2527daaca86358ccd619b8dd9474a01790e67c4f6ed0"
+    },
+    {
+      "vsb": 0,
+      "scene": 7,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "f1753387f3e632b87a2b13621a4859aab4f6db04b56f53ab05e84afc47de7837"
+    },
+    {
+      "vsb": 1,
+      "scene": 0,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "4b7e8fc58c5b726143b69e4ca477657f2828f5b3f524591d96b66486c441f12b"
+    },
+    {
+      "vsb": 1,
+      "scene": 1,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "ed0c8bfb26b46c881a9cd6937e86c6ca940d41db5061c13f5fce7f4e9715a7b5"
+    },
+    {
+      "vsb": 1,
+      "scene": 2,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "efdf2dfadce4721881e5040d108a278d0c97c640498d4026202e697c20aa8c76"
+    },
+    {
+      "vsb": 1,
+      "scene": 3,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "aa3b642c970506198f04be3557f209edd66f05134311dd178a2b41e90de26070"
+    },
+    {
+      "vsb": 1,
+      "scene": 4,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "09b001006a015ee0873d801971ff7f7689756e9d60f60691e933da51f2f09e25"
+    },
+    {
+      "vsb": 1,
+      "scene": 5,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "f742091934ebbf279dd4a24df8929a5f154864181318add1b70ae199100d7357"
+    },
+    {
+      "vsb": 1,
+      "scene": 6,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "77359e54b09f89e3053a2527daaca86358ccd619b8dd9474a01790e67c4f6ed0"
+    },
+    {
+      "vsb": 1,
+      "scene": 7,
+      "writes": 1024,
+      "port": 2299192,
+      "sha256": "f1753387f3e632b87a2b13621a4859aab4f6db04b56f53ab05e84afc47de7837"
+    }
+  ],
+  "mechanism": "QEMU gdb breakpoint before original STR, operands R2 and R3; no code writes"
+}
