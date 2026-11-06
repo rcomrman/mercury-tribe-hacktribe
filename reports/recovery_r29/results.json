@@ -1,0 +1,165 @@
+{
+  "cases": [
+    {
+      "vsb": 0,
+      "case": 0,
+      "exit_pc": "before_worker",
+      "data_writes": 1024,
+      "writes": 1056,
+      "injected": false,
+      "register_restore_exact": false,
+      "timer_reads": 32
+    },
+    {
+      "vsb": 0,
+      "case": 1,
+      "exit_pc": "0xc0015b38",
+      "data_writes": 2048,
+      "writes": 2112,
+      "injected": true,
+      "register_restore_exact": true,
+      "timer_reads": 64
+    },
+    {
+      "vsb": 0,
+      "case": 2,
+      "exit_pc": "0xc0015b3c",
+      "data_writes": 2048,
+      "writes": 2112,
+      "injected": true,
+      "register_restore_exact": true,
+      "timer_reads": 64
+    },
+    {
+      "vsb": 0,
+      "case": 3,
+      "exit_pc": "0xc001613c",
+      "data_writes": 2048,
+      "writes": 2112,
+      "injected": true,
+      "register_restore_exact": true,
+      "timer_reads": 64
+    },
+    {
+      "vsb": 0,
+      "case": 4,
+      "exit_pc": "0xc00160a4",
+      "data_writes": 2048,
+      "writes": 2112,
+      "injected": true,
+      "register_restore_exact": true,
+      "timer_reads": 64
+    },
+    {
+      "vsb": 0,
+      "case": 5,
+      "exit_pc": "0xc001862c",
+      "data_writes": 2048,
+      "writes": 2112,
+      "injected": true,
+      "register_restore_exact": true,
+      "timer_reads": 64
+    },
+    {
+      "vsb": 0,
+      "case": 6,
+      "exit_pc": "0xc00160a4",
+      "data_writes": 2048,
+      "writes": 2112,
+      "injected": true,
+      "register_restore_exact": true,
+      "timer_reads": 64
+    },
+    {
+      "vsb": 0,
+      "case": 7,
+      "exit_pc": "0xc001862c",
+      "data_writes": 384,
+      "writes": 400,
+      "injected": true,
+      "register_restore_exact": true,
+      "timer_reads": 14
+    },
+    {
+      "vsb": 1,
+      "case": 0,
+      "exit_pc": "before_worker",
+      "data_writes": 1024,
+      "writes": 1056,
+      "injected": false,
+      "register_restore_exact": false,
+      "timer_reads": 32
+    },
+    {
+      "vsb": 1,
+      "case": 1,
+      "exit_pc": "0xc0015b38",
+      "data_writes": 2048,
+      "writes": 2112,
+      "injected": true,
+      "register_restore_exact": true,
+      "timer_reads": 64
+    },
+    {
+      "vsb": 1,
+      "case": 2,
+      "exit_pc": "0xc0015b3c",
+      "data_writes": 2048,
+      "writes": 2112,
+      "injected": true,
+      "register_restore_exact": true,
+      "timer_reads": 64
+    },
+    {
+      "vsb": 1,
+      "case": 3,
+      "exit_pc": "0xc001613c",
+      "data_writes": 2048,
+      "writes": 2112,
+      "injected": true,
+      "register_restore_exact": true,
+      "timer_reads": 64
+    },
+    {
+      "vsb": 1,
+      "case": 4,
+      "exit_pc": "0xc00160a4",
+      "data_writes": 2048,
+      "writes": 2112,
+      "injected": true,
+      "register_restore_exact": true,
+      "timer_reads": 64
+    },
+    {
+      "vsb": 1,
+      "case": 5,
+      "exit_pc": "0xc001862c",
+      "data_writes": 2048,
+      "writes": 2112,
+      "injected": true,
+      "register_restore_exact": true,
+      "timer_reads": 64
+    },
+    {
+      "vsb": 1,
+      "case": 6,
+      "exit_pc": "0xc00160a4",
+      "data_writes": 2048,
+      "writes": 2112,
+      "injected": true,
+      "register_restore_exact": true,
+      "timer_reads": 64
+    },
+    {
+      "vsb": 1,
+      "case": 7,
+      "exit_pc": "0xc001862c",
+      "data_writes": 384,
+      "writes": 400,
+      "injected": true,
+      "register_restore_exact": true,
+      "timer_reads": 14
+    }
+  ],
+  "scope": "synthetic timer and sequential debugger injection; no native halt or real concurrency"
+}
