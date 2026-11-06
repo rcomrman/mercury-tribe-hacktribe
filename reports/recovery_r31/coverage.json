@@ -1,0 +1,129 @@
+{
+  "paths": {
+    "main_ui": [
+      "C002D030",
+      "C00836E4",
+      "C006F178"
+    ],
+    "alternate_ui": [
+      "C002D030",
+      "C0083374"
+    ],
+    "secondary": [
+      "C002D030",
+      "C00836E4",
+      "C006EAE0"
+    ],
+    "periodic_worker": [
+      "C002A71C",
+      "C0015DD0",
+      "C0015FA0",
+      "C0015AB4"
+    ],
+    "progress": [
+      "C004D860",
+      "C006038C",
+      "C0015DD0",
+      "C0015FA0",
+      "C0015AB4"
+    ],
+    "startup": [
+      "C0015EB8",
+      "C0015FA0",
+      "C0015AB4"
+    ],
+    "diagnostic": [
+      "C00298BC",
+      "C0015DD0",
+      "C0015FA0",
+      "C0015AB4"
+    ],
+    "direct_comparator": [
+      "C0015AB4"
+    ],
+    "lcd_control7": [
+      "C0015DD0",
+      "C00162C4"
+    ],
+    "direct_pixel": [
+      "C0015824"
+    ],
+    "direct_range": [
+      "C003F55C",
+      "C0015988"
+    ],
+    "direct_reader": [
+      "C0071EC8",
+      "C0015900"
+    ]
+  },
+  "candidate_count": 19,
+  "minimum_cardinality": 6,
+  "minimum_sets": [
+    [
+      "C0015824",
+      "C0015900",
+      "C0015988",
+      "C0015AB4",
+      "C0015DD0",
+      "C002D030"
+    ],
+    [
+      "C0015824",
+      "C0015900",
+      "C0015988",
+      "C0015AB4",
+      "C00162C4",
+      "C002D030"
+    ],
+    [
+      "C0015824",
+      "C0015900",
+      "C0015AB4",
+      "C0015DD0",
+      "C002D030",
+      "C003F55C"
+    ],
+    [
+      "C0015824",
+      "C0015900",
+      "C0015AB4",
+      "C00162C4",
+      "C002D030",
+      "C003F55C"
+    ],
+    [
+      "C0015824",
+      "C0015988",
+      "C0015AB4",
+      "C0015DD0",
+      "C002D030",
+      "C0071EC8"
+    ],
+    [
+      "C0015824",
+      "C0015988",
+      "C0015AB4",
+      "C00162C4",
+      "C002D030",
+      "C0071EC8"
+    ],
+    [
+      "C0015824",
+      "C0015AB4",
+      "C0015DD0",
+      "C002D030",
+      "C003F55C",
+      "C0071EC8"
+    ],
+    [
+      "C0015824",
+      "C0015AB4",
+      "C00162C4",
+      "C002D030",
+      "C003F55C",
+      "C0071EC8"
+    ]
+  ],
+  "scope": "hitting listed paths only; a hit is not verified dominance, atomicity, or authorization"
+}
