@@ -114,9 +114,13 @@ function ink(x, first, last, on) {
     if (on) {
       FB[at] |= bits;
       FB[at + 1] |= bits;
+      FB[at + 2] |= bits;
+      FB[at + 3] |= bits;
     } else {
       FB[at] &= ~bits;
       FB[at + 1] &= ~bits;
+      FB[at + 2] &= ~bits;
+      FB[at + 3] &= ~bits;
     }
     pg += 1;
   }
@@ -158,7 +162,7 @@ function drawMatter() {
     if (v[9] > 15 && (x & 63) == 24) {
       ink(x, core + half, core + half + 2 + v[9] / 15, 1);
     }
-    x += 2;
+    x += 4;
   }
   korg.display.clear();
   korg.display.bitmap(FB, 0, 16, 128);
