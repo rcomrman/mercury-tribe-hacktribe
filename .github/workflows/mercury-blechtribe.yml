@@ -1,0 +1,31 @@
+name: Mercury BLECHTRIBE smoke test
+
+on:
+  push:
+    branches:
+      - mercury-blechtribe
+  pull_request:
+    paths:
+      - 'blechtribe/**'
+      - '.github/workflows/mercury-blechtribe.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  gelumpe-simulator:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Mercury Dust
+        uses: actions/checkout@v4
+      - name: Checkout official GELUMPE sources
+        uses: actions/checkout@v4
+        with:
+          repository: KuhlerBuhler/kuhlers-gelumpe
+          path: kuhlers-gelumpe
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Compile and simulate Mercury V30
+        run: node blechtribe/tests/check-mercury.mjs ./kuhlers-gelumpe
