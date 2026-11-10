@@ -88,9 +88,13 @@ Les touches de navigation sont interceptées par l'app ouverte, conformément au
 
 - La géométrie de la bande principale est maintenant calculée tous les **4 pixels** (au lieu de 8). L'autre bande reste sur **8 pixels**, pour tenir le budget VM.
 - Un tableau de **256 sinus en format entier décalé** remplace le calcul sinusoïdal approximatif par segment, sans utiliser de flottants dans le plugin. `SINE` coûte 256 slots (1 024 octets) dans la mémoire partagée de la VM.
-- Les trous noirs se déplacent avec la bande et restent volontairement très simples : la pleine fidélité V30 demande des cavités plus profondes, des ramifications, coulures et petits reflets.
+- Les trous noirs se déplacent avec la bande et restent volontairement très simples : la pleine fidélité V30 demande des cavités plus profondes, des ramifications et des reflets plus complexes.
 - L'ancien indice de knob était erroné : `OSC EDIT` est bien le **numéro 9** dans la table `data/panel.mjs` de GELUMPE. La nouvelle mise à l'échelle transforme la valeur matérielle 0–255 en 0–100.
 - Test automatisé renforcé : une scène doit **changer visiblement entre deux images** après plusieurs frames, en plus de se compiler et de s'afficher. Les huit variations testées passent.
 - Le plafond de calcul est contrôlé dans les tests à **19 500 unités maximum** (seuil interne de prudence inférieur au plafond VM de 20 000). Ce n'est **pas** la mesure de 5 ms CPU réelle, que seul le matériel ou un émulateur temporisé crédible pourra confirmer.
 
 **Risque en suspens** : la compression de largeur à 4/8 px provoque encore des marches d'escalier ; la vraie référence V30 HTML a des contours et des reflets fluides. Le renderer V30 natif C doit rester la source conceptuelle, pas remplacé en production par ce laboratoire graphique. Les anciens hooks LCD ARM ne sont pas intégrés ici.
+
+### R2.1 — Coulures légères (10 novembre 2026)
+
+Deux fines coulures par image peuvent maintenant descendre depuis le ruban principal, selon le réglage **MELT**. Elles se déplacent horizontalement avec la géométrie et ne sont pas des particules indépendantes. Première tentative à quatre coulures : limite de prudence de 19 500 unités dépassée (19 596) ; réduction à deux coulures : **PASS**, maximum observé 19 292 unités dans le simulateur, `frame` 19 183. [Tests officiels sur GitHub](https://github.com/rcomrman/mercury-tribe-hacktribe/actions/runs/42876906013). Les timings 5 ms ARM restent inconnus. Le rendu est toujours une approximation expérimentale de la V30, pas sa reproduction intégrale.
