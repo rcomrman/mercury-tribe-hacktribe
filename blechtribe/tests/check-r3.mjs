@@ -95,6 +95,21 @@ for (let preset = 0; preset < 8; preset++) {
   assert.ok(earlyFrame.some((value, i) => value !== device.display.bytes[i]),
     "Scene " + preset + " must visibly evolve over time");
 }
+// Stress high-energy and extreme parameter combinations before publishing R3.
+const profiles = [
+  [7,100,8,100,5,100,100,100,100,100,100,0],
+  [0,100,8,100,5,100,100,100,0,100,0,0],
+  [4,100,2,100,5,75,100,85,100,85,100,0],
+  [1,0,1,0,0,0,0,0,0,0,0,0],
+];
+for (let profile = 0; profile < profiles.length; profile++) {
+  for (let index = 0; index < 12; index++)
+    variables[result.info.symbols.v.slot + index] = profiles[profile][index];
+  device.post("pad", 0, 1, 127);
+  device.post("step", 0);
+  assert.deepEqual(device.run(32), [], "No R3 faults under stress profile " + profile);
+}
+
 // Return to the first preset and ensure each global setting is in range.
 variables[result.info.symbols.v.slot] = 0;
 for (let i = 0; i < 12; i++) {
