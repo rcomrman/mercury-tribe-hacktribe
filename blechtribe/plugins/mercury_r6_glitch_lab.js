@@ -102,7 +102,6 @@ function adjust(delta) {
 
 
 const FB = new Array(256);
-const HISTORY = new Array(256);
 let sweepX = 0;
 let seed = 173;
 let glitchHold = 0;
@@ -172,6 +171,7 @@ function drawMatter() {
     let center = 32 + drift / 19 + bend / 32;
     let opening = 7 + ((x * 7 + p / 4) & 31) / 2 + v[6] / 16;
     let ring = (x + p / 6 + scene * 13) & 31;
+    if (crush > 1) ring = (ring / (crush * 4)) * (crush * 4);
     let thick = 1 + v[1] / 45 + accent / 38;
     // Rings occupy alternating depths, with an intentionally dark core.
     if (ring < 15 || (scene & 1) == 0) {
@@ -193,20 +193,6 @@ function drawMatter() {
       ink(x, center - 2, center + 2, 1);
     }
     x += 8;
-  }
-  // Feedback on selected 8-pixel pages, amortized to avoid VM fuel exhaustion.
-  // Each tile retains its last contents in HISTORY, only a sparse subset is mixed.
-  let i = (frames & 3) * 64;
-  let limit = i + 64;
-  while (i < limit) {
-    let b = FB[i];
-    if (freeze > 0 && v[11] > 0) b = HISTORY[i];
-    else if (v[9] > 0 && ((i + frames) & 63) < v[9] / 2) b |= HISTORY[i];
-    if (crush == 2) b = (b & 85) | ((b & 85) << 1);
-    if (crush == 4) b = (b & 17) * 15;
-    FB[i] = b & 255;
-    HISTORY[i] = FB[i];
-    i += 1;
   }
   korg.display.clearRect(sweepX, 0, 32, 64);
   korg.display.bitmap(FB, sweepX, 0, 32);
@@ -232,8 +218,6 @@ korg.onEvent("open", () => {
   frames = 0;
   phase = 0;
   sweepX = 0;
-  let h = 0;
-  while (h < 256) { HISTORY[h] = 0; h += 1; }
   drawMatter();
 });
 korg.onEvent("close", () => {
@@ -293,6 +277,7 @@ korg.onEvent("frame", () => {
   // A full image is completed over four consecutive 40ms frames.
   if (sweepX == 0) phase += (1 + v[4] * 2) + knobReact / 25;
   phase &= 2047;
-  // Freeze is handled by the tile feedback stage, not by skipping drawing.
+  // Cheap rhythmic freeze: reuse the existing LCD content without recomputation.
+  if (freeze > 0 && v[11] > 0) return;
   drawMatter();
 });
