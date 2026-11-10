@@ -128,3 +128,15 @@ La branche conserve la R2.1 dans `plugins/mercury_v30_lab.js`, **sans la remplac
 5. **Matériel** : le budget d'instructions du simulateur **n'est pas une mesure de la limite réelle de 5 ms**. Ne pas installer sur l'Electribe, ni produire un VSB Mercury, sans méthode de récupération adaptée et validation de compatibilité du firmware existant.
 
 **Décision actuelle** : la R3 est une **branche exploratoire testée en simulation**, et la R2.1 demeure le fallback. Le prochain gain visible ne vient plus de la seule augmentation de résolution : il faut une topologie moins sinusoïdale, une deuxième coulée et un champ de reflets propre à la V30, tout en conservant un coût VM et un temps d'exécution raisonnables.
+
+## Nouvelle recherche visuelle R4 / R5 (10 novembre 2026)
+
+La comparaison a été faite **à partir du véritable canvas 128×64 de `reference/Mercury_Dust_V30_Groove_CORRIGE_Reference.html` exécuté dans Chromium**, pas d'une interprétation de captures ni d'une image générée. Voir [audit détaillé V30/R2–R5](V30_VISUAL_GAP.md).
+
+- `plugins/mercury_r4_braid_lab.js` : deuxième variante procédurale, deux rubans qui se tressent, avec creux noirs et déformation spatiale. La R3 reste disponible.
+- `plugins/mercury_r5_coils_lab.js` : **nouvelle piste** dessinant des boucles creuses asymétriques de chrome avec lames, fins reflets intérieurs et expansion liée aux steps/pads.
+- `tests/check-r4.mjs`, `tests/check-r5.mjs` et leurs scripts d'aperçu : compilation par GELUMPE, tests de huit modes et de profils extrêmes, simulation des contrôles et stockage.
+- R5 : **tests GELUMPE PASS**, compilation **5 076 octets**, **620 variables**, budget maximal testé **17 301 / 20 000 unités**. [Dernier test R5 dédié](https://github.com/rcomrman/mercury-tribe-hacktribe/actions/runs/42884053001).
+- Les captures de simulation R5 (48 images) sont disponibles dans l'artefact `mercury-r5-v30-coils` des Actions. Ne pas confondre avec des captures de l'Electribe réelle.
+
+⚠️ **L'aspect V30 n'est PAS encore reproduit fidèlement.** Malgré la topologie plus proche des grandes boucles, les R4/R5 restent des études graphiques. Le moteur de la vraie V30 possède des courbes paramétriques repliées et beaucoup plus de détails. Le rendu actuel en quatre tuiles par image impose encore une actualisation complète théorique de **6,25 Hz**. Aucune modification du firmware de la machine, aucune validation de cadence ARM.
