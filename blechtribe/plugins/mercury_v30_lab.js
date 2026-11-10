@@ -225,7 +225,7 @@ korg.onEvent("step", (step) => {
 korg.onEvent("knob", (index, value) => {
   // Read only! OSC EDIT knob still performs its normal Korg audio function.
   if (!opened) return;
-  if (index == 9) knobReact = clamp(value / 10, 0, 100);
+  if (index == 9) knobReact = clamp((value * 100) / 255, 0, 100);
 });
 korg.onEvent("frame", () => {
   if (!opened || menuOpen) return;
