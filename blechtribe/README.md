@@ -11,18 +11,40 @@ Cette branche **n'écrase pas** la branche `main`, le code C/ARM MD44, les prote
 - `plugins/mercury_v30_lab.js` : **premier plugin autonome et expérimental** (pas encore validé sur la machine).
 - `tests/check-mercury.mjs` : test du plugin avec le compilateur et le simulateur du dépôt officiel GELUMPE.
 
-## Fonctionnement du premier plugin
+## Fonctionnement du premier plugin — V30 Lab / UI3
 
-L'app s'enregistre sous **BLECH → TOOLS → Mercury V30** et ne dessine que lorsqu'elle est ouverte. EXIT restitue l'écran Korg. PLAY/STOP et l'audio Korg continuent de fonctionner ; le plugin ne modifie ni les paramètres des pistes, ni les données audio, ni les patterns.
+Cette app s'enregistre sous **BLECH → TOOLS → Mercury V30** et ne dessine que lorsqu'elle est ouverte. EXIT restitue l'écran Korg. PLAY/STOP et l'audio Korg continuent de fonctionner ; le plugin n'écrit pas dans les paramètres des pistes, les données audio ou les patterns.
 
-- Affichage de deux rubans procéduraux noirs et blancs avec cavités.
-- Huit variantes **provisoires**, que PART LEFT / PART RIGHT font défiler. Ordre réservé : FLOW, SILK, HYPNOSE, ACID, HARD TEK, LOFI, JUNGLE, COLLAPSE. Ce ne sont **pas encore** les huit presets fidèles à V30.
-- `step` provoque un accent **synthétique** tous les quatre steps ; ce n'est **pas** une vraie détection de kick ni une analyse audio.
-- `pad` provoque un impact visuel selon la vélocité ; son traitement musical demeure celui de Korg.
-- Mouvement du potentiomètre `OSC EDIT` (index 10) pilote aussi une variation visuelle. Attention : ce potentiomètre continue normalement de modifier le son de la piste sélectionnée. Il ne devient pas un réglage indépendant.
-- Trame mise à jour une fois tous les deux événements `frame` (~12,5 Hz si la tâche UI tient 25 Hz), afin de réserver du temps CPU.
+- Deux rubans de chrome monochromes procéduraux, nervures noires, huit **variantes expérimentales**. Aucun GIF n'est utilisé.
+- **12 contrôles globaux sur trois pages**, respectant les noms de la spécification MD44 :
+  - AMBIANCE : PRESET (0–7), INTENSITY (0–100), CORDS (1–8), REACTION (0–100) ;
+  - MOUVEMENT : RATE (0–5), SMOOTH, WAVE, CHAOS (0–100) ;
+  - GLITCH : GLITCH, MELT, DATA LOSS, FRAME SLIP (0–100).
+- Ces réglages sont mémorisés dans **12 slots de korg.store**, sauvegardés en quittant le menu ou l'app. Test de sauvegarde/rechargement réalisé sur le simulateur seulement.
+- Les valeurs **CORDS > 2 n'ajoutent pas encore les autres rubans** ; la compatibilité avec les 8 cordes de la V30 de référence n'est pas obtenue. Les valeurs RATE sont ici des vitesses prototypes et non encore les divisions synchronisées de V30.
+- `step` crée une pulsation **synthétique tous les quatre steps** ; ce n'est ni une vraie détection de kick, ni une analyse audio.
+- `pad` provoque un impact visuel avec vélocité.
+- `knob` index **9** = OSC EDIT (corrigé depuis l'ancien index 10) : valeur lue uniquement et utilisée pour influencer la vitesse de l'image. **Ce potentiomètre continue de modifier le son Korg.**
+- Rendu de la scène sur une grille grossière de 16 colonnes par ruban, réactualisée un événement `frame` sur deux (12,5 Hz théoriques). Ce rendu ne remplace **pas** encore les rubans V30 pixel par pixel.
 
-**Tests du simulateur : PASS** le 10/11/2026 après réduction de 32 à 16 colonnes par ruban. Bytecode : 1648 octets, 28 variables, maximum observé 12 605 unités de calcul pour le handler `frame` sur une limite de 20 000. Ce n'est pas une mesure du temps réel (5 ms). [Exécution CI](https://github.com/rcomrman/mercury-tribe-hacktribe/actions/runs/42873094819).\n\n**Ce prototype n'est pas une version installable garantie.** Il ne constitue pas une validation matériellement sûre de BLECHTRIBE, de son chargeur, ou de la compatibilité avec le firmware personnalisé actuel.
+### Commandes quand Mercury est ouvert
+
+| Commande | Action |
+|---|---|
+| MENU | Affiche ou masque le menu Mercury |
+| PART LEFT / PART RIGHT, hors menu | Change de preset (0–7) |
+| EDIT LEFT / EDIT RIGHT, dans menu | Change de page (trois pages) |
+| PART LEFT / PART RIGHT, dans menu | Choisit une des quatre valeurs |
+| BAR 1 / BAR 4, dans menu | Valeur −1 / +1 |
+| BAR 2 / BAR 3, dans menu | Valeur −10 / +10 |
+| EXIT | Quitte Mercury et rend l'écran à Korg |
+| PLAY / STOP / REC | Continuent d'atteindre la machine |
+
+Les touches de navigation sont interceptées par l'app ouverte, conformément au comportement officiel des plugins. En dehors de Mercury, elles retrouvent leur fonction d'origine. Le raccourci historique `SHIFT+BPF` n'est **pas** encore implémenté et il faudra vérifier sa compatibilité avec les filtres Korg.
+
+**Tests du simulateur : PASS** le 10/11/2026. La première version utilisait 1 648 octets et culminait à 12 605 unités de coût ; la nouvelle version UI3 utilise 3 864 octets, 61 variables, avec un pic de 16 176 unités dans un gestionnaire sur la limite de 20 000 unités de la VM. Ce budget de calcul n'est **pas** une mesure du temps matériel de 5 ms. [Première validation UI3](https://github.com/rcomrman/mercury-tribe-hacktribe/actions/runs/42874080077). Test complémentaire : huit presets, réglages et persistance du stockage.
+
+**Ce prototype n'est pas une version installable garantie.** Il ne constitue pas une validation matériellement sûre de BLECHTRIBE, de son chargeur ou de la compatibilité avec le firmware personnalisé actuel.
 
 ## Essayer sur ordinateur sans flasher
 
@@ -42,10 +64,10 @@ L'app s'enregistre sous **BLECH → TOOLS → Mercury V30** et ne dessine que lo
 | Composant | État |
 |---|---|
 | Branche séparée de `main` | Créée |
-| Premier plugin UI procédural | Compilé et exécuté sans erreur dans le simulateur GELUMPE (GitHub Actions, 10/11/2026) |
+| Premier plugin UI procédural | PASS GELUMPE (CI) : 8 presets parcourus |
 | Conformité artistique pixel par pixel à V30 | Non obtenue |
-| Rendu 128×64 natif via framebuffer `bitmap` | À implémenter, mesurer l'occupation mémoire et CPU |
-| 12 paramètres globaux et édition avancée | À porter |
+| Rendu 128×64 natif via framebuffer `bitmap` | Toujours à porter ; utilise actuellement les primitives `rect` / `clearRect` |
+| 12 paramètres globaux et édition avancée | Interface des 3 pages et persistance simulée : PASS ; comportement V30 incomplet |
 | Page PISTES cachée, état par piste | À préserver puis porter |
 | Événements step et pad | Utilisés ; pas d'accès audio |
 | Réaction au véritable kick | À vérifier (notes/steps par piste, pas signal DSP) |
