@@ -113,7 +113,7 @@ function drawMatter() {
     let s1 = wave(x * 3 + p + scene * 17);
     let s2 = wave(x * 7 - p / 2 + 39);
     let center = 23 + s1 * modulation / 1300 + s2 / 24;
-    let thick = width + (wave(x * 4 + p * 2 + 64) + 128) / 58 + rx / 40;
+    let thick = width + (s2 + 128) / 58 + rx / 40;
     if (scene == 1 || scene == 5) thick -= 3;
     if (scene == 4 || scene == 7) thick += 3;
     thick = clamp(thick, 2, 19);
@@ -127,7 +127,7 @@ function drawMatter() {
     korg.display.rect(x, y, 4, bottom - y);
 
     // Travelling black river and a moving metallic highlight.
-    let slot = clamp(center + wave(x * 5 - p + 72) / 16, y, bottom - 1);
+    let slot = clamp(center + s1 / 16, y, bottom - 1);
     let holeHeight = clamp(1 + v[9] / 35, 1, 4);
     korg.display.clearRect(x, slot, 4, clamp(holeHeight, 1, bottom - slot));
     if ((x & 15) == 0) {
@@ -144,17 +144,17 @@ function drawMatter() {
       let a = wave(x * 4 - p + 120);
       let b = wave(x * 2 + p / 3 + 11);
       let center2 = 46 + a / 17 + b / 23;
-      let width2 = 2 + (wave(x * 6 + p + scene * 29) + 128) / 65;
+      let width2 = 2 + (b + 128) / 65;
       if (scene == 3 || scene == 6) width2 += 2;
       width2 = clamp(width2, 1, 8);
       let y2 = clamp(center2 - width2, 0, 63);
       let end2 = clamp(center2 + width2, y2 + 1, 64);
-      korg.display.rect(x, y2, 4, end2 - y2);
+      korg.display.rect(x, y2, 8, end2 - y2);
       if ((x & 31) == 0) {
         let slot2 = clamp(center2, y2, end2 - 1);
-        korg.display.clearRect(x, slot2, 4, 1);
+        korg.display.clearRect(x, slot2, 8, 1);
       }
-      x += 4;
+      x += 8;
     }
   }
   if (v[10] > 50 && flash > 0) {
