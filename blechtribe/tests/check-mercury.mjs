@@ -38,17 +38,37 @@ const key = name => {
   assert.ok(found, "Missing key: " + name);
   return found.value;
 };
+// Preset can change in visual mode.
 device.post("buttonPress", key("PART_RIGHT"));
 device.post("step", 4);
 device.post("pad", 0, 1, 100);
-device.post("knob", 10, 800);
+device.post("knob", 9, 800); // OSC EDIT is knob index 9, read-only.
 assert.deepEqual(device.run(12), [], "No faults on performance events");
-assert.equal(loaded.script.vars[result.info.symbols.mode.slot], 1,
-  "PART_RIGHT should change preset");
+const setting = i => loaded.script.vars[result.info.symbols.v.slot + i];
+assert.equal(setting(0), 1, "PART_RIGHT should select preset 2");
 
 device.post("buttonPress", key("PART_LEFT"));
 assert.deepEqual(device.run(4), [], "No faults on preset reversal");
-assert.equal(loaded.script.vars[result.info.symbols.mode.slot], 0);
+assert.equal(setting(0), 0);
+
+// Mercury pages are separate from Korg menu and preserve all 12 settings.
+device.post("buttonPress", key("MENU"));
+assert.deepEqual(device.run(2), [], "No faults opening Mercury settings");
+assert.equal(loaded.script.vars[result.info.symbols.menuOpen.slot], 1);
+device.post("buttonPress", key("BAR_4")); // preset +1
+assert.deepEqual(device.run(2), [], "No faults editing preset");
+assert.equal(setting(0), 1);
+device.post("buttonPress", key("BAR_1")); // preset -1
+assert.deepEqual(device.run(2), [], "No faults decrementing preset");
+assert.equal(setting(0), 0);
+device.post("buttonPress", key("EDIT_RIGHT"));
+device.post("buttonPress", key("PART_RIGHT"));
+device.post("buttonPress", key("BAR_3")); // smooth +10 (index 5)
+assert.deepEqual(device.run(3), [], "No faults on second settings page");
+assert.equal(setting(5), 84, "SMOOTH should be editable on movement page");
+device.post("buttonPress", key("MENU"));
+assert.deepEqual(device.run(4), [], "No faults exiting Mercury settings");
+assert.equal(loaded.script.vars[result.info.symbols.menuOpen.slot], 0);
 
 const status = device.status().scripts[0];
 console.log("OK: compiled bytecode:", result.blob.length, "bytes");
