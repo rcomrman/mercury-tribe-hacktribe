@@ -194,16 +194,14 @@ function drawMatter() {
     }
     x += 8;
   }
-  // Frame-memory effects: cheap per-byte operations, not re-rendering geometry.
-  let i = 0;
-  while (i < 256) {
+  // Feedback on selected 8-pixel pages, amortized to avoid VM fuel exhaustion.
+  // Each tile retains its last contents in HISTORY, only a sparse subset is mixed.
+  let i = (frames & 3) * 64;
+  let limit = i + 64;
+  while (i < limit) {
     let b = FB[i];
-    let previous = HISTORY[i];
-    // Feedback: retain old fragments; not an alpha blend on a 1-bit LCD.
-    if (v[9] > 0 && ((i + frames / 3) & 127) < v[9]) b |= previous;
-    // Stutter / lag: repeat the previous tile during brief beat-locked windows.
-    if (freeze > 0 && v[11] > 0) b = previous;
-    // Digital crush: deliberately quantize 8-pixel vertical page patterns.
+    if (freeze > 0 && v[11] > 0) b = HISTORY[i];
+    else if (v[9] > 0 && ((i + frames) & 63) < v[9] / 2) b |= HISTORY[i];
     if (crush == 2) b = (b & 85) | ((b & 85) << 1);
     if (crush == 4) b = (b & 17) * 15;
     FB[i] = b & 255;
