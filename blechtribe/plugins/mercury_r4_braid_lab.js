@@ -134,9 +134,9 @@ function drawMatter() {
   let p = phase;
   if (v[5] < 20) p = (p / 16) * 16;
   let accent = (energy * v[3]) / 100;
-  let base = clamp(4 + v[1] / 21, 3, 10);
+  let base = clamp(2 + v[1] / 32, 2, 8);
   // The envelope swells slowly and falls back when a step/pad injects energy.
-  let breath = (wave(p / 3 + scene * 31) * (v[1] + 20)) / 2600;
+  let breath = (wave(p / 3 + scene * 31) * (v[1] + 20)) / 4200;
   // Precompute phases once per tile: unlike R3, the two strands weave in opposition.
   let slowPhase = p / 3 + scene * 27;
   let foldPhase = p / 2 + scene * 13;
@@ -154,24 +154,25 @@ function drawMatter() {
     }
     // Spatial frequencies come from the V30 buildRibbon spirit:
     // a broad undulation, a counter-flowing fold, and a fine curl.
-    let broad = wave(x * 2 + slowPhase);
     let fold = wave(x * 5 - foldPhase);
-    let curl = wave(x * 9 + slowPhase / 2 + 61);
+    let warped = x + (fold * v[6]) / 1200;
+    let broad = wave(warped * 2 + slowPhase);
+    let curl = wave(warped * 9 + slowPhase / 2 + 61);
     let taper = 100;
     if (x < 20) taper = 30 + x * 3;
     if (x > 108) taper = 30 + (127 - x) * 3;
     let bulge = (fold + 128) / 65;
     let thickA = clamp(((base + bulge + breath + accent / 28) * taper) / 100, 1, 15);
-    let thickB = clamp(((base - 1 + (curl + 128) / 100) * taper) / 100, 1, 10);
+    let thickB = clamp(((base - 1 + (curl + 128) / 110) * taper) / 100, 1, 8);
     if (scene == 1 || scene == 5) { thickA -= 1; thickB -= 1; }
     if (scene == 4 || scene == 7) thickA += 2;
     thickA = clamp(thickA, 1, 15);
-    thickB = clamp(thickB, 1, 10);
+    thickB = clamp(thickB, 1, 8);
 
     // Strands braid; they are deliberately NOT two parallel sine strips.
-    let middleA = 30 + broad * (8 + v[6] / 12) / 128 + fold / 27 + curl / 47;
+    let middleA = 29 + broad * (8 + v[6] / 12) / 128 + fold / 27 + curl / 47;
     middleA += accent * broad / 1500;
-    let middleB = 34 - broad * (7 + v[6] / 15) / 128 + fold / 24 - curl / 38;
+    let middleB = 34 - broad * (7 + v[6] / 15) / 128 + fold / 28 - curl / 30;
 
     // Draw smaller background strand and carve its own moving black cavity.
     if (v[2] > 1 && scene != 1) {
@@ -183,7 +184,7 @@ function drawMatter() {
     let river = middleA + fold / 30;
     ink(x, river - 2 - v[9] / 60, river + 2 + v[9] / 60, 0);
     // Specular glints are embedded in the liquid, moving with its folds.
-    if (((x + p / 8) & 31) == 0) ink(x, middleA - thickA + 2, middleA - thickA + 2, 1);
+    if (((x + p / 8) & 15) == 0) ink(x, river - 1, river - 1, 1);
     x += 4;
   }
   korg.display.clearRect(sweepX, 0, 32, 64);
