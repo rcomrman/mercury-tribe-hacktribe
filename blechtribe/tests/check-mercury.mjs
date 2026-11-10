@@ -53,10 +53,12 @@ const key = name => {
 device.post("buttonPress", key("PART_RIGHT"));
 device.post("step", 4);
 device.post("pad", 0, 1, 100);
-device.post("knob", 9, 800); // OSC EDIT is knob index 9, read-only.
+device.post("knob", 9, 255); // OSC EDIT (0..255) is knob index 9, read-only.
 assert.deepEqual(device.run(12), [], "No faults on performance events");
 const setting = i => loaded.script.vars[result.info.symbols.v.slot + i];
 assert.equal(setting(0), 1, "PART_RIGHT should select preset 2");
+assert.equal(loaded.script.vars[result.info.symbols.knobReact.slot], 100,
+  "OSC EDIT maximum must scale to full visual range");
 
 device.post("buttonPress", key("PART_LEFT"));
 assert.deepEqual(device.run(4), [], "No faults on preset reversal");
@@ -87,6 +89,10 @@ for (let preset = 0; preset < 8; preset++) {
   variables[result.info.symbols.v.slot + 0] = preset;
   assert.deepEqual(device.run(6), [], "No faults in V30 preset " + preset);
   assert.ok(device.display.bytes.some(x => x), "Nonempty V30 scene " + preset);
+  const earlyFrame = Uint8Array.from(device.display.bytes);
+  assert.deepEqual(device.run(28), [], "No motion runtime faults in scene " + preset);
+  assert.ok(earlyFrame.some((value, i) => value !== device.display.bytes[i]),
+    "Scene " + preset + " must visibly evolve over time");
 }
 // Return to the first preset and ensure each global setting is in range.
 variables[result.info.symbols.v.slot] = 0;
@@ -110,6 +116,8 @@ assert.equal(rebootLoad.script.vars[result.info.symbols.v.slot + 5],
   storedValue, "SMOOTH setting survives simulated power cycle");
 
 const status = device.status().scripts[0];
+const maxCost = Math.max(...Object.values(status.maxCost));
+assert.ok(maxCost <= 19500, "Guardrail: instruction cost too close to the 20000-unit VM ceiling: " + maxCost);
 console.log("OK: compiled bytecode:", result.blob.length, "bytes");
 console.log("OK: API version:", result.info.apiVersion);
 console.log("OK: variables:", result.info.vars);
