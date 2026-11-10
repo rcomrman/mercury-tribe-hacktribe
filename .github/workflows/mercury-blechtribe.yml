@@ -37,3 +37,13 @@ jobs:
           name: mercury-blechtribe-preview
           path: blechtribe/out/mercury-scenes.svg
           if-no-files-found: error
+      - name: Compile and simulate Mercury R3 bitmap
+        run: node blechtribe/tests/check-r3.mjs ./kuhlers-gelumpe
+      - name: Render Mercury R3 bitmap contact sheet
+        run: node blechtribe/tests/render-r3.mjs ./kuhlers-gelumpe
+      - name: Save Mercury R3 preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: mercury-r3-bitmap-preview
+          path: blechtribe/out/mercury-r3-scenes.svg
+          if-no-files-found: error
