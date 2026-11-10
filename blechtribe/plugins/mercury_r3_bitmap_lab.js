@@ -115,20 +115,16 @@ function ink(x, first, last, on) {
     if (on) {
       FB[at] |= bits;
       FB[at + 1] |= bits;
-      FB[at + 2] |= bits;
-      FB[at + 3] |= bits;
     } else {
       FB[at] &= ~bits;
       FB[at + 1] &= ~bits;
-      FB[at + 2] &= ~bits;
-      FB[at + 3] &= ~bits;
     }
     pg += 1;
   }
 }
 function drawMatter() {
   if (!opened || menuOpen) return;
-  // Work in two 64-column slices: 128x32 bitmap, no full-frame 512-slot clear.
+  // Work in four 32-column slices: 128x32 bitmap, no full-frame 512-slot clear.
   // This spreads the VM cost over adjacent 40ms UI cycles.
   let p = phase;
   if (v[5] < 20) p = (p / 16) * 16;
@@ -136,14 +132,12 @@ function drawMatter() {
   let base = clamp(3 + v[1] / 18, 3, 11);
   let s = v[0];
   let x = sweepX;
-  while (x < sweepX + 64) {
+  while (x < sweepX + 32) {
     let band = 0;
     while (band < 4) {
       let at = band * 128 + x;
       FB[at] = 0;
       FB[at + 1] = 0;
-      FB[at + 2] = 0;
-      FB[at + 3] = 0;
       band += 1;
     }
     let w0 = wave(x * 3 + p + s * 21);
@@ -171,9 +165,9 @@ function drawMatter() {
     if (v[9] > 15 && (x & 63) == 24) {
       ink(x, core + half, core + half + 2 + v[9] / 15, 1);
     }
-    x += 4;
+    x += 2;
   }
-  sweepX = (sweepX + 64) & 127;
+  sweepX = (sweepX + 32) & 127;
   korg.display.clear();
   korg.display.bitmap(FB, 0, 16, 128);
   korg.display.number(s + 1, 120, 55);
@@ -249,7 +243,7 @@ korg.onEvent("frame", () => {
   frames += 1;
   if (energy > 0) energy = clamp(energy - 4, 0, 127);
   if (flash > 0) flash -= 1;
-  // A full image is completed over two consecutive 40ms frames.
+  // A full image is completed over four consecutive 40ms frames.
   if (sweepX == 0) phase += (1 + v[4] * 2) + knobReact / 25;
   phase &= 2047;
   if (v[11] > 30 && ((frames + stepPos) % 18) < v[11] / 20) return;
