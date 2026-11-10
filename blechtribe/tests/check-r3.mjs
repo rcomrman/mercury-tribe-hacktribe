@@ -23,7 +23,7 @@ const source = await readFile(
 const result = compile(source, { name: "Mercury_R3" });
 assert.ok(result.ok, result.errors?.map(formatError).join("\n"));
 assert.equal(result.info.app?.group, "TOOLS");
-assert.ok(result.info.symbols.FB.length === 1024, "R3 uses 128x64 packed full-screen pixels");
+assert.ok(result.info.symbols.FB.length === 256, "R3 uses packed 32x64 tiled render buffer");
 assert.ok(result.blob.length < BUDGET.scriptBytes);
 
 const cardStore = new Map();
