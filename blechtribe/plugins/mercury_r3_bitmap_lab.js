@@ -131,6 +131,7 @@ function drawMatter() {
   let ripple = (energy * v[3]) / 100;
   let base = clamp(3 + v[1] / 18, 3, 11);
   let s = v[0];
+  let breath = (wave(p / 5 + s * 33) * v[1]) / 2500;
   let x = sweepX;
   while (x < sweepX + 32) {
     let band = 0;
@@ -140,12 +141,14 @@ function drawMatter() {
       FB[at + 1] = 0;
       band += 1;
     }
-    let w0 = wave(x * 3 + p + s * 21);
-    let w1 = wave(x * 7 - p / 3 + 30);
+    // V30-inspired domain warp: nonuniform wave spacing, slow shifting crests.
+    let bend = x + wave(x * 2 - p / 3 + s * 31) / 18;
+    let w0 = wave(bend * 3 + p + s * 21);
+    let w1 = wave(bend * 7 - p / 3 + 30);
     let core = 32 + w0 * v[6] / 1000 + w1 / 18;
     core += (ripple * wave(x * 2 + p)) / 1200;
 
-    let half = base + wave(x * 5 + p / 2) / 42;
+    let half = base + breath + wave(bend * 5 + p / 2) / 42;
     half += ripple / 36;
     // Taper at both ends: the ribbon grows and dissolves, never a uniform strip.
     if (x < 18) half = 1 + (half * x) / 18;
@@ -159,7 +162,7 @@ function drawMatter() {
     ink(x, stream - hole, stream + hole, 0);
 
     // Thin chrome edges / highlights INSIDE the ribbon, not random stars.
-    if ((x & 15) == 0) ink(x, core - half + 1, core - half + 1, 1);
+    if (((x + (p / 16) * 2) & 15) == 0) ink(x, core - half + 1, core - half + 1, 1);
 
     // Rare drips attached to the lower contour.
     if (v[9] > 15 && (x & 63) == 24) {
