@@ -135,8 +135,8 @@ function drawMatter() {
       korg.display.clearRect(x, rim, 4, 1);
     }
     // Narrow white liquid drips connected to the parent ribbon, not free particles.
-    // Only four candidate columns per 128px image: bounded VM cost.
-    if (v[9] > 8 && (x & 31) == 16) {
+    // Only two candidate columns per 128px image: keep VM headroom.
+    if (v[9] > 8 && (x & 63) == 16) {
       let dripX = clamp(x + wave(x * 5 + p) / 40, 0, 126);
       let tip = clamp(bottom + 2 + v[9] / 8 + rx / 40, bottom, 64);
       if (tip > bottom) korg.display.rect(dripX, bottom, 2, tip - bottom);
