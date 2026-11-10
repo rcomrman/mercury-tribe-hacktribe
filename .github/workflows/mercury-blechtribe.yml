@@ -85,3 +85,18 @@ jobs:
             blechtribe/out/mercury-r5-scenes.svg
             blechtribe/out/r5-motion/*.pgm
           if-no-files-found: error
+
+      - name: Compile and stress Mercury R6 glitch
+        run: node blechtribe/tests/check-r6.mjs ./kuhlers-gelumpe
+      - name: Render R6 glitch snapshots
+        run: node blechtribe/tests/render-r6.mjs ./kuhlers-gelumpe
+      - name: Render R6 glitch motion
+        run: node blechtribe/tests/render-motion-r6.mjs ./kuhlers-gelumpe
+      - name: Upload R6 glitch captures
+        uses: actions/upload-artifact@v4
+        with:
+          name: mercury-r6-glitch-motion
+          path: |
+            blechtribe/out/mercury-r6-scenes.svg
+            blechtribe/out/r6-motion/*.pgm
+          if-no-files-found: error
