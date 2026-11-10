@@ -127,11 +127,19 @@ function ink(x, y0, y1, on) {
       FB[at + 1] |= mask;
       FB[at + 2] |= mask;
       FB[at + 3] |= mask;
+      FB[at + 4] |= mask;
+      FB[at + 5] |= mask;
+      FB[at + 6] |= mask;
+      FB[at + 7] |= mask;
     } else {
       FB[at] &= ~mask;
       FB[at + 1] &= ~mask;
       FB[at + 2] &= ~mask;
       FB[at + 3] &= ~mask;
+      FB[at + 4] &= ~mask;
+      FB[at + 5] &= ~mask;
+      FB[at + 6] &= ~mask;
+      FB[at + 7] &= ~mask;
     }
     pg += 1;
   }
@@ -153,6 +161,8 @@ function drawMatter() {
       let at = page * 32 + local;
       FB[at] = 0; FB[at + 1] = 0;
       FB[at + 2] = 0; FB[at + 3] = 0;
+      FB[at + 4] = 0; FB[at + 5] = 0;
+      FB[at + 6] = 0; FB[at + 7] = 0;
       page += 1;
     }
     // A breathing interference tunnel: several overlapping rings in perspective.
@@ -182,7 +192,7 @@ function drawMatter() {
     if (accent > 18 && ((x + stepPos * 4) & 15) < 4) {
       ink(x, center - 2, center + 2, 1);
     }
-    x += 4;
+    x += 8;
   }
   // Frame-memory effects: cheap per-byte operations, not re-rendering geometry.
   let i = 0;
