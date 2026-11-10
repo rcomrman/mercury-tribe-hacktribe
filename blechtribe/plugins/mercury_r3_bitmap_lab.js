@@ -1,7 +1,7 @@
 // Mercury Dust / BLECHTRIBE — V30 Groove experimental portable application.
 // Native BLECHTRIBE integer-only JavaScript subset; no DSP/sample/firmware writes.
 // Reference: reference/Mercury_Dust_V30_Groove_CORRIGE_Reference.html.
-// R3 single-ribbon full LCD bitmap experiment; NOT pixel-accurate V30! No hardware safety certification.
+// R3 single-ribbon 128x32 central bitmap experiment; NOT pixel-accurate V30! No hardware safety certification.
 korg.app("Mercury R3", "TOOLS");
 
 // V30 global settings: three pages of four controls, 0-100 except exceptions.
@@ -98,11 +98,11 @@ function adjust(delta) {
   drawMenu();
 }
 
-const FB = new Array(1024);
+const FB = new Array(512);
 // Every slot holds a vertical byte, exactly as GELUMPE's bitmap API expects.
 function ink(x, first, last, on) {
-  first = clamp(first, 0, 63);
-  last = clamp(last, 0, 63);
+  first = clamp(first, 0, 31);
+  last = clamp(last, 0, 31);
   if (last < first) return;
   let pg = first >> 3;
   let stop = last >> 3;
@@ -124,7 +124,7 @@ function ink(x, first, last, on) {
 function drawMatter() {
   if (!opened || menuOpen) return;
   let i = 0;
-  while (i < 1024) { FB[i] = 0; i += 1; }
+  while (i < 512) { FB[i] = 0; i += 1; }
 
   let p = phase;
   if (v[5] < 20) p = (p / 16) * 16;
@@ -135,7 +135,7 @@ function drawMatter() {
   while (x < 128) {
     let w0 = wave(x * 3 + p + s * 21);
     let w1 = wave(x * 7 - p / 3 + 30);
-    let core = 32 + w0 * v[6] / 1200 + w1 / 23;
+    let core = 16 + w0 * v[6] / 1500 + w1 / 30;
     core += (ripple * wave(x * 2 + p)) / 1200;
 
     let half = base + wave(x * 5 + p / 2) / 42;
@@ -161,7 +161,7 @@ function drawMatter() {
     x += 2;
   }
   korg.display.clear();
-  korg.display.bitmap(FB, 0, 0, 128);
+  korg.display.bitmap(FB, 0, 16, 128);
   korg.display.number(s + 1, 120, 55);
 }
 
