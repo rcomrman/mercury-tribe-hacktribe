@@ -18,6 +18,26 @@ let stepPos = 0;
 let energy = 0;
 let knobReact = 40;
 let flash = 0;
+// Fixed-point 256-entry sine wave adapted from the previous native sine_q7.h.
+// Unsigned bytes keep the packed constant pool economical for the BLECH VM.
+const SINE = [
+  128,131,134,137,140,144,147,150,153,156,159,162,165,168,171,174
+  177,179,182,185,188,191,193,196,199,201,204,206,209,211,213,216
+  218,220,222,224,226,228,230,232,234,235,237,239,240,241,243,244
+  245,246,248,249,250,250,251,252,253,253,254,254,254,255,255,255
+  255,255,255,255,254,254,254,253,253,252,251,250,250,249,248,246
+  245,244,243,241,240,239,237,235,234,232,230,228,226,224,222,220
+  218,216,213,211,209,206,204,201,199,196,193,191,188,185,182,179
+  177,174,171,168,165,162,159,156,153,150,147,144,140,137,134,131
+  128,125,122,119,116,112,109,106,103,100,97,94,91,88,85,82
+  79,77,74,71,68,65,63,60,57,55,52,50,47,45,43,40
+  38,36,34,32,30,28,26,24,22,21,19,17,16,15,13,12
+  11,10,8,7,6,6,5,4,3,3,2,2,2,1,1,1
+  1,1,1,1,2,2,2,3,3,4,5,6,6,7,8,10
+  11,12,13,15,16,17,19,21,22,24,26,28,30,32,34,36
+  38,40,43,45,47,50,52,55,57,60,63,65,68,71,74,77
+  79,82,85,88,91,94,97,100,103,106,109,112,116,119,122,125
+];
 
 function clamp(a, lo, hi) {
   if (a < lo) return lo;
@@ -25,12 +45,7 @@ function clamp(a, lo, hi) {
   return a;
 }
 function wave(p) {
-  // Triangle-sine approximation: signed, continuous, no floats or trig API.
-  let q = p & 255;
-  let r = q & 127;
-  let u = r < 64 ? r : 128 - r;
-  let shaped = (u * (128 - u)) / 32;
-  return q < 128 ? shaped : -shaped;
+  return SINE[p & 255] - 128;
 }
 function storeAll() {
   let i = 0;
@@ -87,7 +102,7 @@ function drawMatter() {
   korg.display.clear();
   let scene = v[0];
   let rx = (energy * v[3]) / 100;
-  let width = 6 + v[1] / 35;
+  let width = 4 + v[1] / 40;
   let modulation = v[6] + v[7] / 3;
   let p = phase;
   if (v[5] < 20) p = (phase / 32) * 32;
@@ -98,28 +113,28 @@ function drawMatter() {
     let s1 = wave(x * 3 + p + scene * 17);
     let s2 = wave(x * 7 - p / 2 + 39);
     let center = 23 + s1 * modulation / 1300 + s2 / 24;
-    let thick = width + (wave(x * 4 + p * 2 + 64) + 128) / 36 + rx / 40;
+    let thick = width + (wave(x * 4 + p * 2 + 64) + 128) / 58 + rx / 40;
     if (scene == 1 || scene == 5) thick -= 3;
     if (scene == 4 || scene == 7) thick += 3;
     thick = clamp(thick, 2, 19);
 
     let y = clamp(center - thick, 0, 63);
     let bottom = clamp(center + thick, y + 1, 64);
-    if (v[8] > 20 && ((x + stepPos * 8) & 31) < v[8] / 6) {
+    if (v[8] > 20 && ((x + stepPos * 4) & 31) < v[8] / 6) {
       y = clamp(y + rx / 15, 0, 63);
       bottom = clamp(bottom + rx / 15, y + 1, 64);
     }
-    korg.display.rect(x, y, 8, bottom - y);
+    korg.display.rect(x, y, 4, bottom - y);
 
     // Travelling black river and a moving metallic highlight.
     let slot = clamp(center + wave(x * 5 - p + 72) / 16, y, bottom - 1);
     let holeHeight = clamp(1 + v[9] / 35, 1, 4);
-    korg.display.clearRect(x, slot, 8, clamp(holeHeight, 1, bottom - slot));
-    if ((x & 31) == 0) {
+    korg.display.clearRect(x, slot, 4, clamp(holeHeight, 1, bottom - slot));
+    if ((x & 15) == 0) {
       let rim = clamp(y + 1, y, bottom - 1);
-      korg.display.clearRect(x, rim, 8, 1);
+      korg.display.clearRect(x, rim, 4, 1);
     }
-    x += 8;
+    x += 4;
   }
 
   // Optional counter-moving ribbon. Higher cord counts are not ported yet.
@@ -129,17 +144,17 @@ function drawMatter() {
       let a = wave(x * 4 - p + 120);
       let b = wave(x * 2 + p / 3 + 11);
       let center2 = 46 + a / 17 + b / 23;
-      let width2 = 2 + (wave(x * 6 + p + scene * 29) + 128) / 44;
+      let width2 = 2 + (wave(x * 6 + p + scene * 29) + 128) / 65;
       if (scene == 3 || scene == 6) width2 += 2;
       width2 = clamp(width2, 1, 8);
       let y2 = clamp(center2 - width2, 0, 63);
       let end2 = clamp(center2 + width2, y2 + 1, 64);
-      korg.display.rect(x, y2, 8, end2 - y2);
+      korg.display.rect(x, y2, 4, end2 - y2);
       if ((x & 31) == 0) {
         let slot2 = clamp(center2, y2, end2 - 1);
-        korg.display.clearRect(x, slot2, 8, 1);
+        korg.display.clearRect(x, slot2, 4, 1);
       }
-      x += 8;
+      x += 4;
     }
   }
   if (v[10] > 50 && flash > 0) {
