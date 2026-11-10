@@ -22,7 +22,7 @@ L'app s'enregistre sous **BLECH → TOOLS → Mercury V30** et ne dessine que lo
 - Mouvement du potentiomètre `OSC EDIT` (index 10) pilote aussi une variation visuelle. Attention : ce potentiomètre continue normalement de modifier le son de la piste sélectionnée. Il ne devient pas un réglage indépendant.
 - Trame mise à jour une fois tous les deux événements `frame` (~12,5 Hz si la tâche UI tient 25 Hz), afin de réserver du temps CPU.
 
-**Ce prototype n'est pas une version installable garantie.** Il ne constitue pas une validation matériellement sûre de BLECHTRIBE, de son chargeur, ou de la compatibilité avec le firmware personnalisé actuel.
+**Tests du simulateur : PASS** le 10/11/2026 après réduction de 32 à 16 colonnes par ruban. Bytecode : 1648 octets, 28 variables, maximum observé 12 605 unités de calcul pour le handler `frame` sur une limite de 20 000. Ce n'est pas une mesure du temps réel (5 ms). [Exécution CI](https://github.com/rcomrman/mercury-tribe-hacktribe/actions/runs/42873094819).\n\n**Ce prototype n'est pas une version installable garantie.** Il ne constitue pas une validation matériellement sûre de BLECHTRIBE, de son chargeur, ou de la compatibilité avec le firmware personnalisé actuel.
 
 ## Essayer sur ordinateur sans flasher
 
@@ -42,7 +42,7 @@ L'app s'enregistre sous **BLECH → TOOLS → Mercury V30** et ne dessine que lo
 | Composant | État |
 |---|---|
 | Branche séparée de `main` | Créée |
-| Premier plugin UI procédural | Code ajouté ; tests à exécuter |
+| Premier plugin UI procédural | Compilé et exécuté sans erreur dans le simulateur GELUMPE (GitHub Actions, 10/11/2026) |
 | Conformité artistique pixel par pixel à V30 | Non obtenue |
 | Rendu 128×64 natif via framebuffer `bitmap` | À implémenter, mesurer l'occupation mémoire et CPU |
 | 12 paramètres globaux et édition avancée | À porter |
