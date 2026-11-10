@@ -46,15 +46,15 @@ function draw() {
       y = clamp(y + energy / 16, 0, 63);
       bottom = clamp(bottom + energy / 16, y + 1, 64);
     }
-    korg.display.rect(x, y, 4, bottom - y);
+    korg.display.rect(x, y, 8, bottom - y);
 
     let hollow = clamp(center + triangle(x * 5 - phase + 72) / 18, y, bottom - 1);
-    korg.display.clearRect(x, hollow, 4, 1);
+    korg.display.clearRect(x, hollow, 8, 1);
     if (x % 16 == 0) {
       let nick = clamp(y + 2, y, bottom - 1);
-      korg.display.clearRect(x, nick, 4, 1);
+      korg.display.clearRect(x, nick, 8, 1);
     }
-    x += 4;
+    x += 8;
   }
 
   // Ribbon B: a narrower, counter-moving metallic strand.
@@ -68,12 +68,12 @@ function draw() {
     width2 = clamp(width2, 1, 8);
     let y2 = clamp(center2 - width2, 0, 63);
     let end2 = clamp(center2 + width2, y2 + 1, 64);
-    korg.display.rect(x, y2, 4, end2 - y2);
+    korg.display.rect(x, y2, 8, end2 - y2);
     if (x % 24 == 0) {
       let hole = clamp(center2, y2, end2 - 1);
-      korg.display.clearRect(x, hole, 4, 1);
+      korg.display.clearRect(x, hole, 8, 1);
     }
-    x += 4;
+    x += 8;
   }
 
   // Tiny preset number, not a permanent software menu.
@@ -117,7 +117,7 @@ korg.onEvent("frame", () => {
   if (!opened) return;
   frames += 1;
   if (energy > 0) energy = clamp(energy - 4, 0, 127);
-  // 25 Hz input / 2 = 12.5 Hz visual preview.
+  // 25 Hz input / 2 = 12.5 Hz visual preview (16 coarse columns).
   if ((frames & 1) != 0) return;
   phase += 2 + mode + knobReact / 25;
   phase &= 2047;
