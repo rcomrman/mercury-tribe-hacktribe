@@ -117,9 +117,13 @@ function ink(x, y0, y1, on) {
     if (on) {
       FB[at] |= mask;
       FB[at + 1] |= mask;
+      FB[at + 2] |= mask;
+      FB[at + 3] |= mask;
     } else {
       FB[at] &= ~mask;
       FB[at + 1] &= ~mask;
+      FB[at + 2] &= ~mask;
+      FB[at + 3] &= ~mask;
     }
     pg += 1;
   }
@@ -144,6 +148,8 @@ function drawMatter() {
       let at = band * 32 + x - sweepX;
       FB[at] = 0;
       FB[at + 1] = 0;
+      FB[at + 2] = 0;
+      FB[at + 3] = 0;
       band += 1;
     }
     // Spatial frequencies come from the V30 buildRibbon spirit:
@@ -178,7 +184,7 @@ function drawMatter() {
     ink(x, river - 2 - v[9] / 60, river + 2 + v[9] / 60, 0);
     // Specular glints are embedded in the liquid, moving with its folds.
     if (((x + p / 8) & 31) == 0) ink(x, middleA - thickA + 2, middleA - thickA + 2, 1);
-    x += 2;
+    x += 4;
   }
   korg.display.clearRect(sweepX, 0, 32, 64);
   korg.display.bitmap(FB, sweepX, 0, 32);
