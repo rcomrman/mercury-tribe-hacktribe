@@ -162,7 +162,7 @@ function drawMatter() {
     ink(x, stream - hole, stream + hole, 0);
 
     // Thin chrome edges / highlights INSIDE the ribbon, not random stars.
-    if (((x + (p / 16) * 2) & 15) == 0) ink(x, core - half + 1, core - half + 1, 1);
+    if (((x + (p / 16) * 2) & 31) == 0) ink(x, core - half + 1, core - half + 1, 1);
 
     // Rare drips attached to the lower contour.
     if (v[9] > 15 && (x & 63) == 24) {
