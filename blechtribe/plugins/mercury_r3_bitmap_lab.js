@@ -1,7 +1,7 @@
 // Mercury Dust / BLECHTRIBE — V30 Groove experimental portable application.
 // Native BLECHTRIBE integer-only JavaScript subset; no DSP/sample/firmware writes.
 // Reference: reference/Mercury_Dust_V30_Groove_CORRIGE_Reference.html.
-// R3 single-ribbon 128x32 central bitmap experiment; NOT pixel-accurate V30! No hardware safety certification.
+// R3 full 128x64 framebuffer test; progressive 32-column chunks; NOT pixel-accurate V30! No hardware safety certification.
 korg.app("Mercury R3", "TOOLS");
 
 // V30 global settings: three pages of four controls, 0-100 except exceptions.
@@ -98,12 +98,12 @@ function adjust(delta) {
   drawMenu();
 }
 
-const FB = new Array(512);
+const FB = new Array(1024);
 let sweepX = 0;
 // Every slot holds a vertical byte, exactly as GELUMPE's bitmap API expects.
 function ink(x, first, last, on) {
-  first = clamp(first, 0, 31);
-  last = clamp(last, 0, 31);
+  first = clamp(first, 0, 63);
+  last = clamp(last, 0, 63);
   if (last < first) return;
   let pg = first >> 3;
   let stop = last >> 3;
@@ -124,7 +124,7 @@ function ink(x, first, last, on) {
 }
 function drawMatter() {
   if (!opened || menuOpen) return;
-  // Work in four 32-column slices: 128x32 bitmap, no full-frame 512-slot clear.
+  // Work in four 32-column slices: 128x64 bitmap, no full-frame 512-slot clear.
   // This spreads the VM cost over adjacent 40ms UI cycles.
   let p = phase;
   if (v[5] < 20) p = (p / 16) * 16;
@@ -134,7 +134,7 @@ function drawMatter() {
   let x = sweepX;
   while (x < sweepX + 32) {
     let band = 0;
-    while (band < 4) {
+    while (band < 8) {
       let at = band * 128 + x;
       FB[at] = 0;
       FB[at + 1] = 0;
@@ -142,7 +142,7 @@ function drawMatter() {
     }
     let w0 = wave(x * 3 + p + s * 21);
     let w1 = wave(x * 7 - p / 3 + 30);
-    let core = 16 + w0 * v[6] / 1500 + w1 / 30;
+    let core = 32 + w0 * v[6] / 1000 + w1 / 18;
     core += (ripple * wave(x * 2 + p)) / 1200;
 
     let half = base + wave(x * 5 + p / 2) / 42;
@@ -169,7 +169,7 @@ function drawMatter() {
   }
   sweepX = (sweepX + 32) & 127;
   korg.display.clear();
-  korg.display.bitmap(FB, 0, 16, 128);
+  korg.display.bitmap(FB, 0, 0, 128);
   korg.display.number(s + 1, 120, 55);
 }
 
