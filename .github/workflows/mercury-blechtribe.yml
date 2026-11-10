@@ -47,3 +47,11 @@ jobs:
           name: mercury-r3-bitmap-preview
           path: blechtribe/out/mercury-r3-scenes.svg
           if-no-files-found: error
+      - name: Capture Mercury R3 movement
+        run: node blechtribe/tests/render-motion-r3.mjs ./kuhlers-gelumpe
+      - name: Upload authentic simulator animation frames
+        uses: actions/upload-artifact@v4
+        with:
+          name: mercury-r3-motion-frames
+          path: blechtribe/out/r3-motion/*.pgm
+          if-no-files-found: error
