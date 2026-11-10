@@ -98,3 +98,33 @@ Les touches de navigation sont interceptées par l'app ouverte, conformément au
 ### R2.1 — Coulures légères (10 novembre 2026)
 
 Deux fines coulures par image peuvent maintenant descendre depuis le ruban principal, selon le réglage **MELT**. Elles se déplacent horizontalement avec la géométrie et ne sont pas des particules indépendantes. Première tentative à quatre coulures : limite de prudence de 19 500 unités dépassée (19 596) ; réduction à deux coulures : **PASS**, maximum observé 19 292 unités dans le simulateur, `frame` 19 183. [Tests officiels sur GitHub](https://github.com/rcomrman/mercury-tribe-hacktribe/actions/runs/42876906013). Les timings 5 ms ARM restent inconnus. Le rendu est toujours une approximation expérimentale de la V30, pas sa reproduction intégrale.
+
+## R3 — moteur de chrome bitmap organique (10 novembre 2026)
+
+La branche conserve la R2.1 dans `plugins/mercury_v30_lab.js`, **sans la remplacer**. La recherche R3 est isolée dans `plugins/mercury_r3_bitmap_lab.js`.
+
+### Ce qui a réellement été codé
+
+- **Dessin en mémoire sur tout l'écran 128×64**, mais par tranches de **32×64 pixels** seulement. Un tableau de **256 slots** contient la tranche courante dans le format exact attendu par `korg.display.bitmap(FB, sweepX, 0, 32)`. La zone affichée est nettoyée avec `clearRect` juste avant le dessin pour ne pas laisser de pixels fantômes.
+- **Résolution horizontale 2 pixels par colonne calculée**, au lieu des gros blocs de 4/8 pixels de la R2.1 ; la R3 reste du pixel art, pas un rendu vectoriel antialiasé.
+- **Ruban principal aminci aux extrémités**, canal noir intérieur qui suit les sinuosités, largeur qui respire et variation de domaine par réutilisation d'une seconde onde lente. Le calcul utilise la LUT sinusoïdale entière de `src/sine_q7.h`, adaptée à la VM.
+- **Réactivité événementielle** conservée (pads, steps, réglage `OSC EDIT` lu sans détournement de sa fonction Korg) ; la réaction aux steps ne constitue **pas** une détection du véritable signal du kick.
+- Les **12 réglages globaux** et les trois pages de menu sont réutilisés de la R2.1, avec sauvegarde simulée et retour Korg par EXIT.
+
+### Vérification avec le vrai compilateur GELUMPE et son SimDevice
+
+- `node blechtribe/tests/check-r3.mjs ./kuhlers-gelumpe` teste huit modes, leurs mouvements, le menu, les réglages, la mémoire après redémarrage simulé et **quatre profils extrêmes** dont haute énergie + valeurs à 100.
+- `node blechtribe/tests/render-r3.mjs ./kuhlers-gelumpe` crée la planche SVG des huit presets.
+- `node blechtribe/tests/render-motion-r3.mjs ./kuhlers-gelumpe` génère **48 images PGM 128×64** distinctes sur 7,68 secondes de simulation, en appliquant des événements musicaux de test ; la CI les publie sous l'artefact `mercury-r3-motion-frames`.
+- Dernière vérification R3 poussée : **PASS**, taille du bytecode **4 092 octets**, **579 variables**, coût maximal **19 385 unités** / limite **20 000** sur les cas testés.
+- [GitHub Actions R3](https://github.com/rcomrman/mercury-tribe-hacktribe/actions?query=branch%3Amercury-blechtribe) (ouvrir l'exécution la plus récente pour consulter ses artefacts et logs).
+
+### Ce qui manque avant de parler d'une vraie V30
+
+1. **Fidélité visuelle** : la référence HTML reste plus organique ; la R3 a encore **un seul ruban principal**, et non l'entrelacs original. Reflets épais, vraies cavités sculptées, coulures complexes, poussières, fractures et rémanence de la V30 manquent.
+2. **Fluidité** : l'écran reçoit une tranche à chaque événement `frame` de 40 ms, donc un tour complet de quatre tranches prend **160 ms** (~6,25 images complètes par seconde). Les parties de l'image ont des âges légèrement différents. Ce compromis n'est **pas** l'objectif de fluidité final.
+3. **Synchronisation vraie** : aucun accès DSP au kick ni à l'énergie audio n'est validé ; la pulsation est dérivée de l'événement `step`, et le potentiomètre audio conserve son action normale.
+4. **Fidélité des réglages** : CORDS > 1, variations exactes de chaque preset, paramètres par piste et quatre mini-LFO restent à porter ou sont bloqués par les possibilités API documentées.
+5. **Matériel** : le budget d'instructions du simulateur **n'est pas une mesure de la limite réelle de 5 ms**. Ne pas installer sur l'Electribe, ni produire un VSB Mercury, sans méthode de récupération adaptée et validation de compatibilité du firmware existant.
+
+**Décision actuelle** : la R3 est une **branche exploratoire testée en simulation**, et la R2.1 demeure le fallback. Le prochain gain visible ne vient plus de la seule augmentation de résolution : il faut une topologie moins sinusoïdale, une deuxième coulée et un champ de reflets propre à la V30, tout en conservant un coût VM et un temps d'exécution raisonnables.
