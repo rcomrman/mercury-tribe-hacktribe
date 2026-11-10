@@ -141,10 +141,10 @@ function drawMatter() {
       FB[at + 1] = 0;
       band += 1;
     }
-    // V30-inspired domain warp: nonuniform wave spacing, slow shifting crests.
-    let bend = x + wave(x * 2 - p / 3 + s * 31) / 18;
+    // V30-inspired low-cost domain warp: reuse secondary wave to bend the first.
+    let w1 = wave(x * 7 - p / 3 + 30);
+    let bend = x + w1 / 18;
     let w0 = wave(bend * 3 + p + s * 21);
-    let w1 = wave(bend * 7 - p / 3 + 30);
     let core = 32 + w0 * v[6] / 1000 + w1 / 18;
     core += (ripple * wave(x * 2 + p)) / 1200;
 
