@@ -25,7 +25,7 @@ Cette app s'enregistre sous **BLECH → TOOLS → Mercury V30** et ne dessine qu
 - `step` crée une pulsation **synthétique tous les quatre steps** ; ce n'est ni une vraie détection de kick, ni une analyse audio.
 - `pad` provoque un impact visuel avec vélocité.
 - `knob` index **9** = OSC EDIT (corrigé depuis l'ancien index 10) : valeur lue uniquement et utilisée pour influencer la vitesse de l'image. **Ce potentiomètre continue de modifier le son Korg.**
-- Rendu de la scène sur une grille grossière de 16 colonnes par ruban, réactualisée un événement `frame` sur deux (12,5 Hz théoriques). Ce rendu ne remplace **pas** encore les rubans V30 pixel par pixel.
+- Rendu du ruban principal sur 32 colonnes de 4 px, ruban secondaire sur 16 colonnes de 8 px, réactualisé un événement `frame` sur deux (12,5 Hz théoriques). Ce rendu ne remplace **pas** encore les rubans V30 pixel par pixel.
 
 ### Commandes quand Mercury est ouvert
 
@@ -42,7 +42,7 @@ Cette app s'enregistre sous **BLECH → TOOLS → Mercury V30** et ne dessine qu
 
 Les touches de navigation sont interceptées par l'app ouverte, conformément au comportement officiel des plugins. En dehors de Mercury, elles retrouvent leur fonction d'origine. Le raccourci historique `SHIFT+BPF` n'est **pas** encore implémenté et il faudra vérifier sa compatibilité avec les filtres Korg.
 
-**Tests du simulateur : PASS** le 10/11/2026. La première version utilisait 1 648 octets et culminait à 12 605 unités de coût ; la nouvelle version UI3 utilise 3 864 octets, 61 variables, avec un pic de 16 176 unités dans un gestionnaire sur la limite de 20 000 unités de la VM. Ce budget de calcul n'est **pas** une mesure du temps matériel de 5 ms. [Première validation UI3](https://github.com/rcomrman/mercury-tribe-hacktribe/actions/runs/42874080077). Test complémentaire : huit presets, réglages et persistance du stockage.
+**Tests du simulateur : PASS** le 10/11/2026. La première version utilisait 1 648 octets et culminait à 12 605 unités de coût ; la version UI3 initiale utilisait 3 864 octets, 61 variables. Le rendu sinusoïdal R2 utilise **3 996 octets et 313 variables**, avec un maximum de **18 540 unités** dans les parcours de test, pour une limite de 20 000 unités. Ce budget de calcul n'est **pas** une mesure du temps matériel de 5 ms. [Première validation UI3](https://github.com/rcomrman/mercury-tribe-hacktribe/actions/runs/42874080077). Les tests complémentaires vérifient les huit presets, leur évolution au fil des images, l'échelle 0–255 du potentiomètre OSC EDIT, les réglages et la persistance du stockage. [Exécution R2](https://github.com/rcomrman/mercury-tribe-hacktribe/actions/runs/42876442898). La CI produit une planche SVG des huit variantes, téléchargeable depuis les artefacts du test.
 
 **Ce prototype n'est pas une version installable garantie.** Il ne constitue pas une validation matériellement sûre de BLECHTRIBE, de son chargeur ou de la compatibilité avec le firmware personnalisé actuel.
 
@@ -83,3 +83,14 @@ Les touches de navigation sont interceptées par l'app ouverte, conformément au
 - [Exemples de plugins](https://github.com/KuhlerBuhler/kuhlers-gelumpe/blob/main/data/script/presets.mjs)
 
 **Risques documentés :** VM entière 32 bits sans float, budget commun de 5 ms par cycle, événements `step` quantifiés à 40 ms, rétention limitée, aucun accès audio brut documenté. Les tests sur émulateur ne prouvent pas l'innocuité sur l'appareil.
+
+## Suivi R2 — rendu 4 pixels et optimisation mémoire (10 novembre 2026)
+
+- La géométrie de la bande principale est maintenant calculée tous les **4 pixels** (au lieu de 8). L'autre bande reste sur **8 pixels**, pour tenir le budget VM.
+- Un tableau de **256 sinus en format entier décalé** remplace le calcul sinusoïdal approximatif par segment, sans utiliser de flottants dans le plugin. `SINE` coûte 256 slots (1 024 octets) dans la mémoire partagée de la VM.
+- Les trous noirs se déplacent avec la bande et restent volontairement très simples : la pleine fidélité V30 demande des cavités plus profondes, des ramifications, coulures et petits reflets.
+- L'ancien indice de knob était erroné : `OSC EDIT` est bien le **numéro 9** dans la table `data/panel.mjs` de GELUMPE. La nouvelle mise à l'échelle transforme la valeur matérielle 0–255 en 0–100.
+- Test automatisé renforcé : une scène doit **changer visiblement entre deux images** après plusieurs frames, en plus de se compiler et de s'afficher. Les huit variations testées passent.
+- Le plafond de calcul est contrôlé dans les tests à **19 500 unités maximum** (seuil interne de prudence inférieur au plafond VM de 20 000). Ce n'est **pas** la mesure de 5 ms CPU réelle, que seul le matériel ou un émulateur temporisé crédible pourra confirmer.
+
+**Risque en suspens** : la compression de largeur à 4/8 px provoque encore des marches d'escalier ; la vraie référence V30 HTML a des contours et des reflets fluides. Le renderer V30 natif C doit rester la source conceptuelle, pas remplacé en production par ce laboratoire graphique. Les anciens hooks LCD ARM ne sont pas intégrés ici.
