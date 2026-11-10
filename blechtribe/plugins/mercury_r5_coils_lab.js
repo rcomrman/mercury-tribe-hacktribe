@@ -160,24 +160,31 @@ function drawMatter() {
     if (d1 < 0) d1 = -d1;
     if (d1 < radiusX1) {
       let a = ARC[(d1 * 32) / radiusX1];
-      let lean = fold / 55;
-      let top = cy1 - a * radiusY1 / 32 + lean;
-      let bottom = cy1 + a * radiusY1 / 32 + lean;
+      // Different top/bottom phase warps; taper to zero at the coil tips.
+      let top = cy1 - a * radiusY1 / 32 + (fold * a * v[6]) / 39000;
+      let bottom = cy1 + a * radiusY1 / 32 + (curl * a) / 850;
       let topWidth = 1 + (fold + 128) / 125;
       let bottomWidth = 2 + (curl + 128) / 88 + accent / 54;
       if (scene == 1) { topWidth -= 1; bottomWidth -= 1; }
       ink(x, top - topWidth, top + topWidth, 1);
       ink(x, bottom - bottomWidth, bottom + bottomWidth, 1);
+      // V30-style liquid sheet: bright lower fold, not an evenly stroked ring.
+      if (x > cx1 + 4 && x < cx1 + radiusX1 - 4) {
+        ink(x, bottom - (fold + 128) / 22, bottom + bottomWidth, 1);
+      }
     }
     let d2 = x - cx2;
     if (d2 < 0) d2 = -d2;
     if (d2 < radiusX2 && v[2] > 1 && scene != 1) {
       let a2 = ARC[(d2 * 32) / radiusX2];
-      let skew = curl / 52;
-      let top2 = cy2 - a2 * radiusY2 / 32 + skew;
-      let bottom2 = cy2 + a2 * radiusY2 / 32 + skew;
+      let top2 = cy2 - a2 * radiusY2 / 32 - (curl * a2) / 880;
+      let bottom2 = cy2 + a2 * radiusY2 / 32 + (fold * a2) / 1000;
       ink(x, top2 - 2 - accent / 52, top2 + 2 + accent / 52, 1);
       ink(x, bottom2 - 1 - (fold + 128) / 140, bottom2 + 1 + (fold + 128) / 140, 1);
+      // Opposing luminous sail on the second coil, echoing V30's layered metal.
+      if (x < cx2 - 4 && x > cx2 - radiusX2 + 4) {
+        ink(x, top2 - 2, top2 + (curl + 128) / 28, 1);
+      }
     }
     // A narrow twisted ribbon bridges the two moving coils, with a carved river.
     if (x > 47 && x < 88) {
@@ -185,6 +192,12 @@ function drawMatter() {
       let half = 2 + v[1] / 34 + accent / 55;
       ink(x, middle - half, middle + half, 1);
       ink(x, middle - 1 + fold / 50, middle + 1 + fold / 50, 0);
+    }
+    // Fragile, moving chrome filament. The broken line follows the material;
+    // it is intentionally NOT a background star field.
+    if (x > 13 && x < 114 && ((x + p / 8) & 31) < 22) {
+      let thread = 32 + fold / 17 + wave(x * 3 + p / 3 + 12) / 35;
+      ink(x, thread, thread, 1);
     }
     x += 4;
   }
