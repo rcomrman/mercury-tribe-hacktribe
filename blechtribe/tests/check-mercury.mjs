@@ -20,12 +20,23 @@ const [{ compile, formatError }, { SimDevice }, { KEY_NAMES }, { BUDGET }] =
 const source = await readFile(
   new URL("../plugins/mercury_v30_lab.js", import.meta.url), "utf8"
 );
-const result = compile(source, { name: "Mercury V30" });
+const result = compile(source, { name: "Mercury_V30" });
 assert.ok(result.ok, result.errors?.map(formatError).join("\n"));
 assert.equal(result.info.app?.group, "TOOLS");
 assert.ok(result.blob.length < BUDGET.scriptBytes);
 
-const device = new SimDevice();
+const cardStore = new Map();
+const storage = {
+  load: name => cardStore.get(name) ?? null,
+  save: records => {
+    for (const r of records) {
+      assert.match(r.name, /^[A-Za-z][A-Za-z0-9_]{0,14}$/,
+        "Stored plugin name must match the official SD format");
+      cardStore.set(r.name, { mask: r.mask, values: Int32Array.from(r.values) });
+    }
+  },
+};
+const device = new SimDevice({ storage });
 const loaded = device.load(result.blob);
 assert.ok(loaded.ok, loaded.error?.message);
 assert.ok(device.openApp(0), "App should open through BLECH TOOLS");
@@ -69,6 +80,34 @@ assert.equal(setting(5), 84, "SMOOTH should be editable on movement page");
 device.post("buttonPress", key("MENU"));
 assert.deepEqual(device.run(4), [], "No faults exiting Mercury settings");
 assert.equal(loaded.script.vars[result.info.symbols.menuOpen.slot], 0);
+
+// Stress all eight visual scenes and validate no mode disables the VM.
+const variables = loaded.script.vars;
+for (let preset = 0; preset < 8; preset++) {
+  variables[result.info.symbols.v.slot + 0] = preset;
+  assert.deepEqual(device.run(6), [], "No faults in V30 preset " + preset);
+  assert.ok(device.display.bytes.some(x => x), "Nonempty V30 scene " + preset);
+}
+// Return to the first preset and ensure each global setting is in range.
+variables[result.info.symbols.v.slot] = 0;
+for (let i = 0; i < 12; i++) {
+  const value = setting(i);
+  const lo = i == 2 ? 1 : 0;
+  const hi = i == 0 ? 7 : i == 2 ? 8 : i == 4 ? 5 : 100;
+  assert.ok(value >= lo && value <= hi, "Setting " + i + " outside range");
+}
+device.post("buttonPress", key("MENU"));
+assert.deepEqual(device.run(2), [], "Open menu before persistence test");
+device.post("buttonPress", key("MENU"));
+assert.deepEqual(device.run(3), [], "Close menu and request save");
+assert.ok(cardStore.has("Mercury_V30"), "Store should save all settings");
+const storedValue = setting(5);
+const reboot = new SimDevice({ storage });
+const rebootLoad = reboot.load(result.blob);
+assert.ok(rebootLoad.ok, rebootLoad.error?.message);
+assert.deepEqual(reboot.run(2), [], "No faults restoring from persistent storage");
+assert.equal(rebootLoad.script.vars[result.info.symbols.v.slot + 5],
+  storedValue, "SMOOTH setting survives simulated power cycle");
 
 const status = device.status().scripts[0];
 console.log("OK: compiled bytecode:", result.blob.length, "bytes");
