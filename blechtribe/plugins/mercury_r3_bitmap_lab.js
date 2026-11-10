@@ -99,6 +99,7 @@ function adjust(delta) {
 }
 
 const FB = new Array(512);
+let sweepX = 0;
 // Every slot holds a vertical byte, exactly as GELUMPE's bitmap API expects.
 function ink(x, first, last, on) {
   first = clamp(first, 0, 31);
@@ -127,16 +128,24 @@ function ink(x, first, last, on) {
 }
 function drawMatter() {
   if (!opened || menuOpen) return;
-  let i = 0;
-  while (i < 512) { FB[i] = 0; i += 1; }
-
+  // Work in two 64-column slices: 128x32 bitmap, no full-frame 512-slot clear.
+  // This spreads the VM cost over adjacent 40ms UI cycles.
   let p = phase;
   if (v[5] < 20) p = (p / 16) * 16;
   let ripple = (energy * v[3]) / 100;
   let base = clamp(3 + v[1] / 18, 3, 11);
   let s = v[0];
-  let x = 0;
-  while (x < 128) {
+  let x = sweepX;
+  while (x < sweepX + 64) {
+    let band = 0;
+    while (band < 4) {
+      let at = band * 128 + x;
+      FB[at] = 0;
+      FB[at + 1] = 0;
+      FB[at + 2] = 0;
+      FB[at + 3] = 0;
+      band += 1;
+    }
     let w0 = wave(x * 3 + p + s * 21);
     let w1 = wave(x * 7 - p / 3 + 30);
     let core = 16 + w0 * v[6] / 1500 + w1 / 30;
@@ -164,6 +173,7 @@ function drawMatter() {
     }
     x += 4;
   }
+  sweepX = (sweepX + 64) & 127;
   korg.display.clear();
   korg.display.bitmap(FB, 0, 16, 128);
   korg.display.number(s + 1, 120, 55);
@@ -186,6 +196,7 @@ korg.onEvent("open", () => {
   menuOpen = 0;
   frames = 0;
   phase = 0;
+  sweepX = 0;
   drawMatter();
 });
 korg.onEvent("close", () => {
@@ -238,8 +249,8 @@ korg.onEvent("frame", () => {
   frames += 1;
   if (energy > 0) energy = clamp(energy - 4, 0, 127);
   if (flash > 0) flash -= 1;
-  if ((frames & 1) != 0) return;
-  phase += (1 + v[4] * 2) + knobReact / 25;
+  // A full image is completed over two consecutive 40ms frames.
+  if (sweepX == 0) phase += (1 + v[4] * 2) + knobReact / 25;
   phase &= 2047;
   if (v[11] > 30 && ((frames + stepPos) % 18) < v[11] / 20) return;
   drawMatter();
