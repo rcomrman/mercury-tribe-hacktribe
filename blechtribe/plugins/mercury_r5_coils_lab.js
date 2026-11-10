@@ -137,14 +137,14 @@ function drawMatter() {
   let accent = energy * v[3] / 100;
   // The original V30 has folded-back liquid paths with broad BLACK interiors;
   // replace the R3/R4 straight horizontal carrier wave with two hollow coils.
-  let cx1 = 32 + wave(p / 4 + 17) / 17;
-  let cy1 = 31 + wave(p / 5 + 61) / 23;
-  let cx2 = 98 + wave(p / 5 + 99) / 15;
-  let cy2 = 31 - wave(p / 6 + 9) / 26;
+  let cx1 = 32 + wave(p / 2 + 17) / 14;
+  let cy1 = 31 + wave(p / 3 + 61) / 21;
+  let cx2 = 98 + wave(p / 3 + 99) / 15;
+  let cy2 = 31 - wave(p / 4 + 9) / 22;
   let radiusX1 = 24 + v[6] / 17;
   let radiusX2 = 22 + v[6] / 23;
-  let radiusY1 = 17 + v[1] / 24 + wave(p / 7 + 25) / 46;
-  let radiusY2 = 16 + v[1] / 22 + wave(p / 7 + 77) / 44;
+  let radiusY1 = 17 + v[1] / 24 + wave(p / 6 + 25) / 46 + accent / 18;
+  let radiusY2 = 16 + v[1] / 22 + wave(p / 6 + 77) / 44 - accent / 24;
   let x = sweepX;
   while (x < sweepX + 32) {
     let pg = 0;
@@ -168,6 +168,11 @@ function drawMatter() {
       if (scene == 1) { topWidth -= 1; bottomWidth -= 1; }
       ink(x, top - topWidth, top + topWidth, 1);
       ink(x, bottom - bottomWidth, bottom + bottomWidth, 1);
+      // Delicate nested chrome highlight follows the coil, never static noise.
+      if (((x + p / 5) & 31) < 24 && d1 < radiusX1 - 5) {
+        let streak = top + 5 + curl / 90;
+        ink(x, streak, streak, 1);
+      }
       // V30-style liquid sheet: bright lower fold, not an evenly stroked ring.
       if (x > cx1 + 4 && x < cx1 + radiusX1 - 4) {
         ink(x, bottom - (fold + 128) / 22, bottom + bottomWidth, 1);
@@ -181,6 +186,10 @@ function drawMatter() {
       let bottom2 = cy2 + a2 * radiusY2 / 32 + (fold * a2) / 1000;
       ink(x, top2 - 2 - accent / 52, top2 + 2 + accent / 52, 1);
       ink(x, bottom2 - 1 - (fold + 128) / 140, bottom2 + 1 + (fold + 128) / 140, 1);
+      if (((x + p / 4) & 31) < 18 && d2 < radiusX2 - 5) {
+        let streak2 = bottom2 - 5 + fold / 100;
+        ink(x, streak2, streak2, 1);
+      }
       // Opposing luminous sail on the second coil, echoing V30's layered metal.
       if (x < cx2 - 4 && x > cx2 - radiusX2 + 4) {
         ink(x, top2 - 2, top2 + (curl + 128) / 28, 1);
