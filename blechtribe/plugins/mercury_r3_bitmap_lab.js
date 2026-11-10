@@ -98,7 +98,7 @@ function adjust(delta) {
   drawMenu();
 }
 
-const FB = new Array(1024);
+const FB = new Array(256);
 let sweepX = 0;
 // Every slot holds a vertical byte, exactly as GELUMPE's bitmap API expects.
 function ink(x, first, last, on) {
@@ -111,7 +111,7 @@ function ink(x, first, last, on) {
     let lo = pg == (first >> 3) ? (first & 7) : 0;
     let hi = pg == stop ? (last & 7) : 7;
     let bits = (255 << lo) & (255 >> (7 - hi));
-    let at = pg * 128 + x;
+    let at = pg * 32 + x - sweepX;
     if (on) {
       FB[at] |= bits;
       FB[at + 1] |= bits;
@@ -124,8 +124,8 @@ function ink(x, first, last, on) {
 }
 function drawMatter() {
   if (!opened || menuOpen) return;
-  // Work in four 32-column slices: 128x64 bitmap, no full-frame 512-slot clear.
-  // This spreads the VM cost over adjacent 40ms UI cycles.
+  // Update one 32x64 tile per 40ms frame; 4 tiles cover the 128x64 LCD.
+  // Unlike a full-frame bitmap call, drawing only the changed tile lowers cost.
   let p = phase;
   if (v[5] < 20) p = (p / 16) * 16;
   let ripple = (energy * v[3]) / 100;
@@ -136,7 +136,7 @@ function drawMatter() {
   while (x < sweepX + 32) {
     let band = 0;
     while (band < 8) {
-      let at = band * 128 + x;
+      let at = band * 32 + x - sweepX;
       FB[at] = 0;
       FB[at + 1] = 0;
       band += 1;
@@ -170,10 +170,10 @@ function drawMatter() {
     }
     x += 2;
   }
-  sweepX = (sweepX + 32) & 127;
-  korg.display.clear();
-  korg.display.bitmap(FB, 0, 0, 128);
+  korg.display.clearRect(sweepX, 0, 32, 64);
+  korg.display.bitmap(FB, sweepX, 0, 32);
   korg.display.number(s + 1, 120, 55);
+  sweepX = (sweepX + 32) & 127;
 }
 
 korg.onEvent("ready", () => {
@@ -206,7 +206,7 @@ korg.onEvent("buttonPress", (key) => {
   if (key == korg.key.MENU) {
     menuOpen = 1 - menuOpen;
     if (menuOpen) drawMenu();
-    else { storeAll(); drawMatter(); }
+    else { storeAll(); korg.display.clear(); sweepX = 0; drawMatter(); }
     return;
   }
   if (menuOpen) {
