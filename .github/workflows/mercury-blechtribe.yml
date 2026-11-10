@@ -70,3 +70,18 @@ jobs:
             blechtribe/out/mercury-r4-scenes.svg
             blechtribe/out/r4-motion/*.pgm
           if-no-files-found: error
+
+      - name: Compile and stress Mercury R5 folded coils
+        run: node blechtribe/tests/check-r5.mjs ./kuhlers-gelumpe
+      - name: Render Mercury R5 coil snapshots
+        run: node blechtribe/tests/render-r5.mjs ./kuhlers-gelumpe
+      - name: Render Mercury R5 coil motion
+        run: node blechtribe/tests/render-motion-r5.mjs ./kuhlers-gelumpe
+      - name: Upload R5 artwork comparison
+        uses: actions/upload-artifact@v4
+        with:
+          name: mercury-r5-v30-coils
+          path: |
+            blechtribe/out/mercury-r5-scenes.svg
+            blechtribe/out/r5-motion/*.pgm
+          if-no-files-found: error
