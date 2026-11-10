@@ -7,7 +7,7 @@ korg.app("Mercury R6", "TOOLS");
 // V30 global settings: three pages of four controls, 0-100 except exceptions.
 // [PRESET, INTENSITY, CORDS, REACTION, RATE, SMOOTH, WAVE, CHAOS,
 //  GLITCH, MELT, DATA LOSS, FRAME SLIP]
-const v = [0, 75, 2, 85, 3, 65, 72, 35, 80, 45, 30, 20];
+const v = [0, 75, 2, 85, 3, 74, 72, 35, 80, 45, 30, 20];
 let opened = 0;
 let menuOpen = 0;
 let page = 0;
