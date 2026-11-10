@@ -23,7 +23,7 @@ const source = await readFile(
 const result = compile(source, { name: "Mercury_R3" });
 assert.ok(result.ok, result.errors?.map(formatError).join("\n"));
 assert.equal(result.info.app?.group, "TOOLS");
-assert.ok(result.info.symbols.FB.length === 1024, "R3 must use a 128x64 page-packed framebuffer");
+assert.ok(result.info.symbols.FB.length === 512, "R3 central viewport uses 128x32 page-packed pixels");
 assert.ok(result.blob.length < BUDGET.scriptBytes);
 
 const cardStore = new Map();
